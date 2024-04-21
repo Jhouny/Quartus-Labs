@@ -1,4 +1,4 @@
-/simulation/*
-/output_files/*
-/incremental_db/*
-/db/*
+simulation/
+output_files/
+incremental_db/
+db/
