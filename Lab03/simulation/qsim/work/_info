@@ -9,7 +9,7 @@ z2
 cModel Technology
 dE:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/simulation/qsim
 Ehard_block
-Z0 w1713750723
+Z0 w1713824998
 Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
 Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ V8_BbEmGd;OHS6h@;gFc7W3
 !s100 ROH=D<N4CT6aCZ<37A[_?0
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1713750724
+Z11 !s110 1713825000
 !i10b 1
-Z12 !s108 1713750724.000000
+Z12 !s108 1713825000.000000
 Z13 !s90 -work|work|Main.vho|
 Z14 !s107 Main.vho|
 !i113 1
@@ -70,8 +70,8 @@ R8
 R9
 l0
 L90
-V3@dPh76Z:e4FS_K7BKBVQ1
-!s100 <Bfe2n]98^zdJjC=<RlfB0
+VYXVXb1Rc>5d1jmo[kQAX<2
+!s100 dlTND1gR@T2E`ZU75gHa_1
 R10
 32
 R11
@@ -91,11 +91,11 @@ R3
 R4
 R5
 R18
-DEx4 work 4 main 0 22 3@dPh76Z:e4FS_K7BKBVQ1
-l193
-L122
-VW?cf?El@Je@JMno]^LU@;1
-!s100 n5VcnLPL[Yhg7dhmPAX:L1
+DEx4 work 4 main 0 22 YXVXb1Rc>5d1jmo[kQAX<2
+l366
+L194
+VQ=8_bc>`:_V7M797OA77O0
+!s100 lKeOUBice`mV^2K2XLYe;3
 R10
 32
 R11
@@ -107,7 +107,7 @@ R14
 R15
 R16
 Emain_vhd_vec_tst
-Z19 w1713750722
+Z19 w1713824997
 R4
 R5
 R7
@@ -119,29 +119,29 @@ V=^2f_@5oZ3?cdnzKJEk^Z3
 !s100 MV85YP7W:d9cX;FY6a<d13
 R10
 32
-R11
+Z22 !s110 1713825001
 !i10b 1
 R12
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+Z23 !s90 -work|work|Waveform.vwf.vht|
+Z24 !s107 Waveform.vwf.vht|
 !i113 1
 R15
 R16
 Amain_arch
 R4
 R5
-Z24 DEx4 work 16 main_vhd_vec_tst 0 22 =^2f_@5oZ3?cdnzKJEk^Z3
-l64
+Z25 DEx4 work 16 main_vhd_vec_tst 0 22 =^2f_@5oZ3?cdnzKJEk^Z3
+l136
 L33
-VGZEoh9^2]@@UJ5Q>:MdR10
-!s100 1X7]0ozck=mYB9]COGS2k2
+V]ab6MBIHGWKjZ:boZiaQE1
+!s100 jb4;SjOJ6R40]X@YZb:N[2
 R10
 32
-R11
+R22
 !i10b 1
 R12
-R22
 R23
+R24
 !i113 1
 R15
 R16

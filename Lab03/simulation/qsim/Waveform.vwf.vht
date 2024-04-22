@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/21/2024 22:52:02"
+-- Generated on "04/22/2024 19:29:57"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Main
 -- 
@@ -34,31 +34,103 @@ ARCHITECTURE Main_arch OF Main_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLK : STD_LOGIC;
-SIGNAL EN : STD_LOGIC;
-SIGNAL Q0 : STD_LOGIC;
-SIGNAL Q1 : STD_LOGIC;
-SIGNAL Q2 : STD_LOGIC;
-SIGNAL Q3 : STD_LOGIC;
-SIGNAL Q4 : STD_LOGIC;
-SIGNAL Q5 : STD_LOGIC;
-SIGNAL Q6 : STD_LOGIC;
-SIGNAL Q7 : STD_LOGIC;
-SIGNAL RST : STD_LOGIC;
-SIGNAL SERIAL : STD_LOGIC;
+SIGNAL D0 : STD_LOGIC;
+SIGNAL D1 : STD_LOGIC;
+SIGNAL D2 : STD_LOGIC;
+SIGNAL D3 : STD_LOGIC;
+SIGNAL D4 : STD_LOGIC;
+SIGNAL D5 : STD_LOGIC;
+SIGNAL D6 : STD_LOGIC;
+SIGNAL D7 : STD_LOGIC;
+SIGNAL L0 : STD_LOGIC;
+SIGNAL L1 : STD_LOGIC;
+SIGNAL L2 : STD_LOGIC;
+SIGNAL L3 : STD_LOGIC;
+SIGNAL L4 : STD_LOGIC;
+SIGNAL L5 : STD_LOGIC;
+SIGNAL L6 : STD_LOGIC;
+SIGNAL L7 : STD_LOGIC;
+SIGNAL PB0 : STD_LOGIC;
+SIGNAL PB1 : STD_LOGIC;
+SIGNAL S : STD_LOGIC;
+SIGNAL S1A : STD_LOGIC;
+SIGNAL S1B : STD_LOGIC;
+SIGNAL S1C : STD_LOGIC;
+SIGNAL S1D : STD_LOGIC;
+SIGNAL S1E : STD_LOGIC;
+SIGNAL S1F : STD_LOGIC;
+SIGNAL S1G : STD_LOGIC;
+SIGNAL S2A : STD_LOGIC;
+SIGNAL S2B : STD_LOGIC;
+SIGNAL S2C : STD_LOGIC;
+SIGNAL S2D : STD_LOGIC;
+SIGNAL S2E : STD_LOGIC;
+SIGNAL S2F : STD_LOGIC;
+SIGNAL S2G : STD_LOGIC;
+SIGNAL S4A : STD_LOGIC;
+SIGNAL S4B : STD_LOGIC;
+SIGNAL S4C : STD_LOGIC;
+SIGNAL S4D : STD_LOGIC;
+SIGNAL S4E : STD_LOGIC;
+SIGNAL S4F : STD_LOGIC;
+SIGNAL S4G : STD_LOGIC;
+SIGNAL S5A : STD_LOGIC;
+SIGNAL S5B : STD_LOGIC;
+SIGNAL S5C : STD_LOGIC;
+SIGNAL S5D : STD_LOGIC;
+SIGNAL S5E : STD_LOGIC;
+SIGNAL S5F : STD_LOGIC;
+SIGNAL S5G : STD_LOGIC;
 COMPONENT Main
 	PORT (
 	CLK : IN STD_LOGIC;
-	EN : IN STD_LOGIC;
-	Q0 : OUT STD_LOGIC;
-	Q1 : OUT STD_LOGIC;
-	Q2 : OUT STD_LOGIC;
-	Q3 : OUT STD_LOGIC;
-	Q4 : OUT STD_LOGIC;
-	Q5 : OUT STD_LOGIC;
-	Q6 : OUT STD_LOGIC;
-	Q7 : OUT STD_LOGIC;
-	RST : IN STD_LOGIC;
-	SERIAL : IN STD_LOGIC
+	D0 : IN STD_LOGIC;
+	D1 : IN STD_LOGIC;
+	D2 : IN STD_LOGIC;
+	D3 : IN STD_LOGIC;
+	D4 : IN STD_LOGIC;
+	D5 : IN STD_LOGIC;
+	D6 : IN STD_LOGIC;
+	D7 : IN STD_LOGIC;
+	L0 : OUT STD_LOGIC;
+	L1 : OUT STD_LOGIC;
+	L2 : OUT STD_LOGIC;
+	L3 : OUT STD_LOGIC;
+	L4 : OUT STD_LOGIC;
+	L5 : OUT STD_LOGIC;
+	L6 : OUT STD_LOGIC;
+	L7 : OUT STD_LOGIC;
+	PB0 : IN STD_LOGIC;
+	PB1 : IN STD_LOGIC;
+	S : OUT STD_LOGIC;
+	S1A : OUT STD_LOGIC;
+	S1B : OUT STD_LOGIC;
+	S1C : OUT STD_LOGIC;
+	S1D : OUT STD_LOGIC;
+	S1E : OUT STD_LOGIC;
+	S1F : OUT STD_LOGIC;
+	S1G : OUT STD_LOGIC;
+	S2A : OUT STD_LOGIC;
+	S2B : OUT STD_LOGIC;
+	S2C : OUT STD_LOGIC;
+	S2D : OUT STD_LOGIC;
+	S2E : OUT STD_LOGIC;
+	S2F : OUT STD_LOGIC;
+	S2G : OUT STD_LOGIC;
+	S4A : OUT STD_LOGIC;
+	S4B : OUT STD_LOGIC;
+	S4C : OUT STD_LOGIC;
+	S4D : OUT STD_LOGIC;
+	S4E : OUT STD_LOGIC;
+	S4F : OUT STD_LOGIC;
+	S4G : OUT STD_LOGIC;
+	S5A : OUT STD_LOGIC;
+	S5B : OUT STD_LOGIC;
+	S5C : OUT STD_LOGIC;
+	S5D : OUT STD_LOGIC;
+	S5E : OUT STD_LOGIC;
+	S5F : OUT STD_LOGIC;
+	S5G : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -66,17 +138,53 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	CLK => CLK,
-	EN => EN,
-	Q0 => Q0,
-	Q1 => Q1,
-	Q2 => Q2,
-	Q3 => Q3,
-	Q4 => Q4,
-	Q5 => Q5,
-	Q6 => Q6,
-	Q7 => Q7,
-	RST => RST,
-	SERIAL => SERIAL
+	D0 => D0,
+	D1 => D1,
+	D2 => D2,
+	D3 => D3,
+	D4 => D4,
+	D5 => D5,
+	D6 => D6,
+	D7 => D7,
+	L0 => L0,
+	L1 => L1,
+	L2 => L2,
+	L3 => L3,
+	L4 => L4,
+	L5 => L5,
+	L6 => L6,
+	L7 => L7,
+	PB0 => PB0,
+	PB1 => PB1,
+	S => S,
+	S1A => S1A,
+	S1B => S1B,
+	S1C => S1C,
+	S1D => S1D,
+	S1E => S1E,
+	S1F => S1F,
+	S1G => S1G,
+	S2A => S2A,
+	S2B => S2B,
+	S2C => S2C,
+	S2D => S2D,
+	S2E => S2E,
+	S2F => S2F,
+	S2G => S2G,
+	S4A => S4A,
+	S4B => S4B,
+	S4C => S4C,
+	S4D => S4D,
+	S4E => S4E,
+	S4F => S4F,
+	S4G => S4G,
+	S5A => S5A,
+	S5B => S5B,
+	S5C => S5C,
+	S5D => S5D,
+	S5E => S5E,
+	S5F => S5F,
+	S5G => S5G
 	);
 
 -- CLK
@@ -91,44 +199,83 @@ LOOP
 END LOOP;
 END PROCESS t_prcs_CLK;
 
--- EN
-t_prcs_EN: PROCESS
+-- PB1
+t_prcs_PB1: PROCESS
 BEGIN
-	EN <= '0';
-	WAIT FOR 160000 ps;
-	EN <= '1';
-	WAIT FOR 690000 ps;
-	EN <= '0';
+	PB1 <= '1';
 WAIT;
-END PROCESS t_prcs_EN;
+END PROCESS t_prcs_PB1;
 
--- RST
-t_prcs_RST: PROCESS
+-- PB0
+t_prcs_PB0: PROCESS
 BEGIN
-	RST <= '0';
-	WAIT FOR 260000 ps;
-	RST <= '1';
-	WAIT FOR 70000 ps;
-	RST <= '0';
+	PB0 <= '1';
+	WAIT FOR 80000 ps;
+	PB0 <= '0';
 WAIT;
-END PROCESS t_prcs_RST;
+END PROCESS t_prcs_PB0;
 
--- SERIAL
-t_prcs_SERIAL: PROCESS
+-- D0
+t_prcs_D0: PROCESS
 BEGIN
-	SERIAL <= '0';
-	WAIT FOR 10000 ps;
-	SERIAL <= '1';
-	WAIT FOR 20000 ps;
-	SERIAL <= '0';
-	WAIT FOR 50000 ps;
-	SERIAL <= '1';
-	WAIT FOR 30000 ps;
-	SERIAL <= '0';
-	WAIT FOR 30000 ps;
-	SERIAL <= '1';
-	WAIT FOR 20000 ps;
-	SERIAL <= '0';
+	D0 <= '1';
+	WAIT FOR 80000 ps;
+	D0 <= '0';
 WAIT;
-END PROCESS t_prcs_SERIAL;
+END PROCESS t_prcs_D0;
+
+-- D1
+t_prcs_D1: PROCESS
+BEGIN
+	D1 <= '0';
+WAIT;
+END PROCESS t_prcs_D1;
+
+-- D2
+t_prcs_D2: PROCESS
+BEGIN
+	D2 <= '1';
+	WAIT FOR 80000 ps;
+	D2 <= '0';
+WAIT;
+END PROCESS t_prcs_D2;
+
+-- D3
+t_prcs_D3: PROCESS
+BEGIN
+	D3 <= '0';
+WAIT;
+END PROCESS t_prcs_D3;
+
+-- D4
+t_prcs_D4: PROCESS
+BEGIN
+	D4 <= '0';
+WAIT;
+END PROCESS t_prcs_D4;
+
+-- D5
+t_prcs_D5: PROCESS
+BEGIN
+	D5 <= '1';
+	WAIT FOR 80000 ps;
+	D5 <= '0';
+WAIT;
+END PROCESS t_prcs_D5;
+
+-- D6
+t_prcs_D6: PROCESS
+BEGIN
+	D6 <= '1';
+	WAIT FOR 80000 ps;
+	D6 <= '0';
+WAIT;
+END PROCESS t_prcs_D6;
+
+-- D7
+t_prcs_D7: PROCESS
+BEGIN
+	D7 <= '0';
+WAIT;
+END PROCESS t_prcs_D7;
 END Main_arch;

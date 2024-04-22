@@ -7,14 +7,8 @@ entity SIPO_8_BITS is
     CLK: in STD_LOGIC;
     OUTPUT_ENABLE: in STD_LOGIC;
     RESET: in STD_LOGIC;
-    QO: out STD_LOGIC;
-    Q1: out STD_LOGIC;
-    Q2: out STD_LOGIC;
-    Q3: out STD_LOGIC;
-    Q4: out STD_LOGIC;
-    Q5: out STD_LOGIC;
-    Q6: out STD_LOGIC;
-    Q7: out STD_LOGIC
+    Q: out STD_LOGIC_VECTOR(7 downto 0);
+    FF_OUT: out STD_LOGIC_VECTOR(7 downto 0)
   );
 end SIPO_8_BITS;
 
@@ -38,15 +32,9 @@ begin
       end if;
     end if;
 
+	 FF_OUT <= data;
     if OUTPUT_ENABLE = '1' then
-       QO <= data(0);
-       Q1 <= data(1);
-       Q2 <= data(2);
-       Q3 <= data(3);
-       Q4 <= data(4);
-       Q5 <= data(5);
-       Q6 <= data(6);
-       Q7 <= data(7);
+       Q <= data;
      end if;
   end process;
 

@@ -30,8 +30,8 @@ architecture func of PISO_8_BITS is
 	signal DFFD : std_logic_vector(7 downto 0);
 	
 	begin
-		-- 1st latch doesn't need load X shifting comparator
-		dff0 : dff port map(D => D(0), 
+		ld0 : LOAD_X_DESLOCAMENTO port map(LOAD => LOAD, Din => D(0), DQ => '0', Dout => DFFD(0));
+		dff0 : dff port map(D => DFFD(0), 
 								  CLK => CLK, 
 								  CLRN => CLR, 
 								  PRN => PRESET,
