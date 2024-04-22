@@ -1,0 +1,233 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/MUX/simulation/qsim
+Econtador
+Z1 w1712356012
+Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
+Z3 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 IfY7Mh2WPBc;@7U@3<I^[0
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z10 8FlipFlop.vho
+Z11 FFlipFlop.vho
+l0
+L90
+VGhigfeIid3RSbVL8aRmYU2
+!s100 69NHoF<<NEC5kok>im2B53
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1712356013
+!i10b 1
+Z14 !s108 1712356013.000000
+Z15 !s90 -work|work|FlipFlop.vho|
+Z16 !s107 FlipFlop.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 8 contador 0 22 GhigfeIid3RSbVL8aRmYU2
+l157
+L108
+VH]YBL`>b3Uha9VDkoX:0^2
+!s100 Z;9:LJaKYF@59NFWLaMLh2
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Econtador_vhd_vec_tst
+Z19 w1712356011
+R7
+R8
+R0
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
+l0
+L31
+VGj1fRMdn3e5e8G[SgUYL72
+!s100 SKOIIS;<^ikNHa^j9GzQP1
+R12
+32
+R13
+!i10b 1
+R14
+Z22 !s90 -work|work|Waveform2.vwf.vht|
+Z23 !s107 Waveform2.vwf.vht|
+!i113 1
+R17
+R18
+Acontador_arch
+R7
+R8
+Z24 DEx4 work 20 contador_vhd_vec_tst 0 22 Gj1fRMdn3e5e8G[SgUYL72
+l50
+L33
+Z25 VCzGGP<oGOn8Mn:M?CE^JA0
+Z26 !s100 44?`CkHS=mH5BFg8`B4Fb0
+R12
+32
+R13
+!i10b 1
+R14
+R22
+R23
+!i113 1
+R17
+R18
+Ehard_block
+R1
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L34
+V8_BbEmGd;OHS6h@;gFc7W3
+!s100 ROH=D<N4CT6aCZ<37A[_?0
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 hard_block 0 22 8_BbEmGd;OHS6h@;gFc7W3
+l75
+L53
+Vg=W`CQ>24lhYF71zFSkY43
+!s100 zW6ML5NVY?Ai`]`n2XhME3
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Emultiplexer
+Z27 w1712323843
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L88
+VdV`cWOgQINDQ[:fc<A1iW1
+!s100 ld8f0m<2MhmG<80]Y1hM33
+R12
+32
+Z28 !s110 1712323844
+!i10b 1
+Z29 !s108 1712323844.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 11 multiplexer 0 22 dV`cWOgQINDQ[:fc<A1iW1
+l150
+L110
+VV>Q4k5=?3l;N_EJ:^_adG1
+!s100 5gU[fU2@^?ZI]W?kLD4RS3
+R12
+32
+R28
+!i10b 1
+R29
+R15
+R16
+!i113 1
+R17
+R18
+Emultiplexer_vhd_vec_tst
+Z30 w1712323842
+R7
+R8
+R0
+Z31 8Waveform.vwf.vht
+Z32 FWaveform.vwf.vht
+l0
+L31
+V[l0zM0B[c>^ofmXC7m8Do2
+!s100 <CSDk4bY5mdH^Y4eTK]:f2
+R12
+32
+R28
+!i10b 1
+R29
+Z33 !s90 -work|work|Waveform.vwf.vht|
+Z34 !s107 Waveform.vwf.vht|
+!i113 1
+R17
+R18
+Amultiplexer_arch
+R7
+R8
+DEx4 work 23 multiplexer_vhd_vec_tst 0 22 [l0zM0B[c>^ofmXC7m8Do2
+l54
+L33
+VP6CPbUR8LY_0B`SVd9eeM0
+!s100 D1RPX4k_[?dAA0E`H5XX:2
+R12
+32
+R28
+!i10b 1
+R29
+R33
+R34
+!i113 1
+R17
+R18
