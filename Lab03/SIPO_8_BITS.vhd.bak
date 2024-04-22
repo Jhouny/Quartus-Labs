@@ -27,6 +27,7 @@ begin
       data <= "00000000";
     else
       if rising_edge(CLK) then
+        if OUTPUT_ENABLE = '1' then
           data(0) <= SERIAL;
           data(1) <= data(0);
           data(2) <= data(1);
@@ -35,19 +36,18 @@ begin
           data(5) <= data(4);
           data(6) <= data(5);
           data(7) <= data(6);
+        end if;
       end if;
     end if;
-
-    if OUTPUT_ENABLE = '1' then
-       QO <= data(0);
-       Q1 <= data(1);
-       Q2 <= data(2);
-       Q3 <= data(3);
-       Q4 <= data(4);
-       Q5 <= data(5);
-       Q6 <= data(6);
-       Q7 <= data(7);
-     end if;
   end process;
+
+  QO <= data(0);
+  Q1 <= data(1);
+  Q2 <= data(2);
+  Q3 <= data(3);
+  Q4 <= data(4);
+  Q5 <= data(5);
+  Q6 <= data(6);
+  Q7 <= data(7);
 
 end behavioral;

@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/21/2024 17:38:21"
+-- Generated on "04/21/2024 22:52:02"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Main
 -- 
@@ -34,29 +34,31 @@ ARCHITECTURE Main_arch OF Main_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLK : STD_LOGIC;
-SIGNAL D0 : STD_LOGIC;
-SIGNAL D1 : STD_LOGIC;
-SIGNAL D2 : STD_LOGIC;
-SIGNAL D3 : STD_LOGIC;
-SIGNAL D4 : STD_LOGIC;
-SIGNAL D5 : STD_LOGIC;
-SIGNAL D6 : STD_LOGIC;
-SIGNAL D7 : STD_LOGIC;
-SIGNAL LOAD : STD_LOGIC;
-SIGNAL S : STD_LOGIC;
+SIGNAL EN : STD_LOGIC;
+SIGNAL Q0 : STD_LOGIC;
+SIGNAL Q1 : STD_LOGIC;
+SIGNAL Q2 : STD_LOGIC;
+SIGNAL Q3 : STD_LOGIC;
+SIGNAL Q4 : STD_LOGIC;
+SIGNAL Q5 : STD_LOGIC;
+SIGNAL Q6 : STD_LOGIC;
+SIGNAL Q7 : STD_LOGIC;
+SIGNAL RST : STD_LOGIC;
+SIGNAL SERIAL : STD_LOGIC;
 COMPONENT Main
 	PORT (
 	CLK : IN STD_LOGIC;
-	D0 : IN STD_LOGIC;
-	D1 : IN STD_LOGIC;
-	D2 : IN STD_LOGIC;
-	D3 : IN STD_LOGIC;
-	D4 : IN STD_LOGIC;
-	D5 : IN STD_LOGIC;
-	D6 : IN STD_LOGIC;
-	D7 : IN STD_LOGIC;
-	LOAD : IN STD_LOGIC;
-	S : OUT STD_LOGIC
+	EN : IN STD_LOGIC;
+	Q0 : OUT STD_LOGIC;
+	Q1 : OUT STD_LOGIC;
+	Q2 : OUT STD_LOGIC;
+	Q3 : OUT STD_LOGIC;
+	Q4 : OUT STD_LOGIC;
+	Q5 : OUT STD_LOGIC;
+	Q6 : OUT STD_LOGIC;
+	Q7 : OUT STD_LOGIC;
+	RST : IN STD_LOGIC;
+	SERIAL : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -64,16 +66,17 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	CLK => CLK,
-	D0 => D0,
-	D1 => D1,
-	D2 => D2,
-	D3 => D3,
-	D4 => D4,
-	D5 => D5,
-	D6 => D6,
-	D7 => D7,
-	LOAD => LOAD,
-	S => S
+	EN => EN,
+	Q0 => Q0,
+	Q1 => Q1,
+	Q2 => Q2,
+	Q3 => Q3,
+	Q4 => Q4,
+	Q5 => Q5,
+	Q6 => Q6,
+	Q7 => Q7,
+	RST => RST,
+	SERIAL => SERIAL
 	);
 
 -- CLK
@@ -88,94 +91,44 @@ LOOP
 END LOOP;
 END PROCESS t_prcs_CLK;
 
--- LOAD
-t_prcs_LOAD: PROCESS
+-- EN
+t_prcs_EN: PROCESS
 BEGIN
-	LOAD <= '1';
-	WAIT FOR 150000 ps;
-	LOAD <= '0';
-WAIT;
-END PROCESS t_prcs_LOAD;
-
--- D0
-t_prcs_D0: PROCESS
-BEGIN
-	D0 <= '1';
-	WAIT FOR 150000 ps;
-	D0 <= '0';
-	WAIT FOR 250000 ps;
-	D0 <= '1';
-	WAIT FOR 100000 ps;
-	D0 <= '0';
-WAIT;
-END PROCESS t_prcs_D0;
-
--- D1
-t_prcs_D1: PROCESS
-BEGIN
-	D1 <= '0';
-	WAIT FOR 300000 ps;
-	D1 <= '1';
-	WAIT FOR 40000 ps;
-	D1 <= '0';
-WAIT;
-END PROCESS t_prcs_D1;
-
--- D2
-t_prcs_D2: PROCESS
-BEGIN
-	D2 <= '1';
-	WAIT FOR 150000 ps;
-	D2 <= '0';
-WAIT;
-END PROCESS t_prcs_D2;
-
--- D3
-t_prcs_D3: PROCESS
-BEGIN
-	D3 <= '0';
-WAIT;
-END PROCESS t_prcs_D3;
-
--- D4
-t_prcs_D4: PROCESS
-BEGIN
-	D4 <= '0';
-	WAIT FOR 270000 ps;
-	D4 <= '1';
-	WAIT FOR 230000 ps;
-	D4 <= '0';
-WAIT;
-END PROCESS t_prcs_D4;
-
--- D5
-t_prcs_D5: PROCESS
-BEGIN
-	D5 <= '1';
-	WAIT FOR 150000 ps;
-	D5 <= '0';
-WAIT;
-END PROCESS t_prcs_D5;
-
--- D6
-t_prcs_D6: PROCESS
-BEGIN
-	D6 <= '1';
-	WAIT FOR 150000 ps;
-	D6 <= '0';
-WAIT;
-END PROCESS t_prcs_D6;
-
--- D7
-t_prcs_D7: PROCESS
-BEGIN
-	D7 <= '1';
-	WAIT FOR 150000 ps;
-	D7 <= '0';
+	EN <= '0';
 	WAIT FOR 160000 ps;
-	D7 <= '1';
-	WAIT FOR 100000 ps;
-	D7 <= '0';
+	EN <= '1';
+	WAIT FOR 690000 ps;
+	EN <= '0';
 WAIT;
-END PROCESS t_prcs_D7;
+END PROCESS t_prcs_EN;
+
+-- RST
+t_prcs_RST: PROCESS
+BEGIN
+	RST <= '0';
+	WAIT FOR 260000 ps;
+	RST <= '1';
+	WAIT FOR 70000 ps;
+	RST <= '0';
+WAIT;
+END PROCESS t_prcs_RST;
+
+-- SERIAL
+t_prcs_SERIAL: PROCESS
+BEGIN
+	SERIAL <= '0';
+	WAIT FOR 10000 ps;
+	SERIAL <= '1';
+	WAIT FOR 20000 ps;
+	SERIAL <= '0';
+	WAIT FOR 50000 ps;
+	SERIAL <= '1';
+	WAIT FOR 30000 ps;
+	SERIAL <= '0';
+	WAIT FOR 30000 ps;
+	SERIAL <= '1';
+	WAIT FOR 20000 ps;
+	SERIAL <= '0';
+WAIT;
+END PROCESS t_prcs_SERIAL;
 END Main_arch;

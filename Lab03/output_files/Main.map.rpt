@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Main
-Sun Apr 21 17:37:34 2024
+Sun Apr 21 22:48:31 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 21 17:37:34 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 21 22:48:31 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Main                                        ;
 ; Top-level Entity Name              ; Main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 9                                           ;
-;     Total combinational functions  ; 7                                           ;
-;     Dedicated logic registers      ; 9                                           ;
-; Total registers                    ; 9                                           ;
-; Total pins                         ; 11                                          ;
+; Total logic elements               ; 16                                          ;
+;     Total combinational functions  ; 8                                           ;
+;     Dedicated logic registers      ; 8                                           ;
+; Total registers                    ; 8                                           ;
+; Total pins                         ; 12                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -152,77 +153,88 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; PISO_8_BITS.vhd                  ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/PISO_8_BITS.vhd         ;         ;
-; LOAD_X_DESLOCAMENTO.vhd          ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/LOAD_X_DESLOCAMENTO.vhd ;         ;
-; main.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/main.bdf                ;         ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------+---------+
+; main.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/main.bdf        ;         ;
+; sipo_8_bits.vhd                  ; yes             ; Auto-Found VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 9         ;
-;                                             ;           ;
-; Total combinational functions               ; 7         ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 0         ;
-;     -- 3 input functions                    ; 7         ;
-;     -- <=2 input functions                  ; 0         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 7         ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 9         ;
-;     -- Dedicated logic registers            ; 9         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 11        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 9         ;
-; Total fan-out                               ; 51        ;
-; Average fan-out                             ; 1.34      ;
-+---------------------------------------------+-----------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 16       ;
+;                                             ;          ;
+; Total combinational functions               ; 8        ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 8        ;
+;     -- <=2 input functions                  ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 8        ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 8        ;
+;     -- Dedicated logic registers            ; 8        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 12       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; EN~input ;
+; Maximum fan-out                             ; 8        ;
+; Total fan-out                               ; 68       ;
+; Average fan-out                             ; 1.70     ;
++---------------------------------------------+----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                        ;
-+---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Entity Name         ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+---------------------+--------------+
-; |Main                           ; 7 (0)               ; 9 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 11   ; 0            ; 0          ; |Main                                          ; Main                ; work         ;
-;    |PISO_8_BITS:inst|           ; 7 (0)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|PISO_8_BITS:inst                         ; PISO_8_BITS         ; work         ;
-;       |LOAD_X_DESLOCAMENTO:ld1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|PISO_8_BITS:inst|LOAD_X_DESLOCAMENTO:ld1 ; LOAD_X_DESLOCAMENTO ; work         ;
-;       |LOAD_X_DESLOCAMENTO:ld2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|PISO_8_BITS:inst|LOAD_X_DESLOCAMENTO:ld2 ; LOAD_X_DESLOCAMENTO ; work         ;
-;       |LOAD_X_DESLOCAMENTO:ld3| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|PISO_8_BITS:inst|LOAD_X_DESLOCAMENTO:ld3 ; LOAD_X_DESLOCAMENTO ; work         ;
-;       |LOAD_X_DESLOCAMENTO:ld4| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|PISO_8_BITS:inst|LOAD_X_DESLOCAMENTO:ld4 ; LOAD_X_DESLOCAMENTO ; work         ;
-;       |LOAD_X_DESLOCAMENTO:ld5| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|PISO_8_BITS:inst|LOAD_X_DESLOCAMENTO:ld5 ; LOAD_X_DESLOCAMENTO ; work         ;
-;       |LOAD_X_DESLOCAMENTO:ld6| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|PISO_8_BITS:inst|LOAD_X_DESLOCAMENTO:ld6 ; LOAD_X_DESLOCAMENTO ; work         ;
-;       |LOAD_X_DESLOCAMENTO:ld7| ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|PISO_8_BITS:inst|LOAD_X_DESLOCAMENTO:ld7 ; LOAD_X_DESLOCAMENTO ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name    ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
+; |Main                      ; 8 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |Main                  ; Main        ; work         ;
+;    |SIPO_8_BITS:inst|      ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Main|SIPO_8_BITS:inst ; SIPO_8_BITS ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; SIPO_8_BITS:inst|QO                                ; EN                  ; yes                    ;
+; SIPO_8_BITS:inst|Q1                                ; EN                  ; yes                    ;
+; SIPO_8_BITS:inst|Q2                                ; EN                  ; yes                    ;
+; SIPO_8_BITS:inst|Q3                                ; EN                  ; yes                    ;
+; SIPO_8_BITS:inst|Q4                                ; EN                  ; yes                    ;
+; SIPO_8_BITS:inst|Q5                                ; EN                  ; yes                    ;
+; SIPO_8_BITS:inst|Q6                                ; EN                  ; yes                    ;
+; SIPO_8_BITS:inst|Q7                                ; EN                  ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -230,10 +242,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 9     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -245,15 +257,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 11                          ;
-; cycloneiii_ff         ; 9                           ;
-;     plain             ; 9                           ;
-; cycloneiii_lcell_comb ; 7                           ;
-;     normal            ; 7                           ;
-;         3 data inputs ; 7                           ;
+; boundary_port         ; 12                          ;
+; cycloneiii_ff         ; 8                           ;
+;     CLR               ; 8                           ;
+; cycloneiii_lcell_comb ; 8                           ;
+;     normal            ; 8                           ;
+;         3 data inputs ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.85                        ;
+; Average LUT depth     ; 0.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -272,44 +284,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 21 17:37:21 2024
+    Info: Processing started: Sun Apr 21 22:48:19 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Main -c Main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg_decoder.bdf
     Info (12023): Found entity 1: HEX_TO_7SEG_DECODER
 Info (12021): Found 2 design units, including 1 entities, in source file piso_8_bits.vhd
-    Info (12022): Found design unit 1: PISO_8_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/PISO_8_BITS.vhd Line: 13
-    Info (12023): Found entity 1: PISO_8_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/PISO_8_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: PISO_8_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/PISO_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: PISO_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/PISO_8_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file load_x_deslocamento.vhd
-    Info (12022): Found design unit 1: LOAD_X_DESLOCAMENTO-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/LOAD_X_DESLOCAMENTO.vhd Line: 11
-    Info (12023): Found entity 1: LOAD_X_DESLOCAMENTO File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/LOAD_X_DESLOCAMENTO.vhd Line: 4
+    Info (12022): Found design unit 1: LOAD_X_DESLOCAMENTO-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/LOAD_X_DESLOCAMENTO.vhd Line: 11
+    Info (12023): Found entity 1: LOAD_X_DESLOCAMENTO File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/LOAD_X_DESLOCAMENTO.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file tmp.bdf
+    Info (12023): Found entity 1: tmp
 Warning (12125): Using design file main.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Main
 Info (12127): Elaborating entity "Main" for the top level hierarchy
-Warning (275080): Converted elements in bus name "D" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "D[6]" to "D6"
-    Warning (275081): Converted element name(s) from "D[5]" to "D5"
-    Warning (275081): Converted element name(s) from "D[4]" to "D4"
-    Warning (275081): Converted element name(s) from "D[3]" to "D3"
-    Warning (275081): Converted element name(s) from "D[2]" to "D2"
-    Warning (275081): Converted element name(s) from "D[1]" to "D1"
-    Warning (275081): Converted element name(s) from "D[0]" to "D0"
-    Warning (275081): Converted element name(s) from "D[7]" to "D7"
-    Warning (275081): Converted element name(s) from "D[7..0]" to "D7..0"
-Info (12128): Elaborating entity "PISO_8_BITS" for hierarchy "PISO_8_BITS:inst"
-Info (12128): Elaborating entity "LOAD_X_DESLOCAMENTO" for hierarchy "PISO_8_BITS:inst|LOAD_X_DESLOCAMENTO:ld1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab03/PISO_8_BITS.vhd Line: 40
+Warning (12125): Using design file sipo_8_bits.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SIPO_8_BITS-behavioral File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 21
+    Info (12023): Found entity 1: SIPO_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 4
+Info (12128): Elaborating entity "SIPO_8_BITS" for hierarchy "SIPO_8_BITS:inst"
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(41): signal "OUTPUT_ENABLE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(42): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(43): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(44): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(45): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(46): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(47): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(48): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 48
+Warning (10492): VHDL Process Statement warning at sipo_8_bits.vhd(49): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 49
+Warning (10631): VHDL Process Statement warning at sipo_8_bits.vhd(24): inferring latch(es) for signal or variable "QO", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at sipo_8_bits.vhd(24): inferring latch(es) for signal or variable "Q1", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at sipo_8_bits.vhd(24): inferring latch(es) for signal or variable "Q2", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at sipo_8_bits.vhd(24): inferring latch(es) for signal or variable "Q3", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at sipo_8_bits.vhd(24): inferring latch(es) for signal or variable "Q4", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at sipo_8_bits.vhd(24): inferring latch(es) for signal or variable "Q5", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at sipo_8_bits.vhd(24): inferring latch(es) for signal or variable "Q6", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Warning (10631): VHDL Process Statement warning at sipo_8_bits.vhd(24): inferring latch(es) for signal or variable "Q7", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Info (10041): Inferred latch for "Q7" at sipo_8_bits.vhd(24) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Info (10041): Inferred latch for "Q6" at sipo_8_bits.vhd(24) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Info (10041): Inferred latch for "Q5" at sipo_8_bits.vhd(24) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Info (10041): Inferred latch for "Q4" at sipo_8_bits.vhd(24) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Info (10041): Inferred latch for "Q3" at sipo_8_bits.vhd(24) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Info (10041): Inferred latch for "Q2" at sipo_8_bits.vhd(24) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Info (10041): Inferred latch for "Q1" at sipo_8_bits.vhd(24) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
+Info (10041): Inferred latch for "QO" at sipo_8_bits.vhd(24) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab03/sipo_8_bits.vhd Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 9 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4788 megabytes
-    Info: Processing ended: Sun Apr 21 17:37:34 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:09
+Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 16 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Sun Apr 21 22:48:31 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:07
 
 
