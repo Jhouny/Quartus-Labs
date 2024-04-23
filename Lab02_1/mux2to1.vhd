@@ -20,7 +20,7 @@ architecture control of mux2to1 is
 	
 	begin
 		dec: decoder1to2 port map(a, m);
-		process(a) is
+		process(a, i) is
 		begin	
 			case m is
 				when "01" => f <= i(0);

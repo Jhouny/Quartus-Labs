@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ShiftRegister
-Fri Apr 12 15:02:39 2024
+Mon Apr 22 22:08:28 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,16 +42,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 12 15:02:39 2024       ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 22 22:08:28 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ShiftRegister                               ;
 ; Top-level Entity Name              ; ShiftRegister                               ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 82                                          ;
-;     Total combinational functions  ; 58                                          ;
+; Total logic elements               ; 104                                         ;
+;     Total combinational functions  ; 80                                          ;
 ;     Dedicated logic registers      ; 24                                          ;
 ; Total registers                    ; 24                                          ;
-; Total pins                         ; 48                                          ;
+; Total pins                         ; 49                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -152,73 +152,91 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; HEX_TO_7SEG_DECODER.bdf          ; yes             ; User Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab02_1/HEX_TO_7SEG_DECODER.bdf ;         ;
-; ShiftRegister.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab02_1/ShiftRegister.bdf       ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                          ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; ADDER_1_BIT.bdf                  ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/ADDER_1_BIT.bdf           ;         ;
+; ADDER_4_BITS.bdf                 ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/ADDER_4_BITS.bdf          ;         ;
+; HEX_TO_7SEG_DECODER.bdf          ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/HEX_TO_7SEG_DECODER.bdf   ;         ;
+; ShiftRegister.bdf                ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/ShiftRegister.bdf         ;         ;
+; Full_Adder_Subtractor.bdf        ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/Full_Adder_Subtractor.bdf ;         ;
+; mux2to1.vhd                      ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux2to1.vhd               ;         ;
+; decoder1to2.vhd                  ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/decoder1to2.vhd           ;         ;
+; mux16to8.vhd                     ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux16to8.vhd              ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 82        ;
-;                                             ;           ;
-; Total combinational functions               ; 58        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 44        ;
-;     -- 3 input functions                    ; 6         ;
-;     -- <=2 input functions                  ; 8         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 58        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 24        ;
-;     -- Dedicated logic registers            ; 24        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 48        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 24        ;
-; Total fan-out                               ; 348       ;
-; Average fan-out                             ; 1.96      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 104           ;
+;                                             ;               ;
+; Total combinational functions               ; 80            ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 55            ;
+;     -- 3 input functions                    ; 13            ;
+;     -- <=2 input functions                  ; 12            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 80            ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 24            ;
+;     -- Dedicated logic registers            ; 24            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 49            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; COMPUTE~input ;
+; Maximum fan-out                             ; 26            ;
+; Total fan-out                               ; 422           ;
+; Average fan-out                             ; 2.09          ;
++---------------------------------------------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                     ; Entity Name         ; Library Name ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------+---------------------+--------------+
-; |ShiftRegister                ; 58 (0)              ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 48   ; 0            ; 0          ; |ShiftRegister                          ; ShiftRegister       ; work         ;
-;    |HEX_TO_7SEG_DECODER:HEX0| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX0 ; HEX_TO_7SEG_DECODER ; work         ;
-;    |HEX_TO_7SEG_DECODER:HEX1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX1 ; HEX_TO_7SEG_DECODER ; work         ;
-;    |HEX_TO_7SEG_DECODER:HEX2| ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX2 ; HEX_TO_7SEG_DECODER ; work         ;
-;    |HEX_TO_7SEG_DECODER:HEX3| ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX3 ; HEX_TO_7SEG_DECODER ; work         ;
-;    |HEX_TO_7SEG_DECODER:HEX4| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX4 ; HEX_TO_7SEG_DECODER ; work         ;
-;    |HEX_TO_7SEG_DECODER:HEX5| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX5 ; HEX_TO_7SEG_DECODER ; work         ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                         ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                           ; Entity Name           ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------+-----------------------+--------------+
+; |ShiftRegister                  ; 80 (0)              ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 49   ; 0            ; 0          ; |ShiftRegister                                                                ; ShiftRegister         ; work         ;
+;    |Full_Adder_Subtractor:inst| ; 9 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|Full_Adder_Subtractor:inst                                     ; Full_Adder_Subtractor ; work         ;
+;       |ADDER_4_BITS:inst|       ; 8 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|Full_Adder_Subtractor:inst|ADDER_4_BITS:inst                   ; ADDER_4_BITS          ; work         ;
+;          |ADDER_1_BIT:inst1|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|Full_Adder_Subtractor:inst|ADDER_4_BITS:inst|ADDER_1_BIT:inst1 ; ADDER_1_BIT           ; work         ;
+;          |ADDER_1_BIT:inst2|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|Full_Adder_Subtractor:inst|ADDER_4_BITS:inst|ADDER_1_BIT:inst2 ; ADDER_1_BIT           ; work         ;
+;          |ADDER_1_BIT:inst3|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|Full_Adder_Subtractor:inst|ADDER_4_BITS:inst|ADDER_1_BIT:inst3 ; ADDER_1_BIT           ; work         ;
+;          |ADDER_1_BIT:inst|     ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|Full_Adder_Subtractor:inst|ADDER_4_BITS:inst|ADDER_1_BIT:inst  ; ADDER_1_BIT           ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX0|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX0                                       ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX1|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX1                                       ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX2|   ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX2                                       ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX3|   ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX3                                       ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX4|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX4                                       ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX5|   ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|HEX_TO_7SEG_DECODER:HEX5                                       ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |mux16to8:inst4|             ; 5 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|mux16to8:inst4                                                 ; mux16to8              ; work         ;
+;       |mux2to1:m0|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|mux16to8:inst4|mux2to1:m0                                      ; mux2to1               ; work         ;
+;       |mux2to1:m1|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|mux16to8:inst4|mux2to1:m1                                      ; mux2to1               ; work         ;
+;       |mux2to1:m2|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|mux16to8:inst4|mux2to1:m2                                      ; mux2to1               ; work         ;
+;       |mux2to1:m3|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|mux16to8:inst4|mux2to1:m3                                      ; mux2to1               ; work         ;
+;       |mux2to1:m4|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |ShiftRegister|mux16to8:inst4|mux2to1:m4                                      ; mux2to1               ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -242,17 +260,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 48                          ;
+; boundary_port         ; 49                          ;
 ; cycloneiii_ff         ; 24                          ;
 ;     plain             ; 24                          ;
-; cycloneiii_lcell_comb ; 58                          ;
-;     normal            ; 58                          ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 44                          ;
+; cycloneiii_lcell_comb ; 80                          ;
+;     normal            ; 80                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 55                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.38                        ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -271,10 +289,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 12 15:02:27 2024
+    Info: Processing started: Mon Apr 22 22:08:18 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ShiftRegister -c ShiftRegister
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file adder_1_bit.bdf
     Info (12023): Found entity 1: ADDER_1_BIT
 Info (12021): Found 1 design units, including 1 entities, in source file adder_4_bits.bdf
@@ -283,19 +301,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file hex_to_
     Info (12023): Found entity 1: HEX_TO_7SEG_DECODER
 Info (12021): Found 1 design units, including 1 entities, in source file shiftregister.bdf
     Info (12023): Found entity 1: ShiftRegister
+Info (12021): Found 1 design units, including 1 entities, in source file full_adder_subtractor.bdf
+    Info (12023): Found entity 1: Full_Adder_Subtractor
+Info (12021): Found 2 design units, including 1 entities, in source file mux2to1.vhd
+    Info (12022): Found design unit 1: mux2to1-control File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux2to1.vhd Line: 12
+    Info (12023): Found entity 1: mux2to1 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux2to1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoder1to2.vhd
+    Info (12022): Found design unit 1: decoder1to2-gate_level File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/decoder1to2.vhd Line: 11
+    Info (12023): Found entity 1: decoder1to2 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/decoder1to2.vhd Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file tmp.bdf
+    Info (12023): Found entity 1: TMP
+Info (12021): Found 2 design units, including 1 entities, in source file mux16to8.vhd
+    Info (12022): Found design unit 1: mux16to8-control File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux16to8.vhd Line: 13
+    Info (12023): Found entity 1: mux16to8 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux16to8.vhd Line: 4
 Info (12127): Elaborating entity "ShiftRegister" for the top level hierarchy
 Info (12128): Elaborating entity "HEX_TO_7SEG_DECODER" for hierarchy "HEX_TO_7SEG_DECODER:HEX0"
+Info (12128): Elaborating entity "mux16to8" for hierarchy "mux16to8:inst4"
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux16to8:inst4|mux2to1:m0" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux16to8.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at mux2to1.vhd(25): signal "m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux2to1.vhd Line: 25
+Info (12128): Elaborating entity "decoder1to2" for hierarchy "mux16to8:inst4|mux2to1:m0|decoder1to2:dec" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/mux2to1.vhd Line: 22
+Info (12128): Elaborating entity "Full_Adder_Subtractor" for hierarchy "Full_Adder_Subtractor:inst"
+Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "Full_Adder_Subtractor:inst|ADDER_4_BITS:inst"
+Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "Full_Adder_Subtractor:inst|ADDER_4_BITS:inst|ADDER_1_BIT:inst"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 130 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Info (21057): Implemented 153 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 82 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Fri Apr 12 15:02:39 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:10
+    Info (21061): Implemented 104 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Mon Apr 22 22:08:28 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -193,7 +193,7 @@ GND                          : D11       : gnd    :                   :         
 SW2                          : D12       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7         :                
+SW4                          : D15       : input  : 2.5 V             :         : 7         : N              
 GND                          : D16       : gnd    :                   :         :           :                
 H0F                          : D17       : output : 2.5 V             :         : 7         : Y              
 H1B                          : D18       : output : 2.5 V             :         : 6         : Y              

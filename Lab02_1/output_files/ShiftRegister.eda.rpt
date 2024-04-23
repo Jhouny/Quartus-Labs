@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ShiftRegister
-Sun Apr 21 10:59:12 2024
+Mon Apr 22 21:53:28 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,9 +36,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Apr 21 10:59:12 2024 ;
+; EDA Netlist Writer Status ; Successful - Mon Apr 22 21:53:28 2024 ;
 ; Revision Name             ; ShiftRegister                         ;
-; Top-level Entity Name     ; ADDER_4_BITS                          ;
+; Top-level Entity Name     ; TMP                                   ;
 ; Family                    ; MAX 10                                ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -93,13 +93,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Sun Apr 21 10:59:11 2024
+    Info: Processing started: Mon Apr 22 21:53:27 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/simulation/qsim/ ShiftRegister -c ShiftRegister
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file ShiftRegister.vho in folder "D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab02_1/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4637 megabytes
-    Info: Processing ended: Sun Apr 21 10:59:12 2024
+    Info: Peak virtual memory: 4635 megabytes
+    Info: Processing ended: Mon Apr 22 21:53:28 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
