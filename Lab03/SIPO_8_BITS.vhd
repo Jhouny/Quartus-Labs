@@ -17,7 +17,7 @@ architecture behavioral of SIPO_8_BITS is
 begin
   process (CLK, RESET)
   begin
-    if RESET = '1' then
+    if RESET = '0' then
       data <= "00000000";
     else
       if rising_edge(CLK) then
