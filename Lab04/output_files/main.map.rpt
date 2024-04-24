@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed Apr 24 11:11:39 2024
+Wed Apr 24 11:27:52 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,11 +14,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "COUNTER_1_SENARY:inst5|ADDER_4_BITS:add"
- 10. Port Connectivity Checks: "COUNTER_1_DIGIT:inst|ADDER_4_BITS:add"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Port Connectivity Checks: "COUNTER_1_SENARY:inst5|ADDER_4_BITS:add"
+ 11. Port Connectivity Checks: "COUNTER_1_DIGIT:inst|ADDER_4_BITS:add"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +45,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 24 11:11:39 2024       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 24 11:27:52 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
-; Top-level Entity Name              ; tmp                                         ;
+; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 32                                          ;
-;     Total combinational functions  ; 32                                          ;
-;     Dedicated logic registers      ; 25                                          ;
-; Total registers                    ; 25                                          ;
-; Total pins                         ; 27                                          ;
+; Total logic elements               ; 176                                         ;
+;     Total combinational functions  ; 176                                         ;
+;     Dedicated logic registers      ; 91                                          ;
+; Total registers                    ; 91                                          ;
+; Total pins                         ; 46                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -69,7 +70,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; tmp                ; main               ;
+; Top-level entity name                                            ; main               ; main               ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,79 +155,90 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-6         ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
-; tmp.bdf                          ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/tmp.bdf              ;         ;
-; COUNTER_1_DIGIT.vhd              ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_DIGIT.vhd  ;         ;
-; ADDER_1_BIT.vhd                  ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/ADDER_1_BIT.vhd      ;         ;
-; ADDER_4_BITS.vhd                 ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/ADDER_4_BITS.vhd     ;         ;
-; COUNTER_1_SENARY.vhd             ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_SENARY.vhd ;         ;
-; COMPARATOR_RA.vhd                ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd    ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/main.bdf                   ;         ;
+; HEX_TO_7SEG_DECODER.bdf          ; yes             ; User Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/HEX_TO_7SEG_DECODER.bdf    ;         ;
+; COUNTER_1_DIGIT.vhd              ; yes             ; User VHDL File                     ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_DIGIT.vhd        ;         ;
+; ADDER_1_BIT.vhd                  ; yes             ; User VHDL File                     ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/ADDER_1_BIT.vhd            ;         ;
+; ADDER_4_BITS.vhd                 ; yes             ; User VHDL File                     ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/ADDER_4_BITS.vhd           ;         ;
+; COUNTER_1_SENARY.vhd             ; yes             ; User VHDL File                     ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_SENARY.vhd       ;         ;
+; Timing_Reference_1kHz.vhd        ; yes             ; User VHDL File                     ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/Timing_Reference_1kHz.vhd  ;         ;
+; Timing_Reference_20kHz.vhd       ; yes             ; User VHDL File                     ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/Timing_Reference_20kHz.vhd ;         ;
+; COMPARATOR_RA.vhd                ; yes             ; User VHDL File                     ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd          ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 32        ;
-;                                             ;           ;
-; Total combinational functions               ; 32        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 20        ;
-;     -- 3 input functions                    ; 6         ;
-;     -- <=2 input functions                  ; 6         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 32        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 25        ;
-;     -- Dedicated logic registers            ; 25        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 27        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; RST~input ;
-; Maximum fan-out                             ; 25        ;
-; Total fan-out                               ; 231       ;
-; Average fan-out                             ; 2.08      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 176   ;
+;                                             ;       ;
+; Total combinational functions               ; 176   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 83    ;
+;     -- 3 input functions                    ; 8     ;
+;     -- <=2 input functions                  ; 85    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 114   ;
+;     -- arithmetic mode                      ; 62    ;
+;                                             ;       ;
+; Total registers                             ; 91    ;
+;     -- Dedicated logic registers            ; 91    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 46    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; inst1 ;
+; Maximum fan-out                             ; 66    ;
+; Total fan-out                               ; 875   ;
+; Average fan-out                             ; 2.44  ;
++---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+------------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name         ; Entity Name      ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+------------------+--------------+
-; |tmp                        ; 32 (0)              ; 25 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 27   ; 0            ; 0          ; |tmp                        ; tmp              ; work         ;
-;    |COMPARATOR_RA:inst9|    ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |tmp|COMPARATOR_RA:inst9    ; COMPARATOR_RA    ; work         ;
-;    |COUNTER_1_DIGIT:inst2|  ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |tmp|COUNTER_1_DIGIT:inst2  ; COUNTER_1_DIGIT  ; work         ;
-;    |COUNTER_1_DIGIT:inst3|  ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |tmp|COUNTER_1_DIGIT:inst3  ; COUNTER_1_DIGIT  ; work         ;
-;    |COUNTER_1_DIGIT:inst4|  ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |tmp|COUNTER_1_DIGIT:inst4  ; COUNTER_1_DIGIT  ; work         ;
-;    |COUNTER_1_DIGIT:inst6|  ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |tmp|COUNTER_1_DIGIT:inst6  ; COUNTER_1_DIGIT  ; work         ;
-;    |COUNTER_1_DIGIT:inst|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |tmp|COUNTER_1_DIGIT:inst   ; COUNTER_1_DIGIT  ; work         ;
-;    |COUNTER_1_SENARY:inst5| ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |tmp|COUNTER_1_SENARY:inst5 ; COUNTER_1_SENARY ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------+------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
++------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                 ; Entity Name            ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+------------------------+--------------+
+; |main                              ; 176 (2)             ; 91 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 46   ; 0            ; 0          ; |main                               ; main                   ; work         ;
+;    |COMPARATOR_RA:inst9|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COMPARATOR_RA:inst9           ; COMPARATOR_RA          ; work         ;
+;    |COUNTER_1_DIGIT:inst2|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst2         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst3|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst3         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst4|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst4         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst6|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst6         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst|          ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst          ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_SENARY:inst5|        ; 4 (4)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_SENARY:inst5        ; COUNTER_1_SENARY       ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX0|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:HEX0      ; HEX_TO_7SEG_DECODER    ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX1|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:HEX1      ; HEX_TO_7SEG_DECODER    ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX2|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:HEX2      ; HEX_TO_7SEG_DECODER    ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX3|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:HEX3      ; HEX_TO_7SEG_DECODER    ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX4|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:HEX4      ; HEX_TO_7SEG_DECODER    ; work         ;
+;    |HEX_TO_7SEG_DECODER:HEX5|      ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:HEX5      ; HEX_TO_7SEG_DECODER    ; work         ;
+;    |Timing_Reference_1kHz:inst8|   ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_1kHz:inst8   ; Timing_Reference_1kHz  ; work         ;
+;    |Timing_Reference_20kHz:inst11| ; 50 (50)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_20kHz:inst11 ; Timing_Reference_20kHz ; work         ;
++------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,14 +247,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 25    ;
+; Total registers                              ; 91    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 24    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1     ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Timing_Reference_1kHz:inst8|count[0]   ; 2       ;
+; Timing_Reference_20kHz:inst11|count[0] ; 2       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -272,18 +295,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 27                          ;
-; cycloneiii_ff         ; 25                          ;
+; boundary_port         ; 46                          ;
+; cycloneiii_ff         ; 91                          ;
 ;     CLR               ; 24                          ;
-;     ENA               ; 1                           ;
-; cycloneiii_lcell_comb ; 32                          ;
-;     normal            ; 32                          ;
-;         1 data inputs ; 6                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 20                          ;
+;     ENA               ; 65                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 176                         ;
+;     arith             ; 62                          ;
+;         2 data inputs ; 62                          ;
+;     normal            ; 114                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 83                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.86                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.99                        ;
 +-----------------------+-----------------------------+
 
 
@@ -292,7 +319,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -302,10 +329,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 24 11:11:29 2024
+    Info: Processing started: Wed Apr 24 11:27:33 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file main.bdf
     Info (12023): Found entity 1: main
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg_decoder.bdf
@@ -313,59 +340,66 @@ Info (12021): Found 1 design units, including 1 entities, in source file hex_to_
 Info (12021): Found 1 design units, including 1 entities, in source file tmp.bdf
     Info (12023): Found entity 1: tmp
 Info (12021): Found 2 design units, including 1 entities, in source file counter_1_digit.vhd
-    Info (12022): Found design unit 1: COUNTER_1_DIGIT-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_DIGIT.vhd Line: 11
-    Info (12023): Found entity 1: COUNTER_1_DIGIT File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_DIGIT.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_1_DIGIT-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_DIGIT.vhd Line: 11
+    Info (12023): Found entity 1: COUNTER_1_DIGIT File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_DIGIT.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_1_bit.vhd
-    Info (12022): Found design unit 1: ADDER_1_BIT-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/ADDER_1_BIT.vhd Line: 11
-    Info (12023): Found entity 1: ADDER_1_BIT File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/ADDER_1_BIT.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_1_BIT-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/ADDER_1_BIT.vhd Line: 11
+    Info (12023): Found entity 1: ADDER_1_BIT File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/ADDER_1_BIT.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_4_bits.vhd
-    Info (12022): Found design unit 1: ADDER_4_BITS-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/ADDER_4_BITS.vhd Line: 13
-    Info (12023): Found entity 1: ADDER_4_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/ADDER_4_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_4_BITS-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/ADDER_4_BITS.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_4_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/ADDER_4_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter_1_senary.vhd
-    Info (12022): Found design unit 1: COUNTER_1_SENARY-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_SENARY.vhd Line: 12
-    Info (12023): Found entity 1: COUNTER_1_SENARY File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_SENARY.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_1_SENARY-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_SENARY.vhd Line: 12
+    Info (12023): Found entity 1: COUNTER_1_SENARY File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_SENARY.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_1khz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_1kHz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/Timing_Reference_1kHz.vhd Line: 14
-    Info (12023): Found entity 1: Timing_Reference_1kHz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/Timing_Reference_1kHz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_1kHz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/Timing_Reference_1kHz.vhd Line: 14
+    Info (12023): Found entity 1: Timing_Reference_1kHz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/Timing_Reference_1kHz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_20khz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_20kHz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/Timing_Reference_20kHz.vhd Line: 14
-    Info (12023): Found entity 1: Timing_Reference_20kHz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/Timing_Reference_20kHz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_20kHz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/Timing_Reference_20kHz.vhd Line: 14
+    Info (12023): Found entity 1: Timing_Reference_20kHz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/Timing_Reference_20kHz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file comparator_ra.vhd
-    Info (12022): Found design unit 1: COMPARATOR_RA-compare File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 11
-    Info (12023): Found entity 1: COMPARATOR_RA File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 4
-Info (12127): Elaborating entity "tmp" for the top level hierarchy
-Info (12128): Elaborating entity "COMPARATOR_RA" for hierarchy "COMPARATOR_RA:inst9"
-Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(13): used explicit default value for signal "RA5" because signal was never assigned a value File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 13
-Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(14): used explicit default value for signal "RA4" because signal was never assigned a value File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 14
-Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(15): used explicit default value for signal "RA3" because signal was never assigned a value File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 15
-Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(16): used explicit default value for signal "RA2" because signal was never assigned a value File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 16
-Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(17): used explicit default value for signal "RA1" because signal was never assigned a value File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 17
-Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(18): used explicit default value for signal "RA0" because signal was never assigned a value File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COMPARATOR_RA.vhd Line: 22
+    Info (12022): Found design unit 1: COMPARATOR_RA-compare File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 11
+    Info (12023): Found entity 1: COMPARATOR_RA File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 4
+Info (12127): Elaborating entity "main" for the top level hierarchy
+Info (12128): Elaborating entity "HEX_TO_7SEG_DECODER" for hierarchy "HEX_TO_7SEG_DECODER:HEX0"
 Info (12128): Elaborating entity "COUNTER_1_DIGIT" for hierarchy "COUNTER_1_DIGIT:inst"
-Warning (10036): Verilog HDL or VHDL warning at COUNTER_1_DIGIT.vhd(13): object "trash" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_DIGIT.vhd Line: 13
-Warning (10492): VHDL Process Statement warning at COUNTER_1_DIGIT.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_DIGIT.vhd Line: 40
-Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_1_DIGIT:inst|ADDER_4_BITS:add" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_DIGIT.vhd Line: 25
-Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_1_DIGIT:inst|ADDER_4_BITS:add|ADDER_1_BIT:add1" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/ADDER_4_BITS.vhd Line: 24
+Warning (10036): Verilog HDL or VHDL warning at COUNTER_1_DIGIT.vhd(13): object "trash" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_DIGIT.vhd Line: 13
+Warning (10492): VHDL Process Statement warning at COUNTER_1_DIGIT.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_DIGIT.vhd Line: 40
+Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_1_DIGIT:inst|ADDER_4_BITS:add" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_DIGIT.vhd Line: 25
+Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_1_DIGIT:inst|ADDER_4_BITS:add|ADDER_1_BIT:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/ADDER_4_BITS.vhd Line: 24
+Info (12128): Elaborating entity "Timing_Reference_20kHz" for hierarchy "Timing_Reference_20kHz:inst11"
+Warning (10492): VHDL Process Statement warning at Timing_Reference_20kHz.vhd(29): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/Timing_Reference_20kHz.vhd Line: 29
+Info (12128): Elaborating entity "COMPARATOR_RA" for hierarchy "COMPARATOR_RA:inst9"
+Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(13): used explicit default value for signal "RA5" because signal was never assigned a value File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 13
+Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(14): used explicit default value for signal "RA4" because signal was never assigned a value File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 14
+Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(15): used explicit default value for signal "RA3" because signal was never assigned a value File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 15
+Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(16): used explicit default value for signal "RA2" because signal was never assigned a value File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 16
+Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(17): used explicit default value for signal "RA1" because signal was never assigned a value File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 17
+Warning (10540): VHDL Signal Declaration warning at COMPARATOR_RA.vhd(18): used explicit default value for signal "RA0" because signal was never assigned a value File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at COMPARATOR_RA.vhd(22): signal "RA0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COMPARATOR_RA.vhd Line: 22
 Info (12128): Elaborating entity "COUNTER_1_SENARY" for hierarchy "COUNTER_1_SENARY:inst5"
-Warning (10036): Verilog HDL or VHDL warning at COUNTER_1_SENARY.vhd(14): object "trash" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_SENARY.vhd Line: 14
-Warning (10492): VHDL Process Statement warning at COUNTER_1_SENARY.vhd(43): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab04/COUNTER_1_SENARY.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at COUNTER_1_SENARY.vhd(14): object "trash" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_SENARY.vhd Line: 14
+Warning (10492): VHDL Process Statement warning at COUNTER_1_SENARY.vhd(43): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/COUNTER_1_SENARY.vhd Line: 43
+Info (12128): Elaborating entity "Timing_Reference_1kHz" for hierarchy "Timing_Reference_1kHz:inst8"
+Warning (10492): VHDL Process Statement warning at Timing_Reference_1kHz.vhd(29): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab04/Timing_Reference_1kHz.vhd Line: 29
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer inst15~0
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 60 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 33 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Wed Apr 24 11:11:39 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:05
+Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 177 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Wed Apr 24 11:27:52 2024
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:10
 
 
