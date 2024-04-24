@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ADDER_4_BITS is
+	port(
+		A, B : in std_logic_vector(3 downto 0);
+		Cin : in std_logic;
+		S : out std_logic_vector(3 downto 0);
+		Cout : out std_logic
+	);
+end entity;
+
+architecture add of ADDER_1_BIT is
+	begin
+		S <= (Cin xor (A xor B));
+		Cout <= (A and B) or ((A xor B) and Cin);
+end architecture;

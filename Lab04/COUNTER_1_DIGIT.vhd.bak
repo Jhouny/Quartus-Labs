@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity COUNTER_1_DIGIT is
+	port(
+		CLK, RST : in std_logic;
+		C : out std_logic_vector(3 downto 0)
+	);
+end entity;
+
+architecture count of COUNTER_1_DIGIT
