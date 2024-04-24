@@ -4,6 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity COUNTER_1_SENARY is
 	port(
 		CLK, RST : in std_logic;
+		OUT_CLK : out std_logic;
 		C : out std_logic_vector(3 downto 0)
 	);
 end entity;
@@ -32,8 +33,10 @@ architecture count of COUNTER_1_SENARY is
 		elsif rising_edge(CLK) then
 			if count = "0101" then
 				count <= (others => '0');
+				OUT_CLK <= '0';
 			else
 				count <= tmp;
+				OUT_CLK <= '1';
 			end if;
 		end if;
 		--============================--

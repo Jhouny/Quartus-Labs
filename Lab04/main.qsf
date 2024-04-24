@@ -50,12 +50,55 @@ set_global_assignment -name BDF_FILE main.bdf
 set_global_assignment -name BDF_FILE HEX_TO_7SEG_DECODER.bdf
 set_global_assignment -name VHDL_FILE Timing_Reference.vhd
 set_global_assignment -name BDF_FILE tmp.bdf
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE COUNTER_1_DIGIT.vhd
 set_global_assignment -name VHDL_FILE ADDER_1_BIT.vhd
 set_global_assignment -name VHDL_FILE ADDER_4_BITS.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VHDL_FILE COUNTER_1_SENARY.vhd
+set_location_assignment PIN_P11 -to CLK
+set_location_assignment PIN_C14 -to H0A
+set_location_assignment PIN_E15 -to H0B
+set_location_assignment PIN_C15 -to H0C
+set_location_assignment PIN_C16 -to H0D
+set_location_assignment PIN_E16 -to H0E
+set_location_assignment PIN_D17 -to H0F
+set_location_assignment PIN_C17 -to H0G
+set_location_assignment PIN_C18 -to H1A
+set_location_assignment PIN_D18 -to H1B
+set_location_assignment PIN_E18 -to H1C
+set_location_assignment PIN_B16 -to H1D
+set_location_assignment PIN_A17 -to H1E
+set_location_assignment PIN_A18 -to H1F
+set_location_assignment PIN_B17 -to H1G
+set_location_assignment PIN_B20 -to H2A
+set_location_assignment PIN_A20 -to H2B
+set_location_assignment PIN_B19 -to H2C
+set_location_assignment PIN_A21 -to H2D
+set_location_assignment PIN_B21 -to H2E
+set_location_assignment PIN_C22 -to H2F
+set_location_assignment PIN_B22 -to H2G
+set_location_assignment PIN_F21 -to H3A
+set_location_assignment PIN_E22 -to H3B
+set_location_assignment PIN_E21 -to H3C
+set_location_assignment PIN_C19 -to H3D
+set_location_assignment PIN_C20 -to H3E
+set_location_assignment PIN_D19 -to H3F
+set_location_assignment PIN_E17 -to H3G
+set_location_assignment PIN_F18 -to H4A
+set_location_assignment PIN_E20 -to H4B
+set_location_assignment PIN_E19 -to H4C
+set_location_assignment PIN_J18 -to H4D
+set_location_assignment PIN_H19 -to H4E
+set_location_assignment PIN_F19 -to H4F
+set_location_assignment PIN_F20 -to H4G
+set_location_assignment PIN_J20 -to H5A
+set_location_assignment PIN_K20 -to H5B
+set_location_assignment PIN_L18 -to H5C
+set_location_assignment PIN_N18 -to H5D
+set_location_assignment PIN_M20 -to H5E
+set_location_assignment PIN_N19 -to H5F
+set_location_assignment PIN_N20 -to H5G
+set_location_assignment PIN_A7 -to RST
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
