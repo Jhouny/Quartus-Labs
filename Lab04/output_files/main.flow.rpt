@@ -1,5 +1,5 @@
 Flow report for main
-Tue Apr 23 22:13:01 2024
+Tue Apr 23 22:53:01 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 23 22:12:57 2024       ;
+; Flow Status                        ; Successful - Tue Apr 23 22:52:57 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 123 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 118 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 58 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 58                                          ;
-; Total pins                         ; 44 / 360 ( 12 % )                           ;
+; Total logic elements               ; 174 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 170 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 91 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 91                                          ;
+; Total pins                         ; 46 / 360 ( 13 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/23/2024 22:12:28 ;
+; Start date & time ; 04/23/2024 22:52:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main                ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 9413555127444.171392114809516          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 9413555127444.171392354823524          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -92,11 +92,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4796 MB             ; 00:00:10                           ;
-; Fitter               ; 00:00:11     ; 1.0                     ; 5643 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4683 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4820 MB             ; 00:00:02                           ;
-; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4790 MB             ; 00:00:09                           ;
+; Fitter               ; 00:00:11     ; 1.0                     ; 5640 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4682 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4823 MB             ; 00:00:01                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

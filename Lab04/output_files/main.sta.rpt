@@ -1,5 +1,5 @@
 Timing Analyzer report for main
-Tue Apr 23 22:13:01 2024
+Tue Apr 23 22:53:01 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -91,13 +91,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
+; Average used               ; 1.08        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.0%      ;
-;     Processors 3-4         ;   1.9%      ;
+;     Processor 2            ;   2.8%      ;
+;     Processor 3            ;   2.7%      ;
+;     Processor 4            ;   2.7%      ;
 +----------------------------+-------------+
 
 
@@ -112,23 +113,23 @@ refer to the applicable agreement for further details.
 ; COUNTER_1_DIGIT:inst4|count[3] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { COUNTER_1_DIGIT:inst4|count[3] } ;
 ; COUNTER_1_DIGIT:inst|count[3]  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { COUNTER_1_DIGIT:inst|count[3] }  ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { COUNTER_1_SENARY:inst5|OUT_CLK } ;
-; Timing_Reference:inst1|tmp     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Timing_Reference:inst1|tmp }     ;
+; FREQ_SELECT                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FREQ_SELECT }                    ;
 +--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                             ;
-+------------+-----------------+--------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                           ;
-+------------+-----------------+--------------------------------+------------------------------------------------+
-; 186.43 MHz ; 186.43 MHz      ; CLK                            ;                                                ;
-; 330.47 MHz ; 330.47 MHz      ; COUNTER_1_DIGIT:inst2|count[3] ;                                                ;
-; 333.67 MHz ; 333.67 MHz      ; Timing_Reference:inst1|tmp     ;                                                ;
-; 355.62 MHz ; 355.62 MHz      ; COUNTER_1_DIGIT:inst|count[3]  ;                                                ;
-; 384.32 MHz ; 384.32 MHz      ; COUNTER_1_DIGIT:inst3|count[3] ;                                                ;
-; 746.27 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst4|count[3] ; limit due to minimum period restriction (tmin) ;
-; 815.66 MHz ; 416.15 MHz      ; COUNTER_1_SENARY:inst5|OUT_CLK ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+--------------------------------+------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                            ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                                          ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; 270.05 MHz ; 250.0 MHz       ; CLK                            ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 295.51 MHz ; 250.0 MHz       ; FREQ_SELECT                    ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 347.58 MHz ; 347.58 MHz      ; COUNTER_1_DIGIT:inst2|count[3] ;                                                               ;
+; 360.88 MHz ; 360.88 MHz      ; COUNTER_1_DIGIT:inst|count[3]  ;                                                               ;
+; 367.11 MHz ; 367.11 MHz      ; COUNTER_1_DIGIT:inst3|count[3] ;                                                               ;
+; 744.05 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst4|count[3] ; limit due to minimum period restriction (tmin)                ;
+; 827.13 MHz ; 416.15 MHz      ; COUNTER_1_SENARY:inst5|OUT_CLK ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -137,13 +138,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLK                            ; -4.364 ; -64.904       ;
-; COUNTER_1_DIGIT:inst2|count[3] ; -2.026 ; -4.283        ;
-; Timing_Reference:inst1|tmp     ; -1.997 ; -4.055        ;
-; COUNTER_1_DIGIT:inst|count[3]  ; -1.812 ; -3.950        ;
-; COUNTER_1_DIGIT:inst3|count[3] ; -1.602 ; -3.320        ;
-; COUNTER_1_DIGIT:inst4|count[3] ; -0.340 ; -0.890        ;
-; COUNTER_1_SENARY:inst5|OUT_CLK ; -0.226 ; -0.603        ;
+; CLK                            ; -2.703 ; -127.318      ;
+; FREQ_SELECT                    ; -2.384 ; -4.746        ;
+; COUNTER_1_DIGIT:inst2|count[3] ; -1.877 ; -4.111        ;
+; COUNTER_1_DIGIT:inst|count[3]  ; -1.771 ; -3.848        ;
+; COUNTER_1_DIGIT:inst3|count[3] ; -1.724 ; -3.739        ;
+; COUNTER_1_DIGIT:inst4|count[3] ; -0.344 ; -1.345        ;
+; COUNTER_1_SENARY:inst5|OUT_CLK ; -0.209 ; -0.570        ;
 +--------------------------------+--------+---------------+
 
 
@@ -152,13 +153,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
+; COUNTER_1_DIGIT:inst3|count[3] ; 0.342 ; 0.000         ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; 0.342 ; 0.000         ;
-; COUNTER_1_DIGIT:inst3|count[3] ; 0.347 ; 0.000         ;
-; COUNTER_1_DIGIT:inst4|count[3] ; 0.347 ; 0.000         ;
+; FREQ_SELECT                    ; 0.347 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst2|count[3] ; 0.348 ; 0.000         ;
-; COUNTER_1_DIGIT:inst|count[3]  ; 0.349 ; 0.000         ;
-; Timing_Reference:inst1|tmp     ; 0.349 ; 0.000         ;
-; CLK                            ; 0.645 ; 0.000         ;
+; COUNTER_1_DIGIT:inst4|count[3] ; 0.348 ; 0.000         ;
+; COUNTER_1_DIGIT:inst|count[3]  ; 0.348 ; 0.000         ;
+; CLK                            ; 0.378 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -179,13 +180,13 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLK                            ; -3.000 ; -49.299       ;
+; CLK                            ; -3.000 ; -95.598       ;
+; FREQ_SELECT                    ; -3.000 ; -8.612        ;
 ; COUNTER_1_DIGIT:inst4|count[3] ; -1.403 ; -7.015        ;
 ; COUNTER_1_DIGIT:inst2|count[3] ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst3|count[3] ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst|count[3]  ; -1.403 ; -5.612        ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; -1.403 ; -5.612        ;
-; Timing_Reference:inst1|tmp     ; -1.403 ; -5.612        ;
 +--------------------------------+--------+---------------+
 
 
@@ -195,19 +196,19 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                              ;
-+------------+-----------------+--------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                           ;
-+------------+-----------------+--------------------------------+------------------------------------------------+
-; 201.25 MHz ; 201.25 MHz      ; CLK                            ;                                                ;
-; 357.91 MHz ; 357.91 MHz      ; COUNTER_1_DIGIT:inst2|count[3] ;                                                ;
-; 357.91 MHz ; 357.91 MHz      ; Timing_Reference:inst1|tmp     ;                                                ;
-; 383.44 MHz ; 383.44 MHz      ; COUNTER_1_DIGIT:inst|count[3]  ;                                                ;
-; 413.22 MHz ; 413.22 MHz      ; COUNTER_1_DIGIT:inst3|count[3] ;                                                ;
-; 819.67 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst4|count[3] ; limit due to minimum period restriction (tmin) ;
-; 891.27 MHz ; 416.15 MHz      ; COUNTER_1_SENARY:inst5|OUT_CLK ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+--------------------------------+------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                             ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                                          ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; 300.12 MHz ; 250.0 MHz       ; CLK                            ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 320.82 MHz ; 250.0 MHz       ; FREQ_SELECT                    ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 374.25 MHz ; 374.25 MHz      ; COUNTER_1_DIGIT:inst2|count[3] ;                                                               ;
+; 390.78 MHz ; 390.78 MHz      ; COUNTER_1_DIGIT:inst|count[3]  ;                                                               ;
+; 394.63 MHz ; 394.63 MHz      ; COUNTER_1_DIGIT:inst3|count[3] ;                                                               ;
+; 823.05 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst4|count[3] ; limit due to minimum period restriction (tmin)                ;
+; 900.9 MHz  ; 416.15 MHz      ; COUNTER_1_SENARY:inst5|OUT_CLK ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -216,13 +217,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLK                            ; -3.969 ; -55.670       ;
-; COUNTER_1_DIGIT:inst2|count[3] ; -1.794 ; -3.811        ;
-; Timing_Reference:inst1|tmp     ; -1.794 ; -3.475        ;
-; COUNTER_1_DIGIT:inst|count[3]  ; -1.608 ; -3.415        ;
-; COUNTER_1_DIGIT:inst3|count[3] ; -1.420 ; -2.858        ;
-; COUNTER_1_DIGIT:inst4|count[3] ; -0.220 ; -0.460        ;
-; COUNTER_1_SENARY:inst5|OUT_CLK ; -0.122 ; -0.295        ;
+; CLK                            ; -2.332 ; -109.367      ;
+; FREQ_SELECT                    ; -2.117 ; -4.084        ;
+; COUNTER_1_DIGIT:inst2|count[3] ; -1.672 ; -3.565        ;
+; COUNTER_1_DIGIT:inst|count[3]  ; -1.559 ; -3.315        ;
+; COUNTER_1_DIGIT:inst3|count[3] ; -1.534 ; -3.234        ;
+; COUNTER_1_DIGIT:inst4|count[3] ; -0.215 ; -0.841        ;
+; COUNTER_1_SENARY:inst5|OUT_CLK ; -0.110 ; -0.277        ;
 +--------------------------------+--------+---------------+
 
 
@@ -231,13 +232,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
+; COUNTER_1_DIGIT:inst3|count[3] ; 0.305 ; 0.000         ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; 0.305 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst2|count[3] ; 0.311 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst4|count[3] ; 0.311 ; 0.000         ;
-; COUNTER_1_DIGIT:inst|count[3]  ; 0.311 ; 0.000         ;
-; COUNTER_1_DIGIT:inst3|count[3] ; 0.312 ; 0.000         ;
-; Timing_Reference:inst1|tmp     ; 0.312 ; 0.000         ;
-; CLK                            ; 0.597 ; 0.000         ;
+; COUNTER_1_DIGIT:inst|count[3]  ; 0.312 ; 0.000         ;
+; FREQ_SELECT                    ; 0.313 ; 0.000         ;
+; CLK                            ; 0.339 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -258,13 +259,13 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLK                            ; -3.000 ; -49.299       ;
+; CLK                            ; -3.000 ; -95.598       ;
+; FREQ_SELECT                    ; -3.000 ; -8.612        ;
 ; COUNTER_1_DIGIT:inst4|count[3] ; -1.403 ; -7.015        ;
 ; COUNTER_1_DIGIT:inst2|count[3] ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst3|count[3] ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst|count[3]  ; -1.403 ; -5.612        ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; -1.403 ; -5.612        ;
-; Timing_Reference:inst1|tmp     ; -1.403 ; -5.612        ;
 +--------------------------------+--------+---------------+
 
 
@@ -279,13 +280,13 @@ No synchronizer chains to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLK                            ; -1.330 ; -7.646        ;
-; Timing_Reference:inst1|tmp     ; -0.575 ; -0.798        ;
-; COUNTER_1_DIGIT:inst2|count[3] ; -0.359 ; -0.668        ;
-; COUNTER_1_DIGIT:inst|count[3]  ; -0.256 ; -0.471        ;
-; COUNTER_1_DIGIT:inst3|count[3] ; -0.163 ; -0.234        ;
-; COUNTER_1_DIGIT:inst4|count[3] ; 0.399  ; 0.000         ;
-; COUNTER_1_SENARY:inst5|OUT_CLK ; 0.471  ; 0.000         ;
+; FREQ_SELECT                    ; -1.117 ; -2.021        ;
+; CLK                            ; -0.479 ; -13.145       ;
+; COUNTER_1_DIGIT:inst2|count[3] ; -0.261 ; -0.515        ;
+; COUNTER_1_DIGIT:inst|count[3]  ; -0.222 ; -0.439        ;
+; COUNTER_1_DIGIT:inst3|count[3] ; -0.220 ; -0.381        ;
+; COUNTER_1_DIGIT:inst4|count[3] ; 0.398  ; 0.000         ;
+; COUNTER_1_SENARY:inst5|OUT_CLK ; 0.479  ; 0.000         ;
 +--------------------------------+--------+---------------+
 
 
@@ -294,13 +295,13 @@ No synchronizer chains to report.
 +--------------------------------+-------+---------------+
 ; Clock                          ; Slack ; End Point TNS ;
 +--------------------------------+-------+---------------+
+; COUNTER_1_DIGIT:inst3|count[3] ; 0.146 ; 0.000         ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; 0.146 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst2|count[3] ; 0.151 ; 0.000         ;
-; COUNTER_1_DIGIT:inst3|count[3] ; 0.151 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst4|count[3] ; 0.151 ; 0.000         ;
-; COUNTER_1_DIGIT:inst|count[3]  ; 0.152 ; 0.000         ;
-; Timing_Reference:inst1|tmp     ; 0.152 ; 0.000         ;
-; CLK                            ; 0.250 ; 0.000         ;
+; COUNTER_1_DIGIT:inst|count[3]  ; 0.151 ; 0.000         ;
+; FREQ_SELECT                    ; 0.152 ; 0.000         ;
+; CLK                            ; 0.166 ; 0.000         ;
 +--------------------------------+-------+---------------+
 
 
@@ -321,13 +322,13 @@ No paths to report.
 +--------------------------------+--------+---------------+
 ; Clock                          ; Slack  ; End Point TNS ;
 +--------------------------------+--------+---------------+
-; CLK                            ; -3.000 ; -37.118       ;
+; CLK                            ; -3.000 ; -71.193       ;
+; FREQ_SELECT                    ; -3.000 ; -7.568        ;
 ; COUNTER_1_DIGIT:inst4|count[3] ; -1.000 ; -5.000        ;
 ; COUNTER_1_DIGIT:inst2|count[3] ; -1.000 ; -4.000        ;
 ; COUNTER_1_DIGIT:inst3|count[3] ; -1.000 ; -4.000        ;
 ; COUNTER_1_DIGIT:inst|count[3]  ; -1.000 ; -4.000        ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; -1.000 ; -4.000        ;
-; Timing_Reference:inst1|tmp     ; -1.000 ; -4.000        ;
 +--------------------------------+--------+---------------+
 
 
@@ -337,28 +338,28 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                          ;
-+---------------------------------+---------+-------+----------+---------+---------------------+
-; Clock                           ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+---------------------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack                ; -4.364  ; 0.146 ; N/A      ; N/A     ; -3.000              ;
-;  CLK                            ; -4.364  ; 0.250 ; N/A      ; N/A     ; -3.000              ;
-;  COUNTER_1_DIGIT:inst2|count[3] ; -2.026  ; 0.151 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst3|count[3] ; -1.602  ; 0.151 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst4|count[3] ; -0.340  ; 0.151 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst|count[3]  ; -1.812  ; 0.152 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_SENARY:inst5|OUT_CLK ; -0.226  ; 0.146 ; N/A      ; N/A     ; -1.403              ;
-;  Timing_Reference:inst1|tmp     ; -1.997  ; 0.152 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS                 ; -82.005 ; 0.0   ; 0.0      ; 0.0     ; -84.374             ;
-;  CLK                            ; -64.904 ; 0.000 ; N/A      ; N/A     ; -49.299             ;
-;  COUNTER_1_DIGIT:inst2|count[3] ; -4.283  ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst3|count[3] ; -3.320  ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst4|count[3] ; -0.890  ; 0.000 ; N/A      ; N/A     ; -7.015              ;
-;  COUNTER_1_DIGIT:inst|count[3]  ; -3.950  ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_SENARY:inst5|OUT_CLK ; -0.603  ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  Timing_Reference:inst1|tmp     ; -4.055  ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-+---------------------------------+---------+-------+----------+---------+---------------------+
++-----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                           ;
++---------------------------------+----------+-------+----------+---------+---------------------+
+; Clock                           ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack                ; -2.703   ; 0.146 ; N/A      ; N/A     ; -3.000              ;
+;  CLK                            ; -2.703   ; 0.166 ; N/A      ; N/A     ; -3.000              ;
+;  COUNTER_1_DIGIT:inst2|count[3] ; -1.877   ; 0.151 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst3|count[3] ; -1.724   ; 0.146 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst4|count[3] ; -0.344   ; 0.151 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst|count[3]  ; -1.771   ; 0.151 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_SENARY:inst5|OUT_CLK ; -0.209   ; 0.146 ; N/A      ; N/A     ; -1.403              ;
+;  FREQ_SELECT                    ; -2.384   ; 0.152 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS                 ; -145.677 ; 0.0   ; 0.0      ; 0.0     ; -133.673            ;
+;  CLK                            ; -127.318 ; 0.000 ; N/A      ; N/A     ; -95.598             ;
+;  COUNTER_1_DIGIT:inst2|count[3] ; -4.111   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_DIGIT:inst3|count[3] ; -3.739   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_DIGIT:inst4|count[3] ; -1.345   ; 0.000 ; N/A      ; N/A     ; -7.015              ;
+;  COUNTER_1_DIGIT:inst|count[3]  ; -3.848   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_SENARY:inst5|OUT_CLK ; -0.570   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  FREQ_SELECT                    ; -4.746   ; 0.000 ; N/A      ; N/A     ; -8.612              ;
++---------------------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -418,6 +419,8 @@ No synchronizer chains to report.
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
 ; RST                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; FREQ_SELECT         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; StartStop           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; CLK                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -587,8 +590,7 @@ No synchronizer chains to report.
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 ; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
-; CLK                            ; CLK                            ; 752      ; 0        ; 0        ; 0        ;
-; Timing_Reference:inst1|tmp     ; CLK                            ; 1        ; 1        ; 0        ; 0        ;
+; CLK                            ; CLK                            ; 1474     ; 0        ; 0        ; 0        ;
 ; COUNTER_1_DIGIT:inst2|count[3] ; COUNTER_1_DIGIT:inst2|count[3] ; 0        ; 0        ; 0        ; 10       ;
 ; COUNTER_1_DIGIT:inst3|count[3] ; COUNTER_1_DIGIT:inst2|count[3] ; 0        ; 0        ; 2        ; 2        ;
 ; COUNTER_1_DIGIT:inst3|count[3] ; COUNTER_1_DIGIT:inst3|count[3] ; 0        ; 0        ; 0        ; 10       ;
@@ -597,8 +599,8 @@ No synchronizer chains to report.
 ; COUNTER_1_DIGIT:inst2|count[3] ; COUNTER_1_DIGIT:inst|count[3]  ; 0        ; 0        ; 2        ; 2        ;
 ; COUNTER_1_DIGIT:inst|count[3]  ; COUNTER_1_DIGIT:inst|count[3]  ; 0        ; 0        ; 0        ; 10       ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; COUNTER_1_SENARY:inst5|OUT_CLK ; 0        ; 0        ; 0        ; 12       ;
-; COUNTER_1_DIGIT:inst|count[3]  ; Timing_Reference:inst1|tmp     ; 2        ; 2        ; 0        ; 0        ;
-; Timing_Reference:inst1|tmp     ; Timing_Reference:inst1|tmp     ; 10       ; 0        ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst|count[3]  ; FREQ_SELECT                    ; 2        ; 2        ; 0        ; 0        ;
+; FREQ_SELECT                    ; FREQ_SELECT                    ; 10       ; 0        ; 0        ; 0        ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -608,8 +610,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 ; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
-; CLK                            ; CLK                            ; 752      ; 0        ; 0        ; 0        ;
-; Timing_Reference:inst1|tmp     ; CLK                            ; 1        ; 1        ; 0        ; 0        ;
+; CLK                            ; CLK                            ; 1474     ; 0        ; 0        ; 0        ;
 ; COUNTER_1_DIGIT:inst2|count[3] ; COUNTER_1_DIGIT:inst2|count[3] ; 0        ; 0        ; 0        ; 10       ;
 ; COUNTER_1_DIGIT:inst3|count[3] ; COUNTER_1_DIGIT:inst2|count[3] ; 0        ; 0        ; 2        ; 2        ;
 ; COUNTER_1_DIGIT:inst3|count[3] ; COUNTER_1_DIGIT:inst3|count[3] ; 0        ; 0        ; 0        ; 10       ;
@@ -618,8 +619,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; COUNTER_1_DIGIT:inst2|count[3] ; COUNTER_1_DIGIT:inst|count[3]  ; 0        ; 0        ; 2        ; 2        ;
 ; COUNTER_1_DIGIT:inst|count[3]  ; COUNTER_1_DIGIT:inst|count[3]  ; 0        ; 0        ; 0        ; 10       ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; COUNTER_1_SENARY:inst5|OUT_CLK ; 0        ; 0        ; 0        ; 12       ;
-; COUNTER_1_DIGIT:inst|count[3]  ; Timing_Reference:inst1|tmp     ; 2        ; 2        ; 0        ; 0        ;
-; Timing_Reference:inst1|tmp     ; Timing_Reference:inst1|tmp     ; 10       ; 0        ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst|count[3]  ; FREQ_SELECT                    ; 2        ; 2        ; 0        ; 0        ;
+; FREQ_SELECT                    ; FREQ_SELECT                    ; 10       ; 0        ; 0        ; 0        ;
 +--------------------------------+--------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -643,8 +644,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 25    ; 25   ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 91    ; 91   ;
 ; Unconstrained Output Ports      ; 42    ; 42   ;
 ; Unconstrained Output Port Paths ; 168   ; 168  ;
 +---------------------------------+-------+------+
@@ -661,7 +662,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; COUNTER_1_DIGIT:inst4|count[3] ; COUNTER_1_DIGIT:inst4|count[3] ; Base ; Constrained ;
 ; COUNTER_1_DIGIT:inst|count[3]  ; COUNTER_1_DIGIT:inst|count[3]  ; Base ; Constrained ;
 ; COUNTER_1_SENARY:inst5|OUT_CLK ; COUNTER_1_SENARY:inst5|OUT_CLK ; Base ; Constrained ;
-; Timing_Reference:inst1|tmp     ; Timing_Reference:inst1|tmp     ; Base ; Constrained ;
+; FREQ_SELECT                    ; FREQ_SELECT                    ; Base ; Constrained ;
 +--------------------------------+--------------------------------+------+-------------+
 
 
@@ -671,6 +672,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
 ; RST        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; StartStop  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -730,6 +732,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
 ; RST        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; StartStop  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -789,7 +792,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 23 22:12:58 2024
+    Info: Processing started: Tue Apr 23 22:52:58 2024
 Info: Command: quartus_sta main -c main
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -800,128 +803,134 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'mai
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name CLK CLK
-    Info (332105): create_clock -period 1.000 -name Timing_Reference:inst1|tmp Timing_Reference:inst1|tmp
+    Info (332105): create_clock -period 1.000 -name FREQ_SELECT FREQ_SELECT
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst|count[3] COUNTER_1_DIGIT:inst|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst2|count[3] COUNTER_1_DIGIT:inst2|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst3|count[3] COUNTER_1_DIGIT:inst3|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst4|count[3] COUNTER_1_DIGIT:inst4|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_SENARY:inst5|OUT_CLK COUNTER_1_SENARY:inst5|OUT_CLK
+Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: inst15  from: dataa  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.364
+Info (332146): Worst-case setup slack is -2.703
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.364             -64.904 CLK 
-    Info (332119):    -2.026              -4.283 COUNTER_1_DIGIT:inst2|count[3] 
-    Info (332119):    -1.997              -4.055 Timing_Reference:inst1|tmp 
-    Info (332119):    -1.812              -3.950 COUNTER_1_DIGIT:inst|count[3] 
-    Info (332119):    -1.602              -3.320 COUNTER_1_DIGIT:inst3|count[3] 
-    Info (332119):    -0.340              -0.890 COUNTER_1_DIGIT:inst4|count[3] 
-    Info (332119):    -0.226              -0.603 COUNTER_1_SENARY:inst5|OUT_CLK 
+    Info (332119):    -2.703            -127.318 CLK 
+    Info (332119):    -2.384              -4.746 FREQ_SELECT 
+    Info (332119):    -1.877              -4.111 COUNTER_1_DIGIT:inst2|count[3] 
+    Info (332119):    -1.771              -3.848 COUNTER_1_DIGIT:inst|count[3] 
+    Info (332119):    -1.724              -3.739 COUNTER_1_DIGIT:inst3|count[3] 
+    Info (332119):    -0.344              -1.345 COUNTER_1_DIGIT:inst4|count[3] 
+    Info (332119):    -0.209              -0.570 COUNTER_1_SENARY:inst5|OUT_CLK 
 Info (332146): Worst-case hold slack is 0.342
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.342               0.000 COUNTER_1_DIGIT:inst3|count[3] 
     Info (332119):     0.342               0.000 COUNTER_1_SENARY:inst5|OUT_CLK 
-    Info (332119):     0.347               0.000 COUNTER_1_DIGIT:inst3|count[3] 
-    Info (332119):     0.347               0.000 COUNTER_1_DIGIT:inst4|count[3] 
+    Info (332119):     0.347               0.000 FREQ_SELECT 
     Info (332119):     0.348               0.000 COUNTER_1_DIGIT:inst2|count[3] 
-    Info (332119):     0.349               0.000 COUNTER_1_DIGIT:inst|count[3] 
-    Info (332119):     0.349               0.000 Timing_Reference:inst1|tmp 
-    Info (332119):     0.645               0.000 CLK 
+    Info (332119):     0.348               0.000 COUNTER_1_DIGIT:inst4|count[3] 
+    Info (332119):     0.348               0.000 COUNTER_1_DIGIT:inst|count[3] 
+    Info (332119):     0.378               0.000 CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -49.299 CLK 
+    Info (332119):    -3.000             -95.598 CLK 
+    Info (332119):    -3.000              -8.612 FREQ_SELECT 
     Info (332119):    -1.403              -7.015 COUNTER_1_DIGIT:inst4|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst2|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst3|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_SENARY:inst5|OUT_CLK 
-    Info (332119):    -1.403              -5.612 Timing_Reference:inst1|tmp 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: inst15  from: dataa  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.969
+Info (332146): Worst-case setup slack is -2.332
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.969             -55.670 CLK 
-    Info (332119):    -1.794              -3.811 COUNTER_1_DIGIT:inst2|count[3] 
-    Info (332119):    -1.794              -3.475 Timing_Reference:inst1|tmp 
-    Info (332119):    -1.608              -3.415 COUNTER_1_DIGIT:inst|count[3] 
-    Info (332119):    -1.420              -2.858 COUNTER_1_DIGIT:inst3|count[3] 
-    Info (332119):    -0.220              -0.460 COUNTER_1_DIGIT:inst4|count[3] 
-    Info (332119):    -0.122              -0.295 COUNTER_1_SENARY:inst5|OUT_CLK 
+    Info (332119):    -2.332            -109.367 CLK 
+    Info (332119):    -2.117              -4.084 FREQ_SELECT 
+    Info (332119):    -1.672              -3.565 COUNTER_1_DIGIT:inst2|count[3] 
+    Info (332119):    -1.559              -3.315 COUNTER_1_DIGIT:inst|count[3] 
+    Info (332119):    -1.534              -3.234 COUNTER_1_DIGIT:inst3|count[3] 
+    Info (332119):    -0.215              -0.841 COUNTER_1_DIGIT:inst4|count[3] 
+    Info (332119):    -0.110              -0.277 COUNTER_1_SENARY:inst5|OUT_CLK 
 Info (332146): Worst-case hold slack is 0.305
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.305               0.000 COUNTER_1_DIGIT:inst3|count[3] 
     Info (332119):     0.305               0.000 COUNTER_1_SENARY:inst5|OUT_CLK 
     Info (332119):     0.311               0.000 COUNTER_1_DIGIT:inst2|count[3] 
     Info (332119):     0.311               0.000 COUNTER_1_DIGIT:inst4|count[3] 
-    Info (332119):     0.311               0.000 COUNTER_1_DIGIT:inst|count[3] 
-    Info (332119):     0.312               0.000 COUNTER_1_DIGIT:inst3|count[3] 
-    Info (332119):     0.312               0.000 Timing_Reference:inst1|tmp 
-    Info (332119):     0.597               0.000 CLK 
+    Info (332119):     0.312               0.000 COUNTER_1_DIGIT:inst|count[3] 
+    Info (332119):     0.313               0.000 FREQ_SELECT 
+    Info (332119):     0.339               0.000 CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -49.299 CLK 
+    Info (332119):    -3.000             -95.598 CLK 
+    Info (332119):    -3.000              -8.612 FREQ_SELECT 
     Info (332119):    -1.403              -7.015 COUNTER_1_DIGIT:inst4|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst2|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst3|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_SENARY:inst5|OUT_CLK 
-    Info (332119):    -1.403              -5.612 Timing_Reference:inst1|tmp 
 Info: Analyzing Fast 1200mV 0C Model
+Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): Cell: inst15  from: dataa  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.330
+Info (332146): Worst-case setup slack is -1.117
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.330              -7.646 CLK 
-    Info (332119):    -0.575              -0.798 Timing_Reference:inst1|tmp 
-    Info (332119):    -0.359              -0.668 COUNTER_1_DIGIT:inst2|count[3] 
-    Info (332119):    -0.256              -0.471 COUNTER_1_DIGIT:inst|count[3] 
-    Info (332119):    -0.163              -0.234 COUNTER_1_DIGIT:inst3|count[3] 
-    Info (332119):     0.399               0.000 COUNTER_1_DIGIT:inst4|count[3] 
-    Info (332119):     0.471               0.000 COUNTER_1_SENARY:inst5|OUT_CLK 
+    Info (332119):    -1.117              -2.021 FREQ_SELECT 
+    Info (332119):    -0.479             -13.145 CLK 
+    Info (332119):    -0.261              -0.515 COUNTER_1_DIGIT:inst2|count[3] 
+    Info (332119):    -0.222              -0.439 COUNTER_1_DIGIT:inst|count[3] 
+    Info (332119):    -0.220              -0.381 COUNTER_1_DIGIT:inst3|count[3] 
+    Info (332119):     0.398               0.000 COUNTER_1_DIGIT:inst4|count[3] 
+    Info (332119):     0.479               0.000 COUNTER_1_SENARY:inst5|OUT_CLK 
 Info (332146): Worst-case hold slack is 0.146
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.146               0.000 COUNTER_1_DIGIT:inst3|count[3] 
     Info (332119):     0.146               0.000 COUNTER_1_SENARY:inst5|OUT_CLK 
     Info (332119):     0.151               0.000 COUNTER_1_DIGIT:inst2|count[3] 
-    Info (332119):     0.151               0.000 COUNTER_1_DIGIT:inst3|count[3] 
     Info (332119):     0.151               0.000 COUNTER_1_DIGIT:inst4|count[3] 
-    Info (332119):     0.152               0.000 COUNTER_1_DIGIT:inst|count[3] 
-    Info (332119):     0.152               0.000 Timing_Reference:inst1|tmp 
-    Info (332119):     0.250               0.000 CLK 
+    Info (332119):     0.151               0.000 COUNTER_1_DIGIT:inst|count[3] 
+    Info (332119):     0.152               0.000 FREQ_SELECT 
+    Info (332119):     0.166               0.000 CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -37.118 CLK 
+    Info (332119):    -3.000             -71.193 CLK 
+    Info (332119):    -3.000              -7.568 FREQ_SELECT 
     Info (332119):    -1.000              -5.000 COUNTER_1_DIGIT:inst4|count[3] 
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst2|count[3] 
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst3|count[3] 
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst|count[3] 
     Info (332119):    -1.000              -4.000 COUNTER_1_SENARY:inst5|OUT_CLK 
-    Info (332119):    -1.000              -4.000 Timing_Reference:inst1|tmp 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Tue Apr 23 22:13:01 2024
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Tue Apr 23 22:53:01 2024
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

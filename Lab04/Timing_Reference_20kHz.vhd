@@ -6,7 +6,7 @@ entity Timing_Reference_20kHz is
     port ( 
 		clk: in std_logic;
 		StartStop : in std_logic;
-      clk_1kHz: out std_logic	
+      clk_20kHz: out std_logic	
 	);
 
     end Timing_Reference_20kHz;
@@ -26,7 +26,7 @@ process(clk, StartStop)
             count <= 1;
         end if;
     end if;
-    clk_1kHz <= tmp;
+    clk_20kHz <= tmp;
 end process;
  
 end freq_div;
