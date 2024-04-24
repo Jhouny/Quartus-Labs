@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Apr 23 22:52:39 2024
+Analysis & Synthesis Status : Successful - Wed Apr 24 11:11:39 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : main
-Top-level Entity Name : main
+Top-level Entity Name : tmp
 Family : MAX 10
-Total logic elements : 169
-    Total combinational functions : 169
-    Dedicated logic registers : 91
-Total registers : 91
-Total pins : 46
+Total logic elements : 32
+    Total combinational functions : 32
+    Dedicated logic registers : 25
+Total registers : 25
+Total pins : 27
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

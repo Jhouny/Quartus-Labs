@@ -3,42 +3,46 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -2.703
-TNS   : -127.318
-
-Type  : Slow 1200mV 85C Model Setup 'FREQ_SELECT'
-Slack : -2.384
-TNS   : -4.746
-
-Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst2|count[3]'
-Slack : -1.877
-TNS   : -4.111
+Slack : -2.143
+TNS   : -4.178
 
 Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst|count[3]'
-Slack : -1.771
-TNS   : -3.848
+Slack : -1.655
+TNS   : -3.568
 
 Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst3|count[3]'
-Slack : -1.724
-TNS   : -3.739
+Slack : -1.423
+TNS   : -3.109
+
+Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst2|count[3]'
+Slack : -1.400
+TNS   : -3.086
 
 Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst4|count[3]'
-Slack : -0.344
-TNS   : -1.345
+Slack : -0.576
+TNS   : -1.543
 
 Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_SENARY:inst5|OUT_CLK'
-Slack : -0.209
-TNS   : -0.570
+Slack : -0.179
+TNS   : -0.485
+
+Type  : Slow 1200mV 85C Model Hold 'CLK'
+Slack : 0.347
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst3|count[3]'
-Slack : 0.342
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst4|count[3]'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst|count[3]'
+Slack : 0.347
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_SENARY:inst5|OUT_CLK'
-Slack : 0.342
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'FREQ_SELECT'
 Slack : 0.347
 TNS   : 0.000
 
@@ -46,23 +50,7 @@ Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst2|count[3]'
 Slack : 0.348
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst4|count[3]'
-Slack : 0.348
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst|count[3]'
-Slack : 0.348
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.378
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
-Slack : -3.000
-TNS   : -95.598
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FREQ_SELECT'
 Slack : -3.000
 TNS   : -8.612
 
@@ -87,66 +75,54 @@ Slack : -1.403
 TNS   : -5.612
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -2.332
-TNS   : -109.367
-
-Type  : Slow 1200mV 0C Model Setup 'FREQ_SELECT'
-Slack : -2.117
-TNS   : -4.084
-
-Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst2|count[3]'
-Slack : -1.672
-TNS   : -3.565
+Slack : -1.918
+TNS   : -3.639
 
 Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst|count[3]'
-Slack : -1.559
-TNS   : -3.315
+Slack : -1.460
+TNS   : -3.075
 
 Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst3|count[3]'
-Slack : -1.534
-TNS   : -3.234
+Slack : -1.247
+TNS   : -2.599
+
+Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst2|count[3]'
+Slack : -1.229
+TNS   : -2.582
 
 Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst4|count[3]'
-Slack : -0.215
-TNS   : -0.841
+Slack : -0.447
+TNS   : -1.053
 
 Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst5|OUT_CLK'
-Slack : -0.110
-TNS   : -0.277
+Slack : -0.079
+TNS   : -0.182
 
-Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst3|count[3]'
-Slack : 0.305
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst5|OUT_CLK'
-Slack : 0.305
+Type  : Slow 1200mV 0C Model Hold 'CLK'
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst2|count[3]'
 Slack : 0.311
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst4|count[3]'
+Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst3|count[3]'
 Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst5|OUT_CLK'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst4|count[3]'
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst|count[3]'
 Slack : 0.312
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'FREQ_SELECT'
-Slack : 0.313
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.339
-TNS   : 0.000
-
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
-Slack : -3.000
-TNS   : -95.598
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FREQ_SELECT'
 Slack : -3.000
 TNS   : -8.612
 
@@ -170,47 +146,39 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'COUNTER_1_SENARY:inst5|OUT_CLK
 Slack : -1.403
 TNS   : -5.612
 
-Type  : Fast 1200mV 0C Model Setup 'FREQ_SELECT'
-Slack : -1.117
-TNS   : -2.021
-
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -0.479
-TNS   : -13.145
-
-Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst2|count[3]'
-Slack : -0.261
-TNS   : -0.515
+Slack : -0.879
+TNS   : -1.543
 
 Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst|count[3]'
-Slack : -0.222
-TNS   : -0.439
+Slack : -0.161
+TNS   : -0.293
 
 Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst3|count[3]'
-Slack : -0.220
-TNS   : -0.381
+Slack : -0.059
+TNS   : -0.112
+
+Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst2|count[3]'
+Slack : -0.036
+TNS   : -0.065
 
 Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst4|count[3]'
-Slack : 0.398
+Slack : 0.333
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst5|OUT_CLK'
-Slack : 0.479
+Slack : 0.494
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst3|count[3]'
-Slack : 0.146
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst5|OUT_CLK'
-Slack : 0.146
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst4|count[3]'
+Slack : 0.150
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst2|count[3]'
 Slack : 0.151
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst4|count[3]'
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst3|count[3]'
 Slack : 0.151
 TNS   : 0.000
 
@@ -218,21 +186,17 @@ Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst|count[3]'
 Slack : 0.151
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'FREQ_SELECT'
-Slack : 0.152
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst5|OUT_CLK'
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.166
+Slack : 0.152
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -71.193
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FREQ_SELECT'
-Slack : -3.000
-TNS   : -7.568
+TNS   : -7.136
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'COUNTER_1_DIGIT:inst4|count[3]'
 Slack : -1.000

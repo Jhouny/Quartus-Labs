@@ -1,7 +1,7 @@
 # do main.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:10:40 on Apr 23,2024
+# Start time: 11:13:36 on Apr 24,2024
 # vcom -work work main.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,20 +16,20 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity tmp
 # -- Compiling architecture structure of tmp
-# End time: 22:10:40 on Apr 23,2024, Elapsed time: 0:00:00
+# End time: 11:13:36 on Apr 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:10:40 on Apr 23,2024
-# vcom -work work output_files/Waveform.vwf.vht 
+# Start time: 11:13:36 on Apr 24,2024
+# vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity tmp_vhd_vec_tst
 # -- Compiling architecture tmp_arch of tmp_vhd_vec_tst
-# End time: 22:10:41 on Apr 23,2024, Elapsed time: 0:00:01
+# End time: 11:13:36 on Apr 24,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.tmp_vhd_vec_tst 
-# Start time: 22:10:41 on Apr 23,2024
+# Start time: 11:13:36 on Apr 24,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -50,6 +50,91 @@
 # Loading altera.dffeas(vital_dffeas)
 # Loading fiftyfivenm.fiftyfivenm_unvm(behavior)
 # Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
+# ** Warning: Design size of 11725 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
 # after#35
-# End time: 22:10:42 on Apr 23,2024, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# Simulation time: 6491 ps
+# Simulation time: 6491 ps
+# Simulation time: 6491 ps
+# Simulation time: 6491 ps
+# Simulation time: 6491 ps
+# Simulation time: 6491 ps
+# Simulation time: 6491 ps
+# Simulation time: 6491 ps
+# Simulation time: 105169 ps
+# Simulation time: 105169 ps
+# Simulation time: 105169 ps
+# Simulation time: 105169 ps
+# Simulation time: 105169 ps
+# Simulation time: 105169 ps
+# Simulation time: 105169 ps
+# Simulation time: 105169 ps
+# Simulation time: 202655 ps
+# Simulation time: 202655 ps
+# Simulation time: 202655 ps
+# Simulation time: 202655 ps
+# Simulation time: 202655 ps
+# Simulation time: 202655 ps
+# Simulation time: 202655 ps
+# Simulation time: 202655 ps
+# Simulation time: 301249 ps
+# Simulation time: 301249 ps
+# Simulation time: 301249 ps
+# Simulation time: 301249 ps
+# Simulation time: 301249 ps
+# Simulation time: 301249 ps
+# Simulation time: 301249 ps
+# Simulation time: 301249 ps
+# Simulation time: 398199 ps
+# Simulation time: 398199 ps
+# Simulation time: 398199 ps
+# Simulation time: 398199 ps
+# Simulation time: 398199 ps
+# Simulation time: 398199 ps
+# Simulation time: 398199 ps
+# Simulation time: 398199 ps
+# Simulation time: 490887 ps
+# Simulation time: 490887 ps
+# Simulation time: 490887 ps
+# Simulation time: 490887 ps
+# Simulation time: 490887 ps
+# Simulation time: 490887 ps
+# Simulation time: 490887 ps
+# Simulation time: 490887 ps
+# Simulation time: 586907 ps
+# Simulation time: 586907 ps
+# Simulation time: 586907 ps
+# Simulation time: 586907 ps
+# Simulation time: 586907 ps
+# Simulation time: 586907 ps
+# Simulation time: 586907 ps
+# Simulation time: 586907 ps
+# Simulation time: 676879 ps
+# Simulation time: 676879 ps
+# Simulation time: 676879 ps
+# Simulation time: 676879 ps
+# Simulation time: 676879 ps
+# Simulation time: 676879 ps
+# Simulation time: 676879 ps
+# Simulation time: 676879 ps
+# Simulation time: 771917 ps
+# Simulation time: 771917 ps
+# Simulation time: 771917 ps
+# Simulation time: 771917 ps
+# Simulation time: 771917 ps
+# Simulation time: 771917 ps
+# Simulation time: 771917 ps
+# Simulation time: 771917 ps
+# Simulation time: 865591 ps
+# Simulation time: 865591 ps
+# Simulation time: 865591 ps
+# Simulation time: 865591 ps
+# Simulation time: 865591 ps
+# Simulation time: 865591 ps
+# Simulation time: 865591 ps
+# Simulation time: 959285 ps
+# Simulation time: 959285 ps
+# Simulation time: 959285 ps
+# Simulation time: 959285 ps
+# End time: 11:17:06 on Apr 24,2024, Elapsed time: 0:03:30
+# Errors: 0, Warnings: 1
