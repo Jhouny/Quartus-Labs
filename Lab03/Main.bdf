@@ -818,6 +818,23 @@ refer to the applicable agreement for further details.
 	)
 	(annotation_block (location)(rect 1064 296 1128 320))
 )
+(pin
+	(output)
+	(rect 544 112 720 128)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "CLK_LED" (rect 90 0 138 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 720 112 784 136))
+)
 (symbol
 	(rect 320 448 416 608)
 	(text "HEX_TO_7SEG_DECODER" (rect 5 0 160 19)(font "Intel Clear" (font_size 8)))
@@ -1318,7 +1335,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 216 208 264 240)
+	(rect 232 208 280 240)
 	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
 	(text "inst001" (rect 3 21 38 33)(font "Arial" ))
 	(port
@@ -1362,6 +1379,38 @@ refer to the applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 128 64))
+	)
+)
+(symbol
+	(rect 384 56 448 104)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 37 25 54)(font "Intel Clear" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
 	)
 )
 (connector
@@ -1578,28 +1627,12 @@ refer to the applicable agreement for further details.
 	(pt 888 224)
 )
 (connector
-	(pt 264 176)
-	(pt 264 104)
-)
-(connector
-	(pt 496 104)
-	(pt 264 104)
-)
-(connector
 	(pt 328 192)
 	(pt 304 192)
 )
 (connector
 	(pt 304 192)
 	(pt 304 152)
-)
-(connector
-	(pt 208 224)
-	(pt 216 224)
-)
-(connector
-	(pt 264 224)
-	(pt 328 224)
 )
 (connector
 	(pt 472 176)
@@ -1612,14 +1645,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 480 192)
 	(pt 536 192)
-)
-(connector
-	(pt 480 120)
-	(pt 480 192)
-)
-(connector
-	(pt 496 104)
-	(pt 496 224)
 )
 (connector
 	(text "Q[7..0]" (rect 878 160 909 177)(font "Intel Clear" ))
@@ -1770,18 +1795,6 @@ refer to the applicable agreement for further details.
 	(pt 280 120)
 )
 (connector
-	(pt 280 120)
-	(pt 480 120)
-)
-(connector
-	(pt 208 176)
-	(pt 264 176)
-)
-(connector
-	(pt 264 176)
-	(pt 328 176)
-)
-(connector
 	(pt 1144 176)
 	(pt 1144 192)
 	(bus)
@@ -1826,10 +1839,6 @@ refer to the applicable agreement for further details.
 	(pt 536 224)
 )
 (connector
-	(pt 280 120)
-	(pt 280 208)
-)
-(connector
 	(text "D[4]" (rect 205 352 225 369)(font "Intel Clear" ))
 	(pt 192 368)
 	(pt 280 368)
@@ -1853,6 +1862,70 @@ refer to the applicable agreement for further details.
 	(text "D[0]" (rect 200 416 220 433)(font "Intel Clear" ))
 	(pt 192 432)
 	(pt 232 432)
+)
+(connector
+	(pt 328 224)
+	(pt 280 224)
+)
+(connector
+	(pt 224 224)
+	(pt 224 72)
+)
+(connector
+	(pt 224 72)
+	(pt 384 72)
+)
+(connector
+	(pt 208 224)
+	(pt 224 224)
+)
+(connector
+	(pt 224 224)
+	(pt 232 224)
+)
+(connector
+	(pt 264 176)
+	(pt 264 104)
+)
+(connector
+	(pt 496 224)
+	(pt 496 104)
+)
+(connector
+	(pt 264 104)
+	(pt 496 104)
+)
+(connector
+	(pt 208 176)
+	(pt 264 176)
+)
+(connector
+	(pt 264 176)
+	(pt 328 176)
+)
+(connector
+	(pt 280 120)
+	(pt 544 120)
+)
+(connector
+	(pt 280 88)
+	(pt 384 88)
+)
+(connector
+	(pt 280 88)
+	(pt 280 120)
+)
+(connector
+	(pt 280 120)
+	(pt 280 208)
+)
+(connector
+	(pt 448 80)
+	(pt 480 80)
+)
+(connector
+	(pt 480 80)
+	(pt 480 192)
 )
 (junction (pt 320 400))
 (junction (pt 256 384))
@@ -1885,3 +1958,4 @@ refer to the applicable agreement for further details.
 (junction (pt 1144 208))
 (junction (pt 816 208))
 (junction (pt 816 224))
+(junction (pt 224 224))

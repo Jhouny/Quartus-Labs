@@ -15,6 +15,7 @@ architecture func of Sequence_Gen_RA is
 	begin
 		process(CLK) begin
 			if rising_edge(CLK) then
+				-- SEQ : 23580496ACE17BDF --
 				case state is
 					when s0 =>
 						state <= s1;

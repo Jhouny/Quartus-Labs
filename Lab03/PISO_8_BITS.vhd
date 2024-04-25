@@ -86,10 +86,13 @@ architecture func of PISO_8_BITS is
 								  PRN => PRESET,
 								  Q => DFFQ(7));
 								  
-		process(CLK)
+		process(CLK, LOAD, CLR)
 		begin
-			if rising_edge(CLK) then
+			if rising_edge(CLK) and CLR = '1' then
 				S <= DFFQ(7);
+			end if;
+			if CLR = '0' or LOAD = '1' then
+				S <= '0';
 			end if;
 		end process;
 
