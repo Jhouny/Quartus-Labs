@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed Apr 24 11:27:52 2024
+Thu Apr 25 14:31:14 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -45,15 +45,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 24 11:27:52 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 25 14:31:14 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 176                                         ;
-;     Total combinational functions  ; 176                                         ;
-;     Dedicated logic registers      ; 91                                          ;
-; Total registers                    ; 91                                          ;
+; Total logic elements               ; 177                                         ;
+;     Total combinational functions  ; 177                                         ;
+;     Dedicated logic registers      ; 92                                          ;
+; Total registers                    ; 92                                          ;
 ; Total pins                         ; 46                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -190,20 +190,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 176   ;
+; Estimated Total logic elements              ; 177   ;
 ;                                             ;       ;
-; Total combinational functions               ; 176   ;
+; Total combinational functions               ; 177   ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 83    ;
 ;     -- 3 input functions                    ; 8     ;
-;     -- <=2 input functions                  ; 85    ;
+;     -- <=2 input functions                  ; 86    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 114   ;
+;     -- normal mode                          ; 115   ;
 ;     -- arithmetic mode                      ; 62    ;
 ;                                             ;       ;
-; Total registers                             ; 91    ;
-;     -- Dedicated logic registers            ; 91    ;
+; Total registers                             ; 92    ;
+;     -- Dedicated logic registers            ; 92    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 46    ;
@@ -212,8 +212,8 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Maximum fan-out node                        ; inst1 ;
 ; Maximum fan-out                             ; 66    ;
-; Total fan-out                               ; 875   ;
-; Average fan-out                             ; 2.44  ;
+; Total fan-out                               ; 878   ;
+; Average fan-out                             ; 2.43  ;
 +---------------------------------------------+-------+
 
 
@@ -222,7 +222,7 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                 ; Entity Name            ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+------------------------+--------------+
-; |main                              ; 176 (2)             ; 91 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 46   ; 0            ; 0          ; |main                               ; main                   ; work         ;
+; |main                              ; 177 (3)             ; 92 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 46   ; 0            ; 0          ; |main                               ; main                   ; work         ;
 ;    |COMPARATOR_RA:inst9|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COMPARATOR_RA:inst9           ; COMPARATOR_RA          ; work         ;
 ;    |COUNTER_1_DIGIT:inst2|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst2         ; COUNTER_1_DIGIT        ; work         ;
 ;    |COUNTER_1_DIGIT:inst3|         ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst3         ; COUNTER_1_DIGIT        ; work         ;
@@ -247,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 91    ;
+; Total registers                              ; 92    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 24    ;
@@ -296,21 +296,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 46                          ;
-; cycloneiii_ff         ; 91                          ;
+; cycloneiii_ff         ; 92                          ;
 ;     CLR               ; 24                          ;
 ;     ENA               ; 65                          ;
-;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 176                         ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 177                         ;
 ;     arith             ; 62                          ;
 ;         2 data inputs ; 62                          ;
-;     normal            ; 114                         ;
-;         1 data inputs ; 10                          ;
+;     normal            ; 115                         ;
+;         1 data inputs ; 11                          ;
 ;         2 data inputs ; 13                          ;
 ;         3 data inputs ; 8                           ;
 ;         4 data inputs ; 83                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.99                        ;
+; Average LUT depth     ; 2.98                        ;
 +-----------------------+-----------------------------+
 
 
@@ -319,7 +319,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -329,7 +329,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 24 11:27:33 2024
+    Info: Processing started: Thu Apr 25 14:30:59 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -392,14 +392,14 @@ Warning (19016): Clock multiplexers are found and protected
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 224 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 177 logic cells
+    Info (21061): Implemented 178 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 4790 megabytes
-    Info: Processing ended: Wed Apr 24 11:27:52 2024
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Thu Apr 25 14:31:15 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:11
 
 
