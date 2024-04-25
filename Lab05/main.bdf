@@ -23,7 +23,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect 48 336 216 352)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "PB0" (rect 5 0 26 12)(font "Arial" ))
+	(text "PB0" (rect 5 0 25 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -34,6 +34,7 @@ refer to the applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -8 336 48 360))
 )
 (pin
 	(output)
@@ -50,6 +51,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 320 1224 344))
 )
 (pin
 	(output)
@@ -66,6 +68,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 336 1224 360))
 )
 (pin
 	(output)
@@ -82,6 +85,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 352 1224 376))
 )
 (pin
 	(output)
@@ -98,6 +102,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 368 1224 392))
 )
 (pin
 	(output)
@@ -114,6 +119,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 384 1224 408))
 )
 (pin
 	(output)
@@ -130,6 +136,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 400 1224 424))
 )
 (pin
 	(output)
@@ -146,6 +153,7 @@ refer to the applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 1160 416 1224 440))
 )
 (symbol
 	(rect 576 -8 640 72)
@@ -1300,7 +1308,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect 888 296 984 456)
 	(text "HEX_TO_7SEG_DECODER" (rect 5 0 160 19)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 139 24 156)(font "Intel Clear" ))
+	(text "inst39" (rect 8 139 36 156)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
