@@ -3,7 +3,7 @@ $comment
 		vcd file main.msim.vcd -direction
 $end
 $date
-	Wed May 15 12:01:50 2024
+	Wed May 15 18:05:18 2024
 $end
 $version
 	ModelSim Version 10.5b
@@ -13,83 +13,119 @@ $timescale
 $end
 
 $scope module main_vhd_vec_tst $end
-$var wire 1 ! data [3] $end
-$var wire 1 " data [2] $end
-$var wire 1 # data [1] $end
-$var wire 1 $ data [0] $end
-$var wire 1 % SW0 $end
+$var wire 1 ! CLK $end
+$var wire 1 " data [3] $end
+$var wire 1 # data [2] $end
+$var wire 1 $ data [1] $end
+$var wire 1 % data [0] $end
+$var wire 1 & SW0 $end
 
 $scope module i1 $end
-$var wire 1 & gnd $end
-$var wire 1 ' vcc $end
-$var wire 1 ( unknown $end
-$var wire 1 ) devoe $end
-$var wire 1 * devclrn $end
-$var wire 1 + devpor $end
-$var wire 1 , ww_devoe $end
-$var wire 1 - ww_devclrn $end
-$var wire 1 . ww_devpor $end
-$var wire 1 / ww_data [3] $end
-$var wire 1 0 ww_data [2] $end
-$var wire 1 1 ww_data [1] $end
-$var wire 1 2 ww_data [0] $end
-$var wire 1 3 ww_SW0 $end
-$var wire 1 4 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [4] $end
-$var wire 1 5 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [3] $end
-$var wire 1 6 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [2] $end
-$var wire 1 7 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [1] $end
-$var wire 1 8 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [0] $end
-$var wire 1 9 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [4] $end
-$var wire 1 : \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [3] $end
-$var wire 1 ; \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [2] $end
-$var wire 1 < \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [1] $end
-$var wire 1 = \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [0] $end
-$var wire 1 > \~QUARTUS_CREATED_GND~I_combout\ $end
-$var wire 1 ? \~QUARTUS_CREATED_UNVM~~busy\ $end
-$var wire 1 @ \~QUARTUS_CREATED_ADC1~~eoc\ $end
-$var wire 1 A \~QUARTUS_CREATED_ADC2~~eoc\ $end
-$var wire 1 B \data[3]~output_o\ $end
-$var wire 1 C \data[2]~output_o\ $end
-$var wire 1 D \data[1]~output_o\ $end
-$var wire 1 E \data[0]~output_o\ $end
-$var wire 1 F \SW0~input_o\ $end
-$var wire 1 G \inst|Mux1~0_combout\ $end
-$var wire 1 H \inst|Mux2~0_combout\ $end
-$var wire 1 I \inst|Mux0~0_combout\ $end
+$var wire 1 ' gnd $end
+$var wire 1 ( vcc $end
+$var wire 1 ) unknown $end
+$var wire 1 * devoe $end
+$var wire 1 + devclrn $end
+$var wire 1 , devpor $end
+$var wire 1 - ww_devoe $end
+$var wire 1 . ww_devclrn $end
+$var wire 1 / ww_devpor $end
+$var wire 1 0 ww_data [3] $end
+$var wire 1 1 ww_data [2] $end
+$var wire 1 2 ww_data [1] $end
+$var wire 1 3 ww_data [0] $end
+$var wire 1 4 ww_SW0 $end
+$var wire 1 5 ww_CLK $end
+$var wire 1 6 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [4] $end
+$var wire 1 7 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [3] $end
+$var wire 1 8 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [2] $end
+$var wire 1 9 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [1] $end
+$var wire 1 : \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [0] $end
+$var wire 1 ; \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [4] $end
+$var wire 1 < \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [3] $end
+$var wire 1 = \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [2] $end
+$var wire 1 > \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [1] $end
+$var wire 1 ? \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [0] $end
+$var wire 1 @ \CLK~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 A \CLK~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 B \CLK~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 C \CLK~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 D \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 E \~QUARTUS_CREATED_UNVM~~busy\ $end
+$var wire 1 F \~QUARTUS_CREATED_ADC1~~eoc\ $end
+$var wire 1 G \~QUARTUS_CREATED_ADC2~~eoc\ $end
+$var wire 1 H \data[3]~output_o\ $end
+$var wire 1 I \data[2]~output_o\ $end
+$var wire 1 J \data[1]~output_o\ $end
+$var wire 1 K \data[0]~output_o\ $end
+$var wire 1 L \CLK~input_o\ $end
+$var wire 1 M \CLK~inputclkctrl_outclk\ $end
+$var wire 1 N \SW0~input_o\ $end
+$var wire 1 O \inst|Mux2~0_combout\ $end
+$var wire 1 P \inst|Mux1~0_combout\ $end
+$var wire 1 Q \inst|Mux0~0_combout\ $end
+$var wire 1 R \inst|state[2]~feeder_combout\ $end
+$var wire 1 S \inst|state[1]~feeder_combout\ $end
+$var wire 1 T \inst|state[0]~feeder_combout\ $end
+$var wire 1 U \inst|state\ [3] $end
+$var wire 1 V \inst|state\ [2] $end
+$var wire 1 W \inst|state\ [1] $end
+$var wire 1 X \inst|state\ [0] $end
+$var wire 1 Y \inst|estado\ [3] $end
+$var wire 1 Z \inst|estado\ [2] $end
+$var wire 1 [ \inst|estado\ [1] $end
+$var wire 1 \ \inst|estado\ [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-0%
+0!
 0&
-1'
-x(
-1)
+0'
+1(
+x)
 1*
 1+
 1,
 1-
 1.
-03
-0>
-z?
-z@
-zA
-0B
-xC
-xD
-xE
-0F
-xG
-xH
-xI
-0/
-x0
-x1
-x2
+1/
 04
 05
+0D
+zE
+zF
+zG
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+00
+01
+02
+03
+xU
+0V
+0W
+0X
+xY
+0Z
+0[
+0\
+1@
+1A
+1B
+0C
 06
 07
 08
@@ -98,33 +134,639 @@ x2
 0;
 0<
 0=
-0!
-x"
-x#
-x$
+0>
+0?
+0"
+0#
+0$
+0%
 $end
 #10000
-1%
-13
-1F
+1!
+15
+1L
+1C
+1M
 #20000
-0%
-03
-0F
+0!
+05
+0L
+0C
+0M
 #30000
-1%
-13
-1F
+1!
+15
+1L
+1C
+1M
 #40000
-0%
-03
-0F
+0!
+05
+0L
+0C
+0M
+#50000
+1!
+15
+1L
+1C
+1M
 #60000
-1%
-13
-1F
+0!
+05
+0L
+0C
+0M
 #70000
-0%
+1!
+15
+1L
+1C
+1M
+#80000
+0!
+1&
+05
+14
+1N
+0L
+0C
+1O
+0M
+#90000
+1!
+15
+1L
+1C
+1M
+1\
+1T
+#100000
+0!
+05
+0L
+0C
+0M
+#110000
+1!
+15
+1L
+1C
+1M
+1X
+1K
+13
+1%
+#120000
+0!
+05
+0L
+0C
+0M
+#130000
+1!
+15
+1L
+1C
+1M
+#140000
+0!
+05
+0L
+0C
+0M
+#150000
+1!
+15
+1L
+1C
+1M
+#160000
+0!
+05
+0L
+0C
+0M
+#170000
+1!
+15
+1L
+1C
+1M
+#180000
+0!
+05
+0L
+0C
+0M
+#190000
+1!
+0&
+15
+04
+0N
+1L
+1C
+0O
+1P
+1M
+0\
+1[
+1S
+0P
+0T
+#200000
+0!
+05
+0L
+0C
+0M
+#210000
+1!
+15
+1L
+1C
+1M
+0[
+1W
+0X
+0K
+1J
+0S
 03
-0F
+12
+0%
+1$
+#220000
+0!
+05
+0L
+0C
+0M
+#230000
+1!
+15
+1L
+1C
+1M
+0W
+0J
+02
+0$
+#240000
+0!
+05
+0L
+0C
+0M
+#250000
+1!
+15
+1L
+1C
+1M
+#260000
+0!
+05
+0L
+0C
+0M
+#270000
+1!
+15
+1L
+1C
+1M
+#280000
+0!
+05
+0L
+0C
+0M
+#290000
+1!
+15
+1L
+1C
+1M
+#300000
+0!
+05
+0L
+0C
+0M
+#310000
+1!
+15
+1L
+1C
+1M
+#320000
+0!
+05
+0L
+0C
+0M
+#330000
+1!
+15
+1L
+1C
+1M
+#340000
+0!
+05
+0L
+0C
+0M
+#350000
+1!
+15
+1L
+1C
+1M
+#360000
+0!
+05
+0L
+0C
+0M
+#370000
+1!
+15
+1L
+1C
+1M
+#380000
+0!
+05
+0L
+0C
+0M
+#390000
+1!
+15
+1L
+1C
+1M
+#400000
+0!
+05
+0L
+0C
+0M
+#410000
+1!
+15
+1L
+1C
+1M
+#420000
+0!
+05
+0L
+0C
+0M
+#430000
+1!
+15
+1L
+1C
+1M
+#440000
+0!
+05
+0L
+0C
+0M
+#450000
+1!
+15
+1L
+1C
+1M
+#460000
+0!
+05
+0L
+0C
+0M
+#470000
+1!
+15
+1L
+1C
+1M
+#480000
+0!
+05
+0L
+0C
+0M
+#490000
+1!
+15
+1L
+1C
+1M
+#500000
+0!
+05
+0L
+0C
+0M
+#510000
+1!
+15
+1L
+1C
+1M
+#520000
+0!
+05
+0L
+0C
+0M
+#530000
+1!
+15
+1L
+1C
+1M
+#540000
+0!
+05
+0L
+0C
+0M
+#550000
+1!
+15
+1L
+1C
+1M
+#560000
+0!
+05
+0L
+0C
+0M
+#570000
+1!
+15
+1L
+1C
+1M
+#580000
+0!
+05
+0L
+0C
+0M
+#590000
+1!
+15
+1L
+1C
+1M
+#600000
+0!
+05
+0L
+0C
+0M
+#610000
+1!
+15
+1L
+1C
+1M
+#620000
+0!
+05
+0L
+0C
+0M
+#630000
+1!
+15
+1L
+1C
+1M
+#640000
+0!
+05
+0L
+0C
+0M
+#650000
+1!
+15
+1L
+1C
+1M
+#660000
+0!
+05
+0L
+0C
+0M
+#670000
+1!
+15
+1L
+1C
+1M
+#680000
+0!
+05
+0L
+0C
+0M
+#690000
+1!
+15
+1L
+1C
+1M
+#700000
+0!
+05
+0L
+0C
+0M
+#710000
+1!
+15
+1L
+1C
+1M
+#720000
+0!
+05
+0L
+0C
+0M
+#730000
+1!
+15
+1L
+1C
+1M
+#740000
+0!
+05
+0L
+0C
+0M
+#750000
+1!
+15
+1L
+1C
+1M
+#760000
+0!
+05
+0L
+0C
+0M
+#770000
+1!
+15
+1L
+1C
+1M
+#780000
+0!
+05
+0L
+0C
+0M
+#790000
+1!
+15
+1L
+1C
+1M
+#800000
+0!
+05
+0L
+0C
+0M
+#810000
+1!
+15
+1L
+1C
+1M
+#820000
+0!
+05
+0L
+0C
+0M
+#830000
+1!
+15
+1L
+1C
+1M
+#840000
+0!
+05
+0L
+0C
+0M
+#850000
+1!
+15
+1L
+1C
+1M
+#860000
+0!
+05
+0L
+0C
+0M
+#870000
+1!
+15
+1L
+1C
+1M
+#880000
+0!
+05
+0L
+0C
+0M
+#890000
+1!
+15
+1L
+1C
+1M
+#900000
+0!
+05
+0L
+0C
+0M
+#910000
+1!
+15
+1L
+1C
+1M
+#920000
+0!
+05
+0L
+0C
+0M
+#930000
+1!
+15
+1L
+1C
+1M
+#940000
+0!
+05
+0L
+0C
+0M
+#950000
+1!
+15
+1L
+1C
+1M
+#960000
+0!
+05
+0L
+0C
+0M
+#970000
+1!
+15
+1L
+1C
+1M
+#980000
+0!
+05
+0L
+0C
+0M
+#990000
+1!
+15
+1L
+1C
+1M
 #1000000
