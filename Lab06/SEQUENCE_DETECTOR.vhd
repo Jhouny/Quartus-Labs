@@ -12,7 +12,7 @@ end entity;
 architecture detect of SEQUENCE_DETECTOR is
     signal estado : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 begin
-    process(CLK, input)
+    process(CLK)
     begin
         if rising_edge(CLK) then
 			  case estado is
@@ -74,7 +74,7 @@ begin
 					when others => 
 						estado <= "0000"; -- Default case
 			  end case;
-			  state <= estado;
         end if;
     end process;
+	state <= estado;
 end architecture;
