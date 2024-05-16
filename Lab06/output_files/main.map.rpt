@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed May 15 18:08:29 2024
+Wed May 15 21:40:07 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,11 +14,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +43,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 15 18:08:29 2024       ;
+; Analysis & Synthesis Status        ; Successful - Wed May 15 21:40:07 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 13                                          ;
+; Total logic elements               ; 10                                          ;
 ;     Total combinational functions  ; 10                                          ;
-;     Dedicated logic registers      ; 6                                           ;
-; Total registers                    ; 6                                           ;
-; Total pins                         ; 9                                           ;
+;     Dedicated logic registers      ; 3                                           ;
+; Total registers                    ; 3                                           ;
+; Total pins                         ; 20                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -154,59 +153,59 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab06/main.bdf                ;         ;
-; HEX_TO_7SEG_DECODER.bdf          ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab06/HEX_TO_7SEG_DECODER.bdf ;         ;
-; SEQUENCE_DETECTOR.vhd            ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab06/SEQUENCE_DETECTOR.vhd   ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab06/main.bdf                ;         ;
+; HEX_TO_7SEG_DECODER.bdf          ; yes             ; User Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab06/HEX_TO_7SEG_DECODER.bdf ;         ;
+; SEQUENCE_DETECTOR.vhd            ; yes             ; User VHDL File                     ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab06/SEQUENCE_DETECTOR.vhd   ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                   ;
-+---------------------------------------------+---------------------------------+
-; Resource                                    ; Usage                           ;
-+---------------------------------------------+---------------------------------+
-; Estimated Total logic elements              ; 13                              ;
-;                                             ;                                 ;
-; Total combinational functions               ; 10                              ;
-; Logic element usage by number of LUT inputs ;                                 ;
-;     -- 4 input functions                    ; 3                               ;
-;     -- 3 input functions                    ; 7                               ;
-;     -- <=2 input functions                  ; 0                               ;
-;                                             ;                                 ;
-; Logic elements by mode                      ;                                 ;
-;     -- normal mode                          ; 10                              ;
-;     -- arithmetic mode                      ; 0                               ;
-;                                             ;                                 ;
-; Total registers                             ; 6                               ;
-;     -- Dedicated logic registers            ; 6                               ;
-;     -- I/O registers                        ; 0                               ;
-;                                             ;                                 ;
-; I/O pins                                    ; 9                               ;
-;                                             ;                                 ;
-; Embedded Multiplier 9-bit elements          ; 0                               ;
-;                                             ;                                 ;
-; Maximum fan-out node                        ; SEQUENCE_DETECTOR:inst|state[0] ;
-; Maximum fan-out                             ; 7                               ;
-; Total fan-out                               ; 61                              ;
-; Average fan-out                             ; 1.79                            ;
-+---------------------------------------------+---------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Estimated Total logic elements              ; 10                               ;
+;                                             ;                                  ;
+; Total combinational functions               ; 10                               ;
+; Logic element usage by number of LUT inputs ;                                  ;
+;     -- 4 input functions                    ; 3                                ;
+;     -- 3 input functions                    ; 7                                ;
+;     -- <=2 input functions                  ; 0                                ;
+;                                             ;                                  ;
+; Logic elements by mode                      ;                                  ;
+;     -- normal mode                          ; 10                               ;
+;     -- arithmetic mode                      ; 0                                ;
+;                                             ;                                  ;
+; Total registers                             ; 3                                ;
+;     -- Dedicated logic registers            ; 3                                ;
+;     -- I/O registers                        ; 0                                ;
+;                                             ;                                  ;
+; I/O pins                                    ; 20                               ;
+;                                             ;                                  ;
+; Embedded Multiplier 9-bit elements          ; 0                                ;
+;                                             ;                                  ;
+; Maximum fan-out node                        ; SEQUENCE_DETECTOR:inst|estado[2] ;
+; Maximum fan-out                             ; 10                               ;
+; Total fan-out                               ; 70                               ;
+; Average fan-out                             ; 1.32                             ;
++---------------------------------------------+----------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -214,9 +213,9 @@ refer to the applicable agreement for further details.
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name             ; Entity Name         ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+---------------------+--------------+
-; |main                          ; 10 (0)              ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 9    ; 0            ; 0          ; |main                           ; main                ; work         ;
+; |main                          ; 10 (0)              ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 20   ; 0            ; 0          ; |main                           ; main                ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst1 ; HEX_TO_7SEG_DECODER ; work         ;
-;    |SEQUENCE_DETECTOR:inst|    ; 3 (3)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|SEQUENCE_DETECTOR:inst    ; SEQUENCE_DETECTOR   ; work         ;
+;    |SEQUENCE_DETECTOR:inst|    ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|SEQUENCE_DETECTOR:inst    ; SEQUENCE_DETECTOR   ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -227,19 +226,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
 ; SEQUENCE_DETECTOR:inst|estado[3]      ; Stuck at GND due to stuck port data_in ;
-; SEQUENCE_DETECTOR:inst|state[3]       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
+; Total Number of Removed Registers = 1 ;                                        ;
 +---------------------------------------+----------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                           ;
-+----------------------------------+---------------------------+----------------------------------------+
-; Register name                    ; Reason for Removal        ; Registers Removed due to This Register ;
-+----------------------------------+---------------------------+----------------------------------------+
-; SEQUENCE_DETECTOR:inst|estado[3] ; Stuck at GND              ; SEQUENCE_DETECTOR:inst|state[3]        ;
-;                                  ; due to stuck port data_in ;                                        ;
-+----------------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -247,10 +235,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 6     ;
+; Total registers                              ; 3     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -262,16 +250,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 9                           ;
-; cycloneiii_ff         ; 6                           ;
-;     plain             ; 6                           ;
-; cycloneiii_lcell_comb ; 10                          ;
-;     normal            ; 10                          ;
+; boundary_port         ; 20                          ;
+; cycloneiii_ff         ; 3                           ;
+;     CLR               ; 3                           ;
+; cycloneiii_lcell_comb ; 11                          ;
+;     normal            ; 11                          ;
+;         0 data inputs ; 1                           ;
 ;         3 data inputs ; 7                           ;
 ;         4 data inputs ; 3                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.94                        ;
+; Average LUT depth     ; 0.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -290,34 +279,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 15 18:08:19 2024
+    Info: Processing started: Wed May 15 21:39:53 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file main.bdf
     Info (12023): Found entity 1: main
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg_decoder.bdf
     Info (12023): Found entity 1: HEX_TO_7SEG_DECODER
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference.vhd
-    Info (12022): Found design unit 1: Timing_Reference_0_2Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab06/Timing_Reference.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_0_2Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab06/Timing_Reference.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_0_2Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab06/Timing_Reference.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_0_2Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab06/Timing_Reference.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file sequence_detector.vhd
-    Info (12022): Found design unit 1: SEQUENCE_DETECTOR-detect File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab06/SEQUENCE_DETECTOR.vhd Line: 12
-    Info (12023): Found entity 1: SEQUENCE_DETECTOR File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab06/SEQUENCE_DETECTOR.vhd Line: 4
+    Info (12022): Found design unit 1: SEQUENCE_DETECTOR-detect File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab06/SEQUENCE_DETECTOR.vhd Line: 13
+    Info (12023): Found entity 1: SEQUENCE_DETECTOR File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab06/SEQUENCE_DETECTOR.vhd Line: 4
 Info (12127): Elaborating entity "main" for the top level hierarchy
+Warning (275011): Block or symbol "NOT" of instance "not_1" overlaps another block or symbol
 Info (12128): Elaborating entity "HEX_TO_7SEG_DECODER" for hierarchy "HEX_TO_7SEG_DECODER:inst1"
 Info (12128): Elaborating entity "SEQUENCE_DETECTOR" for hierarchy "SEQUENCE_DETECTOR:inst"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED1" is stuck at GND
+    Warning (13410): Pin "LED2" is stuck at GND
+    Warning (13410): Pin "LED3" is stuck at GND
+    Warning (13410): Pin "LED4" is stuck at GND
+    Warning (13410): Pin "LED5" is stuck at GND
+    Warning (13410): Pin "LED6" is stuck at GND
+    Warning (13410): Pin "LED7" is stuck at GND
+    Warning (13410): Pin "LED8" is stuck at GND
+    Warning (13410): Pin "LED9" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 13 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4806 megabytes
-    Info: Processing ended: Wed May 15 18:08:29 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:05
+Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 10 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Wed May 15 21:40:07 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:08
 
 

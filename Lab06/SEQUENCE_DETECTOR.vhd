@@ -5,6 +5,7 @@ entity SEQUENCE_DETECTOR is
     port(
         input : in STD_LOGIC;
 		  CLK : in STD_LOGIC;
+		  RST : in STD_LOGIC;
         state : out STD_LOGIC_VECTOR(3 downto 0)
     );
 end entity;
@@ -12,7 +13,7 @@ end entity;
 architecture detect of SEQUENCE_DETECTOR is
     signal estado : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 begin
-    process(CLK)
+    process(CLK, RST)
     begin
         if rising_edge(CLK) then
 			  case estado is
@@ -75,6 +76,9 @@ begin
 						estado <= "0000"; -- Default case
 			  end case;
         end if;
+		  if RST = '1' then
+		      estado <= "0000";
+		  end if;
     end process;
-	state <= estado;
+	 state <= estado;
 end architecture;
