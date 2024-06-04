@@ -1,5 +1,5 @@
 EDA Netlist Writer report for main
-Tue Jun 04 02:18:41 2024
+Tue Jun 04 14:56:18 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Jun 04 02:18:41 2024 ;
+; EDA Netlist Writer Status ; Successful - Tue Jun 04 14:56:18 2024 ;
 ; Revision Name             ; main                                  ;
 ; Top-level Entity Name     ; main                                  ;
 ; Family                    ; MAX 10                                ;
@@ -65,13 +65,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                          ;
-+-----------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                     ;
-+-----------------------------------------------------------------------------------------------------+
-; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim//main.vho ;
-+-----------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                  ;
++-------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                             ;
++-------------------------------------------------------------------------------------------------------------+
+; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/simulation/qsim//main.vho ;
++-------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -93,14 +93,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Jun 04 02:18:40 2024
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim/ main -c main
+    Info: Processing started: Tue Jun 04 14:56:17 2024
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/simulation/qsim/" main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file main.vho in folder "D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file main.vho in folder "E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4648 megabytes
-    Info: Processing ended: Tue Jun 04 02:18:41 2024
+    Info: Peak virtual memory: 4651 megabytes
+    Info: Processing ended: Tue Jun 04 14:56:18 2024
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

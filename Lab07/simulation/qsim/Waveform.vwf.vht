@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/04/2024 02:18:40"
+-- Generated on "06/04/2024 14:56:16"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          main
 -- 
@@ -33,20 +33,32 @@ END main_vhd_vec_tst;
 ARCHITECTURE main_arch OF main_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL A : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL B : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL CLK : STD_LOGIC;
-SIGNAL q : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL MEM_CTRL : STD_LOGIC;
+SIGNAL O : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL S : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT main
 	PORT (
+	A : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	B : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	CLK : IN STD_LOGIC;
-	q : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	MEM_CTRL : OUT STD_LOGIC;
+	O : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	S : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
 	i1 : main
 	PORT MAP (
 -- list connections between master ports and signals
+	A => A,
+	B => B,
 	CLK => CLK,
-	q => q
+	MEM_CTRL => MEM_CTRL,
+	O => O,
+	S => S
 	);
 
 -- CLK
@@ -54,10 +66,10 @@ t_prcs_CLK: PROCESS
 BEGIN
 LOOP
 	CLK <= '0';
-	WAIT FOR 10000 ps;
+	WAIT FOR 1000 ps;
 	CLK <= '1';
-	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	WAIT FOR 1000 ps;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_CLK;
 END main_arch;

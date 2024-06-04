@@ -7,9 +7,9 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim
+Z0 dE:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/simulation/qsim
 Ehard_block
-Z1 w1717478321
+Z1 w1717523778
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ V8_BbEmGd;OHS6h@;gFc7W3
 !s100 ROH=D<N4CT6aCZ<37A[_?0
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1717478321
+Z11 !s110 1717523779
 !i10b 1
-Z12 !s108 1717478321.000000
+Z12 !s108 1717523779.000000
 Z13 !s90 -work|work|main.vho|
 Z14 !s107 main.vho|
 !i113 1
@@ -70,8 +70,8 @@ R8
 R9
 l0
 L90
-VPodGn6QHmKePQkH3J0M8A3
-!s100 j=U@?UAe8ci=IRO7fEhcd2
+V0P8oX3DFgjY2=QzY]0S@A0
+!s100 F6P>4zXzRChfA7:f;5H4j2
 R10
 32
 R11
@@ -91,11 +91,11 @@ R4
 R5
 R6
 R18
-DEx4 work 4 main 0 22 PodGn6QHmKePQkH3J0M8A3
-l166
-L109
-VPzoLaaJOQ?ff_Gkh;CVfJ0
-!s100 >A4HJzJXVG6BlSVRRnl8<2
+DEx4 work 4 main 0 22 0P8oX3DFgjY2=QzY]0S@A0
+l231
+L138
+VFaXJe;eXD;:L3<RU0_5:g3
+!s100 GA4B5CcEKEgH]i=^cW1BL2
 R10
 32
 R11
@@ -107,7 +107,7 @@ R14
 R15
 R16
 Emain_vhd_vec_tst
-Z19 w1717478320
+Z19 w1717523776
 R5
 R6
 R0
@@ -131,10 +131,10 @@ Amain_arch
 R5
 R6
 Z24 DEx4 work 16 main_vhd_vec_tst 0 22 bAjZJ?=XSki31j0b2A<jS0
-l44
+l52
 L33
-Z25 VHLmP>bodn?E7h=zZIY08T3
-Z26 !s100 A^38KI`bX277SigiKh>zO0
+Ve763AS`4F?V?AGnD:Kb7h3
+!s100 9;^GFmcnDT?aT@Ea`@]kF1
 R10
 32
 R11

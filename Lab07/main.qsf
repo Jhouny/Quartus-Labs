@@ -56,7 +56,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE ADDER_1_BIT.vhd
 set_global_assignment -name VHDL_FILE ADDER_4_BITS.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name QIP_FILE ROM_256_8.qip
 set_global_assignment -name VHDL_FILE COUNTER_2_HEXA.vhd
 set_global_assignment -name VHDL_FILE ADDER_8_BITS.vhd
@@ -70,4 +69,7 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name QIP_FILE ROM_256_8_DECRESCENTE.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VHDL_FILE BARRAMENTO_2TO1.vhd
+set_global_assignment -name BDF_FILE tmp.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
