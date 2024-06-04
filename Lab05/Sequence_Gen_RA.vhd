@@ -15,56 +15,56 @@ architecture func of Sequence_Gen_RA is
 	begin
 		process(CLK) begin
 			if rising_edge(CLK) then
-				-- SEQ : 23580496ACE17BDF --
+				-- SEQ : F2E3D5C8B9A0417 --
 				case state is
 					when s0 =>
 						state <= s1;
-						Q <= "0010";
+						Q <= "1111";
 					when s1 =>
 						state <= s2;
-						Q <= "0011";
+						Q <= "0010";
 					when s2 =>
 						state <= s3;
-						Q <= "0101";
+						Q <= "1110";
 					when s3 =>
 						state <= s4;
-						Q <= "1000";
+						Q <= "0011";
 					when s4 =>
 						state <= s5;
-						Q <= "0000";
+						Q <= "1101";
 					when s5 =>
 						state <= s6;
-						Q <= "0100";
+						Q <= "0101";
 					when s6 =>
 						state <= s7;
-						Q <= "1001";
+						Q <= "1100";
 					when s7 =>
 						state <= s8;
-						Q <= "0110";
+						Q <= "1000";
 					when s8 =>
 						state <= s9;
-						Q <= "1010";
+						Q <= "1011";
 					when s9 =>
 						state <= s10;
-						Q <= "1100";
+						Q <= "1001";
 					when s10 =>
 						state <= s11;
-						Q <= "1110";
+						Q <= "1010";
 					when s11 =>
 						state <= s12;
-						Q <= "0001";
+						Q <= "0000";
 					when s12 =>
 						state <= s13;
-						Q <= "0111";
+						Q <= "0100";
 					when s13 =>
 						state <= s14;
-						Q <= "1011";
+						Q <= "0110";
 					when s14 =>
 						state <= s15;
-						Q <= "1101";
+						Q <= "0001";
 					when s15 =>
 						state <= s0;
-						Q <= "1111";
+						Q <= "0111";
 				end case;
 			end if;
 		end process;

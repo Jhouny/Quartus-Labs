@@ -1,0 +1,117 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/P1/simulation/qsim
+vhard_block
+Z1 !s110 1716560866
+!i10b 1
+!s100 zHYVML<E@dZz3cQ4M1LKO0
+I_RKe_bcMaD<mdbkzRKAl61
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1716560864
+Z4 8main.vo
+Z5 Fmain.vo
+L0 375
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1716560866.000000
+Z8 !s107 main.vo|
+Z9 !s90 -work|work|main.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vmain
+!s110 1716548972
+!i10b 1
+!s100 95gUWf7LgS3maA5WXNNW60
+I73]]Q7haej^k4mXd;h88g0
+R2
+R0
+w1716548972
+R4
+R5
+Z12 L0 31
+R6
+r1
+!s85 0
+31
+Z13 !s108 1716548972.000000
+R8
+R9
+!i113 1
+R10
+R11
+vmain_vlg_vec_tst
+!s110 1716548973
+!i10b 1
+!s100 EB^DG7mY:kg3L7L>57iBJ3
+IF9=?b4@PCmf;cOE=9RUAU2
+R2
+R0
+w1716548970
+Z14 8Waveform.vwf.vt
+Z15 FWaveform.vwf.vt
+Z16 L0 29
+R6
+r1
+!s85 0
+31
+R13
+!s107 Waveform.vwf.vt|
+Z17 !s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+vQ7
+R1
+!i10b 1
+!s100 n>m4CD]8[Ea<X42`c_j=P0
+IXD;V[n4aJo<0QidgNWUnA1
+R2
+R0
+R3
+R4
+R5
+R12
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@q7
+vQ7_vlg_vec_tst
+R1
+!i10b 1
+!s100 G^;S=^VMnXV9cog<96:KQ3
+I7>@BkcLLD3h=LGBRVeMgT0
+R2
+R0
+w1716560862
+R14
+R15
+R16
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+R17
+!i113 1
+R10
+R11
+n@q7_vlg_vec_tst
