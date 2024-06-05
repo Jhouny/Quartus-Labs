@@ -15,6 +15,7 @@ architecture detect of SEQUENCE_DETECTOR is
 begin
     process(CLK, RST)
     begin
+		-- SEQUENCE: 10110011 = B3 --
         if rising_edge(CLK) then
 			  case estado is
 					when "0000" =>
