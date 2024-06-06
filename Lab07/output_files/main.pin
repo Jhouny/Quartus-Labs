@@ -142,7 +142,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
 GND                          : B6        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
-BTN0                         : B8        : input  : 2.5 V             :         : 7         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B8        :        :                   :         : 7         :                
 GND                          : B9        : gnd    :                   :         :           :                
 LED3                         : B10       : output : 2.5 V             :         : 7         : Y              
 LED9_MEM_SELECT              : B11       : output : 2.5 V             :         : 7         : Y              

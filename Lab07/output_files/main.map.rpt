@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed Jun 05 23:06:25 2024
+Thu Jun 06 00:17:32 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -23,8 +23,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  15. Parameter Settings for User Entity Instance: ROM_256_8:inst3|altsyncram:altsyncram_component
  16. Parameter Settings for User Entity Instance: ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component
  17. altsyncram Parameter Settings by Entity Instance
- 18. Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0"
- 19. Port Connectivity Checks: "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add"
+ 18. Port Connectivity Checks: "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add"
+ 19. Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0"
  20. Post-Synthesis Netlist Statistics for Top Partition
  21. Elapsed Time Per Partition
  22. Analysis & Synthesis Messages
@@ -53,16 +53,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 05 23:06:25 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 06 00:17:32 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 179                                         ;
-;     Total combinational functions  ; 176                                         ;
-;     Dedicated logic registers      ; 88                                          ;
-; Total registers                    ; 88                                          ;
-; Total pins                         ; 48                                          ;
+; Total logic elements               ; 192                                         ;
+;     Total combinational functions  ; 173                                         ;
+;     Dedicated logic registers      ; 104                                         ;
+; Total registers                    ; 104                                         ;
+; Total pins                         ; 47                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -195,6 +195,7 @@ refer to the applicable agreement for further details.
 ; CLOCK_CTRL.vhd                   ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd            ;         ;
 ; Timing_Reference_32Hz.vhd        ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_32Hz.vhd ;         ;
 ; Timing_Reference_2Hz.vhd         ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd  ;         ;
+; REGISTER_4_BITS.vhd              ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd       ;         ;
 ; main.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/main.bdf                  ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
@@ -217,31 +218,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 179       ;
+; Estimated Total logic elements              ; 192       ;
 ;                                             ;           ;
-; Total combinational functions               ; 176       ;
+; Total combinational functions               ; 173       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 60        ;
-;     -- 3 input functions                    ; 19        ;
+;     -- 4 input functions                    ; 56        ;
+;     -- 3 input functions                    ; 20        ;
 ;     -- <=2 input functions                  ; 97        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 115       ;
+;     -- normal mode                          ; 112       ;
 ;     -- arithmetic mode                      ; 61        ;
 ;                                             ;           ;
-; Total registers                             ; 88        ;
-;     -- Dedicated logic registers            ; 88        ;
+; Total registers                             ; 104       ;
+;     -- Dedicated logic registers            ; 104       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 48        ;
+; I/O pins                                    ; 47        ;
 ; Total memory bits                           ; 4096      ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 65        ;
-; Total fan-out                               ; 916       ;
-; Average fan-out                             ; 2.44      ;
+; Total fan-out                               ; 926       ;
+; Average fan-out                             ; 2.39      ;
 +---------------------------------------------+-----------+
 
 
@@ -250,20 +251,24 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                              ; Entity Name           ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |main                                     ; 176 (1)             ; 88 (3)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 48   ; 0            ; 0          ; |main                                                                                            ; main                  ; work         ;
+; |main                                     ; 173 (1)             ; 104 (3)                   ; 4096        ; 0          ; 0            ; 0       ; 0         ; 47   ; 0            ; 0          ; |main                                                                                            ; main                  ; work         ;
 ;    |BARRAMENTO_2TO1:inst|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|BARRAMENTO_2TO1:inst                                                                       ; BARRAMENTO_2TO1       ; work         ;
 ;    |CLOCK_CTRL:inst12|                    ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|CLOCK_CTRL:inst12                                                                          ; CLOCK_CTRL            ; work         ;
-;    |COUNTER_2_HEXA:inst8|                 ; 12 (11)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8                                                                       ; COUNTER_2_HEXA        ; work         ;
+;    |COUNTER_2_HEXA:inst8|                 ; 10 (9)              ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8                                                                       ; COUNTER_2_HEXA        ; work         ;
 ;       |ADDER_8_BITS:add|                  ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add                                                      ; ADDER_8_BITS          ; work         ;
 ;          |ADDER_4_BITS:add1|              ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1                                    ; ADDER_4_BITS          ; work         ;
-;             |ADDER_1_BIT:add4|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add4                   ; ADDER_1_BIT           ; work         ;
-;    |HEX_TO_7SEG_DECODER:inst13|           ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst13                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
+;             |ADDER_1_BIT:add2|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add2                   ; ADDER_1_BIT           ; work         ;
+;    |HEX_TO_7SEG_DECODER:inst13|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst13                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst14|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst14                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst15|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst15                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst16|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst16                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst17|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst17                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |PISO_8_BITS:inst6|                    ; 8 (7)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PISO_8_BITS:inst6                                                                          ; PISO_8_BITS           ; work         ;
 ;       |LOAD_X_DESLOCAMENTO:ld0|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0                                                  ; LOAD_X_DESLOCAMENTO   ; work         ;
+;    |REGISTER_4_BITS:inst27|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst27                                                                     ; REGISTER_4_BITS       ; work         ;
+;    |REGISTER_4_BITS:inst28|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst28                                                                     ; REGISTER_4_BITS       ; work         ;
+;    |REGISTER_4_BITS:inst29|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst29                                                                     ; REGISTER_4_BITS       ; work         ;
+;    |REGISTER_4_BITS:inst30|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst30                                                                     ; REGISTER_4_BITS       ; work         ;
 ;    |ROM_256_8:inst3|                      ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3                                                                            ; ROM_256_8             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3|altsyncram:altsyncram_component                                            ; altsyncram            ; work         ;
 ;          |altsyncram_uoq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated             ; altsyncram_uoq3       ; work         ;
@@ -313,10 +318,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 88    ;
+; Total registers                              ; 104   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 9     ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -504,15 +509,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" ;
-+------+-------+----------+---------------------------------------------+
-; Port ; Type  ; Severity ; Details                                     ;
-+------+-------+----------+---------------------------------------------+
-; dq   ; Input ; Info     ; Stuck at GND                                ;
-+------+-------+----------+---------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add"                                              ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -524,30 +520,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" ;
++------+-------+----------+---------------------------------------------+
+; Port ; Type  ; Severity ; Details                                     ;
++------+-------+----------+---------------------------------------------+
+; dq   ; Input ; Info     ; Stuck at GND                                ;
++------+-------+----------+---------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 48                          ;
-; cycloneiii_ff         ; 88                          ;
-;     CLR               ; 9                           ;
+; boundary_port         ; 47                          ;
+; cycloneiii_ff         ; 104                         ;
+;     CLR               ; 1                           ;
 ;     SLD               ; 7                           ;
-;     plain             ; 72                          ;
-; cycloneiii_lcell_comb ; 177                         ;
+;     plain             ; 96                          ;
+; cycloneiii_lcell_comb ; 174                         ;
 ;     arith             ; 61                          ;
 ;         2 data inputs ; 60                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 116                         ;
+;     normal            ; 113                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 32                          ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 60                          ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 56                          ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 3.01                        ;
+; Average LUT depth     ; 2.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -566,7 +571,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jun 05 23:06:09 2024
+    Info: Processing started: Thu Jun 06 00:17:18 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -628,16 +633,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file timing_
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_2hz.vhd
     Info (12022): Found design unit 1: Timing_Reference_2Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd Line: 13
     Info (12023): Found entity 1: Timing_Reference_2Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register_4_bits.vhd
+    Info (12022): Found design unit 1: REGISTER_4_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_4_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd Line: 5
 Warning (12125): Using design file main.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: main
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "HEX_TO_7SEG_DECODER" for hierarchy "HEX_TO_7SEG_DECODER:inst13"
-Info (12128): Elaborating entity "COUNTER_2_HEXA" for hierarchy "COUNTER_2_HEXA:inst8"
-Warning (10036): Verilog HDL or VHDL warning at COUNTER_2_HEXA.vhd(13): object "trash" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 13
-Warning (10492): VHDL Process Statement warning at COUNTER_2_HEXA.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 40
-Info (12128): Elaborating entity "ADDER_8_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 25
-Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd Line: 26
-Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd Line: 24
+Info (12128): Elaborating entity "REGISTER_4_BITS" for hierarchy "REGISTER_4_BITS:inst30"
 Info (12128): Elaborating entity "CLOCK_CTRL" for hierarchy "CLOCK_CTRL:inst12"
 Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(22): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 22
 Info (12128): Elaborating entity "Timing_Reference_2Hz" for hierarchy "Timing_Reference_2Hz:inst123"
@@ -650,6 +653,12 @@ Info (12128): Elaborating entity "LOAD_X_DESLOCAMENTO" for hierarchy "PISO_8_BIT
 Info (12128): Elaborating entity "BARRAMENTO_2TO1" for hierarchy "BARRAMENTO_2TO1:inst"
 Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 17
 Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 19
+Info (12128): Elaborating entity "COUNTER_2_HEXA" for hierarchy "COUNTER_2_HEXA:inst8"
+Warning (10036): Verilog HDL or VHDL warning at COUNTER_2_HEXA.vhd(13): object "trash" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 13
+Warning (10492): VHDL Process Statement warning at COUNTER_2_HEXA.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 40
+Info (12128): Elaborating entity "ADDER_8_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 25
+Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd Line: 26
+Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd Line: 24
 Info (12128): Elaborating entity "ROM_256_8" for hierarchy "ROM_256_8:inst3"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 59
 Info (12130): Elaborated megafunction instantiation "ROM_256_8:inst3|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 59
@@ -774,15 +783,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 250 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 262 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 186 logic cells
+    Info (21061): Implemented 199 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 4817 megabytes
-    Info: Processing ended: Wed Jun 05 23:06:25 2024
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Peak virtual memory: 4816 megabytes
+    Info: Processing ended: Thu Jun 06 00:17:32 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:08
 
 
