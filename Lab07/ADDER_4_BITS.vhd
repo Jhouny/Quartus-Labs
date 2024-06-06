@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity ADDER_4_BITS is
 	port(
 		A, B : in std_logic_vector(3 downto 0);
-		Cin : in std_logic;
+		Cin, CLK : in std_logic;
 		S : out std_logic_vector(3 downto 0);
 		Cout : out std_logic
 	);
@@ -15,15 +15,15 @@ architecture add of ADDER_4_BITS is
 	
 	component ADDER_1_BIT is
 		port(
-			A, B, Cin : in std_logic;
+			A, B, Cin, CLK : in std_logic;
 			S, Cout : out std_logic
 		);
 	end component;
 	
 	begin
-		add1 : ADDER_1_BIT port map(A => A(0), B => B(0), Cin => Cin, S => S(0), Cout => couts(0));
-		add2 : ADDER_1_BIT port map(A => A(1), B => B(1), Cin => couts(0), S => S(1), Cout => couts(1));
-		add3 : ADDER_1_BIT port map(A => A(2), B => B(2), Cin => couts(1), S => S(2), Cout => couts(2));
-		add4 : ADDER_1_BIT port map(A => A(3), B => B(3), Cin => couts(2), S => S(3), Cout => Cout);
+		add1 : ADDER_1_BIT port map(A => A(0), B => B(0), Cin => Cin, CLK => CLK, S => S(0), Cout => couts(0));
+		add2 : ADDER_1_BIT port map(A => A(1), B => B(1), Cin => couts(0), CLK => CLK, S => S(1), Cout => couts(1));
+		add3 : ADDER_1_BIT port map(A => A(2), B => B(2), Cin => couts(1), CLK => CLK, S => S(2), Cout => couts(2));
+		add4 : ADDER_1_BIT port map(A => A(3), B => B(3), Cin => couts(2), CLK => CLK, S => S(3), Cout => Cout);
 		
 end architecture;

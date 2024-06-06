@@ -15,14 +15,14 @@ architecture count of COUNTER_2_HEXA is
 	component ADDER_8_BITS is
 		port(
 			A, B : in std_logic_vector(7 downto 0);
-			Cin : in std_logic;
+			Cin, CLK : in std_logic;
 			S : out std_logic_vector(7 downto 0);
 			Cout : out std_logic
 		);
 	end component;
 	
 	begin
-		add : ADDER_8_BITS port map(A => count, B => "00000000", Cin => '1', S => tmp, Cout => trash); -- tmp sempre será count+1 --
+		add : ADDER_8_BITS port map(A => count, B => "00000000", Cin => '1', CLK => CLK, S => tmp, Cout => trash); -- tmp sempre será count+1 --
 	--======================================================================================================================--
 	process(CLK, RST) begin
 		-- Reseta o contador para '0' --

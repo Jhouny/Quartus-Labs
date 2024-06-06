@@ -1783,64 +1783,6 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -744 192 -576 272)
-	(text "Timing_Reference_2Hz" (rect 5 0 119 12)(font "Arial" ))
-	(text "inst123" (rect 8 64 43 76)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "StartStop" (rect 0 0 46 12)(font "Arial" ))
-		(text "StartStop" (rect 21 43 67 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 168 32)
-		(output)
-		(text "clk_out" (rect 0 0 35 12)(font "Arial" ))
-		(text "clk_out" (rect 118 27 153 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 152 64))
-	)
-)
-(symbol
-	(rect -744 272 -576 352)
-	(text "Timing_Reference_32Hz" (rect 5 0 125 12)(font "Arial" ))
-	(text "inst234" (rect 8 64 42 81)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "StartStop" (rect 0 0 46 12)(font "Arial" ))
-		(text "StartStop" (rect 21 43 67 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 168 32)
-		(output)
-		(text "clk_out" (rect 0 0 35 12)(font "Arial" ))
-		(text "clk_out" (rect 118 27 153 39)(font "Arial" ))
-		(line (pt 168 32)(pt 152 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 152 64))
-	)
-)
-(symbol
 	(rect -16 -168 152 -56)
 	(text "REGISTER_4_BITS" (rect 5 0 101 12)(font "Arial" ))
 	(text "inst27" (rect 8 96 36 113)(font "Intel Clear" ))
@@ -1982,6 +1924,64 @@ refer to the applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 152 96))
+	)
+)
+(symbol
+	(rect -744 192 -576 272)
+	(text "Timing_Reference_1Hz" (rect 5 0 119 12)(font "Arial" ))
+	(text "inst30946874" (rect 8 64 71 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "StartStop" (rect 0 0 46 12)(font "Arial" ))
+		(text "StartStop" (rect 21 43 67 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "clk_out" (rect 0 0 35 12)(font "Arial" ))
+		(text "clk_out" (rect 118 27 153 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 64))
+	)
+)
+(symbol
+	(rect -744 272 -576 352)
+	(text "Timing_Reference_16Hz" (rect 5 0 125 12)(font "Arial" ))
+	(text "inst33408957" (rect 8 64 71 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "StartStop" (rect 0 0 46 12)(font "Arial" ))
+		(text "StartStop" (rect 21 43 67 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "clk_out" (rect 0 0 35 12)(font "Arial" ))
+		(text "clk_out" (rect 118 27 153 39)(font "Arial" ))
+		(line (pt 168 32)(pt 152 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 64))
 	)
 )
 (connector
@@ -2155,28 +2155,8 @@ refer to the applicable agreement for further details.
 	(pt 784 72)
 )
 (connector
-	(pt 792 88)
-	(pt 784 88)
-)
-(connector
-	(pt 784 88)
-	(pt 784 72)
-)
-(connector
-	(pt 792 104)
-	(pt 784 104)
-)
-(connector
-	(pt 784 104)
-	(pt 784 88)
-)
-(connector
 	(pt 792 120)
 	(pt 784 120)
-)
-(connector
-	(pt 784 120)
-	(pt 784 104)
 )
 (connector
 	(pt 792 136)
@@ -2264,14 +2244,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt -760 240)
 	(pt -760 320)
-)
-(connector
-	(pt -576 224)
-	(pt -544 224)
-)
-(connector
-	(pt -576 304)
-	(pt -464 304)
 )
 (connector
 	(pt -784 224)
@@ -2485,6 +2457,30 @@ refer to the applicable agreement for further details.
 	(pt -40 48)
 	(pt -40 224)
 )
+(connector
+	(text "CLK_BASE_SLOW" (rect -556 208 -468 225)(font "Intel Clear" ))
+	(pt -576 224)
+	(pt -544 224)
+)
+(connector
+	(text "CLK_BASE_FAST" (rect -560 288 -478 305)(font "Intel Clear" ))
+	(pt -576 304)
+	(pt -464 304)
+)
+(connector
+	(pt 784 72)
+	(pt 784 120)
+)
+(connector
+	(text "CLK_BASE_SLOW" (rect 704 72 792 89)(font "Intel Clear" ))
+	(pt 792 88)
+	(pt 728 88)
+)
+(connector
+	(text "CLK_BASE_FAST" (rect 706 88 788 105)(font "Intel Clear" ))
+	(pt 792 104)
+	(pt 728 104)
+)
 (junction (pt 136 224))
 (junction (pt 184 304))
 (junction (pt 152 224))
@@ -2492,8 +2488,6 @@ refer to the applicable agreement for further details.
 (junction (pt 352 368))
 (junction (pt 344 408))
 (junction (pt 784 72))
-(junction (pt 784 88))
-(junction (pt 784 104))
 (junction (pt 784 120))
 (junction (pt 784 136))
 (junction (pt -768 224))
@@ -2513,5 +2507,5 @@ refer to the applicable agreement for further details.
 (text "registers das memórias" (rect 208 504 346 523)(font "Intel Clear" (color 255 0 0)(font_size 8)))
 (text "Delay de 2 clocks slow para sincronizar com os" (rect -64 -208 210 -189)(font "Intel Clear" (color 255 0 0)(font_size 8)))
 (text "registers das memórias" (rect -64 -192 74 -173)(font "Intel Clear" (color 255 0 0)(font_size 8)))
-(rectangle (rect -72 -216 360 128)(color 0 0 0)(line_width 3))
+(rectangle (rect -72 -216 344 128)(color 0 0 0)(line_width 3))
 (rectangle (rect 200 360 512 528)(color 0 0 0)(line_width 3))
