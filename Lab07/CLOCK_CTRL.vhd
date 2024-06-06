@@ -14,16 +14,20 @@ end entity;
 
 architecture func of CLOCK_CTRL is
 	signal clk_slow_ctrl, clk_fast_ctrl : std_logic;
-	signal count : integer:=1;
 	signal tmp, state_ctrl : std_logic := '0';
 	
 	begin
 		process(CLK_BASE_FAST, CLK_BASE_SLOW, STATE) begin
-			if STATE = "0111" and CONTINUE = '0' then -- IF CORRECT SEQUENCE REACHED
+			if STATE = "0111" and CONTINUE = '0' and tmp = '0' then -- IF CORRECT SEQUENCE REACHED
 				clk_fast_ctrl <= '0';
 				clk_slow_ctrl <= '0';
 				state_ctrl <= '1';
 			else
+				if CONTINUE = '1' then
+					tmp = '1';
+				elsif STATE /= "0111" then
+					tmp = '0'
+				end if;
 				clk_fast_ctrl <= CLK_BASE_FAST;
 				clk_slow_ctrl <= CLK_BASE_SLOW;
 				state_ctrl <= '0';
