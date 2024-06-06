@@ -25,7 +25,7 @@ process(clk, StartStop)
             count <= 1;
         end if;
     end if;
-    clk_1kHz <= tmp;
+    clk_out <= tmp;
 end process;
  
 end architecture;

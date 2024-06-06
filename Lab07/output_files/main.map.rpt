@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Wed Jun 05 12:17:22 2024
+Wed Jun 05 23:06:25 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,16 +17,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Source assignments for ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_jkq3:auto_generated
- 13. Source assignments for ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_nrr3:auto_generated
- 14. Parameter Settings for User Entity Instance: ROM_256_8:inst3|altsyncram:altsyncram_component
- 15. Parameter Settings for User Entity Instance: ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add"
+ 12. Inverted Register Statistics
+ 13. Source assignments for ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated
+ 14. Source assignments for ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated
+ 15. Parameter Settings for User Entity Instance: ROM_256_8:inst3|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component
+ 17. altsyncram Parameter Settings by Entity Instance
  18. Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+ 19. Port Connectivity Checks: "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -52,16 +53,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 05 12:17:22 2024       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 05 23:06:25 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 29                                          ;
-;     Total combinational functions  ; 26                                          ;
-;     Dedicated logic registers      ; 23                                          ;
-; Total registers                    ; 23                                          ;
-; Total pins                         ; 44                                          ;
+; Total logic elements               ; 179                                         ;
+;     Total combinational functions  ; 176                                         ;
+;     Dedicated logic registers      ; 88                                          ;
+; Total registers                    ; 88                                          ;
+; Total pins                         ; 48                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -162,83 +163,86 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-6         ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; PISO_8_BITS.vhd                  ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/PISO_8_BITS.vhd           ;         ;
-; SEQUENCE_DETECTOR.vhd            ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/SEQUENCE_DETECTOR.vhd     ;         ;
-; ADDER_1_BIT.vhd                  ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd           ;         ;
-; ADDER_4_BITS.vhd                 ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_4_BITS.vhd          ;         ;
-; ROM_256_8.vhd                    ; yes             ; User Wizard-Generated File               ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd             ;         ;
-; COUNTER_2_HEXA.vhd               ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd        ;         ;
-; ADDER_8_BITS.vhd                 ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_8_BITS.vhd          ;         ;
-; ROM_256_8_DECRESCENTE.vhd        ; yes             ; User Wizard-Generated File               ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd ;         ;
-; BARRAMENTO_2TO1.vhd              ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd       ;         ;
-; LOAD_X_DESLOCAMENTO.vhd          ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/LOAD_X_DESLOCAMENTO.vhd   ;         ;
-; CLOCK_CTRL.vhd                   ; yes             ; User VHDL File                           ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd            ;         ;
-; main.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/main.bdf                  ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                               ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                        ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                  ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                               ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                               ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                ;         ;
-; altrom.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                   ;         ;
-; altram.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                   ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
-; db/altsyncram_jkq3.tdf           ; yes             ; Auto-Generated Megafunction              ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/db/altsyncram_jkq3.tdf    ;         ;
-; rom_256_8.hex                    ; yes             ; Auto-Found Memory Initialization File    ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/rom_256_8.hex             ;         ;
-; db/altsyncram_nrr3.tdf           ; yes             ; Auto-Generated Megafunction              ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/db/altsyncram_nrr3.tdf    ;         ;
-; rom_256_8_decrescente.hex        ; yes             ; Auto-Found Memory Initialization File    ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/rom_256_8_decrescente.hex ;         ;
-+----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                                ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; HEX_TO_7SEG_DECODER.bdf          ; yes             ; User Block Diagram/Schematic File        ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/HEX_TO_7SEG_DECODER.bdf   ;         ;
+; PISO_8_BITS.vhd                  ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd           ;         ;
+; SEQUENCE_DETECTOR.vhd            ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/SEQUENCE_DETECTOR.vhd     ;         ;
+; ADDER_1_BIT.vhd                  ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd           ;         ;
+; ADDER_4_BITS.vhd                 ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd          ;         ;
+; ROM_256_8.vhd                    ; yes             ; User Wizard-Generated File               ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd             ;         ;
+; COUNTER_2_HEXA.vhd               ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd        ;         ;
+; ADDER_8_BITS.vhd                 ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd          ;         ;
+; ROM_256_8_DECRESCENTE.vhd        ; yes             ; User Wizard-Generated File               ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd ;         ;
+; BARRAMENTO_2TO1.vhd              ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd       ;         ;
+; LOAD_X_DESLOCAMENTO.vhd          ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/LOAD_X_DESLOCAMENTO.vhd   ;         ;
+; CLOCK_CTRL.vhd                   ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd            ;         ;
+; Timing_Reference_32Hz.vhd        ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_32Hz.vhd ;         ;
+; Timing_Reference_2Hz.vhd         ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd  ;         ;
+; main.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/main.bdf                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                          ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                       ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                       ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                        ;         ;
+; altrom.inc                       ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                           ;         ;
+; altram.inc                       ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                           ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
+; db/altsyncram_uoq3.tdf           ; yes             ; Auto-Generated Megafunction              ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_uoq3.tdf    ;         ;
+; rom_256_8.hex                    ; yes             ; Auto-Found Memory Initialization File    ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/rom_256_8.hex             ;         ;
+; db/altsyncram_20s3.tdf           ; yes             ; Auto-Generated Megafunction              ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_20s3.tdf    ;         ;
+; rom_256_8_decrescente.hex        ; yes             ; Auto-Found Memory Initialization File    ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/rom_256_8_decrescente.hex ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                              ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Estimated Total logic elements              ; 29                         ;
-;                                             ;                            ;
-; Total combinational functions               ; 26                         ;
-; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 9                          ;
-;     -- 3 input functions                    ; 10                         ;
-;     -- <=2 input functions                  ; 7                          ;
-;                                             ;                            ;
-; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 26                         ;
-;     -- arithmetic mode                      ; 0                          ;
-;                                             ;                            ;
-; Total registers                             ; 23                         ;
-;     -- Dedicated logic registers            ; 23                         ;
-;     -- I/O registers                        ; 0                          ;
-;                                             ;                            ;
-; I/O pins                                    ; 44                         ;
-; Total memory bits                           ; 4096                       ;
-;                                             ;                            ;
-; Embedded Multiplier 9-bit elements          ; 0                          ;
-;                                             ;                            ;
-; Maximum fan-out node                        ; CLOCK_CTRL:inst12|SLOW_CLK ;
-; Maximum fan-out                             ; 36                         ;
-; Total fan-out                               ; 367                        ;
-; Average fan-out                             ; 2.40                       ;
-+---------------------------------------------+----------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 179       ;
+;                                             ;           ;
+; Total combinational functions               ; 176       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 60        ;
+;     -- 3 input functions                    ; 19        ;
+;     -- <=2 input functions                  ; 97        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 115       ;
+;     -- arithmetic mode                      ; 61        ;
+;                                             ;           ;
+; Total registers                             ; 88        ;
+;     -- Dedicated logic registers            ; 88        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 48        ;
+; Total memory bits                           ; 4096      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 65        ;
+; Total fan-out                               ; 916       ;
+; Average fan-out                             ; 2.44      ;
++---------------------------------------------+-----------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -246,31 +250,41 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                              ; Entity Name           ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |main                                     ; 26 (1)              ; 23 (3)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 44   ; 0            ; 0          ; |main                                                                                            ; main                  ; work         ;
+; |main                                     ; 176 (1)             ; 88 (3)                    ; 4096        ; 0          ; 0            ; 0       ; 0         ; 48   ; 0            ; 0          ; |main                                                                                            ; main                  ; work         ;
 ;    |BARRAMENTO_2TO1:inst|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|BARRAMENTO_2TO1:inst                                                                       ; BARRAMENTO_2TO1       ; work         ;
 ;    |CLOCK_CTRL:inst12|                    ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|CLOCK_CTRL:inst12                                                                          ; CLOCK_CTRL            ; work         ;
-;    |COUNTER_2_HEXA:inst8|                 ; 10 (10)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8                                                                       ; COUNTER_2_HEXA        ; work         ;
+;    |COUNTER_2_HEXA:inst8|                 ; 12 (11)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8                                                                       ; COUNTER_2_HEXA        ; work         ;
+;       |ADDER_8_BITS:add|                  ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add                                                      ; ADDER_8_BITS          ; work         ;
+;          |ADDER_4_BITS:add1|              ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1                                    ; ADDER_4_BITS          ; work         ;
+;             |ADDER_1_BIT:add4|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add4                   ; ADDER_1_BIT           ; work         ;
+;    |HEX_TO_7SEG_DECODER:inst13|           ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst13                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:inst14|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst14                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:inst15|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst15                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:inst16|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst16                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:inst17|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst17                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |PISO_8_BITS:inst6|                    ; 8 (7)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PISO_8_BITS:inst6                                                                          ; PISO_8_BITS           ; work         ;
 ;       |LOAD_X_DESLOCAMENTO:ld0|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0                                                  ; LOAD_X_DESLOCAMENTO   ; work         ;
 ;    |ROM_256_8:inst3|                      ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3                                                                            ; ROM_256_8             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3|altsyncram:altsyncram_component                                            ; altsyncram            ; work         ;
-;          |altsyncram_jkq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_jkq3:auto_generated             ; altsyncram_jkq3       ; work         ;
+;          |altsyncram_uoq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated             ; altsyncram_uoq3       ; work         ;
 ;    |ROM_256_8_DECRESCENTE:inst4|          ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8_DECRESCENTE:inst4                                                                ; ROM_256_8_DECRESCENTE ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component                                ; altsyncram            ; work         ;
-;          |altsyncram_nrr3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_nrr3:auto_generated ; altsyncram_nrr3       ; work         ;
+;          |altsyncram_20s3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated ; altsyncram_20s3       ; work         ;
 ;    |SEQUENCE_DETECTOR:inst7|              ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|SEQUENCE_DETECTOR:inst7                                                                    ; SEQUENCE_DETECTOR     ; work         ;
+;    |Timing_Reference_2Hz:inst123|         ; 57 (57)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_2Hz:inst123                                                               ; Timing_Reference_2Hz  ; work         ;
+;    |Timing_Reference_32Hz:inst234|        ; 55 (55)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_32Hz:inst234                                                              ; Timing_Reference_32Hz ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                   ;
-+-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------+
-; Name                                                                                                  ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                       ;
-+-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------+
-; ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_jkq3:auto_generated|ALTSYNCRAM             ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; ROM_256_8.hex             ;
-; ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_nrr3:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; ROM_256_8_DECRESCENTE.hex ;
-+-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                      ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
+; Name                                                                                                  ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                          ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
+; ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated|ALTSYNCRAM             ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; ../ROM_256_8.hex             ;
+; ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; ../ROM_256_8_DECRESCENTE.hex ;
++-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -283,14 +297,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; SEQUENCE_DETECTOR:inst7|estado[3]     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++----------------------------------------+---------------------------------------------------+
+; Register name                          ; Reason for Removal                                ;
++----------------------------------------+---------------------------------------------------+
+; SEQUENCE_DETECTOR:inst7|estado[3]      ; Stuck at GND due to stuck port data_in            ;
+; Timing_Reference_32Hz:inst234|count[0] ; Merged with Timing_Reference_2Hz:inst123|count[0] ;
+; Total Number of Removed Registers = 2  ;                                                   ;
++----------------------------------------+---------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -298,18 +313,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 23    ;
+; Total registers                              ; 88    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Clear ; 9     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Timing_Reference_2Hz:inst123|count[0]  ; 4       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
 +-------------------------------------------------------------------------------------------------------+
-; Source assignments for ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_jkq3:auto_generated ;
+; Source assignments for ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                      ;
 +---------------------------------+--------------------+------+-----------------------------------------+
@@ -318,7 +343,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Source assignments for ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_nrr3:auto_generated ;
+; Source assignments for ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                  ;
 +---------------------------------+--------------------+------+-----------------------------------------------------+
@@ -369,7 +394,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                          ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
-; INIT_FILE                          ; ROM_256_8.hex        ; Untyped                          ;
+; INIT_FILE                          ; ../ROM_256_8.hex     ; Untyped                          ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                          ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                   ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                          ;
@@ -382,69 +407,69 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                          ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                   ;
 ; DEVICE_FAMILY                      ; MAX 10               ; Untyped                          ;
-; CBXI_PARAMETER                     ; altsyncram_jkq3      ; Untyped                          ;
+; CBXI_PARAMETER                     ; altsyncram_uoq3      ; Untyped                          ;
 +------------------------------------+----------------------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component ;
-+------------------------------------+---------------------------+-----------------------------------------+
-; Parameter Name                     ; Value                     ; Type                                    ;
-+------------------------------------+---------------------------+-----------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                         ; Untyped                                 ;
-; AUTO_CARRY_CHAINS                  ; ON                        ; AUTO_CARRY                              ;
-; IGNORE_CARRY_BUFFERS               ; OFF                       ; IGNORE_CARRY                            ;
-; AUTO_CASCADE_CHAINS                ; ON                        ; AUTO_CASCADE                            ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                       ; IGNORE_CASCADE                          ;
-; WIDTH_BYTEENA                      ; 1                         ; Untyped                                 ;
-; OPERATION_MODE                     ; ROM                       ; Untyped                                 ;
-; WIDTH_A                            ; 8                         ; Signed Integer                          ;
-; WIDTHAD_A                          ; 8                         ; Signed Integer                          ;
-; NUMWORDS_A                         ; 256                       ; Signed Integer                          ;
-; OUTDATA_REG_A                      ; CLOCK0                    ; Untyped                                 ;
-; ADDRESS_ACLR_A                     ; NONE                      ; Untyped                                 ;
-; OUTDATA_ACLR_A                     ; NONE                      ; Untyped                                 ;
-; WRCONTROL_ACLR_A                   ; NONE                      ; Untyped                                 ;
-; INDATA_ACLR_A                      ; NONE                      ; Untyped                                 ;
-; BYTEENA_ACLR_A                     ; NONE                      ; Untyped                                 ;
-; WIDTH_B                            ; 1                         ; Signed Integer                          ;
-; WIDTHAD_B                          ; 1                         ; Signed Integer                          ;
-; NUMWORDS_B                         ; 0                         ; Signed Integer                          ;
-; INDATA_REG_B                       ; CLOCK1                    ; Untyped                                 ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                    ; Untyped                                 ;
-; RDCONTROL_REG_B                    ; CLOCK1                    ; Untyped                                 ;
-; ADDRESS_REG_B                      ; CLOCK1                    ; Untyped                                 ;
-; OUTDATA_REG_B                      ; UNREGISTERED              ; Untyped                                 ;
-; BYTEENA_REG_B                      ; CLOCK1                    ; Untyped                                 ;
-; INDATA_ACLR_B                      ; NONE                      ; Untyped                                 ;
-; WRCONTROL_ACLR_B                   ; NONE                      ; Untyped                                 ;
-; ADDRESS_ACLR_B                     ; NONE                      ; Untyped                                 ;
-; OUTDATA_ACLR_B                     ; NONE                      ; Untyped                                 ;
-; RDCONTROL_ACLR_B                   ; NONE                      ; Untyped                                 ;
-; BYTEENA_ACLR_B                     ; NONE                      ; Untyped                                 ;
-; WIDTH_BYTEENA_A                    ; 1                         ; Signed Integer                          ;
-; WIDTH_BYTEENA_B                    ; 1                         ; Signed Integer                          ;
-; RAM_BLOCK_TYPE                     ; AUTO                      ; Untyped                                 ;
-; BYTE_SIZE                          ; 8                         ; Signed Integer                          ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                 ; Untyped                                 ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ      ; Untyped                                 ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ      ; Untyped                                 ;
-; INIT_FILE                          ; ROM_256_8_DECRESCENTE.hex ; Untyped                                 ;
-; INIT_FILE_LAYOUT                   ; PORT_A                    ; Untyped                                 ;
-; MAXIMUM_DEPTH                      ; 0                         ; Signed Integer                          ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                    ; Untyped                                 ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                    ; Untyped                                 ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                    ; Untyped                                 ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                    ; Untyped                                 ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN           ; Untyped                                 ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN           ; Untyped                                 ;
-; ENABLE_ECC                         ; FALSE                     ; Untyped                                 ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                     ; Untyped                                 ;
-; WIDTH_ECCSTATUS                    ; 3                         ; Signed Integer                          ;
-; DEVICE_FAMILY                      ; MAX 10                    ; Untyped                                 ;
-; CBXI_PARAMETER                     ; altsyncram_nrr3           ; Untyped                                 ;
-+------------------------------------+---------------------------+-----------------------------------------+
++------------------------------------+------------------------------+--------------------------------------+
+; Parameter Name                     ; Value                        ; Type                                 ;
++------------------------------------+------------------------------+--------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                            ; Untyped                              ;
+; AUTO_CARRY_CHAINS                  ; ON                           ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                          ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS                ; ON                           ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                          ; IGNORE_CASCADE                       ;
+; WIDTH_BYTEENA                      ; 1                            ; Untyped                              ;
+; OPERATION_MODE                     ; ROM                          ; Untyped                              ;
+; WIDTH_A                            ; 8                            ; Signed Integer                       ;
+; WIDTHAD_A                          ; 8                            ; Signed Integer                       ;
+; NUMWORDS_A                         ; 256                          ; Signed Integer                       ;
+; OUTDATA_REG_A                      ; CLOCK0                       ; Untyped                              ;
+; ADDRESS_ACLR_A                     ; NONE                         ; Untyped                              ;
+; OUTDATA_ACLR_A                     ; NONE                         ; Untyped                              ;
+; WRCONTROL_ACLR_A                   ; NONE                         ; Untyped                              ;
+; INDATA_ACLR_A                      ; NONE                         ; Untyped                              ;
+; BYTEENA_ACLR_A                     ; NONE                         ; Untyped                              ;
+; WIDTH_B                            ; 1                            ; Signed Integer                       ;
+; WIDTHAD_B                          ; 1                            ; Signed Integer                       ;
+; NUMWORDS_B                         ; 0                            ; Signed Integer                       ;
+; INDATA_REG_B                       ; CLOCK1                       ; Untyped                              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                       ; Untyped                              ;
+; RDCONTROL_REG_B                    ; CLOCK1                       ; Untyped                              ;
+; ADDRESS_REG_B                      ; CLOCK1                       ; Untyped                              ;
+; OUTDATA_REG_B                      ; UNREGISTERED                 ; Untyped                              ;
+; BYTEENA_REG_B                      ; CLOCK1                       ; Untyped                              ;
+; INDATA_ACLR_B                      ; NONE                         ; Untyped                              ;
+; WRCONTROL_ACLR_B                   ; NONE                         ; Untyped                              ;
+; ADDRESS_ACLR_B                     ; NONE                         ; Untyped                              ;
+; OUTDATA_ACLR_B                     ; NONE                         ; Untyped                              ;
+; RDCONTROL_ACLR_B                   ; NONE                         ; Untyped                              ;
+; BYTEENA_ACLR_B                     ; NONE                         ; Untyped                              ;
+; WIDTH_BYTEENA_A                    ; 1                            ; Signed Integer                       ;
+; WIDTH_BYTEENA_B                    ; 1                            ; Signed Integer                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                         ; Untyped                              ;
+; BYTE_SIZE                          ; 8                            ; Signed Integer                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                    ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ         ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ         ; Untyped                              ;
+; INIT_FILE                          ; ../ROM_256_8_DECRESCENTE.hex ; Untyped                              ;
+; INIT_FILE_LAYOUT                   ; PORT_A                       ; Untyped                              ;
+; MAXIMUM_DEPTH                      ; 0                            ; Signed Integer                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                       ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                       ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                       ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                       ; Untyped                              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN              ; Untyped                              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN              ; Untyped                              ;
+; ENABLE_ECC                         ; FALSE                        ; Untyped                              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                        ; Untyped                              ;
+; WIDTH_ECCSTATUS                    ; 3                            ; Signed Integer                       ;
+; DEVICE_FAMILY                      ; MAX 10                       ; Untyped                              ;
+; CBXI_PARAMETER                     ; altsyncram_20s3              ; Untyped                              ;
++------------------------------------+------------------------------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -479,6 +504,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" ;
++------+-------+----------+---------------------------------------------+
+; Port ; Type  ; Severity ; Details                                     ;
++------+-------+----------+---------------------------------------------+
+; dq   ; Input ; Info     ; Stuck at GND                                ;
++------+-------+----------+---------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add"                                              ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -490,36 +524,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" ;
-+------+-------+----------+---------------------------------------------+
-; Port ; Type  ; Severity ; Details                                     ;
-+------+-------+----------+---------------------------------------------+
-; dq   ; Input ; Info     ; Stuck at GND                                ;
-+------+-------+----------+---------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 44                          ;
-; cycloneiii_ff         ; 23                          ;
-;     CLR               ; 1                           ;
+; boundary_port         ; 48                          ;
+; cycloneiii_ff         ; 88                          ;
+;     CLR               ; 9                           ;
 ;     SLD               ; 7                           ;
-;     plain             ; 15                          ;
-; cycloneiii_lcell_comb ; 27                          ;
-;     normal            ; 27                          ;
+;     plain             ; 72                          ;
+; cycloneiii_lcell_comb ; 177                         ;
+;     arith             ; 61                          ;
+;         2 data inputs ; 60                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 116                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 9                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 60                          ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.26                        ;
+; Max LUT depth         ; 4.30                        ;
+; Average LUT depth     ; 3.01                        ;
 +-----------------------+-----------------------------+
 
 
@@ -538,68 +566,94 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jun 05 12:17:11 2024
+    Info: Processing started: Wed Jun 05 23:06:09 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg_decoder.bdf
     Info (12023): Found entity 1: HEX_TO_7SEG_DECODER
 Info (12021): Found 2 design units, including 1 entities, in source file piso_8_bits.vhd
-    Info (12022): Found design unit 1: PISO_8_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/PISO_8_BITS.vhd Line: 13
-    Info (12023): Found entity 1: PISO_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/PISO_8_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: PISO_8_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: PISO_8_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file sequence_detector.vhd
-    Info (12022): Found design unit 1: SEQUENCE_DETECTOR-detect File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/SEQUENCE_DETECTOR.vhd Line: 13
-    Info (12023): Found entity 1: SEQUENCE_DETECTOR File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/SEQUENCE_DETECTOR.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file timing_reference.vhd
-    Info (12022): Found design unit 1: Timing_Reference_0_2Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_0_2Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference.vhd Line: 5
+    Info (12022): Found design unit 1: SEQUENCE_DETECTOR-detect File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/SEQUENCE_DETECTOR.vhd Line: 13
+    Info (12023): Found entity 1: SEQUENCE_DETECTOR File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/SEQUENCE_DETECTOR.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter_1_hexa.vhd
-    Info (12022): Found design unit 1: COUNTER_1_HEXA-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_1_HEXA.vhd Line: 11
-    Info (12023): Found entity 1: COUNTER_1_HEXA File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_1_HEXA.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_1_HEXA-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_1_HEXA.vhd Line: 11
+    Info (12023): Found entity 1: COUNTER_1_HEXA File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_1_HEXA.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_1_bit.vhd
-    Info (12022): Found design unit 1: ADDER_1_BIT-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 11
-    Info (12023): Found entity 1: ADDER_1_BIT File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_1_BIT-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 11
+    Info (12023): Found entity 1: ADDER_1_BIT File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_4_bits.vhd
-    Info (12022): Found design unit 1: ADDER_4_BITS-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_4_BITS.vhd Line: 13
-    Info (12023): Found entity 1: ADDER_4_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_4_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_4_BITS-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_4_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rom_256_8.vhd
-    Info (12022): Found design unit 1: rom_256_8-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 52
-    Info (12023): Found entity 1: ROM_256_8 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 42
+    Info (12022): Found design unit 1: rom_256_8-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 52
+    Info (12023): Found entity 1: ROM_256_8 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file counter_2_hexa.vhd
-    Info (12022): Found design unit 1: COUNTER_2_HEXA-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 11
-    Info (12023): Found entity 1: COUNTER_2_HEXA File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_2_HEXA-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 11
+    Info (12023): Found entity 1: COUNTER_2_HEXA File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_8_bits.vhd
-    Info (12022): Found design unit 1: ADDER_8_BITS-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_8_BITS.vhd Line: 13
-    Info (12023): Found entity 1: ADDER_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_8_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_8_BITS-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_8_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rom_256_8_decrescente.vhd
-    Info (12022): Found design unit 1: rom_256_8_decrescente-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 52
-    Info (12023): Found entity 1: ROM_256_8_DECRESCENTE File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 42
+    Info (12022): Found design unit 1: rom_256_8_decrescente-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 52
+    Info (12023): Found entity 1: ROM_256_8_DECRESCENTE File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file barramento_2to1.vhd
-    Info (12022): Found design unit 1: BARRAMENTO_2TO1-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd Line: 12
-    Info (12023): Found entity 1: BARRAMENTO_2TO1 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd Line: 4
+    Info (12022): Found design unit 1: BARRAMENTO_2TO1-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 12
+    Info (12023): Found entity 1: BARRAMENTO_2TO1 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file tmp.bdf
     Info (12023): Found entity 1: tmp
 Info (12021): Found 2 design units, including 1 entities, in source file load_x_deslocamento.vhd
-    Info (12022): Found design unit 1: LOAD_X_DESLOCAMENTO-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/LOAD_X_DESLOCAMENTO.vhd Line: 11
-    Info (12023): Found entity 1: LOAD_X_DESLOCAMENTO File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/LOAD_X_DESLOCAMENTO.vhd Line: 4
+    Info (12022): Found design unit 1: LOAD_X_DESLOCAMENTO-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/LOAD_X_DESLOCAMENTO.vhd Line: 11
+    Info (12023): Found entity 1: LOAD_X_DESLOCAMENTO File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/LOAD_X_DESLOCAMENTO.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file clock_ctrl.vhd
-    Info (12022): Found design unit 1: CLOCK_CTRL-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 15
-    Info (12023): Found entity 1: CLOCK_CTRL File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 4
+    Info (12022): Found design unit 1: CLOCK_CTRL-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 15
+    Info (12023): Found entity 1: CLOCK_CTRL File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_1hz.vhd
+    Info (12022): Found design unit 1: Timing_Reference_1Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_1Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_1Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_1Hz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_8hz.vhd
+    Info (12022): Found design unit 1: Timing_Reference_8Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_8Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_8Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_8Hz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_4hz.vhd
+    Info (12022): Found design unit 1: Timing_Reference_4Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_4Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_4Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_4Hz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_32hz.vhd
+    Info (12022): Found design unit 1: Timing_Reference_32Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_32Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_32Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_32Hz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_16hz.vhd
+    Info (12022): Found design unit 1: Timing_Reference_16Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_16Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_16Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_16Hz.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_2hz.vhd
+    Info (12022): Found design unit 1: Timing_Reference_2Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_2Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd Line: 5
 Warning (12125): Using design file main.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: main
 Info (12127): Elaborating entity "main" for the top level hierarchy
+Info (12128): Elaborating entity "HEX_TO_7SEG_DECODER" for hierarchy "HEX_TO_7SEG_DECODER:inst13"
+Info (12128): Elaborating entity "COUNTER_2_HEXA" for hierarchy "COUNTER_2_HEXA:inst8"
+Warning (10036): Verilog HDL or VHDL warning at COUNTER_2_HEXA.vhd(13): object "trash" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 13
+Warning (10492): VHDL Process Statement warning at COUNTER_2_HEXA.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 40
+Info (12128): Elaborating entity "ADDER_8_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 25
+Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd Line: 26
+Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd Line: 24
 Info (12128): Elaborating entity "CLOCK_CTRL" for hierarchy "CLOCK_CTRL:inst12"
-Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(22): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(22): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 22
+Info (12128): Elaborating entity "Timing_Reference_2Hz" for hierarchy "Timing_Reference_2Hz:inst123"
+Warning (10492): VHDL Process Statement warning at Timing_Reference_2Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd Line: 28
+Info (12128): Elaborating entity "Timing_Reference_32Hz" for hierarchy "Timing_Reference_32Hz:inst234"
+Warning (10492): VHDL Process Statement warning at Timing_Reference_32Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_32Hz.vhd Line: 28
 Info (12128): Elaborating entity "SEQUENCE_DETECTOR" for hierarchy "SEQUENCE_DETECTOR:inst7"
 Info (12128): Elaborating entity "PISO_8_BITS" for hierarchy "PISO_8_BITS:inst6"
-Info (12128): Elaborating entity "LOAD_X_DESLOCAMENTO" for hierarchy "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/PISO_8_BITS.vhd Line: 33
+Info (12128): Elaborating entity "LOAD_X_DESLOCAMENTO" for hierarchy "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd Line: 33
 Info (12128): Elaborating entity "BARRAMENTO_2TO1" for hierarchy "BARRAMENTO_2TO1:inst"
-Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 19
 Info (12128): Elaborating entity "ROM_256_8" for hierarchy "ROM_256_8:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "ROM_256_8:inst3|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 59
-Info (12133): Instantiated megafunction "ROM_256_8:inst3|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "ROM_256_8:inst3|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 59
+Info (12133): Instantiated megafunction "ROM_256_8:inst3|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -620,7 +674,7 @@ Info (12133): Instantiated megafunction "ROM_256_8:inst3|altsyncram:altsyncram_c
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "ROM_256_8.hex"
+    Info (12134): Parameter "init_file" = "../ROM_256_8.hex"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "256"
@@ -650,19 +704,13 @@ Info (12133): Instantiated megafunction "ROM_256_8:inst3|altsyncram:altsyncram_c
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jkq3.tdf
-    Info (12023): Found entity 1: altsyncram_jkq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/db/altsyncram_jkq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_jkq3" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_jkq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "COUNTER_2_HEXA" for hierarchy "COUNTER_2_HEXA:inst8"
-Warning (10036): Verilog HDL or VHDL warning at COUNTER_2_HEXA.vhd(13): object "trash" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 13
-Warning (10492): VHDL Process Statement warning at COUNTER_2_HEXA.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 40
-Info (12128): Elaborating entity "ADDER_8_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 25
-Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_8_BITS.vhd Line: 26
-Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add1" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_4_BITS.vhd Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uoq3.tdf
+    Info (12023): Found entity 1: altsyncram_uoq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_uoq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_uoq3" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "ROM_256_8_DECRESCENTE" for hierarchy "ROM_256_8_DECRESCENTE:inst4"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
-Info (12133): Instantiated megafunction "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
+Info (12133): Instantiated megafunction "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -683,7 +731,7 @@ Info (12133): Instantiated megafunction "ROM_256_8_DECRESCENTE:inst4|altsyncram:
     Info (12134): Parameter "indata_aclr_a" = "UNUSED"
     Info (12134): Parameter "indata_aclr_b" = "NONE"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "ROM_256_8_DECRESCENTE.hex"
+    Info (12134): Parameter "init_file" = "../ROM_256_8_DECRESCENTE.hex"
     Info (12134): Parameter "init_file_layout" = "PORT_A"
     Info (12134): Parameter "maximum_depth" = "0"
     Info (12134): Parameter "numwords_a" = "256"
@@ -713,23 +761,28 @@ Info (12133): Instantiated megafunction "ROM_256_8_DECRESCENTE:inst4|altsyncram:
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nrr3.tdf
-    Info (12023): Found entity 1: altsyncram_nrr3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/db/altsyncram_nrr3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_nrr3" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_nrr3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_20s3.tdf
+    Info (12023): Found entity 1: altsyncram_20s3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_20s3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_20s3" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "state[3]" is stuck at GND
+    Warning (13410): Pin "LED3" is stuck at GND
+    Warning (13410): Pin "LED4" is stuck at GND
+    Warning (13410): Pin "LED5" is stuck at GND
+    Warning (13410): Pin "LED6" is stuck at GND
+    Warning (13410): Pin "LED7" is stuck at GND
+    Warning (13410): Pin "LED8" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 250 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 41 output pins
-    Info (21061): Implemented 36 logic cells
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 186 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Wed Jun 05 12:17:22 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4817 megabytes
+    Info: Processing ended: Wed Jun 05 23:06:25 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:11
 
 
