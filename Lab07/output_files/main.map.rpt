@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Thu Jun 06 14:20:29 2024
+Thu Jun 06 17:24:35 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,19 +15,20 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Source assignments for ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated
- 14. Source assignments for ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated
- 15. Parameter Settings for User Entity Instance: ROM_256_8:inst3|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component
- 17. altsyncram Parameter Settings by Entity Instance
- 18. Port Connectivity Checks: "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add"
- 19. Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Source assignments for ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated
+ 15. Source assignments for ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated
+ 16. Parameter Settings for User Entity Instance: ROM_256_8:inst3|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add"
+ 20. Port Connectivity Checks: "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -53,15 +54,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 06 14:20:29 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 06 17:24:35 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 191                                         ;
-;     Total combinational functions  ; 172                                         ;
-;     Dedicated logic registers      ; 103                                         ;
-; Total registers                    ; 103                                         ;
+; Total logic elements               ; 197                                         ;
+;     Total combinational functions  ; 178                                         ;
+;     Dedicated logic registers      ; 105                                         ;
+; Total registers                    ; 105                                         ;
 ; Total pins                         ; 47                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -171,8 +172,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -193,9 +193,9 @@ refer to the applicable agreement for further details.
 ; BARRAMENTO_2TO1.vhd              ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd       ;         ;
 ; LOAD_X_DESLOCAMENTO.vhd          ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/LOAD_X_DESLOCAMENTO.vhd   ;         ;
 ; CLOCK_CTRL.vhd                   ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd            ;         ;
-; Timing_Reference_1Hz.vhd         ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_1Hz.vhd  ;         ;
-; Timing_Reference_16Hz.vhd        ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_16Hz.vhd ;         ;
+; Timing_Reference_4Hz.vhd         ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_4Hz.vhd  ;         ;
 ; REGISTER_4_BITS.vhd              ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd       ;         ;
+; Timing_Reference_64Hz.vhd        ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_64Hz.vhd ;         ;
 ; main.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/main.bdf                  ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
@@ -218,20 +218,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 191       ;
+; Estimated Total logic elements              ; 197       ;
 ;                                             ;           ;
-; Total combinational functions               ; 172       ;
+; Total combinational functions               ; 178       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 57        ;
-;     -- 3 input functions                    ; 18        ;
-;     -- <=2 input functions                  ; 97        ;
+;     -- 4 input functions                    ; 56        ;
+;     -- 3 input functions                    ; 23        ;
+;     -- <=2 input functions                  ; 99        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 111       ;
-;     -- arithmetic mode                      ; 61        ;
+;     -- normal mode                          ; 116       ;
+;     -- arithmetic mode                      ; 62        ;
 ;                                             ;           ;
-; Total registers                             ; 103       ;
-;     -- Dedicated logic registers            ; 103       ;
+; Total registers                             ; 105       ;
+;     -- Dedicated logic registers            ; 105       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 47        ;
@@ -240,8 +240,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 64        ;
-; Total fan-out                               ; 924       ;
+; Maximum fan-out                             ; 66        ;
+; Total fan-out                               ; 943       ;
 ; Average fan-out                             ; 2.40      ;
 +---------------------------------------------+-----------+
 
@@ -251,9 +251,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                              ; Entity Name           ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |main                                     ; 172 (1)             ; 103 (3)                   ; 4096        ; 0          ; 0            ; 0       ; 0         ; 47   ; 0            ; 0          ; |main                                                                                            ; main                  ; work         ;
+; |main                                     ; 178 (1)             ; 105 (3)                   ; 4096        ; 0          ; 0            ; 0       ; 0         ; 47   ; 0            ; 0          ; |main                                                                                            ; main                  ; work         ;
 ;    |BARRAMENTO_2TO1:inst|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|BARRAMENTO_2TO1:inst                                                                       ; BARRAMENTO_2TO1       ; work         ;
-;    |CLOCK_CTRL:inst12|                    ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|CLOCK_CTRL:inst12                                                                          ; CLOCK_CTRL            ; work         ;
+;    |CLOCK_CTRL:inst12|                    ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|CLOCK_CTRL:inst12                                                                          ; CLOCK_CTRL            ; work         ;
 ;    |COUNTER_2_HEXA:inst8|                 ; 10 (9)              ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8                                                                       ; COUNTER_2_HEXA        ; work         ;
 ;       |ADDER_8_BITS:add|                  ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add                                                      ; ADDER_8_BITS          ; work         ;
 ;          |ADDER_4_BITS:add1|              ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1                                    ; ADDER_4_BITS          ; work         ;
@@ -262,7 +262,7 @@ refer to the applicable agreement for further details.
 ;    |HEX_TO_7SEG_DECODER:inst14|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst14                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst15|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst15                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst16|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst16                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
-;    |HEX_TO_7SEG_DECODER:inst17|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst17                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
+;    |HEX_TO_7SEG_DECODER:inst17|           ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst17                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |PISO_8_BITS:inst6|                    ; 8 (7)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PISO_8_BITS:inst6                                                                          ; PISO_8_BITS           ; work         ;
 ;       |LOAD_X_DESLOCAMENTO:ld0|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0                                                  ; LOAD_X_DESLOCAMENTO   ; work         ;
 ;    |REGISTER_4_BITS:inst27|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst27                                                                     ; REGISTER_4_BITS       ; work         ;
@@ -276,8 +276,8 @@ refer to the applicable agreement for further details.
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component                                ; altsyncram            ; work         ;
 ;          |altsyncram_20s3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated ; altsyncram_20s3       ; work         ;
 ;    |SEQUENCE_DETECTOR:inst7|              ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|SEQUENCE_DETECTOR:inst7                                                                    ; SEQUENCE_DETECTOR     ; work         ;
-;    |Timing_Reference_16Hz:inst33408957|   ; 54 (54)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_16Hz:inst33408957                                                         ; Timing_Reference_16Hz ; work         ;
-;    |Timing_Reference_1Hz:inst30946874|    ; 57 (57)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_1Hz:inst30946874                                                          ; Timing_Reference_1Hz  ; work         ;
+;    |Timing_Reference_4Hz:inst2143|        ; 57 (57)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_4Hz:inst2143                                                              ; Timing_Reference_4Hz  ; work         ;
+;    |Timing_Reference_64Hz:inst2554543|    ; 57 (57)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_64Hz:inst2554543                                                          ; Timing_Reference_64Hz ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -302,16 +302,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                   ;
-+---------------------------------------------+--------------------------------------------------------+
-; Register name                               ; Reason for Removal                                     ;
-+---------------------------------------------+--------------------------------------------------------+
-; SEQUENCE_DETECTOR:inst7|estado[3]           ; Stuck at GND due to stuck port data_in                 ;
-; Timing_Reference_16Hz:inst33408957|count[0] ; Merged with Timing_Reference_1Hz:inst30946874|count[0] ;
-; Timing_Reference_16Hz:inst33408957|count[1] ; Merged with Timing_Reference_1Hz:inst30946874|count[1] ;
-; Total Number of Removed Registers = 3       ;                                                        ;
-+---------------------------------------------+--------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++----------------------------------------------------+-----------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal   ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------+------------------------+
+; CLOCK_CTRL:inst12|tmp                              ; CLOCK_CTRL:inst12|tmp ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                       ;                        ;
++----------------------------------------------------+-----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; SEQUENCE_DETECTOR:inst7|estado[3]     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -319,7 +328,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 103   ;
+; Total registers                              ; 105   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 1     ;
@@ -334,8 +343,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------+---------+
 ; Inverted Register                          ; Fan out ;
 +--------------------------------------------+---------+
-; Timing_Reference_1Hz:inst30946874|count[0] ; 3       ;
-; Total number of inverted registers = 1     ;         ;
+; Timing_Reference_4Hz:inst2143|count[0]     ; 2       ;
+; Timing_Reference_64Hz:inst2554543|count[0] ; 2       ;
+; Total number of inverted registers = 2     ;         ;
 +--------------------------------------------+---------+
 
 
@@ -536,24 +546,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 47                          ;
-; cycloneiii_ff         ; 103                         ;
+; cycloneiii_ff         ; 105                         ;
 ;     CLR               ; 1                           ;
 ;     SLD               ; 7                           ;
-;     plain             ; 95                          ;
-; cycloneiii_lcell_comb ; 173                         ;
-;     arith             ; 61                          ;
-;         2 data inputs ; 60                          ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 112                         ;
+;     plain             ; 97                          ;
+; cycloneiii_lcell_comb ; 179                         ;
+;     arith             ; 62                          ;
+;         2 data inputs ; 62                          ;
+;     normal            ; 117                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 32                          ;
-;         3 data inputs ; 17                          ;
-;         4 data inputs ; 57                          ;
+;         3 data inputs ; 23                          ;
+;         4 data inputs ; 56                          ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 2.93                        ;
+; Max LUT depth         ; 4.20                        ;
+; Average LUT depth     ; 2.89                        ;
 +-----------------------+-----------------------------+
 
 
@@ -572,7 +581,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jun 06 14:20:14 2024
+    Info: Processing started: Thu Jun 06 17:24:20 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -637,17 +646,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file timing_
 Info (12021): Found 2 design units, including 1 entities, in source file register_4_bits.vhd
     Info (12022): Found design unit 1: REGISTER_4_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd Line: 13
     Info (12023): Found entity 1: REGISTER_4_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_64hz.vhd
+    Info (12022): Found design unit 1: Timing_Reference_64Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_64Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_64Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_64Hz.vhd Line: 5
 Warning (12125): Using design file main.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: main
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "HEX_TO_7SEG_DECODER" for hierarchy "HEX_TO_7SEG_DECODER:inst13"
 Info (12128): Elaborating entity "REGISTER_4_BITS" for hierarchy "REGISTER_4_BITS:inst30"
 Info (12128): Elaborating entity "CLOCK_CTRL" for hierarchy "CLOCK_CTRL:inst12"
-Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(22): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 22
-Info (12128): Elaborating entity "Timing_Reference_1Hz" for hierarchy "Timing_Reference_1Hz:inst30946874"
-Warning (10492): VHDL Process Statement warning at Timing_Reference_1Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_1Hz.vhd Line: 28
-Info (12128): Elaborating entity "Timing_Reference_16Hz" for hierarchy "Timing_Reference_16Hz:inst33408957"
-Warning (10492): VHDL Process Statement warning at Timing_Reference_16Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_16Hz.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(21): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(21): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(26): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 26
+Warning (10631): VHDL Process Statement warning at CLOCK_CTRL.vhd(20): inferring latch(es) for signal or variable "tmp", which holds its previous value in one or more paths through the process File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 20
+Info (10041): Inferred latch for "tmp" at CLOCK_CTRL.vhd(20) File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 20
+Info (12128): Elaborating entity "Timing_Reference_4Hz" for hierarchy "Timing_Reference_4Hz:inst2143"
+Warning (10492): VHDL Process Statement warning at Timing_Reference_4Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_4Hz.vhd Line: 28
+Info (12128): Elaborating entity "Timing_Reference_64Hz" for hierarchy "Timing_Reference_64Hz:inst2554543"
+Warning (10492): VHDL Process Statement warning at Timing_Reference_64Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_64Hz.vhd Line: 28
 Info (12128): Elaborating entity "SEQUENCE_DETECTOR" for hierarchy "SEQUENCE_DETECTOR:inst7"
 Info (12128): Elaborating entity "PISO_8_BITS" for hierarchy "PISO_8_BITS:inst6"
 Info (12128): Elaborating entity "LOAD_X_DESLOCAMENTO" for hierarchy "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd Line: 33
@@ -780,6 +796,8 @@ Info (12133): Instantiated megafunction "ROM_256_8_DECRESCENTE:inst4|altsyncram:
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_20s3.tdf
     Info (12023): Found entity 1: altsyncram_20s3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_20s3.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_20s3" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (13012): Latch CLOCK_CTRL:inst12|tmp has unsafe behavior File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SEQUENCE_DETECTOR:inst7|estado[2] File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/SEQUENCE_DETECTOR.vhd Line: 19
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED3" is stuck at GND
     Warning (13410): Pin "LED6" is stuck at GND
@@ -788,15 +806,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 261 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 267 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 198 logic cells
+    Info (21061): Implemented 204 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Thu Jun 06 14:20:29 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Thu Jun 06 17:24:35 2024
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 

@@ -24,9 +24,10 @@ architecture func of CLOCK_CTRL is
 				state_ctrl <= '1';
 			else
 				if CONTINUE = '1' then
-					tmp = '1';
-				elsif STATE /= "0111" then
-					tmp = '0'
+					tmp <= '1';
+				end if;
+				if STATE /= "0111" then
+					tmp <= '0';
 				end if;
 				clk_fast_ctrl <= CLK_BASE_FAST;
 				clk_slow_ctrl <= CLK_BASE_SLOW;

@@ -1,5 +1,5 @@
 Timing Analyzer report for main
-Thu Jun 06 14:20:55 2024
+Thu Jun 06 17:25:01 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -98,9 +98,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   3.1%      ;
-;     Processor 3            ;   2.9%      ;
-;     Processor 4            ;   2.9%      ;
+;     Processor 2            ;   3.0%      ;
+;     Processor 3            ;   2.8%      ;
+;     Processor 4            ;   2.8%      ;
 +----------------------------+-------------+
 
 
@@ -115,15 +115,15 @@ refer to the applicable agreement for further details.
 +-------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                            ;
-+------------+-----------------+-------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                    ; Note                                           ;
-+------------+-----------------+-------------------------------+------------------------------------------------+
-; 174.61 MHz ; 174.61 MHz      ; BTN1                          ;                                                ;
-; 217.44 MHz ; 217.44 MHz      ; CLK                           ;                                                ;
-; 834.72 MHz ; 416.15 MHz      ; COUNTER_2_HEXA:inst8|count[7] ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+-------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                           ;
++------------+-----------------+-------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                    ; Note                                                          ;
++------------+-----------------+-------------------------------+---------------------------------------------------------------+
+; 132.94 MHz ; 132.94 MHz      ; BTN1                          ;                                                               ;
+; 255.04 MHz ; 250.0 MHz       ; CLK                           ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 753.58 MHz ; 416.15 MHz      ; COUNTER_2_HEXA:inst8|count[7] ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+-------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -132,9 +132,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------+--------+---------------+
 ; Clock                         ; Slack  ; End Point TNS ;
 +-------------------------------+--------+---------------+
-; BTN1                          ; -4.727 ; -92.684       ;
-; CLK                           ; -3.599 ; -157.190      ;
-; COUNTER_2_HEXA:inst8|count[7] ; -0.198 ; -0.198        ;
+; BTN1                          ; -4.572 ; -89.401       ;
+; CLK                           ; -2.921 ; -142.562      ;
+; COUNTER_2_HEXA:inst8|count[7] ; -0.327 ; -0.327        ;
 +-------------------------------+--------+---------------+
 
 
@@ -143,9 +143,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------+-------+---------------+
 ; Clock                         ; Slack ; End Point TNS ;
 +-------------------------------+-------+---------------+
-; BTN1                          ; 0.348 ; 0.000         ;
+; BTN1                          ; 0.347 ; 0.000         ;
 ; CLK                           ; 0.378 ; 0.000         ;
-; COUNTER_2_HEXA:inst8|count[7] ; 0.794 ; 0.000         ;
+; COUNTER_2_HEXA:inst8|count[7] ; 0.926 ; 0.000         ;
 +-------------------------------+-------+---------------+
 
 
@@ -154,7 +154,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; BTN1  ; -1.714 ; -1.714                ;
+; BTN1  ; -1.579 ; -1.579                ;
 +-------+--------+-----------------------+
 
 
@@ -163,7 +163,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; BTN1  ; -0.467 ; -0.467               ;
+; BTN1  ; -0.273 ; -0.273               ;
 +-------+--------+----------------------+
 
 
@@ -173,7 +173,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                         ; Slack  ; End Point TNS ;
 +-------------------------------+--------+---------------+
 ; BTN1                          ; -3.000 ; -97.488       ;
-; CLK                           ; -3.000 ; -92.792       ;
+; CLK                           ; -3.000 ; -95.598       ;
 ; COUNTER_2_HEXA:inst8|count[7] ; -1.403 ; -1.403        ;
 +-------------------------------+--------+---------------+
 
@@ -185,15 +185,15 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                             ;
-+------------+-----------------+-------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                    ; Note                                           ;
-+------------+-----------------+-------------------------------+------------------------------------------------+
-; 189.11 MHz ; 189.11 MHz      ; BTN1                          ;                                                ;
-; 242.6 MHz  ; 242.6 MHz       ; CLK                           ;                                                ;
-; 909.09 MHz ; 416.15 MHz      ; COUNTER_2_HEXA:inst8|count[7] ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+-------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                            ;
++------------+-----------------+-------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                    ; Note                                                          ;
++------------+-----------------+-------------------------------+---------------------------------------------------------------+
+; 136.39 MHz ; 136.39 MHz      ; BTN1                          ;                                                               ;
+; 278.24 MHz ; 250.0 MHz       ; CLK                           ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 817.66 MHz ; 416.15 MHz      ; COUNTER_2_HEXA:inst8|count[7] ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+-------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -202,9 +202,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------+--------+---------------+
 ; Clock                         ; Slack  ; End Point TNS ;
 +-------------------------------+--------+---------------+
-; BTN1                          ; -4.288 ; -82.403       ;
-; CLK                           ; -3.122 ; -136.763      ;
-; COUNTER_2_HEXA:inst8|count[7] ; -0.100 ; -0.100        ;
+; BTN1                          ; -4.149 ; -79.882       ;
+; CLK                           ; -2.594 ; -123.350      ;
+; COUNTER_2_HEXA:inst8|count[7] ; -0.223 ; -0.223        ;
 +-------------------------------+--------+---------------+
 
 
@@ -215,7 +215,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------+-------+---------------+
 ; BTN1                          ; 0.312 ; 0.000         ;
 ; CLK                           ; 0.339 ; 0.000         ;
-; COUNTER_2_HEXA:inst8|count[7] ; 0.727 ; 0.000         ;
+; COUNTER_2_HEXA:inst8|count[7] ; 0.844 ; 0.000         ;
 +-------------------------------+-------+---------------+
 
 
@@ -224,7 +224,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; BTN1  ; -1.469 ; -1.469               ;
+; BTN1  ; -1.357 ; -1.357               ;
 +-------+--------+----------------------+
 
 
@@ -233,7 +233,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------------+
 ; Clock ; Slack  ; End Point TNS       ;
 +-------+--------+---------------------+
-; BTN1  ; -0.433 ; -0.433              ;
+; BTN1  ; -0.249 ; -0.249              ;
 +-------+--------+---------------------+
 
 
@@ -243,7 +243,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                         ; Slack  ; End Point TNS ;
 +-------------------------------+--------+---------------+
 ; BTN1                          ; -3.000 ; -95.975       ;
-; CLK                           ; -3.000 ; -92.792       ;
+; CLK                           ; -3.000 ; -95.598       ;
 ; COUNTER_2_HEXA:inst8|count[7] ; -1.403 ; -1.403        ;
 +-------------------------------+--------+---------------+
 
@@ -260,9 +260,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------+--------+---------------+
 ; Clock                         ; Slack  ; End Point TNS ;
 +-------------------------------+--------+---------------+
-; BTN1                          ; -1.819 ; -25.473       ;
-; CLK                           ; -0.928 ; -29.085       ;
-; COUNTER_2_HEXA:inst8|count[7] ; 0.521  ; 0.000         ;
+; BTN1                          ; -1.610 ; -20.699       ;
+; CLK                           ; -0.674 ; -21.153       ;
+; COUNTER_2_HEXA:inst8|count[7] ; 0.479  ; 0.000         ;
 +-------------------------------+--------+---------------+
 
 
@@ -273,7 +273,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------+-------+---------------+
 ; BTN1                          ; 0.152 ; 0.000         ;
 ; CLK                           ; 0.166 ; 0.000         ;
-; COUNTER_2_HEXA:inst8|count[7] ; 0.321 ; 0.000         ;
+; COUNTER_2_HEXA:inst8|count[7] ; 0.367 ; 0.000         ;
 +-------------------------------+-------+---------------+
 
 
@@ -282,7 +282,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; BTN1  ; -0.512 ; -0.512               ;
+; BTN1  ; -0.122 ; -0.122               ;
 +-------+--------+----------------------+
 
 
@@ -291,7 +291,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+--------+---------------------+
 ; Clock ; Slack  ; End Point TNS       ;
 +-------+--------+---------------------+
-; BTN1  ; -0.201 ; -0.201              ;
+; BTN1  ; -0.134 ; -0.134              ;
 +-------+--------+---------------------+
 
 
@@ -300,8 +300,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------+--------+---------------+
 ; Clock                         ; Slack  ; End Point TNS ;
 +-------------------------------+--------+---------------+
-; CLK                           ; -3.000 ; -69.481       ;
-; BTN1                          ; -3.000 ; -62.076       ;
+; CLK                           ; -3.000 ; -71.551       ;
+; BTN1                          ; -3.000 ; -63.122       ;
 ; COUNTER_2_HEXA:inst8|count[7] ; -1.000 ; -1.000        ;
 +-------------------------------+--------+---------------+
 
@@ -318,14 +318,14 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                          ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack               ; -4.727   ; 0.152 ; -1.714   ; -0.467  ; -3.000              ;
-;  BTN1                          ; -4.727   ; 0.152 ; -1.714   ; -0.467  ; -3.000              ;
-;  CLK                           ; -3.599   ; 0.166 ; N/A      ; N/A     ; -3.000              ;
-;  COUNTER_2_HEXA:inst8|count[7] ; -0.198   ; 0.321 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS                ; -250.072 ; 0.0   ; -1.714   ; -0.467  ; -191.683            ;
-;  BTN1                          ; -92.684  ; 0.000 ; -1.714   ; -0.467  ; -97.488             ;
-;  CLK                           ; -157.190 ; 0.000 ; N/A      ; N/A     ; -92.792             ;
-;  COUNTER_2_HEXA:inst8|count[7] ; -0.198   ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+; Worst-case Slack               ; -4.572   ; 0.152 ; -1.579   ; -0.273  ; -3.000              ;
+;  BTN1                          ; -4.572   ; 0.152 ; -1.579   ; -0.273  ; -3.000              ;
+;  CLK                           ; -2.921   ; 0.166 ; N/A      ; N/A     ; -3.000              ;
+;  COUNTER_2_HEXA:inst8|count[7] ; -0.327   ; 0.367 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS                ; -232.29  ; 0.0   ; -1.579   ; -0.273  ; -194.489            ;
+;  BTN1                          ; -89.401  ; 0.000 ; -1.579   ; -0.273  ; -97.488             ;
+;  CLK                           ; -142.562 ; 0.000 ; N/A      ; N/A     ; -95.598             ;
+;  COUNTER_2_HEXA:inst8|count[7] ; -0.327   ; 0.000 ; N/A      ; N/A     ; -1.403              ;
 +--------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -567,10 +567,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
 ; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
-; BTN1                          ; BTN1                          ; 0        ; 0        ; 8        ; 150      ;
+; BTN1                          ; BTN1                          ; 0        ; 3        ; 16       ; 150      ;
 ; CLK                           ; BTN1                          ; 0        ; 0        ; 8        ; 0        ;
 ; COUNTER_2_HEXA:inst8|count[7] ; BTN1                          ; 0        ; 0        ; 3        ; 4        ;
-; CLK                           ; CLK                           ; 1887     ; 0        ; 0        ; 0        ;
+; CLK                           ; CLK                           ; 1922     ; 0        ; 0        ; 0        ;
 ; COUNTER_2_HEXA:inst8|count[7] ; COUNTER_2_HEXA:inst8|count[7] ; 0        ; 0        ; 0        ; 1        ;
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -581,10 +581,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
 ; From Clock                    ; To Clock                      ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
-; BTN1                          ; BTN1                          ; 0        ; 0        ; 8        ; 150      ;
+; BTN1                          ; BTN1                          ; 0        ; 3        ; 16       ; 150      ;
 ; CLK                           ; BTN1                          ; 0        ; 0        ; 8        ; 0        ;
 ; COUNTER_2_HEXA:inst8|count[7] ; BTN1                          ; 0        ; 0        ; 3        ; 4        ;
-; CLK                           ; CLK                           ; 1887     ; 0        ; 0        ; 0        ;
+; CLK                           ; CLK                           ; 1922     ; 0        ; 0        ; 0        ;
 ; COUNTER_2_HEXA:inst8|count[7] ; COUNTER_2_HEXA:inst8|count[7] ; 0        ; 0        ; 0        ; 1        ;
 +-------------------------------+-------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -595,7 +595,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; BTN1       ; BTN1     ; 0        ; 0        ; 1        ; 4        ;
+; BTN1       ; BTN1     ; 0        ; 0        ; 2        ; 4        ;
 ; CLK        ; BTN1     ; 0        ; 0        ; 1        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -606,7 +606,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; BTN1       ; BTN1     ; 0        ; 0        ; 1        ; 4        ;
+; BTN1       ; BTN1     ; 0        ; 0        ; 2        ; 4        ;
 ; CLK        ; BTN1     ; 0        ; 0        ; 1        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -634,7 +634,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 1     ; 1    ;
 ; Unconstrained Input Port Paths  ; 3     ; 3    ;
 ; Unconstrained Output Ports      ; 41    ; 41   ;
-; Unconstrained Output Port Paths ; 220   ; 220  ;
+; Unconstrained Output Port Paths ; 223   ; 223  ;
 +---------------------------------+-------+------+
 
 
@@ -771,50 +771,51 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jun 06 14:20:51 2024
+    Info: Processing started: Thu Jun 06 17:24:57 2024
 Info: Command: quartus_sta main -c main
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'main.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name BTN1 BTN1
-    Info (332105): create_clock -period 1.000 -name COUNTER_2_HEXA:inst8|count[7] COUNTER_2_HEXA:inst8|count[7]
     Info (332105): create_clock -period 1.000 -name CLK CLK
+    Info (332105): create_clock -period 1.000 -name COUNTER_2_HEXA:inst8|count[7] COUNTER_2_HEXA:inst8|count[7]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.727
+Info (332146): Worst-case setup slack is -4.572
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.727             -92.684 BTN1 
-    Info (332119):    -3.599            -157.190 CLK 
-    Info (332119):    -0.198              -0.198 COUNTER_2_HEXA:inst8|count[7] 
-Info (332146): Worst-case hold slack is 0.348
+    Info (332119):    -4.572             -89.401 BTN1 
+    Info (332119):    -2.921            -142.562 CLK 
+    Info (332119):    -0.327              -0.327 COUNTER_2_HEXA:inst8|count[7] 
+Info (332146): Worst-case hold slack is 0.347
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.348               0.000 BTN1 
+    Info (332119):     0.347               0.000 BTN1 
     Info (332119):     0.378               0.000 CLK 
-    Info (332119):     0.794               0.000 COUNTER_2_HEXA:inst8|count[7] 
-Info (332146): Worst-case recovery slack is -1.714
+    Info (332119):     0.926               0.000 COUNTER_2_HEXA:inst8|count[7] 
+Info (332146): Worst-case recovery slack is -1.579
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.714              -1.714 BTN1 
-Info (332146): Worst-case removal slack is -0.467
+    Info (332119):    -1.579              -1.579 BTN1 
+Info (332146): Worst-case removal slack is -0.273
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.467              -0.467 BTN1 
+    Info (332119):    -0.273              -0.273 BTN1 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -97.488 BTN1 
-    Info (332119):    -3.000             -92.792 CLK 
+    Info (332119):    -3.000             -95.598 CLK 
     Info (332119):    -1.403              -1.403 COUNTER_2_HEXA:inst8|count[7] 
 Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
@@ -823,70 +824,70 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.288
+Info (332146): Worst-case setup slack is -4.149
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.288             -82.403 BTN1 
-    Info (332119):    -3.122            -136.763 CLK 
-    Info (332119):    -0.100              -0.100 COUNTER_2_HEXA:inst8|count[7] 
+    Info (332119):    -4.149             -79.882 BTN1 
+    Info (332119):    -2.594            -123.350 CLK 
+    Info (332119):    -0.223              -0.223 COUNTER_2_HEXA:inst8|count[7] 
 Info (332146): Worst-case hold slack is 0.312
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.312               0.000 BTN1 
     Info (332119):     0.339               0.000 CLK 
-    Info (332119):     0.727               0.000 COUNTER_2_HEXA:inst8|count[7] 
-Info (332146): Worst-case recovery slack is -1.469
+    Info (332119):     0.844               0.000 COUNTER_2_HEXA:inst8|count[7] 
+Info (332146): Worst-case recovery slack is -1.357
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.469              -1.469 BTN1 
-Info (332146): Worst-case removal slack is -0.433
+    Info (332119):    -1.357              -1.357 BTN1 
+Info (332146): Worst-case removal slack is -0.249
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.433              -0.433 BTN1 
+    Info (332119):    -0.249              -0.249 BTN1 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -95.975 BTN1 
-    Info (332119):    -3.000             -92.792 CLK 
+    Info (332119):    -3.000             -95.598 CLK 
     Info (332119):    -1.403              -1.403 COUNTER_2_HEXA:inst8|count[7] 
 Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.819
+Info (332146): Worst-case setup slack is -1.610
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.819             -25.473 BTN1 
-    Info (332119):    -0.928             -29.085 CLK 
-    Info (332119):     0.521               0.000 COUNTER_2_HEXA:inst8|count[7] 
+    Info (332119):    -1.610             -20.699 BTN1 
+    Info (332119):    -0.674             -21.153 CLK 
+    Info (332119):     0.479               0.000 COUNTER_2_HEXA:inst8|count[7] 
 Info (332146): Worst-case hold slack is 0.152
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.152               0.000 BTN1 
     Info (332119):     0.166               0.000 CLK 
-    Info (332119):     0.321               0.000 COUNTER_2_HEXA:inst8|count[7] 
-Info (332146): Worst-case recovery slack is -0.512
+    Info (332119):     0.367               0.000 COUNTER_2_HEXA:inst8|count[7] 
+Info (332146): Worst-case recovery slack is -0.122
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.512              -0.512 BTN1 
-Info (332146): Worst-case removal slack is -0.201
+    Info (332119):    -0.122              -0.122 BTN1 
+Info (332146): Worst-case removal slack is -0.134
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.201              -0.201 BTN1 
+    Info (332119):    -0.134              -0.134 BTN1 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -69.481 CLK 
-    Info (332119):    -3.000             -62.076 BTN1 
+    Info (332119):    -3.000             -71.551 CLK 
+    Info (332119):    -3.000             -63.122 BTN1 
     Info (332119):    -1.000              -1.000 COUNTER_2_HEXA:inst8|count[7] 
 Info (332114): Report Metastability: Found 3 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Thu Jun 06 14:20:55 2024
+    Info: Processing ended: Thu Jun 06 17:25:01 2024
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
