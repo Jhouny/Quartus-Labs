@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Thu Jun 06 17:24:35 2024
+Thu Jun 13 11:35:07 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -54,15 +54,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 06 17:24:35 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 13 11:35:07 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 197                                         ;
+; Total logic elements               ; 195                                         ;
 ;     Total combinational functions  ; 178                                         ;
-;     Dedicated logic registers      ; 105                                         ;
-; Total registers                    ; 105                                         ;
+;     Dedicated logic registers      ; 103                                         ;
+; Total registers                    ; 103                                         ;
 ; Total pins                         ; 47                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -164,53 +164,54 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                                ; Library ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
-; HEX_TO_7SEG_DECODER.bdf          ; yes             ; User Block Diagram/Schematic File        ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/HEX_TO_7SEG_DECODER.bdf   ;         ;
-; PISO_8_BITS.vhd                  ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd           ;         ;
-; SEQUENCE_DETECTOR.vhd            ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/SEQUENCE_DETECTOR.vhd     ;         ;
-; ADDER_1_BIT.vhd                  ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd           ;         ;
-; ADDER_4_BITS.vhd                 ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd          ;         ;
-; ROM_256_8.vhd                    ; yes             ; User Wizard-Generated File               ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd             ;         ;
-; COUNTER_2_HEXA.vhd               ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd        ;         ;
-; ADDER_8_BITS.vhd                 ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd          ;         ;
-; ROM_256_8_DECRESCENTE.vhd        ; yes             ; User Wizard-Generated File               ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd ;         ;
-; BARRAMENTO_2TO1.vhd              ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd       ;         ;
-; LOAD_X_DESLOCAMENTO.vhd          ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/LOAD_X_DESLOCAMENTO.vhd   ;         ;
-; CLOCK_CTRL.vhd                   ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd            ;         ;
-; Timing_Reference_4Hz.vhd         ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_4Hz.vhd  ;         ;
-; REGISTER_4_BITS.vhd              ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd       ;         ;
-; Timing_Reference_64Hz.vhd        ; yes             ; User VHDL File                           ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_64Hz.vhd ;         ;
-; main.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/main.bdf                  ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                          ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                       ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                       ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                        ;         ;
-; altrom.inc                       ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                           ;         ;
-; altram.inc                       ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                           ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                             ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
-; db/altsyncram_uoq3.tdf           ; yes             ; Auto-Generated Megafunction              ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_uoq3.tdf    ;         ;
-; rom_256_8.hex                    ; yes             ; Auto-Found Memory Initialization File    ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/rom_256_8.hex             ;         ;
-; db/altsyncram_20s3.tdf           ; yes             ; Auto-Generated Megafunction              ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_20s3.tdf    ;         ;
-; rom_256_8_decrescente.hex        ; yes             ; Auto-Found Memory Initialization File    ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/rom_256_8_decrescente.hex ;         ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; HEX_TO_7SEG_DECODER.bdf          ; yes             ; User Block Diagram/Schematic File      ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/HEX_TO_7SEG_DECODER.bdf   ;         ;
+; PISO_8_BITS.vhd                  ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/PISO_8_BITS.vhd           ;         ;
+; SEQUENCE_DETECTOR.vhd            ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/SEQUENCE_DETECTOR.vhd     ;         ;
+; ADDER_1_BIT.vhd                  ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd           ;         ;
+; ADDER_4_BITS.vhd                 ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_4_BITS.vhd          ;         ;
+; ROM_256_8.vhd                    ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd             ;         ;
+; COUNTER_2_HEXA.vhd               ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd        ;         ;
+; ADDER_8_BITS.vhd                 ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_8_BITS.vhd          ;         ;
+; ROM_256_8_DECRESCENTE.vhd        ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd ;         ;
+; BARRAMENTO_2TO1.vhd              ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd       ;         ;
+; LOAD_X_DESLOCAMENTO.vhd          ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/LOAD_X_DESLOCAMENTO.vhd   ;         ;
+; CLOCK_CTRL.vhd                   ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd            ;         ;
+; Timing_Reference_4Hz.vhd         ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_4Hz.vhd  ;         ;
+; REGISTER_4_BITS.vhd              ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/REGISTER_4_BITS.vhd       ;         ;
+; Timing_Reference_64Hz.vhd        ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_64Hz.vhd ;         ;
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File      ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/main.bdf                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                               ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                 ;         ;
+; db/altsyncram_uoq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/db/altsyncram_uoq3.tdf    ;         ;
+; ../ROM_256_8.hex                 ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex             ;         ;
+; db/altsyncram_20s3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/db/altsyncram_20s3.tdf    ;         ;
+; ../ROM_256_8_DECRESCENTE.hex     ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -218,7 +219,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 197       ;
+; Estimated Total logic elements              ; 195       ;
 ;                                             ;           ;
 ; Total combinational functions               ; 178       ;
 ; Logic element usage by number of LUT inputs ;           ;
@@ -230,8 +231,8 @@ refer to the applicable agreement for further details.
 ;     -- normal mode                          ; 116       ;
 ;     -- arithmetic mode                      ; 62        ;
 ;                                             ;           ;
-; Total registers                             ; 105       ;
-;     -- Dedicated logic registers            ; 105       ;
+; Total registers                             ; 103       ;
+;     -- Dedicated logic registers            ; 103       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 47        ;
@@ -241,7 +242,7 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 66        ;
-; Total fan-out                               ; 943       ;
+; Total fan-out                               ; 939       ;
 ; Average fan-out                             ; 2.40      ;
 +---------------------------------------------+-----------+
 
@@ -251,13 +252,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                              ; Entity Name           ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |main                                     ; 178 (1)             ; 105 (3)                   ; 4096        ; 0          ; 0            ; 0       ; 0         ; 47   ; 0            ; 0          ; |main                                                                                            ; main                  ; work         ;
+; |main                                     ; 178 (1)             ; 103 (3)                   ; 4096        ; 0          ; 0            ; 0       ; 0         ; 47   ; 0            ; 0          ; |main                                                                                            ; main                  ; work         ;
 ;    |BARRAMENTO_2TO1:inst|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|BARRAMENTO_2TO1:inst                                                                       ; BARRAMENTO_2TO1       ; work         ;
 ;    |CLOCK_CTRL:inst12|                    ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|CLOCK_CTRL:inst12                                                                          ; CLOCK_CTRL            ; work         ;
-;    |COUNTER_2_HEXA:inst8|                 ; 10 (9)              ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8                                                                       ; COUNTER_2_HEXA        ; work         ;
+;    |COUNTER_2_HEXA:inst8|                 ; 9 (8)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8                                                                       ; COUNTER_2_HEXA        ; work         ;
 ;       |ADDER_8_BITS:add|                  ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add                                                      ; ADDER_8_BITS          ; work         ;
 ;          |ADDER_4_BITS:add1|              ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1                                    ; ADDER_4_BITS          ; work         ;
-;             |ADDER_1_BIT:add2|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add2                   ; ADDER_1_BIT           ; work         ;
+;             |ADDER_1_BIT:add4|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add4                   ; ADDER_1_BIT           ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst13|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst13                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst14|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst14                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |HEX_TO_7SEG_DECODER:inst15|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst15                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
@@ -265,10 +266,10 @@ refer to the applicable agreement for further details.
 ;    |HEX_TO_7SEG_DECODER:inst17|           ; 8 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|HEX_TO_7SEG_DECODER:inst17                                                                 ; HEX_TO_7SEG_DECODER   ; work         ;
 ;    |PISO_8_BITS:inst6|                    ; 8 (7)               ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PISO_8_BITS:inst6                                                                          ; PISO_8_BITS           ; work         ;
 ;       |LOAD_X_DESLOCAMENTO:ld0|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0                                                  ; LOAD_X_DESLOCAMENTO   ; work         ;
-;    |REGISTER_4_BITS:inst27|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst27                                                                     ; REGISTER_4_BITS       ; work         ;
+;    |REGISTER_4_BITS:inst27|               ; 0 (0)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst27                                                                     ; REGISTER_4_BITS       ; work         ;
 ;    |REGISTER_4_BITS:inst28|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst28                                                                     ; REGISTER_4_BITS       ; work         ;
 ;    |REGISTER_4_BITS:inst29|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst29                                                                     ; REGISTER_4_BITS       ; work         ;
-;    |REGISTER_4_BITS:inst30|               ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst30                                                                     ; REGISTER_4_BITS       ; work         ;
+;    |REGISTER_4_BITS:inst30|               ; 1 (1)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_4_BITS:inst30                                                                     ; REGISTER_4_BITS       ; work         ;
 ;    |ROM_256_8:inst3|                      ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3                                                                            ; ROM_256_8             ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3|altsyncram:altsyncram_component                                            ; altsyncram            ; work         ;
 ;          |altsyncram_uoq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated             ; altsyncram_uoq3       ; work         ;
@@ -313,14 +314,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; SEQUENCE_DETECTOR:inst7|estado[3]     ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++---------------------------------------+-----------------------------------------+
+; Register name                         ; Reason for Removal                      ;
++---------------------------------------+-----------------------------------------+
+; SEQUENCE_DETECTOR:inst7|estado[3]     ; Stuck at GND due to stuck port data_in  ;
+; COUNTER_2_HEXA:inst8|count[0]         ; Merged with REGISTER_4_BITS:inst27|dff0 ;
+; REGISTER_4_BITS:inst27|dff0           ; Merged with REGISTER_4_BITS:inst30|dff0 ;
+; Total Number of Removed Registers = 3 ;                                         ;
++---------------------------------------+-----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -328,7 +331,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 105   ;
+; Total registers                              ; 103   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 1     ;
@@ -546,10 +549,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 47                          ;
-; cycloneiii_ff         ; 105                         ;
+; cycloneiii_ff         ; 103                         ;
 ;     CLR               ; 1                           ;
 ;     SLD               ; 7                           ;
-;     plain             ; 97                          ;
+;     plain             ; 95                          ;
 ; cycloneiii_lcell_comb ; 179                         ;
 ;     arith             ; 62                          ;
 ;         2 data inputs ; 62                          ;
@@ -562,7 +565,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 2.89                        ;
+; Average LUT depth     ; 2.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -581,111 +584,111 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Jun 06 17:24:20 2024
+    Info: Processing started: Thu Jun 13 11:34:55 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg_decoder.bdf
     Info (12023): Found entity 1: HEX_TO_7SEG_DECODER
 Info (12021): Found 2 design units, including 1 entities, in source file piso_8_bits.vhd
-    Info (12022): Found design unit 1: PISO_8_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd Line: 13
-    Info (12023): Found entity 1: PISO_8_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: PISO_8_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/PISO_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: PISO_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/PISO_8_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file sequence_detector.vhd
-    Info (12022): Found design unit 1: SEQUENCE_DETECTOR-detect File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/SEQUENCE_DETECTOR.vhd Line: 13
-    Info (12023): Found entity 1: SEQUENCE_DETECTOR File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/SEQUENCE_DETECTOR.vhd Line: 4
+    Info (12022): Found design unit 1: SEQUENCE_DETECTOR-detect File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/SEQUENCE_DETECTOR.vhd Line: 13
+    Info (12023): Found entity 1: SEQUENCE_DETECTOR File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/SEQUENCE_DETECTOR.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter_1_hexa.vhd
-    Info (12022): Found design unit 1: COUNTER_1_HEXA-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_1_HEXA.vhd Line: 11
-    Info (12023): Found entity 1: COUNTER_1_HEXA File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_1_HEXA.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_1_HEXA-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_1_HEXA.vhd Line: 11
+    Info (12023): Found entity 1: COUNTER_1_HEXA File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_1_HEXA.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_1_bit.vhd
-    Info (12022): Found design unit 1: ADDER_1_BIT-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 11
-    Info (12023): Found entity 1: ADDER_1_BIT File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_1_BIT-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 11
+    Info (12023): Found entity 1: ADDER_1_BIT File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_4_bits.vhd
-    Info (12022): Found design unit 1: ADDER_4_BITS-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd Line: 13
-    Info (12023): Found entity 1: ADDER_4_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_4_BITS-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_4_BITS.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_4_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_4_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rom_256_8.vhd
-    Info (12022): Found design unit 1: rom_256_8-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 52
-    Info (12023): Found entity 1: ROM_256_8 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 42
+    Info (12022): Found design unit 1: rom_256_8-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 52
+    Info (12023): Found entity 1: ROM_256_8 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file counter_2_hexa.vhd
-    Info (12022): Found design unit 1: COUNTER_2_HEXA-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 11
-    Info (12023): Found entity 1: COUNTER_2_HEXA File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_2_HEXA-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 11
+    Info (12023): Found entity 1: COUNTER_2_HEXA File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_8_bits.vhd
-    Info (12022): Found design unit 1: ADDER_8_BITS-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd Line: 13
-    Info (12023): Found entity 1: ADDER_8_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_8_BITS-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_8_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file rom_256_8_decrescente.vhd
-    Info (12022): Found design unit 1: rom_256_8_decrescente-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 52
-    Info (12023): Found entity 1: ROM_256_8_DECRESCENTE File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 42
+    Info (12022): Found design unit 1: rom_256_8_decrescente-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 52
+    Info (12023): Found entity 1: ROM_256_8_DECRESCENTE File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file barramento_2to1.vhd
-    Info (12022): Found design unit 1: BARRAMENTO_2TO1-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 12
-    Info (12023): Found entity 1: BARRAMENTO_2TO1 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 4
+    Info (12022): Found design unit 1: BARRAMENTO_2TO1-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd Line: 12
+    Info (12023): Found entity 1: BARRAMENTO_2TO1 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file tmp.bdf
     Info (12023): Found entity 1: tmp
 Info (12021): Found 2 design units, including 1 entities, in source file load_x_deslocamento.vhd
-    Info (12022): Found design unit 1: LOAD_X_DESLOCAMENTO-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/LOAD_X_DESLOCAMENTO.vhd Line: 11
-    Info (12023): Found entity 1: LOAD_X_DESLOCAMENTO File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/LOAD_X_DESLOCAMENTO.vhd Line: 4
+    Info (12022): Found design unit 1: LOAD_X_DESLOCAMENTO-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/LOAD_X_DESLOCAMENTO.vhd Line: 11
+    Info (12023): Found entity 1: LOAD_X_DESLOCAMENTO File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/LOAD_X_DESLOCAMENTO.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file clock_ctrl.vhd
-    Info (12022): Found design unit 1: CLOCK_CTRL-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 15
-    Info (12023): Found entity 1: CLOCK_CTRL File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 4
+    Info (12022): Found design unit 1: CLOCK_CTRL-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 15
+    Info (12023): Found entity 1: CLOCK_CTRL File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_1hz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_1Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_1Hz.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_1Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_1Hz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_1Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_1Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_1Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_1Hz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_8hz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_8Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_8Hz.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_8Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_8Hz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_8Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_8Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_8Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_8Hz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_4hz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_4Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_4Hz.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_4Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_4Hz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_4Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_4Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_4Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_4Hz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_32hz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_32Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_32Hz.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_32Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_32Hz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_32Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_32Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_32Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_32Hz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_16hz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_16Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_16Hz.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_16Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_16Hz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_16Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_16Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_16Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_16Hz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_2hz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_2Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_2Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_2Hz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_2Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_2Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_2Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_2Hz.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_4_bits.vhd
-    Info (12022): Found design unit 1: REGISTER_4_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd Line: 13
-    Info (12023): Found entity 1: REGISTER_4_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/REGISTER_4_BITS.vhd Line: 5
+    Info (12022): Found design unit 1: REGISTER_4_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/REGISTER_4_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_4_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/REGISTER_4_BITS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_64hz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_64Hz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_64Hz.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_64Hz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_64Hz.vhd Line: 5
-Warning (12125): Using design file main.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12022): Found design unit 1: Timing_Reference_64Hz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_64Hz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_64Hz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_64Hz.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file main.bdf
     Info (12023): Found entity 1: main
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "HEX_TO_7SEG_DECODER" for hierarchy "HEX_TO_7SEG_DECODER:inst13"
 Info (12128): Elaborating entity "REGISTER_4_BITS" for hierarchy "REGISTER_4_BITS:inst30"
 Info (12128): Elaborating entity "CLOCK_CTRL" for hierarchy "CLOCK_CTRL:inst12"
-Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(21): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(21): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(26): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 26
-Warning (10631): VHDL Process Statement warning at CLOCK_CTRL.vhd(20): inferring latch(es) for signal or variable "tmp", which holds its previous value in one or more paths through the process File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 20
-Info (10041): Inferred latch for "tmp" at CLOCK_CTRL.vhd(20) File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(21): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(21): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at CLOCK_CTRL.vhd(26): signal "CONTINUE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 26
+Warning (10631): VHDL Process Statement warning at CLOCK_CTRL.vhd(20): inferring latch(es) for signal or variable "tmp", which holds its previous value in one or more paths through the process File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 20
+Info (10041): Inferred latch for "tmp" at CLOCK_CTRL.vhd(20) File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 20
 Info (12128): Elaborating entity "Timing_Reference_4Hz" for hierarchy "Timing_Reference_4Hz:inst2143"
-Warning (10492): VHDL Process Statement warning at Timing_Reference_4Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_4Hz.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at Timing_Reference_4Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_4Hz.vhd Line: 28
 Info (12128): Elaborating entity "Timing_Reference_64Hz" for hierarchy "Timing_Reference_64Hz:inst2554543"
-Warning (10492): VHDL Process Statement warning at Timing_Reference_64Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/Timing_Reference_64Hz.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at Timing_Reference_64Hz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Timing_Reference_64Hz.vhd Line: 28
 Info (12128): Elaborating entity "SEQUENCE_DETECTOR" for hierarchy "SEQUENCE_DETECTOR:inst7"
 Info (12128): Elaborating entity "PISO_8_BITS" for hierarchy "PISO_8_BITS:inst6"
-Info (12128): Elaborating entity "LOAD_X_DESLOCAMENTO" for hierarchy "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/PISO_8_BITS.vhd Line: 33
+Info (12128): Elaborating entity "LOAD_X_DESLOCAMENTO" for hierarchy "PISO_8_BITS:inst6|LOAD_X_DESLOCAMENTO:ld0" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/PISO_8_BITS.vhd Line: 33
 Info (12128): Elaborating entity "BARRAMENTO_2TO1" for hierarchy "BARRAMENTO_2TO1:inst"
-Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 17
-Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/BARRAMENTO_2TO1.vhd Line: 19
+Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(17): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at BARRAMENTO_2TO1.vhd(19): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/BARRAMENTO_2TO1.vhd Line: 19
 Info (12128): Elaborating entity "COUNTER_2_HEXA" for hierarchy "COUNTER_2_HEXA:inst8"
-Warning (10036): Verilog HDL or VHDL warning at COUNTER_2_HEXA.vhd(13): object "trash" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 13
-Warning (10492): VHDL Process Statement warning at COUNTER_2_HEXA.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 40
-Info (12128): Elaborating entity "ADDER_8_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/COUNTER_2_HEXA.vhd Line: 25
-Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_8_BITS.vhd Line: 26
-Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_4_BITS.vhd Line: 24
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 14
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 14
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 14
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ADDER_1_BIT.vhd Line: 15
+Warning (10036): Verilog HDL or VHDL warning at COUNTER_2_HEXA.vhd(13): object "trash" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 13
+Warning (10492): VHDL Process Statement warning at COUNTER_2_HEXA.vhd(36): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 36
+Info (12128): Elaborating entity "ADDER_8_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/COUNTER_2_HEXA.vhd Line: 25
+Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_8_BITS.vhd Line: 26
+Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_2_HEXA:inst8|ADDER_8_BITS:add|ADDER_4_BITS:add1|ADDER_1_BIT:add1" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_4_BITS.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 14
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 14
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 14
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ADDER_1_BIT.vhd Line: 15
 Info (12128): Elaborating entity "ROM_256_8" for hierarchy "ROM_256_8:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "ROM_256_8:inst3|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 59
-Info (12133): Instantiated megafunction "ROM_256_8:inst3|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "ROM_256_8:inst3|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 59
+Info (12133): Instantiated megafunction "ROM_256_8:inst3|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -737,12 +740,23 @@ Info (12133): Instantiated megafunction "ROM_256_8:inst3|altsyncram:altsyncram_c
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uoq3.tdf
-    Info (12023): Found entity 1: altsyncram_uoq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_uoq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_uoq3" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_uoq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/db/altsyncram_uoq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_uoq3" for hierarchy "ROM_256_8:inst3|altsyncram:altsyncram_component|altsyncram_uoq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (113015): Width of data items in "ROM_256_8.hex" is greater than the memory width. Wrapping data items to subsequent addresses. Found 16 warnings, reporting 10 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 1
+    Warning (113009): Data at line (1) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 1
+    Warning (113009): Data at line (2) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 2
+    Warning (113009): Data at line (3) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 3
+    Warning (113009): Data at line (4) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 4
+    Warning (113009): Data at line (5) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 5
+    Warning (113009): Data at line (6) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 6
+    Warning (113009): Data at line (7) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 7
+    Warning (113009): Data at line (8) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 8
+    Warning (113009): Data at line (9) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 9
+    Warning (113009): Data at line (10) of memory initialization file "ROM_256_8.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8.hex Line: 10
 Info (12128): Elaborating entity "ROM_256_8_DECRESCENTE" for hierarchy "ROM_256_8_DECRESCENTE:inst4"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
-Info (12133): Instantiated megafunction "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
+Info (12133): Instantiated megafunction "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -794,10 +808,21 @@ Info (12133): Instantiated megafunction "ROM_256_8_DECRESCENTE:inst4|altsyncram:
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_20s3.tdf
-    Info (12023): Found entity 1: altsyncram_20s3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/db/altsyncram_20s3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_20s3" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (13012): Latch CLOCK_CTRL:inst12|tmp has unsafe behavior File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/CLOCK_CTRL.vhd Line: 17
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SEQUENCE_DETECTOR:inst7|estado[2] File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Lab07/SEQUENCE_DETECTOR.vhd Line: 19
+    Info (12023): Found entity 1: altsyncram_20s3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/db/altsyncram_20s3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_20s3" for hierarchy "ROM_256_8_DECRESCENTE:inst4|altsyncram:altsyncram_component|altsyncram_20s3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (113015): Width of data items in "ROM_256_8_DECRESCENTE.hex" is greater than the memory width. Wrapping data items to subsequent addresses. Found 16 warnings, reporting 10 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 1
+    Warning (113009): Data at line (1) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 1
+    Warning (113009): Data at line (2) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 2
+    Warning (113009): Data at line (3) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 3
+    Warning (113009): Data at line (4) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 4
+    Warning (113009): Data at line (5) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 5
+    Warning (113009): Data at line (6) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 6
+    Warning (113009): Data at line (7) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 7
+    Warning (113009): Data at line (8) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 8
+    Warning (113009): Data at line (9) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 9
+    Warning (113009): Data at line (10) of memory initialization file "ROM_256_8_DECRESCENTE.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/ROM_256_8_DECRESCENTE.hex Line: 10
+Warning (13012): Latch CLOCK_CTRL:inst12|tmp has unsafe behavior File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/CLOCK_CTRL.vhd Line: 17
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SEQUENCE_DETECTOR:inst7|estado[2] File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/SEQUENCE_DETECTOR.vhd Line: 19
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED3" is stuck at GND
     Warning (13410): Pin "LED6" is stuck at GND
@@ -806,15 +831,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 267 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 265 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 204 logic cells
+    Info (21061): Implemented 202 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4811 megabytes
-    Info: Processing ended: Thu Jun 06 17:24:35 2024
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Thu Jun 13 11:35:07 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:08
 
 

@@ -1,5 +1,5 @@
 Flow report for main
-Thu Jun 06 17:25:01 2024
+Thu Jun 13 11:35:25 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 06 17:24:56 2024       ;
+; Flow Status                        ; Successful - Thu Jun 13 11:35:21 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 195 / 49,760 ( < 1 % )                      ;
+; Total logic elements               ; 199 / 49,760 ( < 1 % )                      ;
 ;     Total combinational functions  ; 179 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 105 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 105                                         ;
+;     Dedicated logic registers      ; 103 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 103                                         ;
 ; Total pins                         ; 47 / 360 ( 13 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096 / 1,677,312 ( < 1 % )                 ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2024 17:24:21 ;
+; Start date & time ; 06/13/2024 11:34:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main                ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 9413555127444.171770546011088          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 185410942696069.171828929619512        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; ROM_256_8.bsf                          ; --            ; --          ; --         ;
@@ -100,11 +100,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4811 MB             ; 00:00:09                           ;
-; Fitter               ; 00:00:14     ; 1.0                     ; 5642 MB             ; 00:00:09                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4686 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 4820 MB             ; 00:00:02                           ;
-; Total                ; 00:00:37     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4818 MB             ; 00:00:08                           ;
+; Fitter               ; 00:00:09     ; 1.1                     ; 5771 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4680 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4844 MB             ; 00:00:01                           ;
+; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,10 +113,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Joulius          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Joulius          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Joulius          ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Joulius          ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; JOULIUS-DT       ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; JOULIUS-DT       ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; JOULIUS-DT       ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; JOULIUS-DT       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

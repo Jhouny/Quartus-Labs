@@ -25,11 +25,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Jun 05 12:33:52 2024
+    Info: Processing started: Thu Jun 13 11:32:22 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off main -c main --vector_source=D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/Waveform.vwf --testbench_file=D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim/Waveform.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-4]" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -53,13 +51,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Jun 05 12:33:53 2024
+    Info: Processing started: Thu Jun 13 11:32:23 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim/ main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file main.vho in folder "D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Wed Jun 05 12:33:54 2024
+    Info: Peak virtual memory: 4635 megabytes
+    Info: Processing ended: Thu Jun 13 11:32:24 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -79,12 +77,13 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
-# do main.do
 
+# do main.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:33:55 on Jun 05,2024
+# Start time: 11:32:24 on Jun 13,2024
 # vcom -work work main.vho 
+
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -94,61 +93,42 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package fiftyfivenm_components
 # -- Compiling entity hard_block
 # -- Compiling architecture structure of hard_block
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity main
-# -- Compiling architecture structure of main
-# End time: 12:33:55 on Jun 05,2024, Elapsed time: 0:00:00
+# -- Compiling entity tmp
+# -- Compiling architecture structure of tmp
+# End time: 11:32:24 on Jun 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 12:33:55 on Jun 05,2024
+# Start time: 11:32:24 on Jun 13,2024
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity main_vhd_vec_tst
-# -- Compiling architecture main_arch of main_vhd_vec_tst
-# End time: 12:33:55 on Jun 05,2024, Elapsed time: 0:00:00
+# -- Compiling entity tmp_vhd_vec_tst
+# -- Compiling architecture tmp_arch of tmp_vhd_vec_tst
+# End time: 11:32:25 on Jun 13,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.main_vhd_vec_tst 
-# Start time: 12:33:55 on Jun 05,2024
+# vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.tmp_vhd_vec_tst 
+# Start time: 11:32:25 on Jun 13,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.main_vhd_vec_tst(main_arch)
+# Loading work.tmp_vhd_vec_tst(tmp_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
-# Loading altera.dffeas_pack
-# Loading altera.altera_primitives_components
 # Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
 # Loading fiftyfivenm.fiftyfivenm_components
-# Loading work.main(structure)
+# Loading work.tmp(structure)
 # Loading work.hard_block(structure)
 # Loading fiftyfivenm.fiftyfivenm_lcell_comb(vital_lcell_comb)
 # Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
 # Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
-# Loading fiftyfivenm.fiftyfivenm_clkctrl(vital_clkctrl)
-# Loading fiftyfivenm.fiftyfivenm_ena_reg(behave)
-# Loading altera.dffeas(vital_dffeas)
-# Loading fiftyfivenm.fiftyfivenm_ram_block(block_arch)
-# Loading fiftyfivenm.fiftyfivenm_ram_register(reg_arch)
-# Loading fiftyfivenm.fiftyfivenm_ram_pulse_generator(pgen_arch)
 # Loading fiftyfivenm.fiftyfivenm_unvm(behavior)
 # Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
-# ** Warning: Design size of 14304 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# after#35
+# after#33
 
-# Simulation time: 189650 ps
-
-# Simulation time: 189650 ps
-
-# Simulation time: 189650 ps
-
-# End time: 12:34:04 on Jun 05,2024, Elapsed time: 0:00:09
-# Errors: 0, Warnings: 1
+# End time: 11:32:25 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 
 Completed successfully. 
 
@@ -160,7 +140,7 @@ Reading D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab0
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim/main_20240605123404.sim.vwf
+Writing the resulting VWF to D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Lab07/simulation/qsim/main_20240613113226.sim.vwf
 
 Finished VCD to VWF conversion.
 

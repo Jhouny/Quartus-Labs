@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/05/2024 12:33:53"
+-- Generated on "06/13/2024 11:32:23"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          main
+-- Vhdl Test Bench(with test vectors) for design  :          tmp
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,104 +28,153 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY main_vhd_vec_tst IS
-END main_vhd_vec_tst;
-ARCHITECTURE main_arch OF main_vhd_vec_tst IS
+ENTITY tmp_vhd_vec_tst IS
+END tmp_vhd_vec_tst;
+ARCHITECTURE tmp_arch OF tmp_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL A : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL B : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL CLK_BASE_FAST : STD_LOGIC;
-SIGNAL CLK_BASE_SLOW : STD_LOGIC;
-SIGNAL CONTINUE : STD_LOGIC;
-SIGNAL FAST_CLK : STD_LOGIC;
-SIGNAL MEM_CTRL : STD_LOGIC;
-SIGNAL O : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL Cin : STD_LOGIC;
+SIGNAL CLK : STD_LOGIC;
+SIGNAL Cout : STD_LOGIC;
 SIGNAL S : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL SERIAL_OUT : STD_LOGIC;
-SIGNAL SLOW_CLK : STD_LOGIC;
-SIGNAL state : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL STOPPED : STD_LOGIC;
-COMPONENT main
+COMPONENT tmp
 	PORT (
-	A : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	B : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	CLK_BASE_FAST : IN STD_LOGIC;
-	CLK_BASE_SLOW : IN STD_LOGIC;
-	CONTINUE : IN STD_LOGIC;
-	FAST_CLK : OUT STD_LOGIC;
-	MEM_CTRL : OUT STD_LOGIC;
-	O : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	S : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	SERIAL_OUT : OUT STD_LOGIC;
-	SLOW_CLK : OUT STD_LOGIC;
-	state : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	STOPPED : OUT STD_LOGIC
+	A : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+	B : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+	Cin : IN STD_LOGIC;
+	CLK : IN STD_LOGIC;
+	Cout : OUT STD_LOGIC;
+	S : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : main
+	i1 : tmp
 	PORT MAP (
 -- list connections between master ports and signals
 	A => A,
 	B => B,
-	CLK_BASE_FAST => CLK_BASE_FAST,
-	CLK_BASE_SLOW => CLK_BASE_SLOW,
-	CONTINUE => CONTINUE,
-	FAST_CLK => FAST_CLK,
-	MEM_CTRL => MEM_CTRL,
-	O => O,
-	S => S,
-	SERIAL_OUT => SERIAL_OUT,
-	SLOW_CLK => SLOW_CLK,
-	state => state,
-	STOPPED => STOPPED
+	Cin => Cin,
+	CLK => CLK,
+	Cout => Cout,
+	S => S
 	);
-
--- CLK_BASE_FAST
-t_prcs_CLK_BASE_FAST: PROCESS
+-- A[7]
+t_prcs_A_7: PROCESS
 BEGIN
-LOOP
-	CLK_BASE_FAST <= '0';
-	WAIT FOR 50 ps;
-	CLK_BASE_FAST <= '1';
-	WAIT FOR 50 ps;
-	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_CLK_BASE_FAST;
-
--- CLK_BASE_SLOW
-t_prcs_CLK_BASE_SLOW: PROCESS
-BEGIN
-LOOP
-	CLK_BASE_SLOW <= '0';
-	WAIT FOR 800 ps;
-	CLK_BASE_SLOW <= '1';
-	WAIT FOR 800 ps;
-	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_CLK_BASE_SLOW;
-
--- CONTINUE
-t_prcs_CONTINUE: PROCESS
-BEGIN
-	CONTINUE <= '0';
-	WAIT FOR 426000 ps;
-	CONTINUE <= '1';
-	WAIT FOR 1600 ps;
-	CONTINUE <= '0';
-	WAIT FOR 33200 ps;
-	CONTINUE <= '1';
-	WAIT FOR 1600 ps;
-	CONTINUE <= '0';
-	WAIT FOR 185600 ps;
-	CONTINUE <= '1';
-	WAIT FOR 1600 ps;
-	CONTINUE <= '0';
-	WAIT FOR 16000 ps;
-	CONTINUE <= '1';
-	WAIT FOR 1600 ps;
-	CONTINUE <= '0';
+	A(7) <= '1';
 WAIT;
-END PROCESS t_prcs_CONTINUE;
-END main_arch;
+END PROCESS t_prcs_A_7;
+-- A[6]
+t_prcs_A_6: PROCESS
+BEGIN
+	A(6) <= '1';
+WAIT;
+END PROCESS t_prcs_A_6;
+-- A[5]
+t_prcs_A_5: PROCESS
+BEGIN
+	A(5) <= '1';
+WAIT;
+END PROCESS t_prcs_A_5;
+-- A[4]
+t_prcs_A_4: PROCESS
+BEGIN
+	A(4) <= '1';
+WAIT;
+END PROCESS t_prcs_A_4;
+-- A[3]
+t_prcs_A_3: PROCESS
+BEGIN
+	A(3) <= '1';
+WAIT;
+END PROCESS t_prcs_A_3;
+-- A[2]
+t_prcs_A_2: PROCESS
+BEGIN
+	A(2) <= '1';
+WAIT;
+END PROCESS t_prcs_A_2;
+-- A[1]
+t_prcs_A_1: PROCESS
+BEGIN
+	A(1) <= '1';
+WAIT;
+END PROCESS t_prcs_A_1;
+-- A[0]
+t_prcs_A_0: PROCESS
+BEGIN
+	A(0) <= '0';
+	WAIT FOR 729600 ps;
+	A(0) <= '1';
+WAIT;
+END PROCESS t_prcs_A_0;
+-- B[7]
+t_prcs_B_7: PROCESS
+BEGIN
+	B(7) <= '0';
+WAIT;
+END PROCESS t_prcs_B_7;
+-- B[6]
+t_prcs_B_6: PROCESS
+BEGIN
+	B(6) <= '0';
+WAIT;
+END PROCESS t_prcs_B_6;
+-- B[5]
+t_prcs_B_5: PROCESS
+BEGIN
+	B(5) <= '0';
+WAIT;
+END PROCESS t_prcs_B_5;
+-- B[4]
+t_prcs_B_4: PROCESS
+BEGIN
+	B(4) <= '0';
+WAIT;
+END PROCESS t_prcs_B_4;
+-- B[3]
+t_prcs_B_3: PROCESS
+BEGIN
+	B(3) <= '0';
+WAIT;
+END PROCESS t_prcs_B_3;
+-- B[2]
+t_prcs_B_2: PROCESS
+BEGIN
+	B(2) <= '0';
+WAIT;
+END PROCESS t_prcs_B_2;
+-- B[1]
+t_prcs_B_1: PROCESS
+BEGIN
+	B(1) <= '0';
+WAIT;
+END PROCESS t_prcs_B_1;
+-- B[0]
+t_prcs_B_0: PROCESS
+BEGIN
+	B(0) <= '0';
+WAIT;
+END PROCESS t_prcs_B_0;
+
+-- Cin
+t_prcs_Cin: PROCESS
+BEGIN
+	Cin <= '1';
+WAIT;
+END PROCESS t_prcs_Cin;
+
+-- CLK
+t_prcs_CLK: PROCESS
+BEGIN
+LOOP
+	CLK <= '0';
+	WAIT FOR 10000 ps;
+	CLK <= '1';
+	WAIT FOR 10000 ps;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_CLK;
+END tmp_arch;
