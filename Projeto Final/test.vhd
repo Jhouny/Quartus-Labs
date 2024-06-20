@@ -13,6 +13,7 @@ entity test is
   port (clk_25   : in  std_logic;
         reset    : in  std_logic;
 		RGB      : in std_logic_vector(23 downto 0);
+		run_mem  : out std_logic;
         vs_out   : out std_logic;
         hs_out   : out std_logic;
         de_out   : out std_logic;
@@ -35,6 +36,8 @@ signal h_count   : integer range 0 to  799 := 0;
 signal v_count   : integer range 0 to  524 := 0;
 signal frame_num : integer range 0 to 1023 := 0;
 signal new_frame : std_logic := '0';
+
+signal mem_ctrl  : std_logic := '0';
 
 signal center_pos_h, center_pos_v : integer range 0 to 799;
 
@@ -67,11 +70,11 @@ begin
 	  h_count <= 0;
 	  if ( v_count = 524 ) then
         v_count     <= 0;
-        new_frame   <= '1';                
+        new_frame   <= '1';
       else
         v_count <= v_count + 1;
       end if; -- v_count
-    else  
+    else
       h_count <= h_count + 1;
     end if; -- h_count
         
@@ -131,20 +134,24 @@ begin
   de_2      <= de_1;
   
   if    (de_1 = '0') then
-    rgb_2 <= x"000000";
+    rgb_2 <= x"336699";
   elsif (h_gap_1 > 8 or v_gap_1 > 8) then
     rgb_2 <= rgb_bg;
-  elsif () then
-    rgb_2 <= rgb_road;
-  elsif () then
-    rgb_2 <= rgb_line;
-  elsif () then
-    rgb_2 <= rgb_road;
+  elsif (center_pos_h - h_count = 8 and center_pos_v - v_count = 8) then
+	mem_ctrl <= '1';
+    rgb_2 <= x"444444";
   else
-    rgb_2 <= rgb_gras;
+	rgb_2 <= x"AABBCC";
+--  elsif () then
+--    rgb_2 <= rgb_line;
+--  elsif () then
+--    rgb_2 <= rgb_road;
+--  else
+--    rgb_2 <= rgb_gras;
   end if;  
   
   ------------------------------------ pipeline stage 3
+  run_mem <= mem_ctrl;
   hs_out  <= hs_2;
   vs_out  <= vs_2;
   de_out  <= de_2;

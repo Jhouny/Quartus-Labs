@@ -61,22 +61,22 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 168 80)
 		(output)
-		(text "r_out[7..0]" (rect 0 0 41 12)(font "Arial" ))
-		(text "r_out[7..0]" (rect 106 75 147 87)(font "Arial" ))
+		(text "r_out[3..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "r_out[3..0]" (rect 106 75 147 87)(font "Arial" ))
 		(line (pt 168 80)(pt 152 80)(line_width 3))
 	)
 	(port
 		(pt 168 96)
 		(output)
-		(text "g_out[7..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "g_out[7..0]" (rect 105 91 147 103)(font "Arial" ))
+		(text "g_out[3..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "g_out[3..0]" (rect 105 91 147 103)(font "Arial" ))
 		(line (pt 168 96)(pt 152 96)(line_width 3))
 	)
 	(port
 		(pt 168 112)
 		(output)
-		(text "b_out[7..0]" (rect 0 0 42 12)(font "Arial" ))
-		(text "b_out[7..0]" (rect 105 107 147 119)(font "Arial" ))
+		(text "b_out[3..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "b_out[3..0]" (rect 105 107 147 119)(font "Arial" ))
 		(line (pt 168 112)(pt 152 112)(line_width 3))
 	)
 	(drawing

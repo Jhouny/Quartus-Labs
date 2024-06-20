@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/20/2024 00:43:33"
+-- Generated on "06/20/2024 14:49:00"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          main
+-- Vhdl Test Bench(with test vectors) for design  :          tmp_2
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,31 +28,31 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY main_vhd_vec_tst IS
-END main_vhd_vec_tst;
-ARCHITECTURE main_arch OF main_vhd_vec_tst IS
+ENTITY tmp_2_vhd_vec_tst IS
+END tmp_2_vhd_vec_tst;
+ARCHITECTURE tmp_2_arch OF tmp_2_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL ADDRESS : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL CLK : STD_LOGIC;
 SIGNAL endereco : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL Q : STD_LOGIC_VECTOR(23 DOWNTO 0);
-COMPONENT main
+SIGNAL RGB : STD_LOGIC_VECTOR(23 DOWNTO 0);
+SIGNAL StartStop : STD_LOGIC;
+COMPONENT tmp_2
 	PORT (
-	ADDRESS : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	CLK : IN STD_LOGIC;
-	endereco : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-	Q : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
+	endereco : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	RGB : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
+	StartStop : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : main
+	i1 : tmp_2
 	PORT MAP (
 -- list connections between master ports and signals
-	ADDRESS => ADDRESS,
 	CLK => CLK,
 	endereco => endereco,
-	Q => Q
+	RGB => RGB,
+	StartStop => StartStop
 	);
 
 -- CLK
@@ -66,113 +66,19 @@ LOOP
 	IF (NOW >= 10000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_CLK;
--- endereco[7]
-t_prcs_endereco_7: PROCESS
+
+-- StartStop
+t_prcs_StartStop: PROCESS
 BEGIN
-	endereco(7) <= '0';
-	WAIT FOR 1920000 ps;
-	endereco(7) <= '1';
-	WAIT FOR 2560000 ps;
-	endereco(7) <= '0';
-	WAIT FOR 2560000 ps;
-	endereco(7) <= '1';
-	WAIT FOR 2560000 ps;
-	endereco(7) <= '0';
-WAIT;
-END PROCESS t_prcs_endereco_7;
--- endereco[6]
-t_prcs_endereco_6: PROCESS
-BEGIN
-	endereco(6) <= '0';
-	WAIT FOR 640000 ps;
-	FOR i IN 1 TO 3
-	LOOP
-		endereco(6) <= '1';
-		WAIT FOR 1280000 ps;
-		endereco(6) <= '0';
-		WAIT FOR 1280000 ps;
-	END LOOP;
-	endereco(6) <= '1';
+	StartStop <= '0';
+	WAIT FOR 2480000 ps;
+	StartStop <= '1';
+	WAIT FOR 720000 ps;
+	StartStop <= '0';
 	WAIT FOR 1280000 ps;
-	endereco(6) <= '0';
+	StartStop <= '1';
+	WAIT FOR 5120000 ps;
+	StartStop <= '0';
 WAIT;
-END PROCESS t_prcs_endereco_6;
--- endereco[5]
-t_prcs_endereco_5: PROCESS
-BEGIN
-	FOR i IN 1 TO 7
-	LOOP
-		endereco(5) <= '1';
-		WAIT FOR 640000 ps;
-		endereco(5) <= '0';
-		WAIT FOR 640000 ps;
-	END LOOP;
-	endereco(5) <= '1';
-	WAIT FOR 640000 ps;
-	endereco(5) <= '0';
-WAIT;
-END PROCESS t_prcs_endereco_5;
--- endereco[4]
-t_prcs_endereco_4: PROCESS
-BEGIN
-	FOR i IN 1 TO 15
-	LOOP
-		endereco(4) <= '0';
-		WAIT FOR 320000 ps;
-		endereco(4) <= '1';
-		WAIT FOR 320000 ps;
-	END LOOP;
-	endereco(4) <= '0';
-	WAIT FOR 320000 ps;
-	endereco(4) <= '1';
-WAIT;
-END PROCESS t_prcs_endereco_4;
--- endereco[3]
-t_prcs_endereco_3: PROCESS
-BEGIN
-	FOR i IN 1 TO 31
-	LOOP
-		endereco(3) <= '0';
-		WAIT FOR 160000 ps;
-		endereco(3) <= '1';
-		WAIT FOR 160000 ps;
-	END LOOP;
-	endereco(3) <= '0';
-WAIT;
-END PROCESS t_prcs_endereco_3;
--- endereco[2]
-t_prcs_endereco_2: PROCESS
-BEGIN
-	FOR i IN 1 TO 62
-	LOOP
-		endereco(2) <= '0';
-		WAIT FOR 80000 ps;
-		endereco(2) <= '1';
-		WAIT FOR 80000 ps;
-	END LOOP;
-	endereco(2) <= '0';
-WAIT;
-END PROCESS t_prcs_endereco_2;
--- endereco[1]
-t_prcs_endereco_1: PROCESS
-BEGIN
-LOOP
-	endereco(1) <= '0';
-	WAIT FOR 40000 ps;
-	endereco(1) <= '1';
-	WAIT FOR 40000 ps;
-	IF (NOW >= 10000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_endereco_1;
--- endereco[0]
-t_prcs_endereco_0: PROCESS
-BEGIN
-LOOP
-	endereco(0) <= '0';
-	WAIT FOR 20000 ps;
-	endereco(0) <= '1';
-	WAIT FOR 20000 ps;
-	IF (NOW >= 10000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_endereco_0;
-END main_arch;
+END PROCESS t_prcs_StartStop;
+END tmp_2_arch;
