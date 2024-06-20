@@ -132,7 +132,7 @@ begin
   
   if    (de_1 = '0') then
     rgb_2 <= x"000000";
-  elsif (h_gap_1 > 8 or ) then
+  elsif (h_gap_1 > 8 or v_gap_1 > 8) then
     rgb_2 <= rgb_bg;
   elsif () then
     rgb_2 <= rgb_road;
