@@ -2,76 +2,40 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'street_de10:inst|clk_25'
-Slack : -6.411
-TNS   : -391.813
-
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -1.667
-TNS   : -1.667
+Slack : -1.901
+TNS   : -45.624
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.425
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'street_de10:inst|clk_25'
-Slack : 0.425
+Slack : 0.423
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -11.418
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'street_de10:inst|clk_25'
-Slack : -2.846
-TNS   : -253.778
-
-Type  : Slow 1200mV 0C Model Setup 'street_de10:inst|clk_25'
-Slack : -5.716
-TNS   : -348.199
+TNS   : -85.998
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -1.472
-TNS   : -1.472
+Slack : -1.670
+TNS   : -40.080
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.391
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'street_de10:inst|clk_25'
-Slack : 0.392
+Slack : 0.389
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -11.418
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'street_de10:inst|clk_25'
-Slack : -2.846
-TNS   : -253.580
-
-Type  : Fast 1200mV 0C Model Setup 'street_de10:inst|clk_25'
-Slack : -2.168
-TNS   : -91.314
+TNS   : -83.773
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -0.479
-TNS   : -0.479
+Slack : -0.280
+TNS   : -6.720
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
 Slack : 0.159
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'street_de10:inst|clk_25'
-Slack : 0.159
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -9.174
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'street_de10:inst|clk_25'
-Slack : -1.000
-TNS   : -154.000
+TNS   : -46.688
 
 ------------------------------------------------------------

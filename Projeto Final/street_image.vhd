@@ -128,21 +128,21 @@ begin
   
   ------------------------------------ pipeline stage 1
   if ( h_count < 96 ) then
-    hs_1 <= '1';  else
+    hs_1 <= '1';  else  -- Horizontal Syncing (HS)
     hs_1 <= '0';  end if;
 
   if ( v_count < 2 ) then
-    vs_1 <= '1';  else
+    vs_1 <= '1';  else  -- Vertical Syncing (VS)
     vs_1 <= '0';  end if;
 
-  if ( h_count >= 144 ) and
-     ( h_count <  784 ) and
-     ( v_count >=  36 ) and
-     ( v_count <  516 ) then
+  if ( h_count >= 144 ) and   -- 144 = 96 (HS) + 40 back-porch + 8 left-border
+     ( h_count <  784 ) and   -- 784 = 144 + 640 actual image data
+     ( v_count >=  36 ) and   -- 36 = 2 (VS) + 25 back-porch + 8 top-border  
+     ( v_count <  516 ) then  -- 516 = 36 + 480 actual image data
     de_1 <= '1'; else
     de_1 <= '0'; end if;
     
-  h_pos_1 <= h_count - 144;
+  h_pos_1 <= h_count - 144;  -- Position relative to start of image data
   v_pos_1 <= v_count -  36;
   
   -- calculate distance of this position from center of the lane

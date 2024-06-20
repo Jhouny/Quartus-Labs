@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Sun Jun 16 15:26:43 2024
+Thu Jun 20 00:41:02 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,18 +13,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. Registers Removed During Synthesis
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
  10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for Inferred Entity Instance: street_de10:inst|street_image:street|lpm_mult:Mult1
- 14. Parameter Settings for Inferred Entity Instance: street_de10:inst|street_image:street|lpm_mult:Mult0
- 15. lpm_mult Parameter Settings by Entity Instance
- 16. Port Connectivity Checks: "street_de10:inst|street_image:street"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 11. Source assignments for mem0:inst_mem|altsyncram:altsyncram_component|altsyncram_hkq3:auto_generated
+ 12. Parameter Settings for User Entity Instance: mem0:inst_mem|altsyncram:altsyncram_component
+ 13. altsyncram Parameter Settings by Entity Instance
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -50,19 +47,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 16 15:26:43 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 20 00:41:02 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 283                                         ;
-;     Total combinational functions  ; 247                                         ;
-;     Dedicated logic registers      ; 151                                         ;
-; Total registers                    ; 151                                         ;
-; Total pins                         ; 16                                          ;
+; Total logic elements               ; 16                                          ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 16                                          ;
+; Total registers                    ; 16                                          ;
+; Total pins                         ; 41                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 2                                           ;
+; Total memory bits                  ; 6,144                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 ; UFM blocks                         ; 0                                           ;
 ; ADC blocks                         ; 0                                           ;
@@ -168,113 +165,101 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-6         ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                       ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------+---------+
-; main.bdf                         ; yes             ; User Block Diagram/Schematic File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/main.bdf         ;         ;
-; street_de10.vhd                  ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_de10.vhd  ;         ;
-; street_image.vhd                 ; yes             ; User VHDL File                     ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                                ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                              ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                             ;         ;
-; multcore.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc                                ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                                ;         ;
-; altshift.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                                ;         ;
-; db/mult_vds.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/mult_vds.tdf  ;         ;
-; db/mult_4ls.tdf                  ; yes             ; Auto-Generated Megafunction        ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/mult_4ls.tdf  ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                           ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                             ; Library ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File      ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/main.bdf               ;         ;
+; mem0.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd               ;         ;
+; REGISTER_4_BITS.vhd              ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_4_BITS.vhd    ;         ;
+; REGISTER_8_BITS.vhd              ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_8_BITS.vhd    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                    ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                             ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                       ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                    ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                    ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                     ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                        ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                        ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                      ;         ;
+; db/altsyncram_hkq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_hkq3.tdf ;         ;
+; output.hex                       ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex             ;         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                           ;
-+---------------------------------------------+-------------------------+
-; Resource                                    ; Usage                   ;
-+---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 283                     ;
-;                                             ;                         ;
-; Total combinational functions               ; 247                     ;
-; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 48                      ;
-;     -- 3 input functions                    ; 78                      ;
-;     -- <=2 input functions                  ; 121                     ;
-;                                             ;                         ;
-; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 117                     ;
-;     -- arithmetic mode                      ; 130                     ;
-;                                             ;                         ;
-; Total registers                             ; 151                     ;
-;     -- Dedicated logic registers            ; 151                     ;
-;     -- I/O registers                        ; 0                       ;
-;                                             ;                         ;
-; I/O pins                                    ; 16                      ;
-;                                             ;                         ;
-; Embedded Multiplier 9-bit elements          ; 2                       ;
-;                                             ;                         ;
-; Maximum fan-out node                        ; street_de10:inst|clk_25 ;
-; Maximum fan-out                             ; 146                     ;
-; Total fan-out                               ; 1090                    ;
-; Average fan-out                             ; 2.51                    ;
-+---------------------------------------------+-------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 16        ;
+;                                             ;           ;
+; Total combinational functions               ; 0         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 0         ;
+;     -- 3 input functions                    ; 0         ;
+;     -- <=2 input functions                  ; 0         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 0         ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 16        ;
+;     -- Dedicated logic registers            ; 16        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 41        ;
+; Total memory bits                           ; 6144      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 40        ;
+; Total fan-out                               ; 321       ;
+; Average fan-out                             ; 2.63      ;
++---------------------------------------------+-----------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                          ;
-+---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name  ; Library Name ;
-+---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+--------------+--------------+
-; |main                                 ; 247 (1)             ; 151 (0)                   ; 0           ; 0          ; 2            ; 2       ; 0         ; 16   ; 0            ; 0          ; |main                                                                             ; main         ; work         ;
-;    |street_de10:inst|                 ; 246 (6)             ; 151 (6)                   ; 0           ; 0          ; 2            ; 2       ; 0         ; 0    ; 0            ; 0          ; |main|street_de10:inst                                                            ; street_de10  ; work         ;
-;       |street_image:street|           ; 240 (240)           ; 145 (145)                 ; 0           ; 0          ; 2            ; 2       ; 0         ; 0    ; 0            ; 0          ; |main|street_de10:inst|street_image:street                                        ; street_image ; work         ;
-;          |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |main|street_de10:inst|street_image:street|lpm_mult:Mult0                         ; lpm_mult     ; work         ;
-;             |mult_4ls:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |main|street_de10:inst|street_image:street|lpm_mult:Mult0|mult_4ls:auto_generated ; mult_4ls     ; work         ;
-;          |lpm_mult:Mult1|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |main|street_de10:inst|street_image:street|lpm_mult:Mult1                         ; lpm_mult     ; work         ;
-;             |mult_vds:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 1            ; 1       ; 0         ; 0    ; 0            ; 0          ; |main|street_de10:inst|street_image:street|lpm_mult:Mult1|mult_vds:auto_generated ; mult_vds     ; work         ;
-+---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+--------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------+-----------------+--------------+
+; |main                                     ; 0 (0)               ; 16 (0)                    ; 6144        ; 0          ; 0            ; 0       ; 0         ; 41   ; 0            ; 0          ; |main                                                                              ; main            ; work         ;
+;    |REGISTER_8_BITS:inst123|              ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_8_BITS:inst123                                                      ; REGISTER_8_BITS ; work         ;
+;       |REGISTER_4_BITS:reg0|              ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_8_BITS:inst123|REGISTER_4_BITS:reg0                                 ; REGISTER_4_BITS ; work         ;
+;       |REGISTER_4_BITS:reg1|              ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_8_BITS:inst123|REGISTER_4_BITS:reg1                                 ; REGISTER_4_BITS ; work         ;
+;    |REGISTER_8_BITS:inst|                 ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_8_BITS:inst                                                         ; REGISTER_8_BITS ; work         ;
+;       |REGISTER_4_BITS:reg0|              ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_8_BITS:inst|REGISTER_4_BITS:reg0                                    ; REGISTER_4_BITS ; work         ;
+;       |REGISTER_4_BITS:reg1|              ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|REGISTER_8_BITS:inst|REGISTER_4_BITS:reg1                                    ; REGISTER_4_BITS ; work         ;
+;    |mem0:inst_mem|                        ; 0 (0)               ; 0 (0)                     ; 6144        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem0:inst_mem                                                                ; mem0            ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 6144        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem0:inst_mem|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;          |altsyncram_hkq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 6144        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem0:inst_mem|altsyncram:altsyncram_component|altsyncram_hkq3:auto_generated ; altsyncram_hkq3 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary        ;
-+---------------------------------------+-------------+
-; Statistic                             ; Number Used ;
-+---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 2           ;
-; Simple Multipliers (18-bit)           ; 0           ;
-; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 2           ;
-; Signed Embedded Multipliers           ; 1           ;
-; Unsigned Embedded Multipliers         ; 1           ;
-; Mixed Sign Embedded Multipliers       ; 0           ;
-; Variable Sign Embedded Multipliers    ; 0           ;
-; Dedicated Input Shift Register Chains ; 0           ;
-+---------------------------------------+-------------+
-Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                      ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
+; Name                                                                                    ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF        ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
+; mem0:inst_mem|altsyncram:altsyncram_component|altsyncram_hkq3:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 24           ; --           ; --           ; 6144 ; output.hex ;
++-----------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                ;
-+---------------------------------------------------+---------------------------------------------------------------+
-; Register name                                     ; Reason for Removal                                            ;
-+---------------------------------------------------+---------------------------------------------------------------+
-; street_de10:inst|street_image:street|x_value_c[9] ; Stuck at GND due to stuck port data_in                        ;
-; street_de10:inst|street_image:street|x_value_b[9] ; Stuck at GND due to stuck port data_in                        ;
-; street_de10:inst|street_image:street|x_value_a[9] ; Stuck at GND due to stuck port data_in                        ;
-; street_de10:inst|street_image:street|x_value_a[1] ; Merged with street_de10:inst|street_image:street|x_value_c[1] ;
-; street_de10:inst|street_image:street|x_value_a[0] ; Merged with street_de10:inst|street_image:street|x_value_c[0] ;
-; street_de10:inst|street_image:street|rgb_2[7]     ; Merged with street_de10:inst|street_image:street|rgb_2[23]    ;
-; street_de10:inst|street_image:street|rgb_2[13,20] ; Merged with street_de10:inst|street_image:street|rgb_2[22]    ;
-; street_de10:inst|street_image:street|rgb_2[14]    ; Merged with street_de10:inst|street_image:street|rgb_2[21]    ;
-; street_de10:inst|street_image:street|rgb_2[4]     ; Merged with street_de10:inst|street_image:street|rgb_2[5]     ;
-; street_de10:inst|street_image:street|v_pos_1[2]   ; Merged with street_de10:inst|street_image:street|x_value_b[0] ;
-; Total Number of Removed Registers = 11            ;                                                               ;
-+---------------------------------------------------+---------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                 ;
++--------+--------------+---------+--------------+--------------+---------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance     ; IP Include File ;
++--------+--------------+---------+--------------+--------------+---------------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 18.1    ; N/A          ; N/A          ; |main|mem0:inst_mem ; mem0.vhd        ;
++--------+--------------+---------+--------------+--------------+---------------------+-----------------+
 
 
 +------------------------------------------------------+
@@ -282,189 +267,119 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 151   ;
-; Number of registers using Synchronous Clear  ; 29    ;
-; Number of registers using Synchronous Load   ; 20    ;
+; Total registers                              ; 16    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 28    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------+
-; Inverted Register Statistics                                 ;
-+----------------------------------------------------+---------+
-; Inverted Register                                  ; Fan out ;
-+----------------------------------------------------+---------+
-; street_de10:inst|street_image:street|v_pos_1[10]   ; 4       ;
-; street_de10:inst|street_image:street|v_pos_1[5]    ; 3       ;
-; street_de10:inst|street_image:street|v_pos_1[8]    ; 3       ;
-; street_de10:inst|street_image:street|v_pos_1[9]    ; 4       ;
-; street_de10:inst|street_image:street|this_curve[7] ; 2       ;
-; street_de10:inst|street_image:street|curve[7]      ; 1       ;
-; street_de10:inst|street_image:street|v_pos_1[3]    ; 1       ;
-; street_de10:inst|street_image:street|v_pos_1[4]    ; 1       ;
-; Total number of inverted registers = 8             ;         ;
-+----------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for mem0:inst_mem|altsyncram:altsyncram_component|altsyncram_hkq3:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|street_de10:inst|street_image:street|h_count[9]   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |main|street_de10:inst|street_image:street|rgb_2[22]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|street_de10:inst|street_image:street|v_count[9]   ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |main|street_de10:inst|street_image:street|frame_num[1] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; Yes        ; |main|street_de10:inst|street_image:street|rgb_2[6]     ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |main|street_de10:inst|street_image:street|curve[7]     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: street_de10:inst|street_image:street|lpm_mult:Mult1 ;
-+------------------------------------------------+----------+------------------------------------------+
-; Parameter Name                                 ; Value    ; Type                                     ;
-+------------------------------------------------+----------+------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                           ;
-; LPM_WIDTHA                                     ; 8        ; Untyped                                  ;
-; LPM_WIDTHB                                     ; 9        ; Untyped                                  ;
-; LPM_WIDTHP                                     ; 17       ; Untyped                                  ;
-; LPM_WIDTHR                                     ; 17       ; Untyped                                  ;
-; LPM_WIDTHS                                     ; 1        ; Untyped                                  ;
-; LPM_REPRESENTATION                             ; SIGNED   ; Untyped                                  ;
-; LPM_PIPELINE                                   ; 0        ; Untyped                                  ;
-; LATENCY                                        ; 0        ; Untyped                                  ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                  ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                  ;
-; USE_EAB                                        ; OFF      ; Untyped                                  ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                  ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                  ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                  ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                      ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                  ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                  ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                  ;
-; CBXI_PARAMETER                                 ; mult_vds ; Untyped                                  ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                  ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                  ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                  ;
-+------------------------------------------------+----------+------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mem0:inst_mem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                        ;
+; WIDTH_A                            ; 24                   ; Signed Integer                 ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                 ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 1                    ; Signed Integer                 ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                 ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; output.hex           ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                 ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_hkq3      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: street_de10:inst|street_image:street|lpm_mult:Mult0 ;
-+------------------------------------------------+----------+------------------------------------------+
-; Parameter Name                                 ; Value    ; Type                                     ;
-+------------------------------------------------+----------+------------------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                           ;
-; LPM_WIDTHA                                     ; 9        ; Untyped                                  ;
-; LPM_WIDTHB                                     ; 9        ; Untyped                                  ;
-; LPM_WIDTHP                                     ; 18       ; Untyped                                  ;
-; LPM_WIDTHR                                     ; 18       ; Untyped                                  ;
-; LPM_WIDTHS                                     ; 1        ; Untyped                                  ;
-; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                                  ;
-; LPM_PIPELINE                                   ; 0        ; Untyped                                  ;
-; LATENCY                                        ; 0        ; Untyped                                  ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                                  ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                                  ;
-; USE_EAB                                        ; OFF      ; Untyped                                  ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped                                  ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped                                  ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped                                  ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K                      ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                                  ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                                  ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                                  ;
-; CBXI_PARAMETER                                 ; mult_4ls ; Untyped                                  ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                                  ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                                  ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                                  ;
-+------------------------------------------------+----------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                                              ;
-+---------------------------------------+-----------------------------------------------------+
-; Name                                  ; Value                                               ;
-+---------------------------------------+-----------------------------------------------------+
-; Number of entity instances            ; 2                                                   ;
-; Entity Instance                       ; street_de10:inst|street_image:street|lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 8                                                   ;
-;     -- LPM_WIDTHB                     ; 9                                                   ;
-;     -- LPM_WIDTHP                     ; 17                                                  ;
-;     -- LPM_REPRESENTATION             ; SIGNED                                              ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                  ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                                  ;
-;     -- USE_EAB                        ; OFF                                                 ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                  ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                  ;
-; Entity Instance                       ; street_de10:inst|street_image:street|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 9                                                   ;
-;     -- LPM_WIDTHB                     ; 9                                                   ;
-;     -- LPM_WIDTHP                     ; 18                                                  ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                            ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                                                  ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                                                  ;
-;     -- USE_EAB                        ; OFF                                                 ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                                                  ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                                                  ;
-+---------------------------------------+-----------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "street_de10:inst|street_image:street"                                                      ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; de_out      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; r_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; g_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; b_out[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                          ;
++-------------------------------------------+-----------------------------------------------+
+; Name                                      ; Value                                         ;
++-------------------------------------------+-----------------------------------------------+
+; Number of entity instances                ; 1                                             ;
+; Entity Instance                           ; mem0:inst_mem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                           ;
+;     -- WIDTH_A                            ; 24                                            ;
+;     -- NUMWORDS_A                         ; 256                                           ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                        ;
+;     -- WIDTH_B                            ; 1                                             ;
+;     -- NUMWORDS_B                         ; 0                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
++-------------------------------------------+-----------------------------------------------+
 
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 16                          ;
-; cycloneiii_ff         ; 151                         ;
-;     ENA               ; 8                           ;
-;     ENA SCLR          ; 10                          ;
-;     ENA SLD           ; 10                          ;
-;     SCLR              ; 19                          ;
-;     SLD               ; 10                          ;
-;     plain             ; 94                          ;
-; cycloneiii_lcell_comb ; 247                         ;
-;     arith             ; 130                         ;
-;         2 data inputs ; 74                          ;
-;         3 data inputs ; 56                          ;
-;     normal            ; 117                         ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 22                          ;
-;         4 data inputs ; 48                          ;
-; cycloneiii_mac_mult   ; 2                           ;
-; cycloneiii_mac_out    ; 2                           ;
-;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.46                        ;
-+-----------------------+-----------------------------+
++----------------------+------------------------------+
+; Type                 ; Count                        ;
++----------------------+------------------------------+
+; boundary_port        ; 41                           ;
+; cycloneiii_ff        ; 16                           ;
+;     plain            ; 16                           ;
+; cycloneiii_ram_block ; 24                           ;
+;                      ;                              ;
+; Max LUT depth        ; 0.00                         ;
+; Average LUT depth    ; 0.00                         ;
++----------------------+------------------------------+
 
 
 +-------------------------------+
@@ -482,7 +397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jun 16 15:26:32 2024
+    Info: Processing started: Thu Jun 20 00:40:52 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -500,51 +415,115 @@ Info (12021): Found 2 design units, including 1 entities, in source file street_
 Info (12021): Found 2 design units, including 1 entities, in source file street_image.vhd
     Info (12022): Found design unit 1: street_image-behave File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 23
     Info (12023): Found entity 1: street_image File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file spiral_image.vhd
+    Info (12022): Found design unit 1: spiral_image-behave File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/spiral_image.vhd Line: 23
+    Info (12023): Found entity 1: spiral_image File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/spiral_image.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file test.vhd
+    Info (12022): Found design unit 1: test-Behavioral File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test.vhd Line: 12
+    Info (12023): Found entity 1: test File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file tmp.bdf
+    Info (12023): Found entity 1: tmp
+Info (12021): Found 2 design units, including 1 entities, in source file mem0.vhd
+    Info (12022): Found design unit 1: mem0-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 52
+    Info (12023): Found entity 1: mem0 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file register_4_bits.vhd
+    Info (12022): Found design unit 1: REGISTER_4_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_4_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_4_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_4_BITS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register_8_bits.vhd
+    Info (12022): Found design unit 1: REGISTER_8_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_8_BITS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register_24_bits.vhd
+    Info (12022): Found design unit 1: REGISTER_24_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_24_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_24_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_24_BITS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register_10_bits.vhd
+    Info (12022): Found design unit 1: REGISTER_10_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_10_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_10_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_10_BITS.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file register_9_bits.vhd
+    Info (12022): Found design unit 1: REGISTER_9_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_9_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_9_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_9_BITS.vhd Line: 5
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "street_de10" for hierarchy "street_de10:inst"
-Info (12128): Elaborating entity "street_image" for hierarchy "street_de10:inst|street_image:street" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_de10.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at street_image.vhd(46): object "h_pos_1" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 46
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "street_de10:inst|street_image:street|Mult1" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 125
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "street_de10:inst|street_image:street|Mult0" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 123
-Info (12130): Elaborated megafunction instantiation "street_de10:inst|street_image:street|lpm_mult:Mult1" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 125
-Info (12133): Instantiated megafunction "street_de10:inst|street_image:street|lpm_mult:Mult1" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 125
-    Info (12134): Parameter "LPM_WIDTHA" = "8"
-    Info (12134): Parameter "LPM_WIDTHB" = "9"
-    Info (12134): Parameter "LPM_WIDTHP" = "17"
-    Info (12134): Parameter "LPM_WIDTHR" = "17"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_vds.tdf
-    Info (12023): Found entity 1: mult_vds File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/mult_vds.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "street_de10:inst|street_image:street|lpm_mult:Mult0" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 123
-Info (12133): Instantiated megafunction "street_de10:inst|street_image:street|lpm_mult:Mult0" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 123
-    Info (12134): Parameter "LPM_WIDTHA" = "9"
-    Info (12134): Parameter "LPM_WIDTHB" = "9"
-    Info (12134): Parameter "LPM_WIDTHP" = "18"
-    Info (12134): Parameter "LPM_WIDTHR" = "18"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_4ls.tdf
-    Info (12023): Found entity 1: mult_4ls File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/mult_4ls.tdf Line: 28
+Info (12128): Elaborating entity "REGISTER_8_BITS" for hierarchy "REGISTER_8_BITS:inst123"
+Info (12128): Elaborating entity "REGISTER_4_BITS" for hierarchy "REGISTER_8_BITS:inst123|REGISTER_4_BITS:reg0" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_8_BITS.vhd Line: 23
+Info (12128): Elaborating entity "mem0" for hierarchy "mem0:inst_mem"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem0:inst_mem|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem0:inst_mem|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 59
+Info (12133): Instantiated megafunction "mem0:inst_mem|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 59
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "MAX 10"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "output.hex"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "24"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hkq3.tdf
+    Info (12023): Found entity 1: altsyncram_hkq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_hkq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_hkq3" for hierarchy "mem0:inst_mem|altsyncram:altsyncram_component|altsyncram_hkq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (113015): Width of data items in "output.hex" is greater than the memory width. Wrapping data items to subsequent addresses. Found 16 warnings, reporting 10 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 1
+    Warning (113009): Data at line (1) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 1
+    Warning (113009): Data at line (2) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 2
+    Warning (113009): Data at line (3) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 3
+    Warning (113009): Data at line (4) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 4
+    Warning (113009): Data at line (5) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 5
+    Warning (113009): Data at line (6) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 6
+    Warning (113009): Data at line (7) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 7
+    Warning (113009): Data at line (8) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 8
+    Warning (113009): Data at line (9) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 9
+    Warning (113009): Data at line (10) of memory initialization file "output.hex" is too wide to fit in one memory word. Wrapping data to subsequent addresses. File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/output.hex Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 303 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 285 logic cells
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 16 logic cells
+    Info (21064): Implemented 24 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Sun Jun 16 15:26:43 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Processing ended: Thu Jun 20 00:41:02 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:06
 
 
