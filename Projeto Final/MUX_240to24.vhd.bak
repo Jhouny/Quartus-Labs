@@ -1,0 +1,12 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity MUX_240to24 is
+	port(
+		
+	);
+end entity;
+
+architecture multiplex of MUX_240to24 is
+
+end architecture;

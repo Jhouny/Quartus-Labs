@@ -1,5 +1,5 @@
 Flow report for main
-Thu Jun 20 16:20:08 2024
+Thu Jun 20 21:02:15 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 20 16:19:54 2024       ;
+; Flow Status                        ; Successful - Thu Jun 20 21:02:12 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 166 / 49,760 ( < 1 % )                      ;
-;     Total combinational functions  ; 148 / 49,760 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 107 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 107                                         ;
-; Total pins                         ; 16 / 360 ( 4 % )                            ;
+; Total logic elements               ; 258 / 49,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 242 / 49,760 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 111 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 111                                         ;
+; Total pins                         ; 17 / 360 ( 5 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 3,072 / 1,677,312 ( < 1 % )                 ;
+; Total memory bits                  ; 30,720 / 1,677,312 ( 2 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/20/2024 16:19:17 ;
+; Start date & time ; 06/20/2024 21:01:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main                ;
 +-------------------+---------------------+
@@ -77,11 +77,29 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 9413555127444.171891115616872          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 185410942696069.171892810505460        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; mem0.bsf                               ; --            ; --          ; --         ;
 ; MISC_FILE                           ; mem0.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem1.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem1.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem2.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem2.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem3.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem3.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem4.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem4.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem5.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem5.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem6.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem6.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem7.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem7.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem8.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem8.cmp                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem9.bsf                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; mem9.cmp                               ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
@@ -98,11 +116,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4813 MB             ; 00:00:10                           ;
-; Fitter               ; 00:00:12     ; 1.0                     ; 5651 MB             ; 00:00:07                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4683 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:12     ; 1.1                     ; 4823 MB             ; 00:00:05                           ;
-; Total                ; 00:00:47     ; --                      ; --                  ; 00:00:26                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4842 MB             ; 00:00:06                           ;
+; Fitter               ; 00:00:09     ; 1.1                     ; 5777 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4682 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4845 MB             ; 00:00:01                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:12                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,10 +129,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Joulius          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Joulius          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Joulius          ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Joulius          ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; JOULIUS-DT       ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; JOULIUS-DT       ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; JOULIUS-DT       ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; JOULIUS-DT       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

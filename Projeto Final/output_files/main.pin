@@ -362,7 +362,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : M4        :        :                   :      
 ~ALTERA_TDO~                 : M5        : output : 2.5 V             :         : 1B        : N              
 VCCIO1B                      : M6        : power  :                   : 2.5V    : 1B        :                
 GND                          : M7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 2         :                
+PB_2                         : M8        : input  : 2.5 V             :         : 2         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 2         :                
 GND                          : M10       : gnd    :                   :         :           :                
 VCC                          : M11       : power  :                   : 1.2V    :           :                

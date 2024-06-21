@@ -159,20 +159,6 @@ begin
 	else
 	  rgb_2 <= rgb_bg;
 	end if;
---  elsif (h_gap_1 > 8 or v_gap_1 > 8) then
---    rgb_2 <= rgb_bg;
---	mem_ctrl <= '0';
---  elsif (h_gap_1 < 8 and v_gap_1 < 8) then
---	mem_ctrl <= '1';
---	rgb_2 <= RGB;
---  else
---	rgb_2 <= x"0000FF";
---  elsif () then
---    rgb_2 <= rgb_line;
---  elsif () then
---    rgb_2 <= rgb_road;
---  else
---    rgb_2 <= rgb_gras;
   end if;  
   
   ------------------------------------ pipeline stage 3
