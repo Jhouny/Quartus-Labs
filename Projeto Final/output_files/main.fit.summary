@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu Jun 20 21:02:08 2024
+Fitter Status : Successful - Sat Jun 22 00:07:29 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : main
 Top-level Entity Name : main
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 258 / 49,760 ( < 1 % )
-    Total combinational functions : 242 / 49,760 ( < 1 % )
-    Dedicated logic registers : 111 / 49,760 ( < 1 % )
-Total registers : 111
+Total logic elements : 238 / 49,760 ( < 1 % )
+    Total combinational functions : 220 / 49,760 ( < 1 % )
+    Dedicated logic registers : 113 / 49,760 ( < 1 % )
+Total registers : 113
 Total pins : 17 / 360 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 30,720 / 1,677,312 ( 2 % )

@@ -16,6 +16,7 @@ entity test_de10 is
         key            : in  std_logic_vector(0 downto 0);  -- push button for reset
 		RGB            : in std_logic_vector(23 downto 0);
 		run_mem        : out std_logic;
+		next_line      : out std_logic;
         vga_vs         : out std_logic;                     -- video out (4 bit resolution)
         vga_hs         : out std_logic;
         vga_r          : out std_logic_vector(3 downto 0);
@@ -60,6 +61,7 @@ test: entity work.test_image
               reset     => reset_e,
 			  RGB       => RGB,
 			  run_mem   => run_mem,
+			  next_line => next_line,
               vs_out    => vga_vs,
               hs_out    => vga_hs,
               de_out    => open,

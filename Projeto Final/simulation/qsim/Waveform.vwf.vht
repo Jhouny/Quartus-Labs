@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/20/2024 14:49:00"
+-- Generated on "06/21/2024 23:36:30"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          tmp_2
+-- Vhdl Test Bench(with test vectors) for design  :          main
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,31 +28,46 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY tmp_2_vhd_vec_tst IS
-END tmp_2_vhd_vec_tst;
-ARCHITECTURE tmp_2_arch OF tmp_2_vhd_vec_tst IS
+ENTITY main_vhd_vec_tst IS
+END main_vhd_vec_tst;
+ARCHITECTURE main_arch OF main_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL B : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL CLK : STD_LOGIC;
-SIGNAL endereco : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL RGB : STD_LOGIC_VECTOR(23 DOWNTO 0);
-SIGNAL StartStop : STD_LOGIC;
-COMPONENT tmp_2
+SIGNAL G : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL LED0 : STD_LOGIC;
+SIGNAL PB : STD_LOGIC;
+SIGNAL PB_2 : STD_LOGIC;
+SIGNAL R : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL VGA_HS : STD_LOGIC;
+SIGNAL VGA_VS : STD_LOGIC;
+COMPONENT main
 	PORT (
+	B : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	CLK : IN STD_LOGIC;
-	endereco : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	RGB : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
-	StartStop : IN STD_LOGIC
+	G : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	LED0 : OUT STD_LOGIC;
+	PB : IN STD_LOGIC;
+	PB_2 : IN STD_LOGIC;
+	R : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	VGA_HS : OUT STD_LOGIC;
+	VGA_VS : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : tmp_2
+	i1 : main
 	PORT MAP (
 -- list connections between master ports and signals
+	B => B,
 	CLK => CLK,
-	endereco => endereco,
-	RGB => RGB,
-	StartStop => StartStop
+	G => G,
+	LED0 => LED0,
+	PB => PB,
+	PB_2 => PB_2,
+	R => R,
+	VGA_HS => VGA_HS,
+	VGA_VS => VGA_VS
 	);
 
 -- CLK
@@ -63,22 +78,26 @@ LOOP
 	WAIT FOR 10000 ps;
 	CLK <= '1';
 	WAIT FOR 10000 ps;
-	IF (NOW >= 10000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 100000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_CLK;
 
--- StartStop
-t_prcs_StartStop: PROCESS
+-- PB
+t_prcs_PB: PROCESS
 BEGIN
-	StartStop <= '0';
-	WAIT FOR 2480000 ps;
-	StartStop <= '1';
-	WAIT FOR 720000 ps;
-	StartStop <= '0';
-	WAIT FOR 1280000 ps;
-	StartStop <= '1';
-	WAIT FOR 5120000 ps;
-	StartStop <= '0';
+	PB <= '1';
 WAIT;
-END PROCESS t_prcs_StartStop;
-END tmp_2_arch;
+END PROCESS t_prcs_PB;
+
+-- PB_2
+t_prcs_PB_2: PROCESS
+BEGIN
+LOOP
+	PB_2 <= '0';
+	WAIT FOR 1000000 ps;
+	PB_2 <= '1';
+	WAIT FOR 1000000 ps;
+	IF (NOW >= 100000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_PB_2;
+END main_arch;

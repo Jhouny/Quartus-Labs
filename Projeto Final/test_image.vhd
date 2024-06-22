@@ -14,6 +14,7 @@ entity test_image is
         reset    : in  std_logic;
 		RGB      : in std_logic_vector(23 downto 0);
 		run_mem  : out std_logic;
+		next_line: out std_logic;
         vs_out   : out std_logic;
         hs_out   : out std_logic;
         de_out   : out std_logic;
@@ -30,14 +31,14 @@ architecture behave of test_image is
 --   horizontal timing: total pixel 0 - 799, sync: 0 - 95, active: 144 - 783
 
 -- rgb values
-constant rgb_bg  : std_logic_vector(23 downto 0) := x"FFCC99";
+constant rgb_bg  : std_logic_vector(23 downto 0) := x"FFFFFF";
 
 signal h_count   : integer range 0 to  799 := 0;
 signal v_count   : integer range 0 to  524 := 0;
 signal frame_num : integer range 0 to 1023 := 0;
 signal new_frame : std_logic := '0';
 
-signal mem_ctrl  : std_logic := '0';
+signal mem_ctrl, vertical_clk  : std_logic := '0';
 
 signal count_x, count_y : integer range 0 to 63 := 0;
 signal center_pos_h, center_pos_v : integer range 0 to 799;
@@ -71,6 +72,7 @@ begin
 	if (h_count = 799) then
 	  count_x <= 0;
 	  h_count <= 0;
+	  vertical_clk <= '1';
 	  if ( v_count = 524 ) then
         v_count   <= 0;
 		count_y   <= 0;
@@ -85,6 +87,7 @@ begin
 	  if mem_ctrl = '1' then
 	    count_x <= count_x + 1;
 	  end if;
+	  vertical_clk <= '0';
       h_count <= h_count + 1;
     end if; -- h_count
         
@@ -147,22 +150,35 @@ begin
   
   if    (de_1 = '0') then
     rgb_2 <= x"000000";
-  elsif (h_count > center_pos_h and h_count < center_pos_h + 17 and v_count > center_pos_v and v_count < center_pos_v + 17) then
-	if count_x > 2 then
+  elsif (v_count > center_pos_v and v_count < center_pos_v + 17) then
+	if (count_x > 0) then
 	  rgb_2 <= RGB;
 	end if;
 	mem_ctrl <= '1';
   else
 	mem_ctrl <= '0';
-	if (h_count > center_pos_h and h_count < center_pos_h + 21 and v_count > center_pos_v and v_count < center_pos_v + 17) then
+	if (v_count > center_pos_v and v_count < center_pos_v + 17) then
 	  rgb_2 <= RGB;
 	else
 	  rgb_2 <= rgb_bg;
 	end if;
+--  elsif (h_count > center_pos_h and h_count < center_pos_h + 17 and v_count > center_pos_v and v_count < center_pos_v + 17) then
+--	if count_x > 2 then
+--	  rgb_2 <= RGB;
+--	end if;
+--	mem_ctrl <= '1';
+--  else
+--	mem_ctrl <= '0';
+--	if (h_count > center_pos_h and h_count < center_pos_h + 21 and v_count > center_pos_v and v_count < center_pos_v + 17) then
+--	  rgb_2 <= RGB;
+--	else
+--	  rgb_2 <= rgb_bg;
+--	end if;
   end if;  
   
   ------------------------------------ pipeline stage 3
   run_mem <= mem_ctrl;
+  next_line <= vertical_clk;
   hs_out  <= hs_2;
   vs_out  <= vs_2;
   de_out  <= de_2;

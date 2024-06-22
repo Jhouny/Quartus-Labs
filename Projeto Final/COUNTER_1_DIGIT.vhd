@@ -30,7 +30,7 @@ architecture count of COUNTER_1_DIGIT is
 			count <= (others => '0');
 		--============================--
 		elsif rising_edge(CLK) then
-			if count = "1010" then
+			if count = "1001" then
 				count <= (others => '0');
 			else
 				count <= tmp;
