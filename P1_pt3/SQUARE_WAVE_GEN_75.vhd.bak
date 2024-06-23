@@ -1,14 +1,14 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity TRIANGLE_WAVE_GEN is
+entity SQUARE_WAVE_GEN is
 	port(
 		CLK  : in std_logic;
-		wave : out std_logic_vector(7 downto 0)
+		wave : out std_logic
 	);
 end entity;
 
-architecture func of TRIANGLE_WAVE_GEN is
+architecture func of SQUARE_WAVE_GEN is
 	
 	begin
 --	--======================================================================================================================--

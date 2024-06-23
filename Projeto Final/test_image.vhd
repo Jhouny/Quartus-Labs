@@ -10,17 +10,18 @@ use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
 
 entity test_image is
-  port (clk_25   : in  std_logic;
-        reset    : in  std_logic;
-		RGB      : in std_logic_vector(23 downto 0);
-		run_mem  : out std_logic;
-		next_line: out std_logic;
-        vs_out   : out std_logic;
-        hs_out   : out std_logic;
-        de_out   : out std_logic;
-        r_out    : out std_logic_vector(7 downto 0);
-        g_out    : out std_logic_vector(7 downto 0);
-        b_out    : out std_logic_vector(7 downto 0));
+  port (clk_25    : in  std_logic;
+        reset     : in  std_logic;
+		RGB       : in std_logic_vector(23 downto 0);
+		run_mem   : out std_logic;
+		next_line : out std_logic;
+        vs_out    : out std_logic;
+        hs_out    : out std_logic;
+        de_out    : out std_logic;
+        r_out     : out std_logic_vector(7 downto 0);
+        g_out     : out std_logic_vector(7 downto 0);
+        b_out     : out std_logic_vector(7 downto 0);
+		DIGIT_CTRL: out std_logic_vector(3 downto 0));
 end entity;
 
 architecture behave of test_image is
@@ -39,6 +40,7 @@ signal frame_num : integer range 0 to 1023 := 0;
 signal new_frame : std_logic := '0';
 
 signal mem_ctrl, vertical_clk  : std_logic := '0';
+signal dgt_ctrl : std_logic_vector(3 downto 0) := "0000";
 
 signal count_x, count_y : integer range 0 to 63 := 0;
 signal center_pos_h, center_pos_v : integer range 0 to 799;
@@ -86,6 +88,8 @@ begin
     else
 	  if mem_ctrl = '1' then
 	    count_x <= count_x + 1;
+	  else
+		count_x <= 0;
 	  end if;
 	  vertical_clk <= '0';
       h_count <= h_count + 1;
@@ -151,17 +155,28 @@ begin
   if    (de_1 = '0') then
     rgb_2 <= x"000000";
   elsif (v_count > center_pos_v and v_count < center_pos_v + 17) then
-	if (count_x > 0) then
-	  rgb_2 <= RGB;
+	if (h_count > 199 and h_count < 216) then  -- Digito 9 (dir. -> esq.)
+		dgt_ctrl <= "1001";
+		if (count_x > 0) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > 220 and h_count < 237) then  -- Digito 8
+		dgt_ctrl <= "1000";
+		if (count_x > 0) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > 241 and h_count < 258) then  -- Digito 7
+		dgt_ctrl <= "0111";
+		if (count_x > 0) then
+		  rgb_2 <= RGB;
+		end if;
 	end if;
+	
 	mem_ctrl <= '1';
   else
+	--count_x <= 0;
 	mem_ctrl <= '0';
-	if (v_count > center_pos_v and v_count < center_pos_v + 17) then
-	  rgb_2 <= RGB;
-	else
-	  rgb_2 <= rgb_bg;
-	end if;
+	rgb_2 <= rgb_bg;
 --  elsif (h_count > center_pos_h and h_count < center_pos_h + 17 and v_count > center_pos_v and v_count < center_pos_v + 17) then
 --	if count_x > 2 then
 --	  rgb_2 <= RGB;
@@ -177,14 +192,15 @@ begin
   end if;  
   
   ------------------------------------ pipeline stage 3
-  run_mem <= mem_ctrl;
-  next_line <= vertical_clk;
-  hs_out  <= hs_2;
-  vs_out  <= vs_2;
-  de_out  <= de_2;
-  r_out   <= rgb_2(23 downto 16);
-  g_out   <= rgb_2(15 downto  8);
-  b_out   <= rgb_2( 7 downto  0);
+  run_mem    <= mem_ctrl;
+  next_line  <= vertical_clk;
+  hs_out     <= hs_2;
+  vs_out     <= vs_2;
+  de_out     <= de_2;
+  r_out      <= rgb_2(23 downto 16);
+  g_out      <= rgb_2(15 downto  8);
+  b_out      <= rgb_2( 7 downto  0);
+  DIGIT_CTRL <= dgt_ctrl;
   
 end process;
 

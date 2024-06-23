@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Sat Jun 22 00:07:14 2024
+Sun Jun 23 20:39:49 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -71,15 +71,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jun 22 00:07:14 2024       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 23 20:39:49 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 237                                         ;
-;     Total combinational functions  ; 218                                         ;
-;     Dedicated logic registers      ; 113                                         ;
-; Total registers                    ; 113                                         ;
+; Total logic elements               ; 324                                         ;
+;     Total combinational functions  ; 302                                         ;
+;     Dedicated logic registers      ; 155                                         ;
+; Total registers                    ; 155                                         ;
 ; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 30,720                                      ;
@@ -181,73 +181,73 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 3-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                         ; Library ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; main.bdf                         ; yes             ; User Block Diagram/Schematic File      ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/main.bdf                   ;         ;
-; mem0.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem0.vhd                   ;         ;
-; test_de10.vhd                    ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_de10.vhd              ;         ;
-; ADDER_1_BIT.vhd                  ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd            ;         ;
-; ADDER_4_BITS.vhd                 ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_4_BITS.vhd           ;         ;
-; Timing_Reference_25MHz.vhd       ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_25MHz.vhd ;         ;
-; test_image.vhd                   ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd             ;         ;
-; mem1.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem1.vhd                   ;         ;
-; mem2.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem2.vhd                   ;         ;
-; mem3.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem3.vhd                   ;         ;
-; mem4.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem4.vhd                   ;         ;
-; mem5.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem5.vhd                   ;         ;
-; mem6.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem6.vhd                   ;         ;
-; mem7.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem7.vhd                   ;         ;
-; mem8.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem8.vhd                   ;         ;
-; mem9.vhd                         ; yes             ; User Wizard-Generated File             ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem9.vhd                   ;         ;
-; MUX_240to24.vhd                  ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/MUX_240to24.vhd            ;         ;
-; COUNTER_1_DIGIT.vhd              ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_DIGIT.vhd        ;         ;
-; COUNTER_1_HEXA.vhd               ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_HEXA.vhd         ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                         ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                   ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                 ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                    ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                    ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                  ;         ;
-; db/altsyncram_1fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf     ;         ;
-; hex/0.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/0.hex                  ;         ;
-; db/altsyncram_2fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf     ;         ;
-; hex/1.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/1.hex                  ;         ;
-; db/altsyncram_3fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf     ;         ;
-; hex/2.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/2.hex                  ;         ;
-; db/altsyncram_4fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf     ;         ;
-; hex/3.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/3.hex                  ;         ;
-; db/altsyncram_5fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf     ;         ;
-; hex/4.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/4.hex                  ;         ;
-; db/altsyncram_6fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf     ;         ;
-; hex/5.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/5.hex                  ;         ;
-; db/altsyncram_7fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf     ;         ;
-; hex/6.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/6.hex                  ;         ;
-; db/altsyncram_8fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf     ;         ;
-; hex/7.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/7.hex                  ;         ;
-; db/altsyncram_9fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf     ;         ;
-; hex/8.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/8.hex                  ;         ;
-; db/altsyncram_afq3.tdf           ; yes             ; Auto-Generated Megafunction            ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf     ;         ;
-; hex/9.hex                        ; yes             ; Auto-Found Memory Initialization File  ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/hex/9.hex                  ;         ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; main.bdf                         ; yes             ; User Block Diagram/Schematic File      ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/main.bdf                   ;         ;
+; mem0.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd                   ;         ;
+; test_de10.vhd                    ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_de10.vhd              ;         ;
+; ADDER_1_BIT.vhd                  ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd            ;         ;
+; ADDER_4_BITS.vhd                 ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_4_BITS.vhd           ;         ;
+; Timing_Reference_25MHz.vhd       ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/Timing_Reference_25MHz.vhd ;         ;
+; test_image.vhd                   ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd             ;         ;
+; mem1.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem1.vhd                   ;         ;
+; mem2.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem2.vhd                   ;         ;
+; mem3.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem3.vhd                   ;         ;
+; mem4.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem4.vhd                   ;         ;
+; mem5.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem5.vhd                   ;         ;
+; mem6.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem6.vhd                   ;         ;
+; mem7.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem7.vhd                   ;         ;
+; mem8.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem8.vhd                   ;         ;
+; mem9.vhd                         ; yes             ; User Wizard-Generated File             ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem9.vhd                   ;         ;
+; MUX_240to24.vhd                  ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/MUX_240to24.vhd            ;         ;
+; COUNTER_1_DIGIT.vhd              ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_DIGIT.vhd        ;         ;
+; COUNTER_1_HEXA.vhd               ; yes             ; User VHDL File                         ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_HEXA.vhd         ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                 ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                          ;         ;
+; db/altsyncram_1fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf     ;         ;
+; hex/0.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/0.hex                  ;         ;
+; db/altsyncram_2fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf     ;         ;
+; hex/1.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/1.hex                  ;         ;
+; db/altsyncram_3fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf     ;         ;
+; hex/2.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/2.hex                  ;         ;
+; db/altsyncram_4fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf     ;         ;
+; hex/3.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/3.hex                  ;         ;
+; db/altsyncram_5fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf     ;         ;
+; hex/4.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/4.hex                  ;         ;
+; db/altsyncram_6fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf     ;         ;
+; hex/5.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/5.hex                  ;         ;
+; db/altsyncram_7fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf     ;         ;
+; hex/6.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/6.hex                  ;         ;
+; db/altsyncram_8fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf     ;         ;
+; hex/7.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/7.hex                  ;         ;
+; db/altsyncram_9fq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf     ;         ;
+; hex/8.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/8.hex                  ;         ;
+; db/altsyncram_afq3.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf     ;         ;
+; hex/9.hex                        ; yes             ; Auto-Found Memory Initialization File  ; D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/hex/9.hex                  ;         ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------+
@@ -255,20 +255,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------+
 ; Resource                                    ; Usage                            ;
 +---------------------------------------------+----------------------------------+
-; Estimated Total logic elements              ; 237                              ;
+; Estimated Total logic elements              ; 324                              ;
 ;                                             ;                                  ;
-; Total combinational functions               ; 218                              ;
+; Total combinational functions               ; 302                              ;
 ; Logic element usage by number of LUT inputs ;                                  ;
-;     -- 4 input functions                    ; 105                              ;
-;     -- 3 input functions                    ; 38                               ;
-;     -- <=2 input functions                  ; 75                               ;
+;     -- 4 input functions                    ; 143                              ;
+;     -- 3 input functions                    ; 68                               ;
+;     -- <=2 input functions                  ; 91                               ;
 ;                                             ;                                  ;
 ; Logic elements by mode                      ;                                  ;
-;     -- normal mode                          ; 164                              ;
+;     -- normal mode                          ; 248                              ;
 ;     -- arithmetic mode                      ; 54                               ;
 ;                                             ;                                  ;
-; Total registers                             ; 113                              ;
-;     -- Dedicated logic registers            ; 113                              ;
+; Total registers                             ; 155                              ;
+;     -- Dedicated logic registers            ; 155                              ;
 ;     -- I/O registers                        ; 0                                ;
 ;                                             ;                                  ;
 ; I/O pins                                    ; 17                               ;
@@ -278,8 +278,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                  ;
 ; Maximum fan-out node                        ; Timing_Reference_25MHz:inst8|tmp ;
 ; Maximum fan-out                             ; 125                              ;
-; Total fan-out                               ; 2072                             ;
-; Average fan-out                             ; 4.27                             ;
+; Total fan-out                               ; 2423                             ;
+; Average fan-out                             ; 3.97                             ;
 +---------------------------------------------+----------------------------------+
 
 
@@ -288,8 +288,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                  ; Entity Name            ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+------------------------+--------------+
-; |main                                     ; 218 (0)             ; 113 (0)                   ; 30720       ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |main                                                                                ; main                   ; work         ;
+; |main                                     ; 302 (0)             ; 155 (0)                   ; 30720       ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |main                                                                                ; main                   ; work         ;
 ;    |COUNTER_1_DIGIT:inst15|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst15                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst16|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst16                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst19|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst19                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst22|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst22                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst25|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst25                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst27|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst27                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst30|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst30                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst33|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst33                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst37|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst37                                                         ; COUNTER_1_DIGIT        ; work         ;
+;    |COUNTER_1_DIGIT:inst39|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst39                                                         ; COUNTER_1_DIGIT        ; work         ;
 ;    |COUNTER_1_HEXA:inst11|                ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_HEXA:inst11                                                          ; COUNTER_1_HEXA         ; work         ;
 ;    |COUNTER_1_HEXA:inst6|                 ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_HEXA:inst6                                                           ; COUNTER_1_HEXA         ; work         ;
 ;    |Timing_Reference_25MHz:inst8|         ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_25MHz:inst8                                                   ; Timing_Reference_25MHz ; work         ;
@@ -323,8 +332,8 @@ refer to the applicable agreement for further details.
 ;    |mem9:inst13|                          ; 0 (0)               ; 0 (0)                     ; 3072        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem9:inst13                                                                    ; mem9                   ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 3072        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem9:inst13|altsyncram:altsyncram_component                                    ; altsyncram             ; work         ;
 ;          |altsyncram_afq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 3072        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated     ; altsyncram_afq3        ; work         ;
-;    |test_de10:inst|                       ; 159 (6)             ; 68 (6)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|test_de10:inst                                                                 ; test_de10              ; work         ;
-;       |test_image:test|                   ; 153 (153)           ; 62 (62)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|test_de10:inst|test_image:test                                                 ; test_image             ; work         ;
+;    |test_de10:inst|                       ; 207 (6)             ; 74 (6)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|test_de10:inst                                                                 ; test_de10              ; work         ;
+;       |test_image:test|                   ; 201 (201)           ; 68 (68)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|test_de10:inst|test_image:test                                                 ; test_image             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -371,9 +380,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                                           ; Reason for Removal                                         ;
 +---------------------------------------------------------+------------------------------------------------------------+
 ; test_de10:inst|test_image:test|center_pos_v[0,1,4..7,9] ; Stuck at GND due to stuck port data_in                     ;
-; test_de10:inst|test_image:test|center_pos_v[2]          ; Merged with test_de10:inst|test_image:test|center_pos_v[3] ;
-; test_de10:inst|test_image:test|center_pos_v[3]          ; Merged with test_de10:inst|test_image:test|center_pos_v[8] ;
-; Total Number of Removed Registers = 9                   ;                                                            ;
+; test_de10:inst|test_image:test|center_pos_v[8]          ; Merged with test_de10:inst|test_image:test|center_pos_v[3] ;
+; test_de10:inst|test_image:test|center_pos_v[3]          ; Merged with test_de10:inst|test_image:test|center_pos_v[2] ;
+; test_de10:inst|test_image:test|DIGIT_CTRL[2]            ; Merged with test_de10:inst|test_image:test|DIGIT_CTRL[1]   ;
+; test_de10:inst|test_image:test|dgt_ctrl[2]              ; Merged with test_de10:inst|test_image:test|dgt_ctrl[1]     ;
+; Total Number of Removed Registers = 11                  ;                                                            ;
 +---------------------------------------------------------+------------------------------------------------------------+
 
 
@@ -382,12 +393,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 113   ;
+; Total registers                              ; 155   ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Clock Enable       ; 33    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -402,15 +413,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|test_de10:inst|test_image:test|h_count[0] ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|test_de10:inst|test_image:test|v_count[4] ;
-; 19:1               ; 12 bits   ; 144 LEs       ; 96 LEs               ; 48 LEs                 ; Yes        ; |main|test_de10:inst|test_image:test|rgb_2[23]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |main|test_de10:inst|test_image:test|count_x[0]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|test_de10:inst|test_image:test|h_count[6]  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|test_de10:inst|test_image:test|v_count[0]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |main|test_de10:inst|test_image:test|dgt_ctrl[0] ;
+; 100:1              ; 12 bits   ; 792 LEs       ; 96 LEs               ; 696 LEs                ; Yes        ; |main|test_de10:inst|test_image:test|rgb_2[12]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -1274,26 +1287,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 113                         ;
+; cycloneiii_ff         ; 155                         ;
 ;     CLR               ; 3                           ;
-;     ENA               ; 13                          ;
+;     ENA               ; 16                          ;
 ;     ENA CLR           ; 1                           ;
 ;     ENA SCLR          ; 16                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 70                          ;
-; cycloneiii_lcell_comb ; 218                         ;
+;     plain             ; 109                         ;
+; cycloneiii_lcell_comb ; 302                         ;
 ;     arith             ; 54                          ;
-;         2 data inputs ; 53                          ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 164                         ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 37                          ;
-;         4 data inputs ; 105                         ;
+;         2 data inputs ; 54                          ;
+;     normal            ; 248                         ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 68                          ;
+;         4 data inputs ; 143                         ;
 ; cycloneiii_ram_block  ; 120                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.65                        ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 4.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1312,134 +1324,134 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Jun 22 00:06:50 2024
+    Info: Processing started: Sun Jun 23 20:39:36 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20032): Parallel compilation is enabled and will use up to 4 processors
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.bdf
     Info (12023): Found entity 1: main
 Info (12021): Found 2 design units, including 1 entities, in source file sim_street_de10.vhd
-    Info (12022): Found design unit 1: sim_street_de10-sim File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/sim_street_de10.vhd Line: 14
-    Info (12023): Found entity 1: sim_street_de10 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/sim_street_de10.vhd Line: 11
+    Info (12022): Found design unit 1: sim_street_de10-sim File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/sim_street_de10.vhd Line: 14
+    Info (12023): Found entity 1: sim_street_de10 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/sim_street_de10.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file sim_street_image.vhd
-    Info (12022): Found design unit 1: sim_street_image-sim File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/sim_street_image.vhd Line: 15
-    Info (12023): Found entity 1: sim_street_image File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/sim_street_image.vhd Line: 12
+    Info (12022): Found design unit 1: sim_street_image-sim File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/sim_street_image.vhd Line: 15
+    Info (12023): Found entity 1: sim_street_image File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/sim_street_image.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file street_de10.vhd
-    Info (12022): Found design unit 1: street_de10-shell File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/street_de10.vhd Line: 24
-    Info (12023): Found entity 1: street_de10 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/street_de10.vhd Line: 14
+    Info (12022): Found design unit 1: street_de10-shell File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_de10.vhd Line: 24
+    Info (12023): Found entity 1: street_de10 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_de10.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file street_image.vhd
-    Info (12022): Found design unit 1: street_image-behave File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/street_image.vhd Line: 23
-    Info (12023): Found entity 1: street_image File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/street_image.vhd Line: 12
+    Info (12022): Found design unit 1: street_image-behave File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 23
+    Info (12023): Found entity 1: street_image File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/street_image.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file spiral_image.vhd
-    Info (12022): Found design unit 1: spiral_image-behave File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/spiral_image.vhd Line: 23
-    Info (12023): Found entity 1: spiral_image File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/spiral_image.vhd Line: 12
+    Info (12022): Found design unit 1: spiral_image-behave File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/spiral_image.vhd Line: 23
+    Info (12023): Found entity 1: spiral_image File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/spiral_image.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file test.vhd
-    Info (12022): Found design unit 1: test-behave File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test.vhd Line: 25
-    Info (12023): Found entity 1: test File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test.vhd Line: 12
+    Info (12022): Found design unit 1: test-behave File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test.vhd Line: 25
+    Info (12023): Found entity 1: test File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test.vhd Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file tmp.bdf
     Info (12023): Found entity 1: tmp
 Info (12021): Found 2 design units, including 1 entities, in source file mem0.vhd
-    Info (12022): Found design unit 1: mem0-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem0.vhd Line: 52
-    Info (12023): Found entity 1: mem0 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem0.vhd Line: 42
+    Info (12022): Found design unit 1: mem0-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 52
+    Info (12023): Found entity 1: mem0 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file register_4_bits.vhd
-    Info (12022): Found design unit 1: REGISTER_4_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_4_BITS.vhd Line: 13
-    Info (12023): Found entity 1: REGISTER_4_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_4_BITS.vhd Line: 5
+    Info (12022): Found design unit 1: REGISTER_4_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_4_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_4_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_4_BITS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_8_bits.vhd
-    Info (12022): Found design unit 1: REGISTER_8_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_8_BITS.vhd Line: 13
-    Info (12023): Found entity 1: REGISTER_8_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_8_BITS.vhd Line: 5
+    Info (12022): Found design unit 1: REGISTER_8_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_8_BITS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_24_bits.vhd
-    Info (12022): Found design unit 1: REGISTER_24_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_24_BITS.vhd Line: 13
-    Info (12023): Found entity 1: REGISTER_24_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_24_BITS.vhd Line: 5
+    Info (12022): Found design unit 1: REGISTER_24_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_24_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_24_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_24_BITS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_10_bits.vhd
-    Info (12022): Found design unit 1: REGISTER_10_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_10_BITS.vhd Line: 13
-    Info (12023): Found entity 1: REGISTER_10_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_10_BITS.vhd Line: 5
+    Info (12022): Found design unit 1: REGISTER_10_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_10_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_10_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_10_BITS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register_9_bits.vhd
-    Info (12022): Found design unit 1: REGISTER_9_BITS-func File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_9_BITS.vhd Line: 13
-    Info (12023): Found entity 1: REGISTER_9_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/REGISTER_9_BITS.vhd Line: 5
+    Info (12022): Found design unit 1: REGISTER_9_BITS-func File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_9_BITS.vhd Line: 13
+    Info (12023): Found entity 1: REGISTER_9_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/REGISTER_9_BITS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file test_de10.vhd
-    Info (12022): Found design unit 1: test_de10-shell File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_de10.vhd Line: 27
-    Info (12023): Found entity 1: test_de10 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_de10.vhd Line: 14
+    Info (12022): Found design unit 1: test_de10-shell File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_de10.vhd Line: 20
+    Info (12023): Found entity 1: test_de10 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_de10.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file counter_2_hexa.vhd
-    Info (12022): Found design unit 1: COUNTER_2_HEXA-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_2_HEXA.vhd Line: 11
-    Info (12023): Found entity 1: COUNTER_2_HEXA File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_2_HEXA.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_2_HEXA-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_2_HEXA.vhd Line: 11
+    Info (12023): Found entity 1: COUNTER_2_HEXA File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_2_HEXA.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_1_bit.vhd
-    Info (12022): Found design unit 1: ADDER_1_BIT-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 11
-    Info (12023): Found entity 1: ADDER_1_BIT File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_1_BIT-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd Line: 11
+    Info (12023): Found entity 1: ADDER_1_BIT File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_4_bits.vhd
-    Info (12022): Found design unit 1: ADDER_4_BITS-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_4_BITS.vhd Line: 13
-    Info (12023): Found entity 1: ADDER_4_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_4_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_4_BITS-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_4_BITS.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_4_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_4_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file adder_8_bits.vhd
-    Info (12022): Found design unit 1: ADDER_8_BITS-add File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_8_BITS.vhd Line: 13
-    Info (12023): Found entity 1: ADDER_8_BITS File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_8_BITS.vhd Line: 4
+    Info (12022): Found design unit 1: ADDER_8_BITS-add File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_8_BITS.vhd Line: 13
+    Info (12023): Found entity 1: ADDER_8_BITS File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_8_BITS.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_25mhz.vhd
-    Info (12022): Found design unit 1: Timing_Reference_25MHz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_25MHz.vhd Line: 13
-    Info (12023): Found entity 1: Timing_Reference_25MHz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_25MHz.vhd Line: 5
+    Info (12022): Found design unit 1: Timing_Reference_25MHz-freq_div File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/Timing_Reference_25MHz.vhd Line: 13
+    Info (12023): Found entity 1: Timing_Reference_25MHz File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/Timing_Reference_25MHz.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file tmp_2.bdf
     Info (12023): Found entity 1: tmp_2
 Info (12021): Found 2 design units, including 1 entities, in source file test_image.vhd
-    Info (12022): Found design unit 1: test_image-behave File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd Line: 26
-    Info (12023): Found entity 1: test_image File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd Line: 12
+    Info (12022): Found design unit 1: test_image-behave File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd Line: 27
+    Info (12023): Found entity 1: test_image File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file mem1.vhd
-    Info (12022): Found design unit 1: mem1-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem1.vhd Line: 52
-    Info (12023): Found entity 1: mem1 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem1.vhd Line: 42
+    Info (12022): Found design unit 1: mem1-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem1.vhd Line: 52
+    Info (12023): Found entity 1: mem1 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem1.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mem2.vhd
-    Info (12022): Found design unit 1: mem2-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem2.vhd Line: 52
-    Info (12023): Found entity 1: mem2 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem2.vhd Line: 42
+    Info (12022): Found design unit 1: mem2-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem2.vhd Line: 52
+    Info (12023): Found entity 1: mem2 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem2.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mem3.vhd
-    Info (12022): Found design unit 1: mem3-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem3.vhd Line: 52
-    Info (12023): Found entity 1: mem3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem3.vhd Line: 42
+    Info (12022): Found design unit 1: mem3-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem3.vhd Line: 52
+    Info (12023): Found entity 1: mem3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem3.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mem4.vhd
-    Info (12022): Found design unit 1: mem4-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem4.vhd Line: 52
-    Info (12023): Found entity 1: mem4 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem4.vhd Line: 42
+    Info (12022): Found design unit 1: mem4-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem4.vhd Line: 52
+    Info (12023): Found entity 1: mem4 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem4.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mem5.vhd
-    Info (12022): Found design unit 1: mem5-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem5.vhd Line: 52
-    Info (12023): Found entity 1: mem5 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem5.vhd Line: 42
+    Info (12022): Found design unit 1: mem5-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem5.vhd Line: 52
+    Info (12023): Found entity 1: mem5 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem5.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mem6.vhd
-    Info (12022): Found design unit 1: mem6-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem6.vhd Line: 52
-    Info (12023): Found entity 1: mem6 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem6.vhd Line: 42
+    Info (12022): Found design unit 1: mem6-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem6.vhd Line: 52
+    Info (12023): Found entity 1: mem6 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem6.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mem7.vhd
-    Info (12022): Found design unit 1: mem7-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem7.vhd Line: 52
-    Info (12023): Found entity 1: mem7 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem7.vhd Line: 42
+    Info (12022): Found design unit 1: mem7-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem7.vhd Line: 52
+    Info (12023): Found entity 1: mem7 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem7.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mem8.vhd
-    Info (12022): Found design unit 1: mem8-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem8.vhd Line: 52
-    Info (12023): Found entity 1: mem8 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem8.vhd Line: 42
+    Info (12022): Found design unit 1: mem8-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem8.vhd Line: 52
+    Info (12023): Found entity 1: mem8 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem8.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mem9.vhd
-    Info (12022): Found design unit 1: mem9-SYN File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem9.vhd Line: 52
-    Info (12023): Found entity 1: mem9 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem9.vhd Line: 42
+    Info (12022): Found design unit 1: mem9-SYN File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem9.vhd Line: 52
+    Info (12023): Found entity 1: mem9 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem9.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file mux_240to24.vhd
-    Info (12022): Found design unit 1: MUX_240to24-multiplex File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/MUX_240to24.vhd Line: 12
-    Info (12023): Found entity 1: MUX_240to24 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/MUX_240to24.vhd Line: 4
+    Info (12022): Found design unit 1: MUX_240to24-multiplex File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/MUX_240to24.vhd Line: 12
+    Info (12023): Found entity 1: MUX_240to24 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/MUX_240to24.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter_1_digit.vhd
-    Info (12022): Found design unit 1: COUNTER_1_DIGIT-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_DIGIT.vhd Line: 11
-    Info (12023): Found entity 1: COUNTER_1_DIGIT File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_DIGIT.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_1_DIGIT-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_DIGIT.vhd Line: 11
+    Info (12023): Found entity 1: COUNTER_1_DIGIT File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_DIGIT.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter_1_hexa.vhd
-    Info (12022): Found design unit 1: COUNTER_1_HEXA-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_HEXA.vhd Line: 11
-    Info (12023): Found entity 1: COUNTER_1_HEXA File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_HEXA.vhd Line: 4
+    Info (12022): Found design unit 1: COUNTER_1_HEXA-count File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_HEXA.vhd Line: 11
+    Info (12023): Found entity 1: COUNTER_1_HEXA File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_HEXA.vhd Line: 4
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "test_de10" for hierarchy "test_de10:inst"
-Info (12128): Elaborating entity "test_image" for hierarchy "test_de10:inst|test_image:test" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_de10.vhd Line: 59
-Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(49): object "h_pos_1" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd Line: 49
-Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(50): object "v_pos_1" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd Line: 50
-Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(51): object "h_gap_1" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd Line: 51
-Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(51): object "v_gap_1" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd Line: 51
-Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(52): object "h_gap_2" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd Line: 52
-Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(52): object "v_gap_2" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_image.vhd Line: 52
-Info (12128): Elaborating entity "MUX_240to24" for hierarchy "MUX_240to24:inst14"
+Info (12128): Elaborating entity "test_image" for hierarchy "test_de10:inst|test_image:test" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_de10.vhd Line: 52
+Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(51): object "h_pos_1" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd Line: 51
+Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(52): object "v_pos_1" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd Line: 52
+Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(53): object "h_gap_1" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd Line: 53
+Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(53): object "v_gap_1" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd Line: 53
+Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(54): object "h_gap_2" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd Line: 54
+Warning (10036): Verilog HDL or VHDL warning at test_image.vhd(54): object "v_gap_2" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/test_image.vhd Line: 54
+Info (12128): Elaborating entity "MUX_240to24" for hierarchy "MUX_240to24:inst43"
 Info (12128): Elaborating entity "COUNTER_1_DIGIT" for hierarchy "COUNTER_1_DIGIT:inst15"
-Warning (10036): Verilog HDL or VHDL warning at COUNTER_1_DIGIT.vhd(13): object "trash" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_DIGIT.vhd Line: 13
-Warning (10492): VHDL Process Statement warning at COUNTER_1_DIGIT.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_DIGIT.vhd Line: 40
-Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_1_DIGIT:inst15|ADDER_4_BITS:add" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_DIGIT.vhd Line: 25
-Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_1_DIGIT:inst15|ADDER_4_BITS:add|ADDER_1_BIT:add1" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_4_BITS.vhd Line: 24
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 14
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 14
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 14
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 15
+Warning (10036): Verilog HDL or VHDL warning at COUNTER_1_DIGIT.vhd(13): object "trash" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_DIGIT.vhd Line: 13
+Warning (10492): VHDL Process Statement warning at COUNTER_1_DIGIT.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_DIGIT.vhd Line: 40
+Info (12128): Elaborating entity "ADDER_4_BITS" for hierarchy "COUNTER_1_DIGIT:inst15|ADDER_4_BITS:add" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_DIGIT.vhd Line: 25
+Info (12128): Elaborating entity "ADDER_1_BIT" for hierarchy "COUNTER_1_DIGIT:inst15|ADDER_4_BITS:add|ADDER_1_BIT:add1" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_4_BITS.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd Line: 14
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd Line: 14
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd Line: 14
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/ADDER_1_BIT.vhd Line: 15
 Info (12128): Elaborating entity "mem0" for hierarchy "mem0:inst_mem17"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem0:inst_mem17|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem0.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem0:inst_mem17|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem0.vhd Line: 59
-Info (12133): Instantiated megafunction "mem0:inst_mem17|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem0.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem0:inst_mem17|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem0:inst_mem17|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 59
+Info (12133): Instantiated megafunction "mem0:inst_mem17|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem0.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1491,17 +1503,17 @@ Info (12133): Instantiated megafunction "mem0:inst_mem17|altsyncram:altsyncram_c
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1fq3.tdf
-    Info (12023): Found entity 1: altsyncram_1fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_1fq3" for hierarchy "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_1fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_1fq3" for hierarchy "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "Timing_Reference_25MHz" for hierarchy "Timing_Reference_25MHz:inst8"
-Warning (10492): VHDL Process Statement warning at Timing_Reference_25MHz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_25MHz.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at Timing_Reference_25MHz.vhd(28): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/Timing_Reference_25MHz.vhd Line: 28
 Info (12128): Elaborating entity "COUNTER_1_HEXA" for hierarchy "COUNTER_1_HEXA:inst11"
-Warning (10036): Verilog HDL or VHDL warning at COUNTER_1_HEXA.vhd(13): object "trash" assigned a value but never read File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_HEXA.vhd Line: 13
-Warning (10492): VHDL Process Statement warning at COUNTER_1_HEXA.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_HEXA.vhd Line: 40
+Warning (10036): Verilog HDL or VHDL warning at COUNTER_1_HEXA.vhd(13): object "trash" assigned a value but never read File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_HEXA.vhd Line: 13
+Warning (10492): VHDL Process Statement warning at COUNTER_1_HEXA.vhd(40): signal "count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/COUNTER_1_HEXA.vhd Line: 40
 Info (12128): Elaborating entity "mem1" for hierarchy "mem1:inst2"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem1:inst2|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem1.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem1:inst2|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem1.vhd Line: 59
-Info (12133): Instantiated megafunction "mem1:inst2|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem1.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem1:inst2|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem1.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem1:inst2|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem1.vhd Line: 59
+Info (12133): Instantiated megafunction "mem1:inst2|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem1.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1553,12 +1565,12 @@ Info (12133): Instantiated megafunction "mem1:inst2|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2fq3.tdf
-    Info (12023): Found entity 1: altsyncram_2fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_2fq3" for hierarchy "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_2fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_2fq3" for hierarchy "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem2" for hierarchy "mem2:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem2:inst3|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem2.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem2:inst3|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem2.vhd Line: 59
-Info (12133): Instantiated megafunction "mem2:inst3|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem2.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem2:inst3|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem2.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem2:inst3|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem2.vhd Line: 59
+Info (12133): Instantiated megafunction "mem2:inst3|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem2.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1610,12 +1622,12 @@ Info (12133): Instantiated megafunction "mem2:inst3|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3fq3.tdf
-    Info (12023): Found entity 1: altsyncram_3fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_3fq3" for hierarchy "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_3fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_3fq3" for hierarchy "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem3" for hierarchy "mem3:inst4"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem3:inst4|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem3.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem3:inst4|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem3.vhd Line: 59
-Info (12133): Instantiated megafunction "mem3:inst4|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem3.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem3:inst4|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem3.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem3:inst4|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem3.vhd Line: 59
+Info (12133): Instantiated megafunction "mem3:inst4|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem3.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1667,12 +1679,12 @@ Info (12133): Instantiated megafunction "mem3:inst4|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4fq3.tdf
-    Info (12023): Found entity 1: altsyncram_4fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_4fq3" for hierarchy "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_4fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_4fq3" for hierarchy "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem4" for hierarchy "mem4:inst5"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem4:inst5|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem4.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem4:inst5|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem4.vhd Line: 59
-Info (12133): Instantiated megafunction "mem4:inst5|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem4.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem4:inst5|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem4.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem4:inst5|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem4.vhd Line: 59
+Info (12133): Instantiated megafunction "mem4:inst5|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem4.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1724,12 +1736,12 @@ Info (12133): Instantiated megafunction "mem4:inst5|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_5fq3.tdf
-    Info (12023): Found entity 1: altsyncram_5fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_5fq3" for hierarchy "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_5fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_5fq3" for hierarchy "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem5" for hierarchy "mem5:inst7"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem5:inst7|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem5.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem5:inst7|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem5.vhd Line: 59
-Info (12133): Instantiated megafunction "mem5:inst7|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem5.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem5:inst7|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem5.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem5:inst7|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem5.vhd Line: 59
+Info (12133): Instantiated megafunction "mem5:inst7|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem5.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1781,12 +1793,12 @@ Info (12133): Instantiated megafunction "mem5:inst7|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6fq3.tdf
-    Info (12023): Found entity 1: altsyncram_6fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_6fq3" for hierarchy "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_6fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_6fq3" for hierarchy "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem6" for hierarchy "mem6:inst9"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem6:inst9|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem6.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem6:inst9|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem6.vhd Line: 59
-Info (12133): Instantiated megafunction "mem6:inst9|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem6.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem6:inst9|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem6.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem6:inst9|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem6.vhd Line: 59
+Info (12133): Instantiated megafunction "mem6:inst9|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem6.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1838,12 +1850,12 @@ Info (12133): Instantiated megafunction "mem6:inst9|altsyncram:altsyncram_compon
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7fq3.tdf
-    Info (12023): Found entity 1: altsyncram_7fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_7fq3" for hierarchy "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_7fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_7fq3" for hierarchy "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem7" for hierarchy "mem7:inst10"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem7:inst10|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem7.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem7:inst10|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem7.vhd Line: 59
-Info (12133): Instantiated megafunction "mem7:inst10|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem7.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem7:inst10|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem7.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem7:inst10|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem7.vhd Line: 59
+Info (12133): Instantiated megafunction "mem7:inst10|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem7.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1895,12 +1907,12 @@ Info (12133): Instantiated megafunction "mem7:inst10|altsyncram:altsyncram_compo
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8fq3.tdf
-    Info (12023): Found entity 1: altsyncram_8fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_8fq3" for hierarchy "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_8fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_8fq3" for hierarchy "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem8" for hierarchy "mem8:inst12"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem8:inst12|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem8.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem8:inst12|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem8.vhd Line: 59
-Info (12133): Instantiated megafunction "mem8:inst12|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem8.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem8:inst12|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem8.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem8:inst12|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem8.vhd Line: 59
+Info (12133): Instantiated megafunction "mem8:inst12|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem8.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1952,12 +1964,12 @@ Info (12133): Instantiated megafunction "mem8:inst12|altsyncram:altsyncram_compo
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_9fq3.tdf
-    Info (12023): Found entity 1: altsyncram_9fq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_9fq3" for hierarchy "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_9fq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_9fq3" for hierarchy "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "mem9" for hierarchy "mem9:inst13"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "mem9:inst13|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem9.vhd Line: 59
-Info (12130): Elaborated megafunction instantiation "mem9:inst13|altsyncram:altsyncram_component" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem9.vhd Line: 59
-Info (12133): Instantiated megafunction "mem9:inst13|altsyncram:altsyncram_component" with the following parameter: File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/mem9.vhd Line: 59
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem9:inst13|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem9.vhd Line: 59
+Info (12130): Elaborated megafunction instantiation "mem9:inst13|altsyncram:altsyncram_component" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem9.vhd Line: 59
+Info (12133): Instantiated megafunction "mem9:inst13|altsyncram:altsyncram_component" with the following parameter: File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/mem9.vhd Line: 59
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -2009,143 +2021,143 @@ Info (12133): Instantiated megafunction "mem9:inst13|altsyncram:altsyncram_compo
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_afq3.tdf
-    Info (12023): Found entity 1: altsyncram_afq3 File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_afq3" for hierarchy "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated" File: f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_afq3 File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_afq3" for hierarchy "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_afq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_9fq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_8fq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_7fq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_6fq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_5fq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_4fq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_3fq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_2fq3.tdf Line: 471
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[0]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 34
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[1]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 57
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[2]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 80
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[3]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 103
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[8]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 218
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[9]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 241
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[10]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 264
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[11]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 287
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[16]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 402
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 425
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 448
-        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_afq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem8:inst12|altsyncram:altsyncram_component|altsyncram_9fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_9fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem7:inst10|altsyncram:altsyncram_component|altsyncram_8fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_8fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem6:inst9|altsyncram:altsyncram_component|altsyncram_7fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_7fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem5:inst7|altsyncram:altsyncram_component|altsyncram_6fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_6fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem4:inst5|altsyncram:altsyncram_component|altsyncram_5fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_5fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem3:inst4|altsyncram:altsyncram_component|altsyncram_4fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_4fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem2:inst3|altsyncram:altsyncram_component|altsyncram_3fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_3fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem1:inst2|altsyncram:altsyncram_component|altsyncram_2fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_2fq3.tdf Line: 471
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[0]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 34
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[1]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 57
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[2]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 80
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[3]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 103
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[8]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 218
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[9]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 241
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[10]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 264
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[11]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 287
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[16]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 402
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[17]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 425
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[18]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 448
+        Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[19]" File: D:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/db/altsyncram_1fq3.tdf Line: 471
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 374 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 462 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 237 logic cells
+    Info (21061): Implemented 325 logic cells
     Info (21064): Implemented 120 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 141 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Sat Jun 22 00:07:14 2024
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Sun Jun 23 20:39:49 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:07
 
 

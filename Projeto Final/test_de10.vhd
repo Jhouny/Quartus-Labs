@@ -1,11 +1,3 @@
--- street_de10.vhd
---
--- generate an VGA-image of a street scene
--- top level for DE10-Lite board
---
--- FPGA Vision Remote Lab http://h-brs.de/fpga-vision-lab
--- (c) Marco Winzker, Hochschule Bonn-Rhein-Sieg, 02.05.2019
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
@@ -21,7 +13,8 @@ entity test_de10 is
         vga_hs         : out std_logic;
         vga_r          : out std_logic_vector(3 downto 0);
         vga_g          : out std_logic_vector(3 downto 0);
-        vga_b          : out std_logic_vector(3 downto 0));
+        vga_b          : out std_logic_vector(3 downto 0);
+		DIGIT_CTRL     : out std_logic_vector(3 downto 0));
 end entity;
 
 architecture shell of test_de10 is
@@ -67,7 +60,8 @@ test: entity work.test_image
               de_out    => open,
               r_out     => r,
               g_out     => g,
-              b_out     => b);
+              b_out     => b,
+			  DIGIT_CTRL=> DIGIT_CTRL);
 
 vga_r <= r(7 downto 4);
 vga_g <= g(7 downto 4);
