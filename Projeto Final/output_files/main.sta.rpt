@@ -1,5 +1,5 @@
 Timing Analyzer report for main
-Sun Jun 23 20:40:09 2024
+Sun Jun 23 22:14:22 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -90,18 +90,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 6           ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.22        ;
-; Maximum used               ; 6           ;
+; Average used               ; 1.23        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.5%      ;
-;     Processor 3            ;   4.5%      ;
-;     Processor 4            ;   4.4%      ;
-;     Processors 5-6         ;   4.4%      ;
+;     Processor 2            ;   7.6%      ;
+;     Processor 3            ;   7.5%      ;
+;     Processor 4            ;   7.5%      ;
 +----------------------------+-------------+
 
 
@@ -118,35 +117,31 @@ refer to the applicable agreement for further details.
 ; COUNTER_1_DIGIT:inst25|count[3]          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { COUNTER_1_DIGIT:inst25|count[3] }          ;
 ; COUNTER_1_DIGIT:inst27|count[3]          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { COUNTER_1_DIGIT:inst27|count[3] }          ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { COUNTER_1_DIGIT:inst30|count[3] }          ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { COUNTER_1_DIGIT:inst33|count[3] }          ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { COUNTER_1_DIGIT:inst37|count[3] }          ;
-; PB_2                                     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { PB_2 }                                     ;
 ; test_de10:inst|clk_25                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { test_de10:inst|clk_25 }                    ;
 ; test_de10:inst|test_image:test|next_line ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { test_de10:inst|test_image:test|next_line } ;
+; Timing_Reference_1kHz:inst44|tmp         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Timing_Reference_1kHz:inst44|tmp }         ;
 ; Timing_Reference_25MHz:inst8|tmp         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Timing_Reference_25MHz:inst8|tmp }         ;
 +------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                                                      ;
-+------------+-----------------+------------------------------------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                               ; Note                                                          ;
-+------------+-----------------+------------------------------------------+---------------------------------------------------------------+
-; 109.11 MHz ; 109.11 MHz      ; test_de10:inst|clk_25                    ;                                                               ;
-; 176.96 MHz ; 176.96 MHz      ; CLK                                      ;                                                               ;
-; 334.78 MHz ; 334.78 MHz      ; COUNTER_1_DIGIT:inst27|count[3]          ;                                                               ;
-; 341.41 MHz ; 341.41 MHz      ; COUNTER_1_DIGIT:inst30|count[3]          ;                                                               ;
-; 344.71 MHz ; 292.23 MHz      ; Timing_Reference_25MHz:inst8|tmp         ; limit due to minimum period restriction (tmin)                ;
-; 352.49 MHz ; 352.49 MHz      ; COUNTER_1_DIGIT:inst15|count[3]          ;                                                               ;
-; 361.53 MHz ; 361.53 MHz      ; COUNTER_1_DIGIT:inst33|count[3]          ;                                                               ;
-; 373.97 MHz ; 373.97 MHz      ; COUNTER_1_DIGIT:inst16|count[3]          ;                                                               ;
-; 384.02 MHz ; 250.0 MHz       ; PB_2                                     ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 395.88 MHz ; 395.88 MHz      ; COUNTER_1_DIGIT:inst25|count[3]          ;                                                               ;
-; 402.09 MHz ; 402.09 MHz      ; COUNTER_1_DIGIT:inst19|count[3]          ;                                                               ;
-; 402.25 MHz ; 402.25 MHz      ; COUNTER_1_DIGIT:inst22|count[3]          ;                                                               ;
-; 574.05 MHz ; 416.15 MHz      ; test_de10:inst|test_image:test|next_line ; limit due to minimum period restriction (tmin)                ;
-; 773.99 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst37|count[3]          ; limit due to minimum period restriction (tmin)                ;
-+------------+-----------------+------------------------------------------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                       ;
++------------+-----------------+------------------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                               ; Note                                           ;
++------------+-----------------+------------------------------------------+------------------------------------------------+
+; 106.33 MHz ; 106.33 MHz      ; test_de10:inst|clk_25                    ;                                                ;
+; 185.7 MHz  ; 185.7 MHz       ; CLK                                      ;                                                ;
+; 323.52 MHz ; 323.52 MHz      ; COUNTER_1_DIGIT:inst22|count[3]          ;                                                ;
+; 328.95 MHz ; 328.95 MHz      ; COUNTER_1_DIGIT:inst19|count[3]          ;                                                ;
+; 343.88 MHz ; 343.88 MHz      ; COUNTER_1_DIGIT:inst16|count[3]          ;                                                ;
+; 344.71 MHz ; 292.23 MHz      ; Timing_Reference_25MHz:inst8|tmp         ; limit due to minimum period restriction (tmin) ;
+; 348.43 MHz ; 348.43 MHz      ; COUNTER_1_DIGIT:inst25|count[3]          ;                                                ;
+; 350.88 MHz ; 350.88 MHz      ; Timing_Reference_1kHz:inst44|tmp         ;                                                ;
+; 351.37 MHz ; 351.37 MHz      ; COUNTER_1_DIGIT:inst15|count[3]          ;                                                ;
+; 352.36 MHz ; 352.36 MHz      ; COUNTER_1_DIGIT:inst27|count[3]          ;                                                ;
+; 489.96 MHz ; 416.15 MHz      ; test_de10:inst|test_image:test|next_line ; limit due to minimum period restriction (tmin) ;
+; 841.04 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst30|count[3]          ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -155,20 +150,18 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------+--------+---------------+
 ; Clock                                    ; Slack  ; End Point TNS ;
 +------------------------------------------+--------+---------------+
-; test_de10:inst|clk_25                    ; -8.971 ; -204.627      ;
-; CLK                                      ; -4.651 ; -64.311       ;
-; COUNTER_1_DIGIT:inst27|count[3]          ; -1.987 ; -4.099        ;
-; COUNTER_1_DIGIT:inst30|count[3]          ; -1.929 ; -3.980        ;
-; Timing_Reference_25MHz:inst8|tmp         ; -1.901 ; -233.856      ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; -1.884 ; -4.049        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; -1.766 ; -3.653        ;
-; COUNTER_1_DIGIT:inst16|count[3]          ; -1.674 ; -3.505        ;
-; PB_2                                     ; -1.604 ; -3.082        ;
-; COUNTER_1_DIGIT:inst25|count[3]          ; -1.526 ; -3.297        ;
-; COUNTER_1_DIGIT:inst19|count[3]          ; -1.498 ; -3.268        ;
-; COUNTER_1_DIGIT:inst22|count[3]          ; -1.486 ; -3.263        ;
-; test_de10:inst|test_image:test|next_line ; -0.744 ; -2.243        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; -0.292 ; -0.662        ;
+; test_de10:inst|clk_25                    ; -9.972 ; -212.872      ;
+; CLK                                      ; -4.385 ; -129.672      ;
+; COUNTER_1_DIGIT:inst22|count[3]          ; -2.091 ; -4.419        ;
+; COUNTER_1_DIGIT:inst19|count[3]          ; -2.040 ; -4.121        ;
+; COUNTER_1_DIGIT:inst16|count[3]          ; -1.908 ; -3.997        ;
+; Timing_Reference_25MHz:inst8|tmp         ; -1.901 ; -236.741      ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; -1.900 ; -3.996        ;
+; COUNTER_1_DIGIT:inst25|count[3]          ; -1.870 ; -4.014        ;
+; Timing_Reference_1kHz:inst44|tmp         ; -1.850 ; -3.774        ;
+; COUNTER_1_DIGIT:inst27|count[3]          ; -1.838 ; -3.995        ;
+; test_de10:inst|test_image:test|next_line ; -1.041 ; -3.510        ;
+; COUNTER_1_DIGIT:inst30|count[3]          ; -0.189 ; -0.499        ;
 +------------------------------------------+--------+---------------+
 
 
@@ -177,39 +170,37 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------+-------+---------------+
 ; Clock                                    ; Slack ; End Point TNS ;
 +------------------------------------------+-------+---------------+
-; COUNTER_1_DIGIT:inst22|count[3]          ; 0.339 ; 0.000         ;
-; COUNTER_1_DIGIT:inst16|count[3]          ; 0.340 ; 0.000         ;
-; COUNTER_1_DIGIT:inst25|count[3]          ; 0.340 ; 0.000         ;
-; Timing_Reference_25MHz:inst8|tmp         ; 0.340 ; 0.000         ;
+; Timing_Reference_25MHz:inst8|tmp         ; 0.258 ; 0.000         ;
 ; test_de10:inst|clk_25                    ; 0.340 ; 0.000         ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; 0.341 ; 0.000         ;
 ; test_de10:inst|test_image:test|next_line ; 0.341 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst15|count[3]          ; 0.342 ; 0.000         ;
-; COUNTER_1_DIGIT:inst19|count[3]          ; 0.342 ; 0.000         ;
-; COUNTER_1_DIGIT:inst27|count[3]          ; 0.342 ; 0.000         ;
+; COUNTER_1_DIGIT:inst25|count[3]          ; 0.342 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; 0.342 ; 0.000         ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; 0.342 ; 0.000         ;
-; PB_2                                     ; 0.378 ; 0.000         ;
-; CLK                                      ; 0.432 ; 0.000         ;
+; Timing_Reference_1kHz:inst44|tmp         ; 0.342 ; 0.000         ;
+; COUNTER_1_DIGIT:inst22|count[3]          ; 0.343 ; 0.000         ;
+; COUNTER_1_DIGIT:inst27|count[3]          ; 0.343 ; 0.000         ;
+; COUNTER_1_DIGIT:inst16|count[3]          ; 0.344 ; 0.000         ;
+; COUNTER_1_DIGIT:inst19|count[3]          ; 0.344 ; 0.000         ;
+; CLK                                      ; 0.426 ; 0.000         ;
 +------------------------------------------+-------+---------------+
 
 
-+----------------------------------------------------------+
-; Slow 1200mV 85C Model Recovery Summary                   ;
-+----------------------------------+-------+---------------+
-; Clock                            ; Slack ; End Point TNS ;
-+----------------------------------+-------+---------------+
-; Timing_Reference_25MHz:inst8|tmp ; 0.133 ; 0.000         ;
-+----------------------------------+-------+---------------+
-
-
 +-----------------------------------------------------------+
-; Slow 1200mV 85C Model Removal Summary                     ;
+; Slow 1200mV 85C Model Recovery Summary                    ;
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; Timing_Reference_25MHz:inst8|tmp ; -0.159 ; -0.636        ;
+; Timing_Reference_25MHz:inst8|tmp ; -0.489 ; -1.401        ;
 +----------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Slow 1200mV 85C Model Removal Summary                    ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; Timing_Reference_25MHz:inst8|tmp ; 0.691 ; 0.000         ;
++----------------------------------+-------+---------------+
 
 
 +-------------------------------------------------------------------+
@@ -217,10 +208,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------+--------+---------------+
 ; Clock                                    ; Slack  ; End Point TNS ;
 +------------------------------------------+--------+---------------+
-; CLK                                      ; -3.000 ; -57.717       ;
-; PB_2                                     ; -3.000 ; -8.612        ;
+; CLK                                      ; -3.000 ; -104.016      ;
 ; Timing_Reference_25MHz:inst8|tmp         ; -2.422 ; -305.940      ;
-; test_de10:inst|clk_25                    ; -1.403 ; -95.404       ;
+; test_de10:inst|clk_25                    ; -1.403 ; -89.792       ;
 ; COUNTER_1_DIGIT:inst15|count[3]          ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst16|count[3]          ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst19|count[3]          ; -1.403 ; -5.612        ;
@@ -228,8 +218,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; COUNTER_1_DIGIT:inst25|count[3]          ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst27|count[3]          ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; -1.403 ; -5.612        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; -1.403 ; -5.612        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; -1.403 ; -5.612        ;
+; Timing_Reference_1kHz:inst44|tmp         ; -1.403 ; -5.612        ;
 ; test_de10:inst|test_image:test|next_line ; -1.403 ; -5.612        ;
 +------------------------------------------+--------+---------------+
 
@@ -241,26 +230,24 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                                                       ;
-+------------+-----------------+------------------------------------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                               ; Note                                                          ;
-+------------+-----------------+------------------------------------------+---------------------------------------------------------------+
-; 118.5 MHz  ; 118.5 MHz       ; test_de10:inst|clk_25                    ;                                                               ;
-; 190.44 MHz ; 190.44 MHz      ; CLK                                      ;                                                               ;
-; 362.84 MHz ; 362.84 MHz      ; COUNTER_1_DIGIT:inst27|count[3]          ;                                                               ;
-; 374.53 MHz ; 300.03 MHz      ; Timing_Reference_25MHz:inst8|tmp         ; limit due to minimum period restriction (tmin)                ;
-; 377.64 MHz ; 377.64 MHz      ; COUNTER_1_DIGIT:inst30|count[3]          ;                                                               ;
-; 385.06 MHz ; 385.06 MHz      ; COUNTER_1_DIGIT:inst15|count[3]          ;                                                               ;
-; 389.26 MHz ; 389.26 MHz      ; COUNTER_1_DIGIT:inst33|count[3]          ;                                                               ;
-; 402.41 MHz ; 402.41 MHz      ; COUNTER_1_DIGIT:inst16|count[3]          ;                                                               ;
-; 413.74 MHz ; 250.0 MHz       ; PB_2                                     ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 425.53 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst25|count[3]          ; limit due to minimum period restriction (tmin)                ;
-; 431.59 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst19|count[3]          ; limit due to minimum period restriction (tmin)                ;
-; 434.4 MHz  ; 416.15 MHz      ; COUNTER_1_DIGIT:inst22|count[3]          ; limit due to minimum period restriction (tmin)                ;
-; 629.33 MHz ; 416.15 MHz      ; test_de10:inst|test_image:test|next_line ; limit due to minimum period restriction (tmin)                ;
-; 856.16 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst37|count[3]          ; limit due to minimum period restriction (tmin)                ;
-+------------+-----------------+------------------------------------------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                        ;
++------------+-----------------+------------------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                               ; Note                                           ;
++------------+-----------------+------------------------------------------+------------------------------------------------+
+; 112.85 MHz ; 112.85 MHz      ; test_de10:inst|clk_25                    ;                                                ;
+; 199.52 MHz ; 199.52 MHz      ; CLK                                      ;                                                ;
+; 350.14 MHz ; 350.14 MHz      ; COUNTER_1_DIGIT:inst22|count[3]          ;                                                ;
+; 353.48 MHz ; 353.48 MHz      ; COUNTER_1_DIGIT:inst19|count[3]          ;                                                ;
+; 372.44 MHz ; 372.44 MHz      ; COUNTER_1_DIGIT:inst16|count[3]          ;                                                ;
+; 374.53 MHz ; 300.03 MHz      ; Timing_Reference_25MHz:inst8|tmp         ; limit due to minimum period restriction (tmin) ;
+; 376.36 MHz ; 376.36 MHz      ; COUNTER_1_DIGIT:inst25|count[3]          ;                                                ;
+; 379.22 MHz ; 379.22 MHz      ; COUNTER_1_DIGIT:inst15|count[3]          ;                                                ;
+; 379.79 MHz ; 379.79 MHz      ; Timing_Reference_1kHz:inst44|tmp         ;                                                ;
+; 380.66 MHz ; 380.66 MHz      ; COUNTER_1_DIGIT:inst27|count[3]          ;                                                ;
+; 539.67 MHz ; 416.15 MHz      ; test_de10:inst|test_image:test|next_line ; limit due to minimum period restriction (tmin) ;
+; 918.27 MHz ; 416.15 MHz      ; COUNTER_1_DIGIT:inst30|count[3]          ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -269,20 +256,18 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------+--------+---------------+
 ; Clock                                    ; Slack  ; End Point TNS ;
 +------------------------------------------+--------+---------------+
-; test_de10:inst|clk_25                    ; -8.174 ; -183.760      ;
-; CLK                                      ; -4.251 ; -54.866       ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; -1.862 ; -3.877        ;
-; COUNTER_1_DIGIT:inst30|count[3]          ; -1.768 ; -3.590        ;
-; COUNTER_1_DIGIT:inst27|count[3]          ; -1.756 ; -3.548        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; -1.749 ; -3.433        ;
-; Timing_Reference_25MHz:inst8|tmp         ; -1.670 ; -205.185      ;
-; COUNTER_1_DIGIT:inst16|count[3]          ; -1.485 ; -2.993        ;
-; COUNTER_1_DIGIT:inst19|count[3]          ; -1.456 ; -2.993        ;
-; PB_2                                     ; -1.417 ; -2.573        ;
-; COUNTER_1_DIGIT:inst25|count[3]          ; -1.363 ; -2.782        ;
-; COUNTER_1_DIGIT:inst22|count[3]          ; -1.302 ; -2.741        ;
-; test_de10:inst|test_image:test|next_line ; -0.618 ; -1.711        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; -0.168 ; -0.330        ;
+; test_de10:inst|clk_25                    ; -9.072 ; -192.328      ;
+; CLK                                      ; -4.012 ; -111.003      ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; -1.915 ; -3.797        ;
+; COUNTER_1_DIGIT:inst22|count[3]          ; -1.856 ; -3.811        ;
+; COUNTER_1_DIGIT:inst19|count[3]          ; -1.829 ; -3.541        ;
+; COUNTER_1_DIGIT:inst27|count[3]          ; -1.817 ; -3.709        ;
+; COUNTER_1_DIGIT:inst16|count[3]          ; -1.685 ; -3.454        ;
+; COUNTER_1_DIGIT:inst25|count[3]          ; -1.676 ; -3.484        ;
+; Timing_Reference_25MHz:inst8|tmp         ; -1.670 ; -207.684      ;
+; Timing_Reference_1kHz:inst44|tmp         ; -1.633 ; -3.250        ;
+; test_de10:inst|test_image:test|next_line ; -0.853 ; -2.973        ;
+; COUNTER_1_DIGIT:inst30|count[3]          ; -0.089 ; -0.197        ;
 +------------------------------------------+--------+---------------+
 
 
@@ -291,39 +276,37 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------+-------+---------------+
 ; Clock                                    ; Slack ; End Point TNS ;
 +------------------------------------------+-------+---------------+
-; COUNTER_1_DIGIT:inst25|count[3]          ; 0.303 ; 0.000         ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; 0.305 ; 0.000         ;
-; COUNTER_1_DIGIT:inst16|count[3]          ; 0.305 ; 0.000         ;
-; COUNTER_1_DIGIT:inst19|count[3]          ; 0.305 ; 0.000         ;
-; COUNTER_1_DIGIT:inst22|count[3]          ; 0.305 ; 0.000         ;
-; COUNTER_1_DIGIT:inst27|count[3]          ; 0.305 ; 0.000         ;
-; test_de10:inst|clk_25                    ; 0.305 ; 0.000         ;
+; Timing_Reference_25MHz:inst8|tmp         ; 0.262 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; 0.306 ; 0.000         ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; 0.306 ; 0.000         ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; 0.306 ; 0.000         ;
-; Timing_Reference_25MHz:inst8|tmp         ; 0.306 ; 0.000         ;
+; test_de10:inst|clk_25                    ; 0.306 ; 0.000         ;
 ; test_de10:inst|test_image:test|next_line ; 0.306 ; 0.000         ;
-; PB_2                                     ; 0.339 ; 0.000         ;
-; CLK                                      ; 0.397 ; 0.000         ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; 0.307 ; 0.000         ;
+; COUNTER_1_DIGIT:inst16|count[3]          ; 0.307 ; 0.000         ;
+; COUNTER_1_DIGIT:inst19|count[3]          ; 0.307 ; 0.000         ;
+; COUNTER_1_DIGIT:inst22|count[3]          ; 0.307 ; 0.000         ;
+; COUNTER_1_DIGIT:inst25|count[3]          ; 0.307 ; 0.000         ;
+; COUNTER_1_DIGIT:inst27|count[3]          ; 0.307 ; 0.000         ;
+; Timing_Reference_1kHz:inst44|tmp         ; 0.307 ; 0.000         ;
+; CLK                                      ; 0.390 ; 0.000         ;
 +------------------------------------------+-------+---------------+
 
 
-+----------------------------------------------------------+
-; Slow 1200mV 0C Model Recovery Summary                    ;
-+----------------------------------+-------+---------------+
-; Clock                            ; Slack ; End Point TNS ;
-+----------------------------------+-------+---------------+
-; Timing_Reference_25MHz:inst8|tmp ; 0.183 ; 0.000         ;
-+----------------------------------+-------+---------------+
-
-
 +-----------------------------------------------------------+
-; Slow 1200mV 0C Model Removal Summary                      ;
+; Slow 1200mV 0C Model Recovery Summary                     ;
 +----------------------------------+--------+---------------+
 ; Clock                            ; Slack  ; End Point TNS ;
 +----------------------------------+--------+---------------+
-; Timing_Reference_25MHz:inst8|tmp ; -0.146 ; -0.584        ;
+; Timing_Reference_25MHz:inst8|tmp ; -0.357 ; -0.957        ;
 +----------------------------------+--------+---------------+
+
+
++----------------------------------------------------------+
+; Slow 1200mV 0C Model Removal Summary                     ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; Timing_Reference_25MHz:inst8|tmp ; 0.642 ; 0.000         ;
++----------------------------------+-------+---------------+
 
 
 +-------------------------------------------------------------------+
@@ -331,10 +314,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------+--------+---------------+
 ; Clock                                    ; Slack  ; End Point TNS ;
 +------------------------------------------+--------+---------------+
-; CLK                                      ; -3.000 ; -57.717       ;
-; PB_2                                     ; -3.000 ; -8.612        ;
+; CLK                                      ; -3.000 ; -104.016      ;
 ; Timing_Reference_25MHz:inst8|tmp         ; -2.333 ; -294.904      ;
-; test_de10:inst|clk_25                    ; -1.403 ; -95.404       ;
+; test_de10:inst|clk_25                    ; -1.403 ; -89.792       ;
 ; COUNTER_1_DIGIT:inst15|count[3]          ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst16|count[3]          ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst19|count[3]          ; -1.403 ; -5.612        ;
@@ -342,8 +324,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; COUNTER_1_DIGIT:inst25|count[3]          ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst27|count[3]          ; -1.403 ; -5.612        ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; -1.403 ; -5.612        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; -1.403 ; -5.612        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; -1.403 ; -5.612        ;
+; Timing_Reference_1kHz:inst44|tmp         ; -1.403 ; -5.612        ;
 ; test_de10:inst|test_image:test|next_line ; -1.403 ; -5.612        ;
 +------------------------------------------+--------+---------------+
 
@@ -360,20 +341,18 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------+--------+---------------+
 ; Clock                                    ; Slack  ; End Point TNS ;
 +------------------------------------------+--------+---------------+
-; test_de10:inst|clk_25                    ; -3.724 ; -61.204       ;
-; CLK                                      ; -1.505 ; -6.836        ;
-; PB_2                                     ; -0.492 ; -0.821        ;
-; COUNTER_1_DIGIT:inst27|count[3]          ; -0.352 ; -0.645        ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; -0.329 ; -0.612        ;
-; COUNTER_1_DIGIT:inst30|count[3]          ; -0.325 ; -0.562        ;
-; Timing_Reference_25MHz:inst8|tmp         ; -0.280 ; -33.600       ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; -0.241 ; -0.468        ;
-; COUNTER_1_DIGIT:inst19|count[3]          ; -0.220 ; -0.423        ;
-; COUNTER_1_DIGIT:inst16|count[3]          ; -0.198 ; -0.368        ;
-; COUNTER_1_DIGIT:inst25|count[3]          ; -0.094 ; -0.179        ;
-; COUNTER_1_DIGIT:inst22|count[3]          ; -0.085 ; -0.159        ;
-; test_de10:inst|test_image:test|next_line ; 0.185  ; 0.000         ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; 0.428  ; 0.000         ;
+; test_de10:inst|clk_25                    ; -4.221 ; -68.989       ;
+; CLK                                      ; -1.377 ; -15.017       ;
+; COUNTER_1_DIGIT:inst22|count[3]          ; -0.371 ; -0.742        ;
+; Timing_Reference_25MHz:inst8|tmp         ; -0.330 ; -34.576       ;
+; COUNTER_1_DIGIT:inst19|count[3]          ; -0.325 ; -0.592        ;
+; COUNTER_1_DIGIT:inst16|count[3]          ; -0.296 ; -0.586        ;
+; COUNTER_1_DIGIT:inst25|count[3]          ; -0.284 ; -0.566        ;
+; Timing_Reference_1kHz:inst44|tmp         ; -0.282 ; -0.488        ;
+; COUNTER_1_DIGIT:inst27|count[3]          ; -0.280 ; -0.544        ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; -0.277 ; -0.551        ;
+; test_de10:inst|test_image:test|next_line ; 0.072  ; 0.000         ;
+; COUNTER_1_DIGIT:inst30|count[3]          ; 0.489  ; 0.000         ;
 +------------------------------------------+--------+---------------+
 
 
@@ -382,20 +361,18 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------+-------+---------------+
 ; Clock                                    ; Slack ; End Point TNS ;
 +------------------------------------------+-------+---------------+
-; test_de10:inst|clk_25                    ; 0.100 ; 0.000         ;
-; Timing_Reference_25MHz:inst8|tmp         ; 0.138 ; 0.000         ;
-; COUNTER_1_DIGIT:inst22|count[3]          ; 0.145 ; 0.000         ;
-; COUNTER_1_DIGIT:inst25|count[3]          ; 0.145 ; 0.000         ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; 0.146 ; 0.000         ;
-; COUNTER_1_DIGIT:inst16|count[3]          ; 0.146 ; 0.000         ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; 0.146 ; 0.000         ;
-; COUNTER_1_DIGIT:inst27|count[3]          ; 0.147 ; 0.000         ;
+; Timing_Reference_25MHz:inst8|tmp         ; 0.102 ; 0.000         ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; 0.147 ; 0.000         ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; 0.147 ; 0.000         ;
-; COUNTER_1_DIGIT:inst19|count[3]          ; 0.148 ; 0.000         ;
+; COUNTER_1_DIGIT:inst22|count[3]          ; 0.148 ; 0.000         ;
+; COUNTER_1_DIGIT:inst25|count[3]          ; 0.148 ; 0.000         ;
+; Timing_Reference_1kHz:inst44|tmp         ; 0.148 ; 0.000         ;
+; test_de10:inst|clk_25                    ; 0.148 ; 0.000         ;
 ; test_de10:inst|test_image:test|next_line ; 0.148 ; 0.000         ;
-; CLK                                      ; 0.163 ; 0.000         ;
-; PB_2                                     ; 0.166 ; 0.000         ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; 0.149 ; 0.000         ;
+; COUNTER_1_DIGIT:inst16|count[3]          ; 0.149 ; 0.000         ;
+; COUNTER_1_DIGIT:inst19|count[3]          ; 0.149 ; 0.000         ;
+; COUNTER_1_DIGIT:inst27|count[3]          ; 0.149 ; 0.000         ;
+; CLK                                      ; 0.158 ; 0.000         ;
 +------------------------------------------+-------+---------------+
 
 
@@ -404,17 +381,17 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------+-------+---------------+
 ; Clock                            ; Slack ; End Point TNS ;
 +----------------------------------+-------+---------------+
-; Timing_Reference_25MHz:inst8|tmp ; 0.275 ; 0.000         ;
+; Timing_Reference_25MHz:inst8|tmp ; 0.318 ; 0.000         ;
 +----------------------------------+-------+---------------+
 
 
-+-----------------------------------------------------------+
-; Fast 1200mV 0C Model Removal Summary                      ;
-+----------------------------------+--------+---------------+
-; Clock                            ; Slack  ; End Point TNS ;
-+----------------------------------+--------+---------------+
-; Timing_Reference_25MHz:inst8|tmp ; -0.085 ; -0.340        ;
-+----------------------------------+--------+---------------+
++----------------------------------------------------------+
+; Fast 1200mV 0C Model Removal Summary                     ;
++----------------------------------+-------+---------------+
+; Clock                            ; Slack ; End Point TNS ;
++----------------------------------+-------+---------------+
+; Timing_Reference_25MHz:inst8|tmp ; 0.281 ; 0.000         ;
++----------------------------------+-------+---------------+
 
 
 +-------------------------------------------------------------------+
@@ -422,10 +399,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------+--------+---------------+
 ; Clock                                    ; Slack  ; End Point TNS ;
 +------------------------------------------+--------+---------------+
-; CLK                                      ; -3.000 ; -43.412       ;
-; PB_2                                     ; -3.000 ; -7.484        ;
+; CLK                                      ; -3.000 ; -77.533       ;
 ; Timing_Reference_25MHz:inst8|tmp         ; -1.000 ; -128.000      ;
-; test_de10:inst|clk_25                    ; -1.000 ; -68.000       ;
+; test_de10:inst|clk_25                    ; -1.000 ; -64.000       ;
 ; COUNTER_1_DIGIT:inst15|count[3]          ; -1.000 ; -4.000        ;
 ; COUNTER_1_DIGIT:inst16|count[3]          ; -1.000 ; -4.000        ;
 ; COUNTER_1_DIGIT:inst19|count[3]          ; -1.000 ; -4.000        ;
@@ -433,8 +409,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; COUNTER_1_DIGIT:inst25|count[3]          ; -1.000 ; -4.000        ;
 ; COUNTER_1_DIGIT:inst27|count[3]          ; -1.000 ; -4.000        ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; -1.000 ; -4.000        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; -1.000 ; -4.000        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; -1.000 ; -4.000        ;
+; Timing_Reference_1kHz:inst44|tmp         ; -1.000 ; -4.000        ;
 ; test_de10:inst|test_image:test|next_line ; -1.000 ; -4.000        ;
 +------------------------------------------+--------+---------------+
 
@@ -451,36 +426,32 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                     ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                          ; -8.971   ; 0.100 ; 0.133    ; -0.159  ; -3.000              ;
-;  CLK                                      ; -4.651   ; 0.163 ; N/A      ; N/A     ; -3.000              ;
-;  COUNTER_1_DIGIT:inst15|count[3]          ; -1.884   ; 0.146 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst16|count[3]          ; -1.674   ; 0.146 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst19|count[3]          ; -1.498   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst22|count[3]          ; -1.486   ; 0.145 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst25|count[3]          ; -1.526   ; 0.145 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst27|count[3]          ; -1.987   ; 0.147 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst30|count[3]          ; -1.929   ; 0.147 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst33|count[3]          ; -1.766   ; 0.147 ; N/A      ; N/A     ; -1.403              ;
-;  COUNTER_1_DIGIT:inst37|count[3]          ; -0.292   ; 0.146 ; N/A      ; N/A     ; -1.403              ;
-;  PB_2                                     ; -1.604   ; 0.166 ; N/A      ; N/A     ; -3.000              ;
-;  Timing_Reference_25MHz:inst8|tmp         ; -1.901   ; 0.138 ; 0.133    ; -0.159  ; -2.422              ;
-;  test_de10:inst|clk_25                    ; -8.971   ; 0.100 ; N/A      ; N/A     ; -1.403              ;
-;  test_de10:inst|test_image:test|next_line ; -0.744   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS                           ; -537.895 ; 0.0   ; 0.0      ; -0.636  ; -523.793            ;
-;  CLK                                      ; -64.311  ; 0.000 ; N/A      ; N/A     ; -57.717             ;
-;  COUNTER_1_DIGIT:inst15|count[3]          ; -4.049   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst16|count[3]          ; -3.505   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst19|count[3]          ; -3.268   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst22|count[3]          ; -3.263   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst25|count[3]          ; -3.297   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst27|count[3]          ; -4.099   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst30|count[3]          ; -3.980   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst33|count[3]          ; -3.653   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  COUNTER_1_DIGIT:inst37|count[3]          ; -0.662   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
-;  PB_2                                     ; -3.082   ; 0.000 ; N/A      ; N/A     ; -8.612              ;
-;  Timing_Reference_25MHz:inst8|tmp         ; -233.856 ; 0.000 ; 0.000    ; -0.636  ; -305.940            ;
-;  test_de10:inst|clk_25                    ; -204.627 ; 0.000 ; N/A      ; N/A     ; -95.404             ;
-;  test_de10:inst|test_image:test|next_line ; -2.243   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+; Worst-case Slack                          ; -9.972   ; 0.102 ; -0.489   ; 0.281   ; -3.000              ;
+;  CLK                                      ; -4.385   ; 0.158 ; N/A      ; N/A     ; -3.000              ;
+;  COUNTER_1_DIGIT:inst15|count[3]          ; -1.915   ; 0.149 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst16|count[3]          ; -1.908   ; 0.149 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst19|count[3]          ; -2.040   ; 0.149 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst22|count[3]          ; -2.091   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst25|count[3]          ; -1.870   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst27|count[3]          ; -1.838   ; 0.149 ; N/A      ; N/A     ; -1.403              ;
+;  COUNTER_1_DIGIT:inst30|count[3]          ; -0.189   ; 0.147 ; N/A      ; N/A     ; -1.403              ;
+;  Timing_Reference_1kHz:inst44|tmp         ; -1.850   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+;  Timing_Reference_25MHz:inst8|tmp         ; -1.901   ; 0.102 ; -0.489   ; 0.281   ; -2.422              ;
+;  test_de10:inst|clk_25                    ; -9.972   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+;  test_de10:inst|test_image:test|next_line ; -1.041   ; 0.148 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS                           ; -611.61  ; 0.0   ; -1.401   ; 0.0     ; -550.256            ;
+;  CLK                                      ; -129.672 ; 0.000 ; N/A      ; N/A     ; -104.016            ;
+;  COUNTER_1_DIGIT:inst15|count[3]          ; -3.996   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_DIGIT:inst16|count[3]          ; -3.997   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_DIGIT:inst19|count[3]          ; -4.121   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_DIGIT:inst22|count[3]          ; -4.419   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_DIGIT:inst25|count[3]          ; -4.014   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_DIGIT:inst27|count[3]          ; -3.995   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  COUNTER_1_DIGIT:inst30|count[3]          ; -0.499   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  Timing_Reference_1kHz:inst44|tmp         ; -3.774   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
+;  Timing_Reference_25MHz:inst8|tmp         ; -236.741 ; 0.000 ; -1.401   ; 0.000   ; -305.940            ;
+;  test_de10:inst|clk_25                    ; -212.872 ; 0.000 ; N/A      ; N/A     ; -89.792             ;
+;  test_de10:inst|test_image:test|next_line ; -3.510   ; 0.000 ; N/A      ; N/A     ; -5.612              ;
 +-------------------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -514,7 +485,6 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------+-----------------------+-----------------+-----------------+
 ; PB                  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; CLK                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; PB_2                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -599,8 +569,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------+------------------------------------------+----------+----------+----------+----------+
 ; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; CLK                                      ; CLK                                      ; 628      ; 0        ; 0        ; 0        ;
+; CLK                                      ; CLK                                      ; 1380     ; 0        ; 0        ; 0        ;
 ; test_de10:inst|clk_25                    ; CLK                                      ; 1        ; 1        ; 0        ; 0        ;
+; Timing_Reference_1kHz:inst44|tmp         ; CLK                                      ; 1        ; 1        ; 0        ; 0        ;
 ; Timing_Reference_25MHz:inst8|tmp         ; CLK                                      ; 1        ; 1        ; 0        ; 0        ;
 ; COUNTER_1_DIGIT:inst15|count[3]          ; COUNTER_1_DIGIT:inst15|count[3]          ; 0        ; 0        ; 0        ; 10       ;
 ; COUNTER_1_DIGIT:inst16|count[3]          ; COUNTER_1_DIGIT:inst15|count[3]          ; 0        ; 0        ; 2        ; 2        ;
@@ -614,25 +585,22 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; COUNTER_1_DIGIT:inst27|count[3]          ; COUNTER_1_DIGIT:inst25|count[3]          ; 0        ; 0        ; 2        ; 2        ;
 ; COUNTER_1_DIGIT:inst27|count[3]          ; COUNTER_1_DIGIT:inst27|count[3]          ; 0        ; 0        ; 0        ; 10       ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; COUNTER_1_DIGIT:inst27|count[3]          ; 0        ; 0        ; 2        ; 2        ;
-; COUNTER_1_DIGIT:inst30|count[3]          ; COUNTER_1_DIGIT:inst30|count[3]          ; 0        ; 0        ; 0        ; 10       ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; COUNTER_1_DIGIT:inst30|count[3]          ; 0        ; 0        ; 2        ; 2        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; COUNTER_1_DIGIT:inst33|count[3]          ; 0        ; 0        ; 0        ; 10       ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; COUNTER_1_DIGIT:inst33|count[3]          ; 0        ; 0        ; 2        ; 2        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; COUNTER_1_DIGIT:inst37|count[3]          ; 0        ; 0        ; 0        ; 12       ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; PB_2                                     ; 2        ; 2        ; 0        ; 0        ;
-; PB_2                                     ; PB_2                                     ; 10       ; 0        ; 0        ; 0        ;
-; CLK                                      ; test_de10:inst|clk_25                    ; 37       ; 0        ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 315      ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst16|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 38       ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst27|count[3]          ; test_de10:inst|clk_25                    ; 0        ; 277      ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst30|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 315      ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 315      ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 353      ; 0        ; 0        ;
-; PB_2                                     ; test_de10:inst|clk_25                    ; 277      ; 0        ; 0        ; 0        ;
-; test_de10:inst|clk_25                    ; test_de10:inst|clk_25                    ; 6960     ; 0        ; 0        ; 0        ;
-; Timing_Reference_25MHz:inst8|tmp         ; test_de10:inst|clk_25                    ; 131      ; 0        ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst30|count[3]          ; COUNTER_1_DIGIT:inst30|count[3]          ; 0        ; 0        ; 0        ; 12       ;
+; CLK                                      ; test_de10:inst|clk_25                    ; 32       ; 0        ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; test_de10:inst|clk_25                    ; 74       ; 325      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst16|count[3]          ; test_de10:inst|clk_25                    ; 74       ; 325      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst19|count[3]          ; test_de10:inst|clk_25                    ; 74       ; 325      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst22|count[3]          ; test_de10:inst|clk_25                    ; 74       ; 325      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst25|count[3]          ; test_de10:inst|clk_25                    ; 37       ; 288      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst27|count[3]          ; test_de10:inst|clk_25                    ; 37       ; 288      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst30|count[3]          ; test_de10:inst|clk_25                    ; 37       ; 325      ; 0        ; 0        ;
+; test_de10:inst|clk_25                    ; test_de10:inst|clk_25                    ; 6015     ; 0        ; 0        ; 0        ;
+; Timing_Reference_1kHz:inst44|tmp         ; test_de10:inst|clk_25                    ; 251      ; 0        ; 0        ; 0        ;
+; Timing_Reference_25MHz:inst8|tmp         ; test_de10:inst|clk_25                    ; 126      ; 0        ; 0        ; 0        ;
 ; test_de10:inst|clk_25                    ; test_de10:inst|test_image:test|next_line ; 4        ; 0        ; 0        ; 0        ;
 ; test_de10:inst|test_image:test|next_line ; test_de10:inst|test_image:test|next_line ; 10       ; 0        ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; Timing_Reference_1kHz:inst44|tmp         ; 2        ; 2        ; 0        ; 0        ;
+; Timing_Reference_1kHz:inst44|tmp         ; Timing_Reference_1kHz:inst44|tmp         ; 10       ; 0        ; 0        ; 0        ;
 ; test_de10:inst|clk_25                    ; Timing_Reference_25MHz:inst8|tmp         ; 4        ; 0        ; 0        ; 0        ;
 ; test_de10:inst|test_image:test|next_line ; Timing_Reference_25MHz:inst8|tmp         ; 16       ; 0        ; 0        ; 0        ;
 ; Timing_Reference_25MHz:inst8|tmp         ; Timing_Reference_25MHz:inst8|tmp         ; 146      ; 0        ; 0        ; 0        ;
@@ -645,8 +613,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------------------+------------------------------------------+----------+----------+----------+----------+
 ; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; CLK                                      ; CLK                                      ; 628      ; 0        ; 0        ; 0        ;
+; CLK                                      ; CLK                                      ; 1380     ; 0        ; 0        ; 0        ;
 ; test_de10:inst|clk_25                    ; CLK                                      ; 1        ; 1        ; 0        ; 0        ;
+; Timing_Reference_1kHz:inst44|tmp         ; CLK                                      ; 1        ; 1        ; 0        ; 0        ;
 ; Timing_Reference_25MHz:inst8|tmp         ; CLK                                      ; 1        ; 1        ; 0        ; 0        ;
 ; COUNTER_1_DIGIT:inst15|count[3]          ; COUNTER_1_DIGIT:inst15|count[3]          ; 0        ; 0        ; 0        ; 10       ;
 ; COUNTER_1_DIGIT:inst16|count[3]          ; COUNTER_1_DIGIT:inst15|count[3]          ; 0        ; 0        ; 2        ; 2        ;
@@ -660,25 +629,22 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; COUNTER_1_DIGIT:inst27|count[3]          ; COUNTER_1_DIGIT:inst25|count[3]          ; 0        ; 0        ; 2        ; 2        ;
 ; COUNTER_1_DIGIT:inst27|count[3]          ; COUNTER_1_DIGIT:inst27|count[3]          ; 0        ; 0        ; 0        ; 10       ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; COUNTER_1_DIGIT:inst27|count[3]          ; 0        ; 0        ; 2        ; 2        ;
-; COUNTER_1_DIGIT:inst30|count[3]          ; COUNTER_1_DIGIT:inst30|count[3]          ; 0        ; 0        ; 0        ; 10       ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; COUNTER_1_DIGIT:inst30|count[3]          ; 0        ; 0        ; 2        ; 2        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; COUNTER_1_DIGIT:inst33|count[3]          ; 0        ; 0        ; 0        ; 10       ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; COUNTER_1_DIGIT:inst33|count[3]          ; 0        ; 0        ; 2        ; 2        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; COUNTER_1_DIGIT:inst37|count[3]          ; 0        ; 0        ; 0        ; 12       ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; PB_2                                     ; 2        ; 2        ; 0        ; 0        ;
-; PB_2                                     ; PB_2                                     ; 10       ; 0        ; 0        ; 0        ;
-; CLK                                      ; test_de10:inst|clk_25                    ; 37       ; 0        ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst15|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 315      ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst16|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 38       ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst27|count[3]          ; test_de10:inst|clk_25                    ; 0        ; 277      ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst30|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 315      ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 315      ; 0        ; 0        ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; test_de10:inst|clk_25                    ; 38       ; 353      ; 0        ; 0        ;
-; PB_2                                     ; test_de10:inst|clk_25                    ; 277      ; 0        ; 0        ; 0        ;
-; test_de10:inst|clk_25                    ; test_de10:inst|clk_25                    ; 6960     ; 0        ; 0        ; 0        ;
-; Timing_Reference_25MHz:inst8|tmp         ; test_de10:inst|clk_25                    ; 131      ; 0        ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst30|count[3]          ; COUNTER_1_DIGIT:inst30|count[3]          ; 0        ; 0        ; 0        ; 12       ;
+; CLK                                      ; test_de10:inst|clk_25                    ; 32       ; 0        ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; test_de10:inst|clk_25                    ; 74       ; 325      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst16|count[3]          ; test_de10:inst|clk_25                    ; 74       ; 325      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst19|count[3]          ; test_de10:inst|clk_25                    ; 74       ; 325      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst22|count[3]          ; test_de10:inst|clk_25                    ; 74       ; 325      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst25|count[3]          ; test_de10:inst|clk_25                    ; 37       ; 288      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst27|count[3]          ; test_de10:inst|clk_25                    ; 37       ; 288      ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst30|count[3]          ; test_de10:inst|clk_25                    ; 37       ; 325      ; 0        ; 0        ;
+; test_de10:inst|clk_25                    ; test_de10:inst|clk_25                    ; 6015     ; 0        ; 0        ; 0        ;
+; Timing_Reference_1kHz:inst44|tmp         ; test_de10:inst|clk_25                    ; 251      ; 0        ; 0        ; 0        ;
+; Timing_Reference_25MHz:inst8|tmp         ; test_de10:inst|clk_25                    ; 126      ; 0        ; 0        ; 0        ;
 ; test_de10:inst|clk_25                    ; test_de10:inst|test_image:test|next_line ; 4        ; 0        ; 0        ; 0        ;
 ; test_de10:inst|test_image:test|next_line ; test_de10:inst|test_image:test|next_line ; 10       ; 0        ; 0        ; 0        ;
+; COUNTER_1_DIGIT:inst15|count[3]          ; Timing_Reference_1kHz:inst44|tmp         ; 2        ; 2        ; 0        ; 0        ;
+; Timing_Reference_1kHz:inst44|tmp         ; Timing_Reference_1kHz:inst44|tmp         ; 10       ; 0        ; 0        ; 0        ;
 ; test_de10:inst|clk_25                    ; Timing_Reference_25MHz:inst8|tmp         ; 4        ; 0        ; 0        ; 0        ;
 ; test_de10:inst|test_image:test|next_line ; Timing_Reference_25MHz:inst8|tmp         ; 16       ; 0        ; 0        ; 0        ;
 ; Timing_Reference_25MHz:inst8|tmp         ; Timing_Reference_25MHz:inst8|tmp         ; 146      ; 0        ; 0        ; 0        ;
@@ -686,23 +652,23 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Recovery Transfers                                                                                                      ;
-+------------------------------------------+----------------------------------+----------+----------+----------+----------+
-; From Clock                               ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------------------+----------------------------------+----------+----------+----------+----------+
-; test_de10:inst|test_image:test|next_line ; Timing_Reference_25MHz:inst8|tmp ; 4        ; 4        ; 0        ; 0        ;
-+------------------------------------------+----------------------------------+----------+----------+----------+----------+
++------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                   ;
++-----------------------+----------------------------------+----------+----------+----------+----------+
+; From Clock            ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------+----------------------------------+----------+----------+----------+----------+
+; test_de10:inst|clk_25 ; Timing_Reference_25MHz:inst8|tmp ; 4        ; 0        ; 0        ; 0        ;
++-----------------------+----------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Removal Transfers                                                                                                       ;
-+------------------------------------------+----------------------------------+----------+----------+----------+----------+
-; From Clock                               ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------------------+----------------------------------+----------+----------+----------+----------+
-; test_de10:inst|test_image:test|next_line ; Timing_Reference_25MHz:inst8|tmp ; 4        ; 4        ; 0        ; 0        ;
-+------------------------------------------+----------------------------------+----------+----------+----------+----------+
++------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                    ;
++-----------------------+----------------------------------+----------+----------+----------+----------+
+; From Clock            ; To Clock                         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------+----------------------------------+----------+----------+----------+----------+
+; test_de10:inst|clk_25 ; Timing_Reference_25MHz:inst8|tmp ; 4        ; 0        ; 0        ; 0        ;
++-----------------------+----------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -745,9 +711,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; COUNTER_1_DIGIT:inst25|count[3]          ; COUNTER_1_DIGIT:inst25|count[3]          ; Base ; Constrained ;
 ; COUNTER_1_DIGIT:inst27|count[3]          ; COUNTER_1_DIGIT:inst27|count[3]          ; Base ; Constrained ;
 ; COUNTER_1_DIGIT:inst30|count[3]          ; COUNTER_1_DIGIT:inst30|count[3]          ; Base ; Constrained ;
-; COUNTER_1_DIGIT:inst33|count[3]          ; COUNTER_1_DIGIT:inst33|count[3]          ; Base ; Constrained ;
-; COUNTER_1_DIGIT:inst37|count[3]          ; COUNTER_1_DIGIT:inst37|count[3]          ; Base ; Constrained ;
-; PB_2                                     ; PB_2                                     ; Base ; Constrained ;
+; Timing_Reference_1kHz:inst44|tmp         ; Timing_Reference_1kHz:inst44|tmp         ; Base ; Constrained ;
 ; Timing_Reference_25MHz:inst8|tmp         ; Timing_Reference_25MHz:inst8|tmp         ; Base ; Constrained ;
 ; test_de10:inst|clk_25                    ; test_de10:inst|clk_25                    ; Base ; Constrained ;
 ; test_de10:inst|test_image:test|next_line ; test_de10:inst|test_image:test|next_line ; Base ; Constrained ;
@@ -822,11 +786,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jun 23 20:40:06 2024
+    Info: Processing started: Sun Jun 23 22:14:18 2024
 Info: Command: quartus_sta main -c main
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'main.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -836,71 +800,64 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name CLK CLK
     Info (332105): create_clock -period 1.000 -name Timing_Reference_25MHz:inst8|tmp Timing_Reference_25MHz:inst8|tmp
     Info (332105): create_clock -period 1.000 -name test_de10:inst|test_image:test|next_line test_de10:inst|test_image:test|next_line
-    Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst15|count[3] COUNTER_1_DIGIT:inst15|count[3]
-    Info (332105): create_clock -period 1.000 -name PB_2 PB_2
+    Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst30|count[3] COUNTER_1_DIGIT:inst30|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst27|count[3] COUNTER_1_DIGIT:inst27|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst25|count[3] COUNTER_1_DIGIT:inst25|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst22|count[3] COUNTER_1_DIGIT:inst22|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst19|count[3] COUNTER_1_DIGIT:inst19|count[3]
     Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst16|count[3] COUNTER_1_DIGIT:inst16|count[3]
-    Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst30|count[3] COUNTER_1_DIGIT:inst30|count[3]
-    Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst33|count[3] COUNTER_1_DIGIT:inst33|count[3]
-    Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst37|count[3] COUNTER_1_DIGIT:inst37|count[3]
+    Info (332105): create_clock -period 1.000 -name COUNTER_1_DIGIT:inst15|count[3] COUNTER_1_DIGIT:inst15|count[3]
+    Info (332105): create_clock -period 1.000 -name Timing_Reference_1kHz:inst44|tmp Timing_Reference_1kHz:inst44|tmp
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -8.971
+Info (332146): Worst-case setup slack is -9.972
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.971            -204.627 test_de10:inst|clk_25 
-    Info (332119):    -4.651             -64.311 CLK 
-    Info (332119):    -1.987              -4.099 COUNTER_1_DIGIT:inst27|count[3] 
-    Info (332119):    -1.929              -3.980 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):    -1.901            -233.856 Timing_Reference_25MHz:inst8|tmp 
-    Info (332119):    -1.884              -4.049 COUNTER_1_DIGIT:inst15|count[3] 
-    Info (332119):    -1.766              -3.653 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):    -1.674              -3.505 COUNTER_1_DIGIT:inst16|count[3] 
-    Info (332119):    -1.604              -3.082 PB_2 
-    Info (332119):    -1.526              -3.297 COUNTER_1_DIGIT:inst25|count[3] 
-    Info (332119):    -1.498              -3.268 COUNTER_1_DIGIT:inst19|count[3] 
-    Info (332119):    -1.486              -3.263 COUNTER_1_DIGIT:inst22|count[3] 
-    Info (332119):    -0.744              -2.243 test_de10:inst|test_image:test|next_line 
-    Info (332119):    -0.292              -0.662 COUNTER_1_DIGIT:inst37|count[3] 
-Info (332146): Worst-case hold slack is 0.339
+    Info (332119):    -9.972            -212.872 test_de10:inst|clk_25 
+    Info (332119):    -4.385            -129.672 CLK 
+    Info (332119):    -2.091              -4.419 COUNTER_1_DIGIT:inst22|count[3] 
+    Info (332119):    -2.040              -4.121 COUNTER_1_DIGIT:inst19|count[3] 
+    Info (332119):    -1.908              -3.997 COUNTER_1_DIGIT:inst16|count[3] 
+    Info (332119):    -1.901            -236.741 Timing_Reference_25MHz:inst8|tmp 
+    Info (332119):    -1.900              -3.996 COUNTER_1_DIGIT:inst15|count[3] 
+    Info (332119):    -1.870              -4.014 COUNTER_1_DIGIT:inst25|count[3] 
+    Info (332119):    -1.850              -3.774 Timing_Reference_1kHz:inst44|tmp 
+    Info (332119):    -1.838              -3.995 COUNTER_1_DIGIT:inst27|count[3] 
+    Info (332119):    -1.041              -3.510 test_de10:inst|test_image:test|next_line 
+    Info (332119):    -0.189              -0.499 COUNTER_1_DIGIT:inst30|count[3] 
+Info (332146): Worst-case hold slack is 0.258
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.339               0.000 COUNTER_1_DIGIT:inst22|count[3] 
-    Info (332119):     0.340               0.000 COUNTER_1_DIGIT:inst16|count[3] 
-    Info (332119):     0.340               0.000 COUNTER_1_DIGIT:inst25|count[3] 
-    Info (332119):     0.340               0.000 Timing_Reference_25MHz:inst8|tmp 
+    Info (332119):     0.258               0.000 Timing_Reference_25MHz:inst8|tmp 
     Info (332119):     0.340               0.000 test_de10:inst|clk_25 
-    Info (332119):     0.341               0.000 COUNTER_1_DIGIT:inst37|count[3] 
     Info (332119):     0.341               0.000 test_de10:inst|test_image:test|next_line 
     Info (332119):     0.342               0.000 COUNTER_1_DIGIT:inst15|count[3] 
-    Info (332119):     0.342               0.000 COUNTER_1_DIGIT:inst19|count[3] 
-    Info (332119):     0.342               0.000 COUNTER_1_DIGIT:inst27|count[3] 
+    Info (332119):     0.342               0.000 COUNTER_1_DIGIT:inst25|count[3] 
     Info (332119):     0.342               0.000 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):     0.342               0.000 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):     0.378               0.000 PB_2 
-    Info (332119):     0.432               0.000 CLK 
-Info (332146): Worst-case recovery slack is 0.133
+    Info (332119):     0.342               0.000 Timing_Reference_1kHz:inst44|tmp 
+    Info (332119):     0.343               0.000 COUNTER_1_DIGIT:inst22|count[3] 
+    Info (332119):     0.343               0.000 COUNTER_1_DIGIT:inst27|count[3] 
+    Info (332119):     0.344               0.000 COUNTER_1_DIGIT:inst16|count[3] 
+    Info (332119):     0.344               0.000 COUNTER_1_DIGIT:inst19|count[3] 
+    Info (332119):     0.426               0.000 CLK 
+Info (332146): Worst-case recovery slack is -0.489
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.133               0.000 Timing_Reference_25MHz:inst8|tmp 
-Info (332146): Worst-case removal slack is -0.159
+    Info (332119):    -0.489              -1.401 Timing_Reference_25MHz:inst8|tmp 
+Info (332146): Worst-case removal slack is 0.691
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.159              -0.636 Timing_Reference_25MHz:inst8|tmp 
+    Info (332119):     0.691               0.000 Timing_Reference_25MHz:inst8|tmp 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -57.717 CLK 
-    Info (332119):    -3.000              -8.612 PB_2 
+    Info (332119):    -3.000            -104.016 CLK 
     Info (332119):    -2.422            -305.940 Timing_Reference_25MHz:inst8|tmp 
-    Info (332119):    -1.403             -95.404 test_de10:inst|clk_25 
+    Info (332119):    -1.403             -89.792 test_de10:inst|clk_25 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst15|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst16|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst19|count[3] 
@@ -908,8 +865,7 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst25|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst27|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst37|count[3] 
+    Info (332119):    -1.403              -5.612 Timing_Reference_1kHz:inst44|tmp 
     Info (332119):    -1.403              -5.612 test_de10:inst|test_image:test|next_line 
 Info (332114): Report Metastability: Found 12 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
@@ -918,55 +874,50 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -8.174
+Info (332146): Worst-case setup slack is -9.072
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.174            -183.760 test_de10:inst|clk_25 
-    Info (332119):    -4.251             -54.866 CLK 
-    Info (332119):    -1.862              -3.877 COUNTER_1_DIGIT:inst15|count[3] 
-    Info (332119):    -1.768              -3.590 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):    -1.756              -3.548 COUNTER_1_DIGIT:inst27|count[3] 
-    Info (332119):    -1.749              -3.433 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):    -1.670            -205.185 Timing_Reference_25MHz:inst8|tmp 
-    Info (332119):    -1.485              -2.993 COUNTER_1_DIGIT:inst16|count[3] 
-    Info (332119):    -1.456              -2.993 COUNTER_1_DIGIT:inst19|count[3] 
-    Info (332119):    -1.417              -2.573 PB_2 
-    Info (332119):    -1.363              -2.782 COUNTER_1_DIGIT:inst25|count[3] 
-    Info (332119):    -1.302              -2.741 COUNTER_1_DIGIT:inst22|count[3] 
-    Info (332119):    -0.618              -1.711 test_de10:inst|test_image:test|next_line 
-    Info (332119):    -0.168              -0.330 COUNTER_1_DIGIT:inst37|count[3] 
-Info (332146): Worst-case hold slack is 0.303
+    Info (332119):    -9.072            -192.328 test_de10:inst|clk_25 
+    Info (332119):    -4.012            -111.003 CLK 
+    Info (332119):    -1.915              -3.797 COUNTER_1_DIGIT:inst15|count[3] 
+    Info (332119):    -1.856              -3.811 COUNTER_1_DIGIT:inst22|count[3] 
+    Info (332119):    -1.829              -3.541 COUNTER_1_DIGIT:inst19|count[3] 
+    Info (332119):    -1.817              -3.709 COUNTER_1_DIGIT:inst27|count[3] 
+    Info (332119):    -1.685              -3.454 COUNTER_1_DIGIT:inst16|count[3] 
+    Info (332119):    -1.676              -3.484 COUNTER_1_DIGIT:inst25|count[3] 
+    Info (332119):    -1.670            -207.684 Timing_Reference_25MHz:inst8|tmp 
+    Info (332119):    -1.633              -3.250 Timing_Reference_1kHz:inst44|tmp 
+    Info (332119):    -0.853              -2.973 test_de10:inst|test_image:test|next_line 
+    Info (332119):    -0.089              -0.197 COUNTER_1_DIGIT:inst30|count[3] 
+Info (332146): Worst-case hold slack is 0.262
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.303               0.000 COUNTER_1_DIGIT:inst25|count[3] 
-    Info (332119):     0.305               0.000 COUNTER_1_DIGIT:inst15|count[3] 
-    Info (332119):     0.305               0.000 COUNTER_1_DIGIT:inst16|count[3] 
-    Info (332119):     0.305               0.000 COUNTER_1_DIGIT:inst19|count[3] 
-    Info (332119):     0.305               0.000 COUNTER_1_DIGIT:inst22|count[3] 
-    Info (332119):     0.305               0.000 COUNTER_1_DIGIT:inst27|count[3] 
-    Info (332119):     0.305               0.000 test_de10:inst|clk_25 
+    Info (332119):     0.262               0.000 Timing_Reference_25MHz:inst8|tmp 
     Info (332119):     0.306               0.000 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):     0.306               0.000 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):     0.306               0.000 COUNTER_1_DIGIT:inst37|count[3] 
-    Info (332119):     0.306               0.000 Timing_Reference_25MHz:inst8|tmp 
+    Info (332119):     0.306               0.000 test_de10:inst|clk_25 
     Info (332119):     0.306               0.000 test_de10:inst|test_image:test|next_line 
-    Info (332119):     0.339               0.000 PB_2 
-    Info (332119):     0.397               0.000 CLK 
-Info (332146): Worst-case recovery slack is 0.183
+    Info (332119):     0.307               0.000 COUNTER_1_DIGIT:inst15|count[3] 
+    Info (332119):     0.307               0.000 COUNTER_1_DIGIT:inst16|count[3] 
+    Info (332119):     0.307               0.000 COUNTER_1_DIGIT:inst19|count[3] 
+    Info (332119):     0.307               0.000 COUNTER_1_DIGIT:inst22|count[3] 
+    Info (332119):     0.307               0.000 COUNTER_1_DIGIT:inst25|count[3] 
+    Info (332119):     0.307               0.000 COUNTER_1_DIGIT:inst27|count[3] 
+    Info (332119):     0.307               0.000 Timing_Reference_1kHz:inst44|tmp 
+    Info (332119):     0.390               0.000 CLK 
+Info (332146): Worst-case recovery slack is -0.357
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.183               0.000 Timing_Reference_25MHz:inst8|tmp 
-Info (332146): Worst-case removal slack is -0.146
+    Info (332119):    -0.357              -0.957 Timing_Reference_25MHz:inst8|tmp 
+Info (332146): Worst-case removal slack is 0.642
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.146              -0.584 Timing_Reference_25MHz:inst8|tmp 
+    Info (332119):     0.642               0.000 Timing_Reference_25MHz:inst8|tmp 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -57.717 CLK 
-    Info (332119):    -3.000              -8.612 PB_2 
+    Info (332119):    -3.000            -104.016 CLK 
     Info (332119):    -2.333            -294.904 Timing_Reference_25MHz:inst8|tmp 
-    Info (332119):    -1.403             -95.404 test_de10:inst|clk_25 
+    Info (332119):    -1.403             -89.792 test_de10:inst|clk_25 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst15|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst16|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst19|count[3] 
@@ -974,63 +925,57 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst25|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst27|count[3] 
     Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):    -1.403              -5.612 COUNTER_1_DIGIT:inst37|count[3] 
+    Info (332119):    -1.403              -5.612 Timing_Reference_1kHz:inst44|tmp 
     Info (332119):    -1.403              -5.612 test_de10:inst|test_image:test|next_line 
 Info (332114): Report Metastability: Found 12 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.724
+Info (332146): Worst-case setup slack is -4.221
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.724             -61.204 test_de10:inst|clk_25 
-    Info (332119):    -1.505              -6.836 CLK 
-    Info (332119):    -0.492              -0.821 PB_2 
-    Info (332119):    -0.352              -0.645 COUNTER_1_DIGIT:inst27|count[3] 
-    Info (332119):    -0.329              -0.612 COUNTER_1_DIGIT:inst15|count[3] 
-    Info (332119):    -0.325              -0.562 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):    -0.280             -33.600 Timing_Reference_25MHz:inst8|tmp 
-    Info (332119):    -0.241              -0.468 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):    -0.220              -0.423 COUNTER_1_DIGIT:inst19|count[3] 
-    Info (332119):    -0.198              -0.368 COUNTER_1_DIGIT:inst16|count[3] 
-    Info (332119):    -0.094              -0.179 COUNTER_1_DIGIT:inst25|count[3] 
-    Info (332119):    -0.085              -0.159 COUNTER_1_DIGIT:inst22|count[3] 
-    Info (332119):     0.185               0.000 test_de10:inst|test_image:test|next_line 
-    Info (332119):     0.428               0.000 COUNTER_1_DIGIT:inst37|count[3] 
-Info (332146): Worst-case hold slack is 0.100
+    Info (332119):    -4.221             -68.989 test_de10:inst|clk_25 
+    Info (332119):    -1.377             -15.017 CLK 
+    Info (332119):    -0.371              -0.742 COUNTER_1_DIGIT:inst22|count[3] 
+    Info (332119):    -0.330             -34.576 Timing_Reference_25MHz:inst8|tmp 
+    Info (332119):    -0.325              -0.592 COUNTER_1_DIGIT:inst19|count[3] 
+    Info (332119):    -0.296              -0.586 COUNTER_1_DIGIT:inst16|count[3] 
+    Info (332119):    -0.284              -0.566 COUNTER_1_DIGIT:inst25|count[3] 
+    Info (332119):    -0.282              -0.488 Timing_Reference_1kHz:inst44|tmp 
+    Info (332119):    -0.280              -0.544 COUNTER_1_DIGIT:inst27|count[3] 
+    Info (332119):    -0.277              -0.551 COUNTER_1_DIGIT:inst15|count[3] 
+    Info (332119):     0.072               0.000 test_de10:inst|test_image:test|next_line 
+    Info (332119):     0.489               0.000 COUNTER_1_DIGIT:inst30|count[3] 
+Info (332146): Worst-case hold slack is 0.102
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.100               0.000 test_de10:inst|clk_25 
-    Info (332119):     0.138               0.000 Timing_Reference_25MHz:inst8|tmp 
-    Info (332119):     0.145               0.000 COUNTER_1_DIGIT:inst22|count[3] 
-    Info (332119):     0.145               0.000 COUNTER_1_DIGIT:inst25|count[3] 
-    Info (332119):     0.146               0.000 COUNTER_1_DIGIT:inst15|count[3] 
-    Info (332119):     0.146               0.000 COUNTER_1_DIGIT:inst16|count[3] 
-    Info (332119):     0.146               0.000 COUNTER_1_DIGIT:inst37|count[3] 
-    Info (332119):     0.147               0.000 COUNTER_1_DIGIT:inst27|count[3] 
+    Info (332119):     0.102               0.000 Timing_Reference_25MHz:inst8|tmp 
     Info (332119):     0.147               0.000 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):     0.147               0.000 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):     0.148               0.000 COUNTER_1_DIGIT:inst19|count[3] 
+    Info (332119):     0.148               0.000 COUNTER_1_DIGIT:inst22|count[3] 
+    Info (332119):     0.148               0.000 COUNTER_1_DIGIT:inst25|count[3] 
+    Info (332119):     0.148               0.000 Timing_Reference_1kHz:inst44|tmp 
+    Info (332119):     0.148               0.000 test_de10:inst|clk_25 
     Info (332119):     0.148               0.000 test_de10:inst|test_image:test|next_line 
-    Info (332119):     0.163               0.000 CLK 
-    Info (332119):     0.166               0.000 PB_2 
-Info (332146): Worst-case recovery slack is 0.275
+    Info (332119):     0.149               0.000 COUNTER_1_DIGIT:inst15|count[3] 
+    Info (332119):     0.149               0.000 COUNTER_1_DIGIT:inst16|count[3] 
+    Info (332119):     0.149               0.000 COUNTER_1_DIGIT:inst19|count[3] 
+    Info (332119):     0.149               0.000 COUNTER_1_DIGIT:inst27|count[3] 
+    Info (332119):     0.158               0.000 CLK 
+Info (332146): Worst-case recovery slack is 0.318
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.275               0.000 Timing_Reference_25MHz:inst8|tmp 
-Info (332146): Worst-case removal slack is -0.085
+    Info (332119):     0.318               0.000 Timing_Reference_25MHz:inst8|tmp 
+Info (332146): Worst-case removal slack is 0.281
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.085              -0.340 Timing_Reference_25MHz:inst8|tmp 
+    Info (332119):     0.281               0.000 Timing_Reference_25MHz:inst8|tmp 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -43.412 CLK 
-    Info (332119):    -3.000              -7.484 PB_2 
+    Info (332119):    -3.000             -77.533 CLK 
     Info (332119):    -1.000            -128.000 Timing_Reference_25MHz:inst8|tmp 
-    Info (332119):    -1.000             -68.000 test_de10:inst|clk_25 
+    Info (332119):    -1.000             -64.000 test_de10:inst|clk_25 
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst15|count[3] 
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst16|count[3] 
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst19|count[3] 
@@ -1038,17 +983,16 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst25|count[3] 
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst27|count[3] 
     Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst30|count[3] 
-    Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst33|count[3] 
-    Info (332119):    -1.000              -4.000 COUNTER_1_DIGIT:inst37|count[3] 
+    Info (332119):    -1.000              -4.000 Timing_Reference_1kHz:inst44|tmp 
     Info (332119):    -1.000              -4.000 test_de10:inst|test_image:test|next_line 
 Info (332114): Report Metastability: Found 12 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Sun Jun 23 20:40:09 2024
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Sun Jun 23 22:14:22 2024
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
 
 

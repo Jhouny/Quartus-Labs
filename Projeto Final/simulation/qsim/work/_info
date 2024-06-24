@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/Joule/Documents/Jhony/Universidade/UTFPR/2024.1/.cd/Quartus-Labs/Projeto Final/simulation/qsim
 Ehard_block
-Z0 w1719024513
+Z0 w1719188989
 Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z2 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 7d5Xo;QBOkc31OfQTzSXV0
 Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ V8_BbEmGd;OHS6h@;gFc7W3
 !s100 ROH=D<N4CT6aCZ<37A[_?0
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1719024514
+Z11 !s110 1719188996
 !i10b 1
-Z12 !s108 1719024514.000000
+Z12 !s108 1719188995.000000
 Z13 !s90 -work|work|main.vho|
 Z14 !s107 main.vho|
 !i113 1
@@ -160,8 +160,8 @@ R8
 R9
 l0
 L90
-Vl8`:;S0Y]McfiZ:e@J3mM0
-!s100 loC;J9E]oo7G5cWZRDKo33
+VQ>>7Vh4@ZfkBF4bSU5KcN3
+!s100 CJ;[0Z8S?ZmG9_[`C@e9m2
 R10
 32
 R11
@@ -181,11 +181,11 @@ R3
 R4
 R5
 R19
-DEx4 work 5 tmp_2 0 22 l8`:;S0Y]McfiZ:e@J3mM0
-l169
-L113
-V33jIGN2nJhRz42Am2XMMh2
-!s100 2[RGz[ZPV^g1;gUZNUNP[1
+DEx4 work 5 tmp_2 0 22 Q>>7Vh4@ZfkBF4bSU5KcN3
+l201
+L132
+VebmFSl0n0Q4k2Mi]=_aiU0
+!s100 U9K;0W6moBah0B@cLKQE>3
 R10
 32
 R11
@@ -197,7 +197,7 @@ R14
 R15
 R16
 Etmp_2_vhd_vec_tst
-Z27 w1719024511
+Z27 w1719188986
 R4
 R5
 R7
@@ -211,27 +211,27 @@ R10
 32
 R11
 !i10b 1
-R12
-Z30 !s90 -work|work|Waveform1.vwf.vht|
-Z31 !s107 Waveform1.vwf.vht|
+Z30 !s108 1719188996.000000
+Z31 !s90 -work|work|Waveform1.vwf.vht|
+Z32 !s107 Waveform1.vwf.vht|
 !i113 1
 R15
 R16
 Atmp_2_arch
 R4
 R5
-Z32 DEx4 work 17 tmp_2_vhd_vec_tst 0 22 lOHWl0TVEYTUWecRML;lo2
+Z33 DEx4 work 17 tmp_2_vhd_vec_tst 0 22 lOHWl0TVEYTUWecRML;lo2
 l48
 L33
-Vc>>eQWdcM@7U0TLYalMKE2
-!s100 F_kCDfalHO4BN]JPdHVmU3
+VoREaXM3hjg<eIaMK1cZJR2
+!s100 E0fGAddjE;EHRQ3L=TDM90
 R10
 32
 R11
 !i10b 1
-R12
 R30
 R31
+R32
 !i113 1
 R15
 R16

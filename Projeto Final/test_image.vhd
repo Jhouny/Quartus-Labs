@@ -14,6 +14,7 @@ entity test_image is
         reset     : in  std_logic;
 		RGB       : in std_logic_vector(23 downto 0);
 		run_mem   : out std_logic;
+		RST_DIGIT : out std_logic;
 		next_line : out std_logic;
         vs_out    : out std_logic;
         hs_out    : out std_logic;
@@ -34,12 +35,12 @@ architecture behave of test_image is
 -- rgb values
 constant rgb_bg  : std_logic_vector(23 downto 0) := x"FFFFFF";
 
-signal h_count   : integer range 0 to  799 := 0;
+signal h_count, last_count_x   : integer range 0 to  799 := 0;
 signal v_count   : integer range 0 to  524 := 0;
 signal frame_num : integer range 0 to 1023 := 0;
 signal new_frame : std_logic := '0';
 
-signal mem_ctrl, vertical_clk  : std_logic := '0';
+signal mem_ctrl, vertical_clk, rst_dgt : std_logic := '0';
 signal dgt_ctrl : std_logic_vector(3 downto 0) := "0000";
 
 signal count_x, count_y : integer range 0 to 63 := 0;
@@ -155,26 +156,42 @@ begin
   if    (de_1 = '0') then
     rgb_2 <= x"000000";
   elsif (v_count > center_pos_v and v_count < center_pos_v + 17) then
-	if (h_count > 199 and h_count < 216) then  -- Digito 9 (dir. -> esq.)
-		dgt_ctrl <= "1001";
-		if (count_x > 0) then
+	if    (h_count > 199 and h_count < 220) then  -- Digito 2 (dir. -> esq.)
+		if h_count = 200 then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "0100";
+		if (h_count > 203) then
 		  rgb_2 <= RGB;
 		end if;
-	elsif (h_count > 220 and h_count < 237) then  -- Digito 8
-		dgt_ctrl <= "1000";
-		if (count_x > 0) then
+	elsif (h_count > 299 and h_count < 320) then  -- Digito 1
+		if h_count = 300 then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "0011";
+		if (h_count > 303) then
 		  rgb_2 <= RGB;
 		end if;
-	elsif (h_count > 241 and h_count < 258) then  -- Digito 7
-		dgt_ctrl <= "0111";
-		if (count_x > 0) then
+	elsif (h_count > 399 and h_count < 420) then  -- Digito 0
+		if h_count = 400 then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "0010";
+		if (h_count > 403) then
 		  rgb_2 <= RGB;
 		end if;
+	else
+		mem_ctrl <= '0';
+		rgb_2 <= rgb_bg;
 	end if;
-	
 	mem_ctrl <= '1';
   else
-	--count_x <= 0;
 	mem_ctrl <= '0';
 	rgb_2 <= rgb_bg;
 --  elsif (h_count > center_pos_h and h_count < center_pos_h + 17 and v_count > center_pos_v and v_count < center_pos_v + 17) then
@@ -193,6 +210,7 @@ begin
   
   ------------------------------------ pipeline stage 3
   run_mem    <= mem_ctrl;
+  RST_DIGIT  <= rst_dgt;
   next_line  <= vertical_clk;
   hs_out     <= hs_2;
   vs_out     <= vs_2;

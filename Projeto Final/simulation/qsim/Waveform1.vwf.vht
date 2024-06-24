@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "06/21/2024 23:48:31"
+-- Generated on "06/23/2024 21:29:46"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          tmp_2
 -- 
@@ -33,15 +33,15 @@ END tmp_2_vhd_vec_tst;
 ARCHITECTURE tmp_2_arch OF tmp_2_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL ADDRESS : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL C : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL CLK : STD_LOGIC;
-SIGNAL CLK_2 : STD_LOGIC;
+SIGNAL Q : STD_LOGIC_VECTOR(23 DOWNTO 0);
 SIGNAL StStop : STD_LOGIC;
 COMPONENT tmp_2
 	PORT (
-	ADDRESS : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	C : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 	CLK : IN STD_LOGIC;
-	CLK_2 : IN STD_LOGIC;
+	Q : OUT STD_LOGIC_VECTOR(23 DOWNTO 0);
 	StStop : IN STD_LOGIC
 	);
 END COMPONENT;
@@ -49,9 +49,9 @@ BEGIN
 	i1 : tmp_2
 	PORT MAP (
 -- list connections between master ports and signals
-	ADDRESS => ADDRESS,
+	C => C,
 	CLK => CLK,
-	CLK_2 => CLK_2,
+	Q => Q,
 	StStop => StStop
 	);
 
@@ -67,22 +67,11 @@ LOOP
 END LOOP;
 END PROCESS t_prcs_CLK;
 
--- CLK_2
-t_prcs_CLK_2: PROCESS
-BEGIN
-	CLK_2 <= '0';
-	WAIT FOR 320000 ps;
-	CLK_2 <= '1';
-	WAIT FOR 320000 ps;
-	CLK_2 <= '0';
-	WAIT FOR 320000 ps;
-	CLK_2 <= '1';
-WAIT;
-END PROCESS t_prcs_CLK_2;
-
 -- StStop
 t_prcs_StStop: PROCESS
 BEGIN
+	StStop <= '0';
+	WAIT FOR 120000 ps;
 	StStop <= '1';
 WAIT;
 END PROCESS t_prcs_StStop;

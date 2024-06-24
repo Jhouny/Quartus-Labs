@@ -1,7 +1,7 @@
 # do main.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:48:34 on Jun 21,2024
+# Start time: 21:29:55 on Jun 23,2024
 # vcom -work work main.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,20 +16,20 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity tmp_2
 # -- Compiling architecture structure of tmp_2
-# End time: 23:48:34 on Jun 21,2024, Elapsed time: 0:00:00
+# End time: 21:29:56 on Jun 23,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:48:34 on Jun 21,2024
+# Start time: 21:29:56 on Jun 23,2024
 # vcom -work work Waveform1.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity tmp_2_vhd_vec_tst
 # -- Compiling architecture tmp_2_arch of tmp_2_vhd_vec_tst
-# End time: 23:48:34 on Jun 21,2024, Elapsed time: 0:00:00
+# End time: 21:29:56 on Jun 23,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.tmp_2_vhd_vec_tst 
-# Start time: 23:48:34 on Jun 21,2024
+# Start time: 21:29:58 on Jun 23,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -48,8 +48,11 @@
 # Loading fiftyfivenm.fiftyfivenm_clkctrl(vital_clkctrl)
 # Loading fiftyfivenm.fiftyfivenm_ena_reg(behave)
 # Loading altera.dffeas(vital_dffeas)
+# Loading fiftyfivenm.fiftyfivenm_ram_block(block_arch)
+# Loading fiftyfivenm.fiftyfivenm_ram_register(reg_arch)
+# Loading fiftyfivenm.fiftyfivenm_ram_pulse_generator(pgen_arch)
 # Loading fiftyfivenm.fiftyfivenm_unvm(behavior)
 # Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
 # after#35
-# End time: 23:48:36 on Jun 21,2024, Elapsed time: 0:00:02
+# End time: 21:30:00 on Jun 23,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
