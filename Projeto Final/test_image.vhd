@@ -35,7 +35,7 @@ architecture behave of test_image is
 -- rgb values
 constant rgb_bg  : std_logic_vector(23 downto 0) := x"FFFFFF";
 
-signal h_count, last_count_x   : integer range 0 to  799 := 0;
+signal h_count   : integer range 0 to  799 := 0;
 signal v_count   : integer range 0 to  524 := 0;
 signal frame_num : integer range 0 to 1023 := 0;
 signal new_frame : std_logic := '0';
@@ -43,8 +43,7 @@ signal new_frame : std_logic := '0';
 signal mem_ctrl, vertical_clk, rst_dgt : std_logic := '0';
 signal dgt_ctrl : std_logic_vector(3 downto 0) := "0000";
 
-signal count_x, count_y : integer range 0 to 63 := 0;
-signal center_pos_h, center_pos_v : integer range 0 to 799;
+signal center_pos_h, center_pos_v, top_left_x, top_left_y, padding_x : integer range 0 to 799;
 
 signal hs_1, vs_1, de_1 : std_logic;
 signal hs_2, vs_2, de_2 : std_logic;
@@ -73,25 +72,15 @@ begin
 	
 	new_frame  <= '0'; -- default
 	if (h_count = 799) then
-	  count_x <= 0;
 	  h_count <= 0;
 	  vertical_clk <= '1';
 	  if ( v_count = 524 ) then
         v_count   <= 0;
-		count_y   <= 0;
         new_frame <= '1';
       else
-		if mem_ctrl = '1' then
-		  count_y <= count_y + 1;
-		 end if;
         v_count <= v_count + 1;
       end if; -- v_count
     else
-	  if mem_ctrl = '1' then
-	    count_x <= count_x + 1;
-	  else
-		count_x <= 0;
-	  end if;
 	  vertical_clk <= '0';
       h_count <= h_count + 1;
     end if; -- h_count
@@ -134,56 +123,115 @@ begin
   h_pos_1 <= h_count - 144;  -- Position relative to start of image data
   v_pos_1 <= v_count -  36;
   
-  -- calculate distance of this position from center of the lane
-  if (h_count > center_pos_h) then
-    h_gap_1 <= h_count - center_pos_h;
-  else
-    h_gap_1 <= center_pos_h - h_count;
-  end if;  
-  h_gap_2 <= center_pos_h - h_count;
-  if (v_count > center_pos_v) then
-    v_gap_1 <= v_count - center_pos_v;
-  else
-    v_gap_1 <= center_pos_v - v_count;
-  end if;
-  v_gap_2 <= center_pos_v - v_count;
-  
   ------------------------------------ pipeline stage 2
   hs_2      <= hs_1;
   vs_2      <= vs_1;
   de_2      <= de_1;
+  top_left_x <= 310;
+  top_left_y <= center_pos_v;
+  padding_x  <= 30;
   
   if    (de_1 = '0') then
     rgb_2 <= x"000000";
-  elsif (v_count > center_pos_v and v_count < center_pos_v + 17) then
-	if    (h_count > 199 and h_count < 220) then  -- Digito 2 (dir. -> esq.)
-		if h_count = 200 then
+  elsif (v_count > top_left_y and v_count < top_left_y + 17) then
+	if    (h_count > top_left_x and h_count < top_left_x + 21) then  -- Digito 9 (dir. -> esq.)
+		if (h_count = top_left_x+1) then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "1001";
+		if (h_count > top_left_x+4) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > top_left_x+1*padding_x and h_count < top_left_x+21+1*padding_x) then  -- Digito 8
+		if(h_count = top_left_x+1+1*padding_x) then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "1000";
+		if (h_count > top_left_x+4+1*padding_x) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > top_left_x+2*padding_x and h_count < top_left_x+21+2*padding_x) then  -- Digito 7
+		if(h_count = top_left_x+1+2*padding_x) then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "0111";
+		if (h_count > top_left_x+4+2*padding_x) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > top_left_x+3*padding_x and h_count < top_left_x+21+3*padding_x) then  -- Digito 6
+		if(h_count = top_left_x+1+3*padding_x) then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "0110";
+		if (h_count > top_left_x+4+3*padding_x) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > top_left_x+4*padding_x and h_count < top_left_x+21+4*padding_x) then  -- Digito 5
+		if(h_count = top_left_x+1+4*padding_x) then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "0101";
+		if (h_count > top_left_x+4+4*padding_x) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > top_left_x+5*padding_x and h_count < top_left_x+21+5*padding_x) then  -- Digito 4
+		if(h_count = top_left_x+1+5*padding_x) then
 			rst_dgt <= '1';
 		else
 			rst_dgt <= '0';
 		end if;
 		dgt_ctrl <= "0100";
-		if (h_count > 203) then
+		if (h_count > top_left_x+4+5*padding_x) then
 		  rgb_2 <= RGB;
 		end if;
-	elsif (h_count > 299 and h_count < 320) then  -- Digito 1
-		if h_count = 300 then
+	elsif (h_count > top_left_x+6*padding_x and h_count < top_left_x+21+6*padding_x) then  -- Digito 3
+		if(h_count = top_left_x+1+6*padding_x) then
 			rst_dgt <= '1';
 		else
 			rst_dgt <= '0';
 		end if;
 		dgt_ctrl <= "0011";
-		if (h_count > 303) then
+		if (h_count > top_left_x+4+6*padding_x) then
 		  rgb_2 <= RGB;
 		end if;
-	elsif (h_count > 399 and h_count < 420) then  -- Digito 0
-		if h_count = 400 then
+	elsif (h_count > top_left_x+7*padding_x and h_count < top_left_x+21+7*padding_x) then  -- Digito 2
+		if(h_count = top_left_x+1+7*padding_x) then
 			rst_dgt <= '1';
 		else
 			rst_dgt <= '0';
 		end if;
 		dgt_ctrl <= "0010";
-		if (h_count > 403) then
+		if (h_count > top_left_x+4+7*padding_x) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > top_left_x+8*padding_x and h_count < top_left_x+21+8*padding_x) then  -- Digito 1
+		if(h_count = top_left_x+1+8*padding_x) then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "0001";
+		if (h_count > top_left_x+4+8*padding_x) then
+		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > top_left_x+9*padding_x and h_count < top_left_x+21+9*padding_x) then  -- Digito 0
+		if(h_count = top_left_x+1+9*padding_x) then
+			rst_dgt <= '1';
+		else
+			rst_dgt <= '0';
+		end if;
+		dgt_ctrl <= "0000";
+		if (h_count > top_left_x+4+9*padding_x) then
 		  rgb_2 <= RGB;
 		end if;
 	else
@@ -194,18 +242,6 @@ begin
   else
 	mem_ctrl <= '0';
 	rgb_2 <= rgb_bg;
---  elsif (h_count > center_pos_h and h_count < center_pos_h + 17 and v_count > center_pos_v and v_count < center_pos_v + 17) then
---	if count_x > 2 then
---	  rgb_2 <= RGB;
---	end if;
---	mem_ctrl <= '1';
---  else
---	mem_ctrl <= '0';
---	if (h_count > center_pos_h and h_count < center_pos_h + 21 and v_count > center_pos_v and v_count < center_pos_v + 17) then
---	  rgb_2 <= RGB;
---	else
---	  rgb_2 <= rgb_bg;
---	end if;
   end if;  
   
   ------------------------------------ pipeline stage 3
