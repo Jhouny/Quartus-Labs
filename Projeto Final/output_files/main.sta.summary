@@ -3,128 +3,144 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'test_de10:inst|clk_25'
-Slack : -9.571
-TNS   : -235.347
+Slack : -11.528
+TNS   : -257.616
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -4.723
-TNS   : -130.913
+Slack : -4.650
+TNS   : -196.656
 
-Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_SENARY:inst47|OUT_CLK'
-Slack : -2.099
-TNS   : -4.187
+Type  : Slow 1200mV 85C Model Setup 'FREQ_SLCT'
+Slack : -2.763
+TNS   : -5.574
 
-Type  : Slow 1200mV 85C Model Setup 'test_de10:inst|test_image:test|next_line'
-Slack : -1.947
-TNS   : -7.223
+Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst19|count[3]'
+Slack : -2.097
+TNS   : -4.380
+
+Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_SENARY:inst48|OUT_CLK'
+Slack : -2.064
+TNS   : -4.885
+
+Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst16|count[3]'
+Slack : -1.993
+TNS   : -4.096
 
 Type  : Slow 1200mV 85C Model Setup 'Timing_Reference_25MHz:inst8|tmp'
 Slack : -1.901
-TNS   : -238.997
-
-Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst19|count[3]'
-Slack : -1.873
-TNS   : -3.961
-
-Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_SENARY:inst48|OUT_CLK'
-Slack : -1.864
-TNS   : -3.865
-
-Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst16|count[3]'
-Slack : -1.783
-TNS   : -3.825
-
-Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst33|count[3]'
-Slack : -1.770
-TNS   : -3.677
-
-Type  : Slow 1200mV 85C Model Setup 'Timing_Reference_1kHz:inst44|tmp'
-Slack : -1.762
-TNS   : -3.583
+TNS   : -234.386
 
 Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst15|count[3]'
-Slack : -1.738
-TNS   : -3.696
+Slack : -1.886
+TNS   : -4.028
 
-Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst27|count[3]'
-Slack : -0.814
-TNS   : -2.266
+Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_SENARY:inst47|OUT_CLK'
+Slack : -1.778
+TNS   : -3.771
+
+Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst33|count[3]'
+Slack : -1.676
+TNS   : -3.609
+
+Type  : Slow 1200mV 85C Model Setup 'test_de10:inst|test_image:test|next_line'
+Slack : -1.097
+TNS   : -2.830
 
 Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst22|count[3]'
-Slack : -0.336
-TNS   : -0.943
+Slack : -0.371
+TNS   : -1.023
+
+Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst27|count[3]'
+Slack : -0.307
+TNS   : -0.956
+
+Type  : Slow 1200mV 85C Model Setup 'PB'
+Slack : -0.291
+TNS   : -0.291
 
 Type  : Slow 1200mV 85C Model Setup 'COUNTER_1_DIGIT:inst37|count[3]'
-Slack : -0.327
-TNS   : -0.636
+Slack : -0.221
+TNS   : -0.568
 
 Type  : Slow 1200mV 85C Model Hold 'Timing_Reference_25MHz:inst8|tmp'
-Slack : 0.271
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'test_de10:inst|clk_25'
-Slack : 0.323
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'test_de10:inst|test_image:test|next_line'
-Slack : 0.340
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst22|count[3]'
-Slack : 0.347
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst27|count[3]'
-Slack : 0.347
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst37|count[3]'
-Slack : 0.347
+Slack : 0.328
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst15|count[3]'
-Slack : 0.348
+Slack : 0.342
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst16|count[3]'
-Slack : 0.348
+Slack : 0.342
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst19|count[3]'
-Slack : 0.348
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst22|count[3]'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'FREQ_SLCT'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst27|count[3]'
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst33|count[3]'
-Slack : 0.348
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_DIGIT:inst37|count[3]'
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_SENARY:inst47|OUT_CLK'
-Slack : 0.348
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'COUNTER_1_SENARY:inst48|OUT_CLK'
-Slack : 0.348
+Slack : 0.343
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'Timing_Reference_1kHz:inst44|tmp'
-Slack : 0.348
+Type  : Slow 1200mV 85C Model Hold 'test_de10:inst|test_image:test|next_line'
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.423
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'test_de10:inst|clk_25'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PB'
+Slack : 0.739
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'Timing_Reference_25MHz:inst8|tmp'
-Slack : -1.770
-TNS   : -5.676
+Slack : -0.645
+TNS   : -2.122
 
 Type  : Slow 1200mV 85C Model Removal 'Timing_Reference_25MHz:inst8|tmp'
-Slack : 1.657
+Slack : 0.601
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -104.016
+TNS   : -143.300
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FREQ_SLCT'
+Slack : -3.000
+TNS   : -8.612
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PB'
+Slack : -3.000
+TNS   : -4.403
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Timing_Reference_25MHz:inst8|tmp'
 Slack : -2.422
@@ -170,137 +186,149 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'COUNTER_1_SENARY:inst48|OUT_C
 Slack : -1.403
 TNS   : -5.612
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Timing_Reference_1kHz:inst44|tmp'
-Slack : -1.403
-TNS   : -5.612
-
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'test_de10:inst|test_image:test|next_line'
 Slack : -1.403
 TNS   : -5.612
 
 Type  : Slow 1200mV 0C Model Setup 'test_de10:inst|clk_25'
-Slack : -8.784
-TNS   : -212.829
+Slack : -10.645
+TNS   : -235.122
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -4.300
-TNS   : -112.331
+Slack : -4.238
+TNS   : -168.823
 
-Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst47|OUT_CLK'
-Slack : -1.844
-TNS   : -3.611
+Type  : Slow 1200mV 0C Model Setup 'FREQ_SLCT'
+Slack : -2.497
+TNS   : -4.898
 
-Type  : Slow 1200mV 0C Model Setup 'test_de10:inst|test_image:test|next_line'
-Slack : -1.756
-TNS   : -6.399
+Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst19|count[3]'
+Slack : -1.884
+TNS   : -3.842
 
 Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst48|OUT_CLK'
-Slack : -1.742
-TNS   : -3.435
+Slack : -1.834
+TNS   : -4.277
+
+Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst16|count[3]'
+Slack : -1.785
+TNS   : -3.539
 
 Type  : Slow 1200mV 0C Model Setup 'Timing_Reference_25MHz:inst8|tmp'
 Slack : -1.670
-TNS   : -209.929
-
-Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst19|count[3]'
-Slack : -1.657
-TNS   : -3.353
-
-Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst16|count[3]'
-Slack : -1.576
-TNS   : -3.281
-
-Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst33|count[3]'
-Slack : -1.563
-TNS   : -3.130
-
-Type  : Slow 1200mV 0C Model Setup 'Timing_Reference_1kHz:inst44|tmp'
-Slack : -1.551
-TNS   : -3.072
+TNS   : -205.594
 
 Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst15|count[3]'
-Slack : -1.540
-TNS   : -3.129
+Slack : -1.665
+TNS   : -3.523
 
-Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst27|count[3]'
-Slack : -0.703
-TNS   : -1.741
+Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst47|OUT_CLK'
+Slack : -1.601
+TNS   : -3.289
+
+Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst33|count[3]'
+Slack : -1.480
+TNS   : -3.065
+
+Type  : Slow 1200mV 0C Model Setup 'test_de10:inst|test_image:test|next_line'
+Slack : -0.906
+TNS   : -2.238
 
 Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst22|count[3]'
-Slack : -0.211
-TNS   : -0.496
+Slack : -0.253
+TNS   : -0.585
+
+Type  : Slow 1200mV 0C Model Setup 'PB'
+Slack : -0.187
+TNS   : -0.187
+
+Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst27|count[3]'
+Slack : -0.186
+TNS   : -0.515
 
 Type  : Slow 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst37|count[3]'
-Slack : -0.207
-TNS   : -0.314
+Slack : -0.115
+TNS   : -0.263
 
-Type  : Slow 1200mV 0C Model Hold 'Timing_Reference_25MHz:inst8|tmp'
-Slack : 0.271
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'test_de10:inst|clk_25'
-Slack : 0.290
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'test_de10:inst|test_image:test|next_line'
+Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst16|count[3]'
 Slack : 0.306
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst27|count[3]'
-Slack : 0.310
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst47|OUT_CLK'
-Slack : 0.310
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst15|count[3]'
-Slack : 0.311
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst16|count[3]'
-Slack : 0.311
-TNS   : 0.000
-
 Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst19|count[3]'
-Slack : 0.311
+Slack : 0.306
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst22|count[3]'
-Slack : 0.311
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst15|count[3]'
+Slack : 0.307
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst33|count[3]'
-Slack : 0.311
+Slack : 0.307
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst37|count[3]'
-Slack : 0.311
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst47|OUT_CLK'
+Slack : 0.307
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst48|OUT_CLK'
-Slack : 0.311
+Slack : 0.307
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'Timing_Reference_1kHz:inst44|tmp'
-Slack : 0.311
+Type  : Slow 1200mV 0C Model Hold 'FREQ_SLCT'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'test_de10:inst|test_image:test|next_line'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst27|count[3]'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Timing_Reference_25MHz:inst8|tmp'
+Slack : 0.308
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.391
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'test_de10:inst|clk_25'
+Slack : 0.394
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PB'
+Slack : 0.668
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'Timing_Reference_25MHz:inst8|tmp'
-Slack : -1.536
-TNS   : -4.902
+Slack : -0.488
+TNS   : -1.543
 
 Type  : Slow 1200mV 0C Model Removal 'Timing_Reference_25MHz:inst8|tmp'
-Slack : 1.532
+Slack : 0.544
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -104.016
+TNS   : -143.300
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FREQ_SLCT'
+Slack : -3.000
+TNS   : -8.612
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PB'
+Slack : -3.000
+TNS   : -4.403
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Timing_Reference_25MHz:inst8|tmp'
 Slack : -2.333
@@ -346,137 +374,149 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'COUNTER_1_SENARY:inst48|OUT_CL
 Slack : -1.403
 TNS   : -5.612
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Timing_Reference_1kHz:inst44|tmp'
-Slack : -1.403
-TNS   : -5.612
-
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'test_de10:inst|test_image:test|next_line'
 Slack : -1.403
 TNS   : -5.612
 
 Type  : Fast 1200mV 0C Model Setup 'test_de10:inst|clk_25'
-Slack : -3.779
-TNS   : -74.147
+Slack : -4.353
+TNS   : -81.441
+
+Type  : Fast 1200mV 0C Model Setup 'FREQ_SLCT'
+Slack : -1.485
+TNS   : -2.742
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -1.509
-TNS   : -15.000
+Slack : -1.456
+TNS   : -21.669
 
-Type  : Fast 1200mV 0C Model Setup 'Timing_Reference_1kHz:inst44|tmp'
-Slack : -0.447
-TNS   : -0.642
+Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst48|OUT_CLK'
+Slack : -0.397
+TNS   : -0.770
 
-Type  : Fast 1200mV 0C Model Setup 'test_de10:inst|test_image:test|next_line'
-Slack : -0.378
-TNS   : -1.198
+Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst19|count[3]'
+Slack : -0.360
+TNS   : -0.705
 
-Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst47|OUT_CLK'
-Slack : -0.339
-TNS   : -0.676
+Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst16|count[3]'
+Slack : -0.298
+TNS   : -0.582
+
+Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst15|count[3]'
+Slack : -0.282
+TNS   : -0.527
 
 Type  : Fast 1200mV 0C Model Setup 'Timing_Reference_25MHz:inst8|tmp'
 Slack : -0.280
-TNS   : -34.544
-
-Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst19|count[3]'
-Slack : -0.276
-TNS   : -0.517
-
-Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst16|count[3]'
-Slack : -0.261
-TNS   : -0.514
+TNS   : -33.633
 
 Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst33|count[3]'
-Slack : -0.253
-TNS   : -0.485
+Slack : -0.215
+TNS   : -0.426
 
-Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst48|OUT_CLK'
-Slack : -0.235
-TNS   : -0.464
+Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_SENARY:inst47|OUT_CLK'
+Slack : -0.202
+TNS   : -0.393
 
-Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst15|count[3]'
-Slack : -0.231
-TNS   : -0.405
-
-Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst27|count[3]'
-Slack : 0.185
+Type  : Fast 1200mV 0C Model Setup 'test_de10:inst|test_image:test|next_line'
+Slack : 0.052
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst22|count[3]'
-Slack : 0.414
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst27|count[3]'
+Slack : 0.431
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'COUNTER_1_DIGIT:inst37|count[3]'
-Slack : 0.421
+Slack : 0.471
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'test_de10:inst|clk_25'
-Slack : -0.169
-TNS   : -0.304
-
-Type  : Fast 1200mV 0C Model Hold 'Timing_Reference_25MHz:inst8|tmp'
-Slack : 0.103
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'test_de10:inst|test_image:test|next_line'
-Slack : 0.148
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst22|count[3]'
-Slack : 0.150
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst15|count[3]'
-Slack : 0.151
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst16|count[3]'
-Slack : 0.151
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst19|count[3]'
-Slack : 0.151
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst27|count[3]'
-Slack : 0.151
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst33|count[3]'
-Slack : 0.151
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst37|count[3]'
-Slack : 0.151
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst47|OUT_CLK'
-Slack : 0.151
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst48|OUT_CLK'
-Slack : 0.151
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'Timing_Reference_1kHz:inst44|tmp'
-Slack : 0.152
+Type  : Fast 1200mV 0C Model Setup 'PB'
+Slack : 0.484
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.159
+Slack : 0.059
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst33|count[3]'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Timing_Reference_25MHz:inst8|tmp'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst16|count[3]'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst19|count[3]'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst22|count[3]'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst37|count[3]'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst15|count[3]'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst47|OUT_CLK'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_DIGIT:inst27|count[3]'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'COUNTER_1_SENARY:inst48|OUT_CLK'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'FREQ_SLCT'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'test_de10:inst|test_image:test|next_line'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'test_de10:inst|clk_25'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PB'
+Slack : 0.300
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'Timing_Reference_25MHz:inst8|tmp'
-Slack : -0.301
-TNS   : -0.505
+Slack : 0.196
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'Timing_Reference_25MHz:inst8|tmp'
-Slack : 0.744
+Slack : 0.270
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -77.380
+TNS   : -106.321
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FREQ_SLCT'
+Slack : -3.000
+TNS   : -8.682
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PB'
+Slack : -3.000
+TNS   : -4.132
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Timing_Reference_25MHz:inst8|tmp'
 Slack : -1.000
@@ -519,10 +559,6 @@ Slack : -1.000
 TNS   : -4.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'COUNTER_1_SENARY:inst48|OUT_CLK'
-Slack : -1.000
-TNS   : -4.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Timing_Reference_1kHz:inst44|tmp'
 Slack : -1.000
 TNS   : -4.000
 

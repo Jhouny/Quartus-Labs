@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main
-Sun Jun 23 23:45:04 2024
+Thu Jun 27 15:27:14 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -73,16 +73,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 23 23:45:04 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 27 15:27:14 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; main                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 530                                         ;
-;     Total combinational functions  ; 505                                         ;
-;     Dedicated logic registers      ; 189                                         ;
-; Total registers                    ; 189                                         ;
-; Total pins                         ; 17                                          ;
+; Total logic elements               ; 637                                         ;
+;     Total combinational functions  ; 612                                         ;
+;     Dedicated logic registers      ; 218                                         ;
+; Total registers                    ; 218                                         ;
+; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 30,720                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -222,6 +222,7 @@ refer to the applicable agreement for further details.
 ; COUNTER_1_HEXA.vhd               ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_HEXA.vhd         ;         ;
 ; Timing_Reference_1kHz.vhd        ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_1kHz.vhd  ;         ;
 ; COUNTER_1_SENARY.vhd             ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_SENARY.vhd       ;         ;
+; Timing_Reference_20kHz.vhd       ; yes             ; User VHDL File                         ; E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_20kHz.vhd ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                         ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; f:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                   ;         ;
@@ -259,31 +260,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------+
 ; Resource                                    ; Usage                            ;
 +---------------------------------------------+----------------------------------+
-; Estimated Total logic elements              ; 530                              ;
+; Estimated Total logic elements              ; 637                              ;
 ;                                             ;                                  ;
-; Total combinational functions               ; 505                              ;
+; Total combinational functions               ; 612                              ;
 ; Logic element usage by number of LUT inputs ;                                  ;
-;     -- 4 input functions                    ; 280                              ;
-;     -- 3 input functions                    ; 100                              ;
-;     -- <=2 input functions                  ; 125                              ;
+;     -- 4 input functions                    ; 320                              ;
+;     -- 3 input functions                    ; 112                              ;
+;     -- <=2 input functions                  ; 180                              ;
 ;                                             ;                                  ;
 ; Logic elements by mode                      ;                                  ;
-;     -- normal mode                          ; 425                              ;
-;     -- arithmetic mode                      ; 80                               ;
+;     -- normal mode                          ; 501                              ;
+;     -- arithmetic mode                      ; 111                              ;
 ;                                             ;                                  ;
-; Total registers                             ; 189                              ;
-;     -- Dedicated logic registers            ; 189                              ;
+; Total registers                             ; 218                              ;
+;     -- Dedicated logic registers            ; 218                              ;
 ;     -- I/O registers                        ; 0                                ;
 ;                                             ;                                  ;
-; I/O pins                                    ; 17                               ;
+; I/O pins                                    ; 18                               ;
 ; Total memory bits                           ; 30720                            ;
 ;                                             ;                                  ;
 ; Embedded Multiplier 9-bit elements          ; 0                                ;
 ;                                             ;                                  ;
 ; Maximum fan-out node                        ; Timing_Reference_25MHz:inst8|tmp ;
 ; Maximum fan-out                             ; 125                              ;
-; Total fan-out                               ; 3235                             ;
-; Average fan-out                             ; 3.81                             ;
+; Total fan-out                               ; 3666                             ;
+; Average fan-out                             ; 3.72                             ;
 +---------------------------------------------+----------------------------------+
 
 
@@ -292,7 +293,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                  ; Entity Name            ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+------------------------+--------------+
-; |main                                     ; 505 (0)             ; 189 (0)                   ; 30720       ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |main                                                                                ; main                   ; work         ;
+; |main                                     ; 612 (2)             ; 218 (1)                   ; 30720       ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |main                                                                                ; main                   ; work         ;
 ;    |COUNTER_1_DIGIT:inst15|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst15                                                         ; COUNTER_1_DIGIT        ; work         ;
 ;    |COUNTER_1_DIGIT:inst16|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst16                                                         ; COUNTER_1_DIGIT        ; work         ;
 ;    |COUNTER_1_DIGIT:inst19|               ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_DIGIT:inst19                                                         ; COUNTER_1_DIGIT        ; work         ;
@@ -305,7 +306,8 @@ refer to the applicable agreement for further details.
 ;    |COUNTER_1_HEXA:inst6|                 ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_HEXA:inst6                                                           ; COUNTER_1_HEXA         ; work         ;
 ;    |COUNTER_1_SENARY:inst47|              ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_SENARY:inst47                                                        ; COUNTER_1_SENARY       ; work         ;
 ;    |COUNTER_1_SENARY:inst48|              ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|COUNTER_1_SENARY:inst48                                                        ; COUNTER_1_SENARY       ; work         ;
-;    |Timing_Reference_1kHz:inst44|         ; 50 (50)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_1kHz:inst44                                                   ; Timing_Reference_1kHz  ; work         ;
+;    |Timing_Reference_1kHz:inst44|         ; 51 (51)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_1kHz:inst44                                                   ; Timing_Reference_1kHz  ; work         ;
+;    |Timing_Reference_20kHz:inst25|        ; 50 (50)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_20kHz:inst25                                                  ; Timing_Reference_20kHz ; work         ;
 ;    |Timing_Reference_25MHz:inst8|         ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|Timing_Reference_25MHz:inst8                                                   ; Timing_Reference_25MHz ; work         ;
 ;    |mem0:inst_mem17|                      ; 0 (0)               ; 0 (0)                     ; 3072        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem0:inst_mem17                                                                ; mem0                   ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 3072        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem0:inst_mem17|altsyncram:altsyncram_component                                ; altsyncram             ; work         ;
@@ -337,8 +339,8 @@ refer to the applicable agreement for further details.
 ;    |mem9:inst13|                          ; 0 (0)               ; 0 (0)                     ; 3072        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem9:inst13                                                                    ; mem9                   ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 3072        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem9:inst13|altsyncram:altsyncram_component                                    ; altsyncram             ; work         ;
 ;          |altsyncram_afq3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 3072        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|mem9:inst13|altsyncram:altsyncram_component|altsyncram_afq3:auto_generated     ; altsyncram_afq3        ; work         ;
-;    |test_de10:inst|                       ; 358 (6)             ; 73 (6)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|test_de10:inst                                                                 ; test_de10              ; work         ;
-;       |test_image:test|                   ; 352 (352)           ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|test_de10:inst|test_image:test                                                 ; test_image             ; work         ;
+;    |test_de10:inst|                       ; 412 (1)             ; 68 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|test_de10:inst                                                                 ; test_de10              ; work         ;
+;       |test_image:test|                   ; 411 (411)           ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|test_de10:inst|test_image:test                                                 ; test_image             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -384,6 +386,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------+------------------------------------------------------------+
 ; Register name                                           ; Reason for Removal                                         ;
 +---------------------------------------------------------+------------------------------------------------------------+
+; test_de10:inst|reset_a                                  ; Stuck at GND due to stuck port data_in                     ;
+; test_de10:inst|reset_b                                  ; Stuck at GND due to stuck port data_in                     ;
+; test_de10:inst|reset_c                                  ; Stuck at GND due to stuck port data_in                     ;
+; test_de10:inst|reset_d                                  ; Stuck at GND due to stuck port data_in                     ;
+; test_de10:inst|reset_e                                  ; Stuck at GND due to stuck port data_in                     ;
 ; test_de10:inst|test_image:test|padding_x[0,5..9]        ; Stuck at GND due to stuck port data_in                     ;
 ; test_de10:inst|test_image:test|top_left_x[0,3,6,7,9]    ; Stuck at GND due to stuck port data_in                     ;
 ; test_de10:inst|test_image:test|center_pos_v[0,1,4..7,9] ; Stuck at GND due to stuck port data_in                     ;
@@ -400,30 +407,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; test_de10:inst|test_image:test|padding_x[3]             ; Merged with test_de10:inst|test_image:test|padding_x[2]    ;
 ; test_de10:inst|test_image:test|padding_x[2]             ; Merged with test_de10:inst|test_image:test|padding_x[1]    ;
 ; test_de10:inst|test_image:test|top_left_y[3,8]          ; Merged with test_de10:inst|test_image:test|top_left_y[2]   ;
-; Total Number of Removed Registers = 38                  ;                                                            ;
+; Total Number of Removed Registers = 43                  ;                                                            ;
 +---------------------------------------------------------+------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                               ;
-+------------------------------------------------+---------------------------+----------------------------------------------+
-; Register name                                  ; Reason for Removal        ; Registers Removed due to This Register       ;
-+------------------------------------------------+---------------------------+----------------------------------------------+
-; test_de10:inst|test_image:test|center_pos_v[0] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[0] ;
-;                                                ; due to stuck port data_in ;                                              ;
-; test_de10:inst|test_image:test|center_pos_v[1] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[1] ;
-;                                                ; due to stuck port data_in ;                                              ;
-; test_de10:inst|test_image:test|center_pos_v[4] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[4] ;
-;                                                ; due to stuck port data_in ;                                              ;
-; test_de10:inst|test_image:test|center_pos_v[5] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[5] ;
-;                                                ; due to stuck port data_in ;                                              ;
-; test_de10:inst|test_image:test|center_pos_v[6] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[6] ;
-;                                                ; due to stuck port data_in ;                                              ;
-; test_de10:inst|test_image:test|center_pos_v[7] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[7] ;
-;                                                ; due to stuck port data_in ;                                              ;
-; test_de10:inst|test_image:test|center_pos_v[9] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[9] ;
-;                                                ; due to stuck port data_in ;                                              ;
-+------------------------------------------------+---------------------------+----------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                          ;
++------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
+; Register name                                  ; Reason for Removal        ; Registers Removed due to This Register                                  ;
++------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
+; test_de10:inst|reset_a                         ; Stuck at GND              ; test_de10:inst|reset_b, test_de10:inst|reset_c, test_de10:inst|reset_d, ;
+;                                                ; due to stuck port data_in ; test_de10:inst|reset_e                                                  ;
+; test_de10:inst|test_image:test|center_pos_v[0] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[0]                            ;
+;                                                ; due to stuck port data_in ;                                                                         ;
+; test_de10:inst|test_image:test|center_pos_v[1] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[1]                            ;
+;                                                ; due to stuck port data_in ;                                                                         ;
+; test_de10:inst|test_image:test|center_pos_v[4] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[4]                            ;
+;                                                ; due to stuck port data_in ;                                                                         ;
+; test_de10:inst|test_image:test|center_pos_v[5] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[5]                            ;
+;                                                ; due to stuck port data_in ;                                                                         ;
+; test_de10:inst|test_image:test|center_pos_v[6] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[6]                            ;
+;                                                ; due to stuck port data_in ;                                                                         ;
+; test_de10:inst|test_image:test|center_pos_v[7] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[7]                            ;
+;                                                ; due to stuck port data_in ;                                                                         ;
+; test_de10:inst|test_image:test|center_pos_v[9] ; Stuck at GND              ; test_de10:inst|test_image:test|top_left_y[9]                            ;
+;                                                ; due to stuck port data_in ;                                                                         ;
++------------------------------------------------+---------------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -431,12 +440,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 189   ;
-; Number of registers using Synchronous Clear  ; 21    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 218   ;
+; Number of registers using Synchronous Clear  ; 1     ;
+; Number of registers using Synchronous Load   ; 12    ;
 ; Number of registers using Asynchronous Clear ; 44    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Clock Enable       ; 95    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -448,7 +457,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Timing_Reference_25MHz:inst8|count[0]  ; 2       ;
 ; Timing_Reference_1kHz:inst44|count[0]  ; 2       ;
-; Total number of inverted registers = 2 ;         ;
+; Timing_Reference_20kHz:inst25|count[0] ; 2       ;
+; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
 
@@ -457,10 +467,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|test_de10:inst|test_image:test|h_count[8]  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |main|test_de10:inst|test_image:test|v_count[7]  ;
-; 11:1               ; 4 bits    ; 28 LEs        ; 24 LEs               ; 4 LEs                  ; Yes        ; |main|test_de10:inst|test_image:test|dgt_ctrl[3] ;
-; 173:1              ; 12 bits   ; 1380 LEs      ; 96 LEs               ; 1284 LEs               ; Yes        ; |main|test_de10:inst|test_image:test|rgb_2[6]    ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |main|test_de10:inst|test_image:test|dgt_ctrl[2] ;
+; 176:1              ; 12 bits   ; 1404 LEs      ; 120 LEs              ; 1284 LEs               ; Yes        ; |main|test_de10:inst|test_image:test|rgb_2[5]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
@@ -1336,26 +1344,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 189                         ;
+; boundary_port         ; 18                          ;
+; cycloneiii_ff         ; 218                         ;
 ;     CLR               ; 43                          ;
-;     ENA               ; 19                          ;
+;     ENA               ; 82                          ;
 ;     ENA CLR           ; 1                           ;
-;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 11                          ;
-;     plain             ; 105                         ;
-; cycloneiii_lcell_comb ; 505                         ;
-;     arith             ; 80                          ;
-;         2 data inputs ; 80                          ;
-;     normal            ; 425                         ;
-;         1 data inputs ; 18                          ;
-;         2 data inputs ; 27                          ;
-;         3 data inputs ; 100                         ;
-;         4 data inputs ; 280                         ;
+;     ENA SLD           ; 12                          ;
+;     SCLR              ; 1                           ;
+;     plain             ; 79                          ;
+; cycloneiii_lcell_comb ; 612                         ;
+;     arith             ; 111                         ;
+;         2 data inputs ; 111                         ;
+;     normal            ; 501                         ;
+;         1 data inputs ; 21                          ;
+;         2 data inputs ; 48                          ;
+;         3 data inputs ; 112                         ;
+;         4 data inputs ; 320                         ;
 ; cycloneiii_ram_block  ; 120                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 5.65                        ;
+; Average LUT depth     ; 5.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1364,7 +1372,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1374,7 +1382,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jun 23 23:44:31 2024
+    Info: Processing started: Thu Jun 27 15:26:37 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main -c main
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -1483,6 +1491,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file timing_
 Info (12021): Found 2 design units, including 1 entities, in source file counter_1_senary.vhd
     Info (12022): Found design unit 1: COUNTER_1_SENARY-count File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_SENARY.vhd Line: 12
     Info (12023): Found entity 1: COUNTER_1_SENARY File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/COUNTER_1_SENARY.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file timing_reference_20khz.vhd
+    Info (12022): Found design unit 1: Timing_Reference_20kHz-freq_div File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_20kHz.vhd Line: 14
+    Info (12023): Found entity 1: Timing_Reference_20kHz File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_20kHz.vhd Line: 5
 Info (12127): Elaborating entity "main" for the top level hierarchy
 Info (12128): Elaborating entity "test_de10" for hierarchy "test_de10:inst"
 Info (12128): Elaborating entity "test_image" for hierarchy "test_de10:inst|test_image:test" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/test_de10.vhd Line: 53
@@ -1501,6 +1512,8 @@ Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(14): signal "
 Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 15
 Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 15
 Warning (10492): VHDL Process Statement warning at ADDER_1_BIT.vhd(15): signal "Cin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/ADDER_1_BIT.vhd Line: 15
+Info (12128): Elaborating entity "Timing_Reference_20kHz" for hierarchy "Timing_Reference_20kHz:inst25"
+Warning (10492): VHDL Process Statement warning at Timing_Reference_20kHz.vhd(29): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_20kHz.vhd Line: 29
 Info (12128): Elaborating entity "Timing_Reference_1kHz" for hierarchy "Timing_Reference_1kHz:inst44"
 Warning (10492): VHDL Process Statement warning at Timing_Reference_1kHz.vhd(29): signal "tmp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/Timing_Reference_1kHz.vhd Line: 29
 Info (12128): Elaborating entity "mem0" for hierarchy "mem0:inst_mem17"
@@ -2203,19 +2216,21 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[17]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 425
         Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[18]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 448
         Warning (14320): Synthesized away node "mem0:inst_mem17|altsyncram:altsyncram_component|altsyncram_1fq3:auto_generated|q_a[19]" File: E:/Users/jhony/Documents/Jhony/Universidade/UTFPR/2024.1/Circuitos Digitais/Projeto Final/db/altsyncram_1fq3.tdf Line: 471
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer inst49~0
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 668 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 777 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 531 logic cells
+    Info (21061): Implemented 639 logic cells
     Info (21064): Implemented 120 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 141 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 144 warnings
     Info: Peak virtual memory: 4856 megabytes
-    Info: Processing ended: Sun Jun 23 23:45:04 2024
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Thu Jun 27 15:27:14 2024
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:22
 
 

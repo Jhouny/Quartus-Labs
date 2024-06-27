@@ -164,6 +164,14 @@ begin
 		if (h_count > top_left_x+4+2*padding_x) then
 		  rgb_2 <= RGB;
 		end if;
+	elsif (h_count > top_left_x+27+2*padding_x and h_count < top_left_x+30+2*padding_x) then  -- hhh : mm
+		if v_count > top_left_y + 5 and v_count < top_left_y + 8 then
+		  rgb_2 <= x"000000";
+		 elsif v_count > top_left_y + 9 and v_count < top_left_y + 12 then
+		  rgb_2 <= x"000000";
+		 else
+		  rgb_2 <= rgb_bg;
+		end if;
 	elsif (h_count > top_left_x+3*padding_x and h_count < top_left_x+21+3*padding_x) then  -- Digito 6
 		if(h_count = top_left_x+1+3*padding_x) then
 			rst_dgt <= '1';
@@ -184,6 +192,14 @@ begin
 		if (h_count > top_left_x+4+4*padding_x) then
 		  rgb_2 <= RGB;
 		end if;
+	elsif (h_count > top_left_x+27+4*padding_x and h_count < top_left_x+30+4*padding_x) then  -- mm : ss
+		if v_count > top_left_y + 5 and v_count < top_left_y + 8 then
+		  rgb_2 <= x"000000";
+		 elsif v_count > top_left_y + 9 and v_count < top_left_y + 12 then
+		  rgb_2 <= x"000000";
+		 else
+		  rgb_2 <= rgb_bg;
+		end if;
 	elsif (h_count > top_left_x+5*padding_x and h_count < top_left_x+21+5*padding_x) then  -- Digito 4
 		if(h_count = top_left_x+1+5*padding_x) then
 			rst_dgt <= '1';
@@ -203,6 +219,12 @@ begin
 		dgt_ctrl <= "0011";
 		if (h_count > top_left_x+4+6*padding_x) then
 		  rgb_2 <= RGB;
+		end if;
+	elsif (h_count > top_left_x+27+6*padding_x and h_count < top_left_x+30+6*padding_x) then  -- ss . msmsms
+		if v_count > top_left_y + 12 and v_count < top_left_y + 16 then
+		  rgb_2 <= x"000000";
+		 else
+		  rgb_2 <= rgb_bg;
 		end if;
 	elsif (h_count > top_left_x+7*padding_x and h_count < top_left_x+21+7*padding_x) then  -- Digito 2
 		if(h_count = top_left_x+1+7*padding_x) then
